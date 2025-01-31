@@ -1,5 +1,5 @@
 import { createPublicClient, http, getContract } from 'viem';
-import { mainnet } from 'viem/chains';
+import { astarZkEVM } from 'viem/chains';
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
@@ -9,7 +9,7 @@ import { ABI } from './abi721a'
 dotenv.config();
 
 // Define the input file path
-const inputFilePath = path.join(__dirname, 'data/projects.json');
+const inputFilePath = path.join(__dirname, 'data/projects_test.json');
 
 // Define the output file path
 const outputFilePath = path.join(__dirname, 'data/output.json');
@@ -18,15 +18,26 @@ const outputFilePath = path.join(__dirname, 'data/output.json');
 const inputJson = JSON.parse(fs.readFileSync(inputFilePath, 'utf-8'));
 
 const erc721Abi = [
-    "function totalSupply() view returns (uint256)",
-    "function owner() view returns (address)",
-    "function DEFAULT_ADMIN_ROLE view returns (address)"
+    {
+        inputs: [],
+        name: "totalSupply",
+        outputs: [{ name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function",
+      },
+    {
+        inputs: [],
+        name: "owner",
+        outputs: [{ name: "", type: "address" }],
+        stateMutability: "view",
+        type: "function",
+      },
 ];
 
 // Initialize the client using the RPC URL from the environment variable
 const client = createPublicClient({
-    chain: mainnet,
-    transport: http(process.env.RPC || '')
+    chain: astarZkEVM,
+    transport: http()
 });
 
 // Define the interface for contract details
@@ -36,15 +47,16 @@ interface ContractDetails {
 }
 
 // Function to get contract details
-async function getContractDetails(address: string): Promise<ContractDetails> {
+async function getContractDetails(address: `0x${string}`): Promise<ContractDetails> {
     try {
         const contract = getContract({
-            address: address as `0x${string}`,
-            abi: ABI,
+            address,
+            abi: erc721Abi,
             client
         });
         const totalSupply = await contract.read.totalSupply() as unknown as bigint;
-        const owner = await contract.read.DEFAULT_ADMIN_ROLE() as unknown as string;
+        const owner = await contract.read.owner() as unknown as string;
+        console.log(`${address}: totalSupply=${totalSupply}, owner=${owner}`);
         return { totalSupply: totalSupply.toString(), owner };
     } catch (error) {
         console.error(`Failed to get contract details for address ${address}:`, error);
@@ -58,16 +70,20 @@ async function main() {
 
     for (const [key, address] of Object.entries(inputJson)) {
         console.log(`Getting contract details for ${key} at address ${address}`);
-        const details = await getContractDetails(address as string);
+        const details = await getContractDetails(address as `0x${string}`);
         outputJson[key] = {
-            totalSupply: details.totalSupply,
+            totalSupply: String(details.totalSupply),
             owner: details.owner
         };
     }
 
     // Write the output JSON to a file
-    fs.writeFileSync(outputFilePath, JSON.stringify(outputJson, null, 2));
-    console.log("Output written to output.json");
+    fs.writeFileSync(
+        outputFilePath, 
+        JSON.stringify(outputJson, (key, value) => 
+            typeof value === 'bigint' ? value.toString() : value
+        , 2)
+    );    console.log("Output written to output.json");
 }
 
 // Run the main function

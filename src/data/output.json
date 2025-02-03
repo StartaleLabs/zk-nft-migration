@@ -1,10 +1,117 @@
 {
-  "rarible": {
-    "totalSupply": "6077",
-    "owner": "0xfC9A5CBD132818D71428f03b9Bfb4c1741176c2a"
+  "casio": {
+    "totalSupply": "2075",
+    "name": "CASIO WATCHES NFT",
+    "symbol": "CASIO WATCHES NFT"
+  },
+  "origamiKokyo": {
+    "totalSupply": "3000",
+    "name": "ORIGAMI NFT by KOKYO NFT",
+    "symbol": "ORIGAMI"
+  },
+  "jrKyushuFree": {
+    "totalSupply": "6967",
+    "name": "JR九州NFT",
+    "symbol": "JRKYUSHUNFT"
+  },
+  "jrKyushuPaid": {
+    "totalSupply": "1126",
+    "name": "JR九州NFT",
+    "symbol": "JRKYUSHUNFT"
+  },
+  "onigiriman": {
+    "totalSupply": "390",
+    "name": "Memory of a Japanese landscapes and girs",
+    "symbol": "MJLG"
   },
   "mazda": {
     "totalSupply": "2088",
-    "owner": "0x77A5e6eaB72Fd38bbB9b09b0E734D8d025818765"
+    "name": "Meta-Mazda",
+    "symbol": "METAMAZDA"
+  },
+  "candyGirl": {
+    "totalSupply": "12725",
+    "name": "CANDY GIRL 1 Year Anniversary x ASTAR zkEVM NFT",
+    "symbol": "CANDYGIRL1YEAR"
+  },
+  "his": {
+    "totalSupply": "2708",
+    "name": "ご当地vtuber図鑑　コラボNFT",
+    "symbol": "HISVTUBERNFT"
+  },
+  "sashimi": {
+    "totalSupply": "451",
+    "name": "Sashimic Japan",
+    "symbol": "SJ"
+  },
+  "UZNo": {
+    "totalSupply": "2050",
+    "name": "UZNo Leonarudo Collection",
+    "symbol": "ULC"
+  },
+  "DenDekaDen": {
+    "totalSupply": "8888",
+    "name": "DenDekaDen Garden YoPort",
+    "symbol": "DGY"
+  },
+  "CityPopTokyo": {
+    "totalSupply": "3641",
+    "name": "City Pop TOKYO Card",
+    "symbol": "CPTC"
+  },
+  "JapanCreatorCollection": {
+    "totalSupply": "50000",
+    "name": "Japan Creators Collection",
+    "symbol": "JCC"
+  },
+  "Walkmon": {
+    "totalSupply": "1979",
+    "name": "WALKMON OG",
+    "symbol": "WMOG"
+  },
+  "DenShinSanKa": {
+    "totalSupply": "756",
+    "name": "DenDekaDen DenShinSanKa",
+    "symbol": "DSSK"
+  },
+  "SNPIT": {
+    "totalSupply": "1000",
+    "name": "SNPIT Special Commemorative NFT Badge",
+    "symbol": "SNPITCOMBADGE"
+  },
+  "DoF": {
+    "totalSupply": "1000",
+    "name": "DoF OG Pass",
+    "symbol": "DoF OG"
+  },
+  "DEKSA": {
+    "totalSupply": "999",
+    "name": "Pandawa",
+    "symbol": "PNDW"
+  },
+  "Neemo": {
+    "totalSupply": "0",
+    "name": "Neemo Loyalty Badge",
+    "symbol": "NLB"
+  },
+  "On1force": {
+    "totalSupply": "777",
+    "name": "0N1 FORCE 0N1 Doll and F0N1 Doll Collectible",
+    "symbol": "0N1FORCE"
+  },
+  "SkyLabs": {
+    "totalSupply": "192",
+    "name": "SkyLabs NFT",
+    "symbol": "SKY"
+  },
+  "Kamui": {
+    "totalSupply": "706",
+    "name": "Kamui",
+    "symbol": "KAMUI"
+  },
+  "Yoki": {
+    "totalSupply": "448235",
+    "name": "Yoki Origins",
+    "symbol": "YOKI"
   }
 }

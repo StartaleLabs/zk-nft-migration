@@ -17,6 +17,10 @@ const outputFilePath = path.join(__dirname, 'data/output.json');
 // Read the input JSON from the file
 const inputJson: Record<string, ProjectConfig> = JSON.parse(fs.readFileSync(inputFilePath, 'utf-8'));
 
+// interface IDs
+const ERC721_INTERFACE_ID = '0x80ac58cd';
+const ERC1155_INTERFACE_ID = '0xd9b67a26';
+
 const erc721Abi = [
     {
         inputs: [],
@@ -24,28 +28,35 @@ const erc721Abi = [
         outputs: [{ name: "", type: "uint256" }],
         stateMutability: "view",
         type: "function",
-      },
+    },
     {
         inputs: [],
         name: "owner",
         outputs: [{ name: "", type: "address" }],
         stateMutability: "view",
         type: "function",
-      },
+    },
     {
         inputs: [],
         name: "name",
         outputs: [{ name: "", type: "string" }],
         stateMutability: "view",
         type: "function",
-      },
+    },
     {
         inputs: [],
         name: "symbol",
         outputs: [{ name: "", type: "string" }],
         stateMutability: "view",
         type: "function",
-      },
+    },
+    {
+        inputs: [{ name: "interfaceId", type: "bytes4" }],
+        name: "supportsInterface",
+        outputs: [{ name: "", type: "bool" }],
+        stateMutability: "view",
+        type: "function",
+    }
 ];
 
 // Initialize the client using the RPC URL from the environment variable
@@ -59,6 +70,7 @@ interface ContractDetails {
     totalSupply: string;
     name: string;
     symbol: string;
+    contractType: 'ERC721' | 'ERC1155' | 'UNKNOWN';
 }
 
 interface ProjectConfig {
@@ -75,7 +87,7 @@ async function readTotalSupply(contract: any, totalSupplyFunction: string): Prom
         if (contract.address === '0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4') { // Neemo
             return '0';
         }
-        
+
         // @ts-ignore - dynamic function call
         const totalSupply = await contract.read.totalSupply() as unknown as bigint;
         return totalSupply.toString();
@@ -115,44 +127,62 @@ async function readSymbol(contract: any): Promise<string> {
     }
 }
 
+async function getContractType(contract: any): Promise<'ERC721' | 'ERC1155' | 'UNKNOWN'> {
+    try {
+        const isERC721 = await contract.read.supportsInterface([ERC721_INTERFACE_ID]);
+        if (isERC721) return 'ERC721';
+
+        const isERC1155 = await contract.read.supportsInterface([ERC1155_INTERFACE_ID]);
+        if (isERC1155) return 'ERC1155';
+
+        return 'UNKNOWN';
+    } catch (error) {
+        console.warn(`  !!! Warning: interface check failed`);
+        return 'UNKNOWN';
+    }
+}
+
 async function getContractDetails(address: `0x${string}`, totalSupplyFunction: string): Promise<ContractDetails> {
     const contract = getContract({
         address,
         abi: erc721Abi,
         client
     });
+
+    const [totalSupply, name, symbol, contractType] = await Promise.all([
+        readTotalSupply(contract, totalSupplyFunction),
+        readName(contract),
+        readSymbol(contract),
+        getContractType(contract)
+    ]);
     
-    const totalSupply = await readTotalSupply(contract, totalSupplyFunction);
-    // const owner = await readOwner(contract);
-    const name = await readName(contract);
-    const symbol = await readSymbol(contract);
-    
-    return { totalSupply, name, symbol };
+    return { totalSupply, name, symbol, contractType };
 }
 
 // Main function to process the input JSON and generate the output JSON
 async function main() {
     const outputJson: Record<string, ContractDetails> = {};
-    
+
     for (const [key, config] of Object.entries(inputJson)) {
         // console.log(`Getting contract details for ${key} at address ${config.address}`);
         const details = await getContractDetails(config.address as `0x${string}`, config.totalSupplyFunction);
         const totalSupply = String(details.totalSupply)
-        console.log(`${config.address}: totalSupply=${totalSupply}, ${key}=${details.name}, ${details.symbol}`);
+        console.log(`${config.address}: totalSupply=${totalSupply}, ${key}=${details.name}, ${details.symbol}, type=${details.contractType}`);
         outputJson[key] = {
             totalSupply,
             name: details.name,
-            symbol: details.symbol
+            symbol: details.symbol,
+            contractType: details.contractType
         };
     }
 
     // Write the output JSON to a file
     fs.writeFileSync(
-        outputFilePath, 
-        JSON.stringify(outputJson, (key, value) => 
+        outputFilePath,
+        JSON.stringify(outputJson, (key, value) =>
             typeof value === 'bigint' ? value.toString() : value
-        , 2)
-    );    console.log("Output written to output.json");
+            , 2)
+    ); console.log("Output written to output.json");
 }
 
 // Run the main function

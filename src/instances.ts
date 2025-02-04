@@ -30,7 +30,11 @@ interface TokenCounters {
 }
 const BASE_API_URL = 'https://astar-zkevm.explorer.startale.com/api/v2';
 
-
+/**
+ * Fetches all token instances for a given contract address
+ * @param contractAddress The NFT contract address
+ * @returns Map of tokenId to owner address
+ */
 async function fetchAllInstances(contractAddress: string): Promise<Map<string, string>> {
     const ownership = new Map<string, string>();
     let nextPageParams = null;
@@ -63,18 +67,42 @@ async function fetchAllInstances(contractAddress: string): Promise<Map<string, s
     return ownership;
 }
 
+/**
+ * Writes token ownership data to CSV file in ascending order by tokenId
+ * @description Creates a CSV file containing NFT ownership data sorted by tokenId (ascending).
+ * File is created in the /data directory with format: {projectName}_instances.csv
+ * 
+ * @param projectName - Project identifier used in filename
+ * @param ownership - Map containing tokenId -> owner address pairs
+ * 
+ * CSV Format:
+ * address,tokenId
+ * 0x123...,1
+ * 0x456...,2
+ */
 async function writeOwnershipToCsv(projectName: string, ownership: Map<string, string>) {
     const outputPath = path.join(__dirname, `data/${projectName}_instances.csv`);
     const csvContent = ['address,tokenId\n'];
     
-    for (const [tokenId, address] of ownership) {
-        csvContent.push(`${address},${tokenId}\n`);
+    // Convert to array and sort by tokenId
+    const entries = Array.from(ownership.entries())
+        .map(([tokenId, address]) => ({ tokenId: parseInt(tokenId), address }))
+        .sort((a, b) => a.tokenId - b.tokenId);
+    
+    // Add sorted entries to CSV
+    for (const entry of entries) {
+        csvContent.push(`${entry.address},${entry.tokenId}\n`);
     }
     
     fs.writeFileSync(outputPath, csvContent.join(''));
     console.log(`Written ${ownership.size} entries to ${outputPath}`);
 }
 
+/**
+ * Fetches token statistics including total holders and transfers
+ * @param contractAddress The NFT contract address
+ * @returns TokenCounters object or null if request fails
+ */
 async function getTokenCounters(contractAddress: string): Promise<TokenCounters | null> {
     try {
         const response = await axios.get<TokenCounters>(

@@ -1,0 +1,67 @@
+{
+  "casio": {
+    "address": "0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e",
+    "tokenURIchangeNeeded": "7 meta"
+  },
+  "origamiKokyo": {
+    "address": "0xD524DD5ca9272BEE145c6577910448421e1F5e69",
+    "tokenURIchangeNeeded": "NO EXTENSION"
+  },
+  "jrKyushuFree": {
+    "address": "0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC"
+  },
+  "jrKyushuPaid": {
+    "address": "0xDE782Cc4bf15Df5791261C126da1942BA8d805c4"
+  },
+  "onigiriman": {
+    "address": "0x0CFd649E37882944342Ec0f8A2ac8ABca01f6934"
+  },
+  "mazda": {
+    "address": "0x8Ade4c707630d2F3aB0e36cde5c81dA8F56fE0b6"
+  },
+  "candyGirl": {
+    "address": "0xe3A4dBF34e21C7D24F86ef032A3E3beC39220B86"
+  },
+  "his": {
+    "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69"
+  },
+  "sashimi": {
+    "address": "0x682cD0890C9c3aC423D534a50a96E9C6EF9983D2"
+  },
+  "UZNo": {
+    "address": "0xC384342Ad561B6791F4E38dE7A5e8b7747Bca5eE"
+  },
+  "DenDekaDen": {
+    "address": "0x6d99156004e7DDD41b3CBF7E60A8AF2438609542"
+  },
+  "CityPopTokyo": {
+    "address": "0x9D640D61FaFB620C6473eB87B5FD093a0392902B"
+  },
+  "JapanCreatorCollection": {
+    "address": "0xAd61e3700A9ABa6dC5B986Ec39604167db33Fe09"
+  },
+  "Walkmon": {
+    "address": "0x580c0d3b8d4E146E7d8f99457a34248c9C988D1b"
+  },
+  "DenShinSanKa": {
+    "address": "0x91843Af2fA625975FD9249ecD5a6c20d3EBAb482"
+  },
+  "SNPIT": {
+    "address": "0x5d9FfaFed1F17550846c27Ee57110BAa9609F6D0"
+  },
+  "DoF": {
+    "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6"
+  },
+  "DEKSA": {
+    "address": "0xdd25a366b972691ECDd23093Ab5F9BF35047Ca77"
+  },
+  "On1force": {
+    "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1"
+  },
+  "SkyLabs": {
+    "address": "0x4eFC1FbED6598551c30A830758244eCC9706dFb4"
+  },
+  "Kamui": {
+    "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933"
+  }
+}

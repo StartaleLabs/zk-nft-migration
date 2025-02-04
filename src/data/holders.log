@@ -1,0 +1,2916 @@
+➜ npm run snap
+
+> migration@1.0.0 snap
+> ts-node src/getHolders.ts
+
+Processing onigiriman...
+Token has 298 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 48 holders, total: 298
+No more pages available
+Written 298 holders to /Users/mario/zk/zk-nft-migration/src/data/onigiriman_holders.csv
+Processing SkyLabs...
+Token has 134 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 34 holders, total: 134
+No more pages available
+Written 134 holders to /Users/mario/zk/zk-nft-migration/src/data/SkyLabs_holders.csv
+
+zk-nft-migration on  snapshot [📝🌱] via  v23.3.0 took 9s 
+➜ git st
+On branch snapshot
+Your branch is up to date with 'origin/snapshot'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   src/data/SkyLabs_holders.csv
+	modified:   src/data/onigiriman_holders.csv
+	modified:   src/getHolders.ts
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+zk-nft-migration on  snapshot [📝🌱] via  v23.3.0 
+➜ git st
+On branch snapshot
+Your branch is up to date with 'origin/snapshot'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   src/data/SkyLabs_holders.csv
+	modified:   src/data/onigiriman_holders.csv
+	modified:   src/getHolders.ts
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+zk-nft-migration on  snapshot [📝🌱] via  v23.3.0 
+➜ npm run snap
+
+> migration@1.0.0 snap
+> ts-node src/getHolders.ts
+
+/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/getHolders.ts:67:46 - error TS2454: Variable 'nextPageParams' is used before being assigned.
+
+67             const params: PaginationParams = nextPageParams ? {
+                                                ~~~~~~~~~~~~~~
+
+    at createTSError (/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1698:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1303:32)
+    at Function._load (node:internal/modules/cjs/loader:1117:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2454 ]
+}
+
+zk-nft-migration on  snapshot [📝🌱] via  v23.3.0 
+❯ 
+
+zk-nft-migration on  snapshot [📝🌱] via  v23.3.0 
+❯ npm run snap
+
+> migration@1.0.0 snap
+> ts-node src/getHolders.ts
+
+Processing casio...
+Token has 677 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 27 holders, total: 677
+No more pages available
+Written 677 holders to /Users/mario/zk/zk-nft-migration/src/data/casio_holders.csv
+Processing origamiKokyo...
+Token has 2988 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 50 holders, total: 1150
+Fetched 50 holders, total: 1200
+Fetched 50 holders, total: 1250
+Fetched 50 holders, total: 1300
+Fetched 50 holders, total: 1350
+Fetched 50 holders, total: 1400
+Fetched 50 holders, total: 1450
+Fetched 50 holders, total: 1500
+Fetched 50 holders, total: 1550
+Fetched 50 holders, total: 1600
+Fetched 50 holders, total: 1650
+Fetched 50 holders, total: 1700
+Fetched 50 holders, total: 1750
+Fetched 50 holders, total: 1800
+Fetched 50 holders, total: 1850
+Fetched 50 holders, total: 1900
+Fetched 50 holders, total: 1950
+Fetched 50 holders, total: 2000
+Fetched 50 holders, total: 2050
+Fetched 50 holders, total: 2100
+Fetched 50 holders, total: 2150
+Fetched 50 holders, total: 2200
+Fetched 50 holders, total: 2250
+Fetched 50 holders, total: 2300
+Fetched 50 holders, total: 2350
+Fetched 50 holders, total: 2400
+Fetched 50 holders, total: 2450
+Fetched 50 holders, total: 2500
+Fetched 50 holders, total: 2550
+Fetched 50 holders, total: 2600
+Fetched 50 holders, total: 2650
+Fetched 50 holders, total: 2700
+Fetched 50 holders, total: 2750
+Fetched 50 holders, total: 2800
+Fetched 50 holders, total: 2850
+Fetched 50 holders, total: 2900
+Fetched 50 holders, total: 2950
+Fetched 38 holders, total: 2988
+No more pages available
+Written 2988 holders to /Users/mario/zk/zk-nft-migration/src/data/origamiKokyo_holders.csv
+Processing jrKyushuFree...
+Token has 3606 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 50 holders, total: 1150
+Fetched 50 holders, total: 1200
+Fetched 50 holders, total: 1250
+Fetched 50 holders, total: 1300
+Fetched 50 holders, total: 1350
+Fetched 50 holders, total: 1400
+Fetched 50 holders, total: 1450
+Fetched 50 holders, total: 1500
+Fetched 50 holders, total: 1550
+Fetched 50 holders, total: 1600
+Fetched 50 holders, total: 1650
+Fetched 50 holders, total: 1700
+Fetched 50 holders, total: 1750
+Fetched 50 holders, total: 1800
+Fetched 50 holders, total: 1850
+Fetched 50 holders, total: 1900
+Fetched 50 holders, total: 1950
+Fetched 50 holders, total: 2000
+Fetched 50 holders, total: 2050
+Fetched 50 holders, total: 2100
+Fetched 50 holders, total: 2150
+Fetched 50 holders, total: 2200
+Fetched 50 holders, total: 2250
+Fetched 50 holders, total: 2300
+Fetched 50 holders, total: 2350
+Fetched 50 holders, total: 2400
+Fetched 50 holders, total: 2450
+Fetched 50 holders, total: 2500
+Fetched 50 holders, total: 2550
+Fetched 50 holders, total: 2600
+Fetched 50 holders, total: 2650
+Fetched 50 holders, total: 2700
+Fetched 50 holders, total: 2750
+Fetched 50 holders, total: 2800
+Fetched 50 holders, total: 2850
+Fetched 50 holders, total: 2900
+Fetched 50 holders, total: 2950
+Fetched 50 holders, total: 3000
+Fetched 50 holders, total: 3050
+Fetched 50 holders, total: 3100
+Fetched 50 holders, total: 3150
+Fetched 50 holders, total: 3200
+Fetched 50 holders, total: 3250
+Fetched 50 holders, total: 3300
+Fetched 50 holders, total: 3350
+Fetched 50 holders, total: 3400
+Fetched 50 holders, total: 3450
+Fetched 50 holders, total: 3500
+Fetched 50 holders, total: 3550
+Fetched 50 holders, total: 3600
+Fetched 6 holders, total: 3606
+No more pages available
+Written 3606 holders to /Users/mario/zk/zk-nft-migration/src/data/jrKyushuFree_holders.csv
+Processing jrKyushuPaid...
+Token has 854 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 4 holders, total: 854
+No more pages available
+Written 854 holders to /Users/mario/zk/zk-nft-migration/src/data/jrKyushuPaid_holders.csv
+Processing onigiriman...
+Token has 298 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 48 holders, total: 298
+No more pages available
+Written 298 holders to /Users/mario/zk/zk-nft-migration/src/data/onigiriman_holders.csv
+Processing mazda...
+Token has 1091 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 39 holders, total: 1089
+No more pages available
+Assertion failed
+Written 1089 holders to /Users/mario/zk/zk-nft-migration/src/data/mazda_holders.csv
+Processing candyGirl...
+Token has 3666 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 50 holders, total: 1150
+Fetched 50 holders, total: 1200
+Fetched 50 holders, total: 1250
+Fetched 50 holders, total: 1300
+Fetched 50 holders, total: 1350
+Fetched 50 holders, total: 1400
+Fetched 50 holders, total: 1450
+Fetched 50 holders, total: 1500
+Fetched 50 holders, total: 1550
+Fetched 50 holders, total: 1600
+Fetched 50 holders, total: 1650
+Fetched 50 holders, total: 1700
+Fetched 50 holders, total: 1750
+Fetched 50 holders, total: 1800
+Fetched 50 holders, total: 1850
+Fetched 50 holders, total: 1900
+Fetched 50 holders, total: 1950
+Fetched 50 holders, total: 2000
+Fetched 50 holders, total: 2050
+Fetched 50 holders, total: 2100
+Fetched 50 holders, total: 2150
+Fetched 50 holders, total: 2200
+Fetched 50 holders, total: 2250
+Fetched 50 holders, total: 2300
+Fetched 50 holders, total: 2350
+Fetched 50 holders, total: 2400
+Fetched 50 holders, total: 2450
+Fetched 50 holders, total: 2500
+Fetched 50 holders, total: 2550
+Fetched 50 holders, total: 2600
+Fetched 50 holders, total: 2650
+Fetched 50 holders, total: 2700
+Fetched 50 holders, total: 2750
+Fetched 50 holders, total: 2800
+Fetched 50 holders, total: 2850
+Fetched 50 holders, total: 2900
+Fetched 50 holders, total: 2950
+Fetched 50 holders, total: 3000
+Fetched 50 holders, total: 3050
+Fetched 50 holders, total: 3100
+Fetched 50 holders, total: 3150
+Fetched 50 holders, total: 3200
+Fetched 50 holders, total: 3250
+Fetched 50 holders, total: 3300
+Fetched 50 holders, total: 3350
+Fetched 50 holders, total: 3400
+Fetched 50 holders, total: 3450
+Fetched 50 holders, total: 3500
+Fetched 50 holders, total: 3550
+Fetched 50 holders, total: 3600
+Fetched 50 holders, total: 3650
+Fetched 16 holders, total: 3666
+No more pages available
+Written 3666 holders to /Users/mario/zk/zk-nft-migration/src/data/candyGirl_holders.csv
+Processing his...
+Token has 1221 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 50 holders, total: 1150
+Fetched 50 holders, total: 1200
+Fetched 50 holders, total: 1250
+Fetched 50 holders, total: 1300
+Fetched 50 holders, total: 1350
+Fetched 50 holders, total: 1400
+Fetched 50 holders, total: 1450
+Fetched 50 holders, total: 1500
+Fetched 50 holders, total: 1550
+Fetched 50 holders, total: 1600
+Fetched 50 holders, total: 1650
+Fetched 50 holders, total: 1700
+Fetched 50 holders, total: 1750
+Fetched 50 holders, total: 1800
+Fetched 50 holders, total: 1850
+Fetched 50 holders, total: 1900
+Fetched 50 holders, total: 1950
+Fetched 50 holders, total: 2000
+Fetched 50 holders, total: 2050
+Fetched 50 holders, total: 2100
+Fetched 50 holders, total: 2150
+Fetched 50 holders, total: 2200
+Fetched 50 holders, total: 2250
+Fetched 50 holders, total: 2300
+Fetched 50 holders, total: 2350
+Fetched 50 holders, total: 2400
+Fetched 1 holders, total: 2401
+No more pages available
+Assertion failed
+Written 2401 holders to /Users/mario/zk/zk-nft-migration/src/data/his_holders.csv
+Processing sashimi...
+Token has 344 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 44 holders, total: 344
+No more pages available
+Written 344 holders to /Users/mario/zk/zk-nft-migration/src/data/sashimi_holders.csv
+Processing UZNo...
+Token has 1148 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 48 holders, total: 1148
+No more pages available
+Written 1148 holders to /Users/mario/zk/zk-nft-migration/src/data/UZNo_holders.csv
+Processing DenDekaDen...
+Token has 1999 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 50 holders, total: 1150
+Fetched 50 holders, total: 1200
+Fetched 50 holders, total: 1250
+Fetched 50 holders, total: 1300
+Fetched 50 holders, total: 1350
+Fetched 50 holders, total: 1400
+Fetched 50 holders, total: 1450
+Fetched 50 holders, total: 1500
+Fetched 50 holders, total: 1550
+Fetched 50 holders, total: 1600
+Fetched 50 holders, total: 1650
+Fetched 50 holders, total: 1700
+Fetched 50 holders, total: 1750
+Fetched 50 holders, total: 1800
+Fetched 50 holders, total: 1850
+Fetched 50 holders, total: 1900
+Fetched 50 holders, total: 1950
+Fetched 49 holders, total: 1999
+No more pages available
+Written 1999 holders to /Users/mario/zk/zk-nft-migration/src/data/DenDekaDen_holders.csv
+Processing CityPopTokyo...
+Token has 1471 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 50 holders, total: 1150
+Fetched 50 holders, total: 1200
+Fetched 50 holders, total: 1250
+Fetched 50 holders, total: 1300
+Fetched 50 holders, total: 1350
+Fetched 50 holders, total: 1400
+Fetched 50 holders, total: 1450
+Fetched 21 holders, total: 1471
+No more pages available
+Written 1471 holders to /Users/mario/zk/zk-nft-migration/src/data/CityPopTokyo_holders.csv
+Processing JapanCreatorCollection...
+Token has 2309 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 50 holders, total: 1150
+Fetched 50 holders, total: 1200
+Fetched 50 holders, total: 1250
+Fetched 50 holders, total: 1300
+Fetched 50 holders, total: 1350
+Fetched 50 holders, total: 1400
+Fetched 50 holders, total: 1450
+Fetched 50 holders, total: 1500
+Fetched 50 holders, total: 1550
+Fetched 50 holders, total: 1600
+Fetched 50 holders, total: 1650
+Fetched 50 holders, total: 1700
+Fetched 50 holders, total: 1750
+Fetched 50 holders, total: 1800
+Fetched 50 holders, total: 1850
+Fetched 50 holders, total: 1900
+Fetched 50 holders, total: 1950
+Fetched 50 holders, total: 2000
+Fetched 50 holders, total: 2050
+Fetched 50 holders, total: 2100
+Fetched 50 holders, total: 2150
+Fetched 50 holders, total: 2200
+Fetched 50 holders, total: 2250
+Fetched 50 holders, total: 2300
+Fetched 9 holders, total: 2309
+No more pages available
+Written 2309 holders to /Users/mario/zk/zk-nft-migration/src/data/JapanCreatorCollection_holders.csv
+Processing Walkmon...
+Token has 791 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 41 holders, total: 791
+No more pages available
+Written 791 holders to /Users/mario/zk/zk-nft-migration/src/data/Walkmon_holders.csv
+Processing DenShinSanKa...
+Token has 403 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 3 holders, total: 403
+No more pages available
+Written 403 holders to /Users/mario/zk/zk-nft-migration/src/data/DenShinSanKa_holders.csv
+Processing SNPIT...
+Token has 430 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 30 holders, total: 430
+No more pages available
+Written 430 holders to /Users/mario/zk/zk-nft-migration/src/data/SNPIT_holders.csv
+Processing DoF...
+Token has 699 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 49 holders, total: 699
+No more pages available
+Written 699 holders to /Users/mario/zk/zk-nft-migration/src/data/DoF_holders.csv
+Processing DEKSA...
+Token has 122 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 22 holders, total: 122
+No more pages available
+Written 122 holders to /Users/mario/zk/zk-nft-migration/src/data/DEKSA_holders.csv
+Processing Neemo...
+Error fetching token counters for 0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4: AxiosError: Request failed with status code 404
+    at settle (/Users/mario/zk/zk-nft-migration/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (/Users/mario/zk/zk-nft-migration/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:525:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (/Users/mario/zk/zk-nft-migration/node_modules/axios/lib/core/Axios.js:45:41)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getTokenCounters (/Users/mario/zk/zk-nft-migration/src/getHolders.ts:50:26)
+    at async main (/Users/mario/zk/zk-nft-migration/src/getHolders.ts:111:26) {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.7.9',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://astar-zkevm.explorer.startale.com/api/v2/tokens/0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4/counters',
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /api/v2/tokens/0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4/counters HTTP/1.1\r\n' +
+      'Accept: application/json\r\n' +
+      'User-Agent: axios/1.7.9\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: astar-zkevm.explorer.startale.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/v2/tokens/0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4/counters',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'Not Found',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://astar-zkevm.explorer.startale.com/api/v2/tokens/0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4/counters',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 20,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'astar-zkevm.explorer.startale.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://astar-zkevm.explorer.startale.com/api/v2/tokens/0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4/counters',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'astar-zkevm.explorer.startale.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'astar-zkevm.explorer.startale.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 311381,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 14388,
+        [Symbol(triggerId)]: 14386,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 404,
+    statusText: 'Not Found',
+    headers: Object [AxiosHeaders] {
+      date: 'Tue, 04 Feb 2025 07:19:48 GMT',
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': '23',
+      connection: 'keep-alive',
+      'access-control-allow-credentials': 'true',
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': '',
+      'cache-control': 'max-age=0, private, must-revalidate',
+      'x-request-id': 'b49c2df46185ea2b6f2c726c43102cc7',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'get',
+      url: 'https://astar-zkevm.explorer.startale.com/api/v2/tokens/0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4/counters',
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /api/v2/tokens/0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4/counters HTTP/1.1\r\n' +
+        'Accept: application/json\r\n' +
+        'User-Agent: axios/1.7.9\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: astar-zkevm.explorer.startale.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/v2/tokens/0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4/counters',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'astar-zkevm.explorer.startale.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: { message: 'Not found' }
+  },
+  status: 404
+}
+Failed to get counters for Neemo
+Processing On1force...
+Token has 416 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 16 holders, total: 416
+No more pages available
+Written 416 holders to /Users/mario/zk/zk-nft-migration/src/data/On1force_holders.csv
+Processing SkyLabs...
+Token has 134 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 34 holders, total: 134
+No more pages available
+Written 134 holders to /Users/mario/zk/zk-nft-migration/src/data/SkyLabs_holders.csv
+Processing Kamui...
+Token has 426 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 26 holders, total: 426
+No more pages available
+Written 426 holders to /Users/mario/zk/zk-nft-migration/src/data/Kamui_holders.csv
+Processing Yoki...
+Token has 11564 holders
+Fetched 50 holders, total: 50
+Fetched 50 holders, total: 100
+Fetched 50 holders, total: 150
+Fetched 50 holders, total: 200
+Fetched 50 holders, total: 250
+Fetched 50 holders, total: 300
+Fetched 50 holders, total: 350
+Fetched 50 holders, total: 400
+Fetched 50 holders, total: 450
+Fetched 50 holders, total: 500
+Fetched 50 holders, total: 550
+Fetched 50 holders, total: 600
+Fetched 50 holders, total: 650
+Fetched 50 holders, total: 700
+Fetched 50 holders, total: 750
+Fetched 50 holders, total: 800
+Fetched 50 holders, total: 850
+Fetched 50 holders, total: 900
+Fetched 50 holders, total: 950
+Fetched 50 holders, total: 1000
+Fetched 50 holders, total: 1050
+Fetched 50 holders, total: 1100
+Fetched 50 holders, total: 1150
+Fetched 50 holders, total: 1200
+Fetched 50 holders, total: 1250
+Fetched 50 holders, total: 1300
+Fetched 50 holders, total: 1350
+Fetched 50 holders, total: 1400
+Fetched 50 holders, total: 1450
+Fetched 50 holders, total: 1500
+Fetched 50 holders, total: 1550
+Fetched 50 holders, total: 1600
+Fetched 50 holders, total: 1650
+Fetched 50 holders, total: 1700
+Fetched 50 holders, total: 1750
+Fetched 50 holders, total: 1800
+Fetched 50 holders, total: 1850
+Fetched 50 holders, total: 1900
+Fetched 50 holders, total: 1950
+Fetched 50 holders, total: 2000
+Fetched 50 holders, total: 2050
+Fetched 50 holders, total: 2100
+Fetched 50 holders, total: 2150
+Fetched 50 holders, total: 2200
+Fetched 50 holders, total: 2250
+Fetched 50 holders, total: 2300
+Fetched 50 holders, total: 2350
+Fetched 50 holders, total: 2400
+Fetched 50 holders, total: 2450
+Fetched 50 holders, total: 2500
+Fetched 50 holders, total: 2550
+Fetched 50 holders, total: 2600
+Fetched 50 holders, total: 2650
+Fetched 50 holders, total: 2700
+Fetched 50 holders, total: 2750
+Fetched 50 holders, total: 2800
+Fetched 50 holders, total: 2850
+Fetched 50 holders, total: 2900
+Fetched 50 holders, total: 2950
+Fetched 50 holders, total: 3000
+Fetched 50 holders, total: 3050
+Fetched 50 holders, total: 3100
+Fetched 50 holders, total: 3150
+Fetched 50 holders, total: 3200
+Fetched 50 holders, total: 3250
+Fetched 50 holders, total: 3300
+Fetched 50 holders, total: 3350
+Fetched 50 holders, total: 3400
+Fetched 50 holders, total: 3450
+Fetched 50 holders, total: 3500
+Fetched 50 holders, total: 3550
+Fetched 50 holders, total: 3600
+Fetched 50 holders, total: 3650
+Fetched 50 holders, total: 3700
+Fetched 50 holders, total: 3750
+Fetched 50 holders, total: 3800
+Fetched 50 holders, total: 3850
+Fetched 50 holders, total: 3900
+Fetched 50 holders, total: 3950
+Fetched 50 holders, total: 4000
+Fetched 50 holders, total: 4050
+Fetched 50 holders, total: 4100
+Fetched 50 holders, total: 4150
+Fetched 50 holders, total: 4200
+Fetched 50 holders, total: 4250
+Fetched 50 holders, total: 4300
+Fetched 50 holders, total: 4350
+Fetched 50 holders, total: 4400
+Fetched 50 holders, total: 4450
+Fetched 50 holders, total: 4500
+Fetched 50 holders, total: 4550
+Fetched 50 holders, total: 4600
+Fetched 50 holders, total: 4650
+Fetched 50 holders, total: 4700
+Fetched 50 holders, total: 4750
+Fetched 50 holders, total: 4800
+Fetched 50 holders, total: 4850
+Fetched 50 holders, total: 4900
+Fetched 50 holders, total: 4950
+Fetched 50 holders, total: 5000
+Fetched 50 holders, total: 5050
+Fetched 50 holders, total: 5100
+Fetched 50 holders, total: 5150
+Fetched 50 holders, total: 5200
+Fetched 50 holders, total: 5250
+Fetched 50 holders, total: 5300
+Fetched 50 holders, total: 5350
+Fetched 50 holders, total: 5400
+Fetched 50 holders, total: 5450
+Fetched 50 holders, total: 5500
+Fetched 50 holders, total: 5550
+Fetched 50 holders, total: 5600
+Fetched 50 holders, total: 5650
+Fetched 50 holders, total: 5700
+Fetched 50 holders, total: 5750
+Fetched 50 holders, total: 5800
+Fetched 50 holders, total: 5850
+Fetched 50 holders, total: 5900
+Fetched 50 holders, total: 5950
+Fetched 50 holders, total: 6000
+Fetched 50 holders, total: 6050
+Fetched 50 holders, total: 6100
+Fetched 50 holders, total: 6150
+Fetched 50 holders, total: 6200
+Fetched 50 holders, total: 6250
+Fetched 50 holders, total: 6300
+Fetched 50 holders, total: 6350
+Fetched 50 holders, total: 6400
+Fetched 50 holders, total: 6450
+Fetched 50 holders, total: 6500
+Fetched 50 holders, total: 6550
+Fetched 50 holders, total: 6600
+Fetched 50 holders, total: 6650
+Fetched 50 holders, total: 6700
+Fetched 50 holders, total: 6750
+Fetched 50 holders, total: 6800
+Fetched 50 holders, total: 6850
+Fetched 50 holders, total: 6900
+Fetched 50 holders, total: 6950
+Fetched 50 holders, total: 7000
+Fetched 50 holders, total: 7050
+Fetched 50 holders, total: 7100
+Fetched 50 holders, total: 7150
+Fetched 50 holders, total: 7200
+Fetched 50 holders, total: 7250
+Fetched 50 holders, total: 7300
+Fetched 50 holders, total: 7350
+Fetched 50 holders, total: 7400
+Fetched 50 holders, total: 7450
+Fetched 50 holders, total: 7500
+Fetched 50 holders, total: 7550
+Fetched 50 holders, total: 7600
+Fetched 50 holders, total: 7650
+Fetched 50 holders, total: 7700
+Fetched 50 holders, total: 7750
+Fetched 50 holders, total: 7800
+Fetched 50 holders, total: 7850
+Fetched 50 holders, total: 7900
+Fetched 50 holders, total: 7950
+Fetched 50 holders, total: 8000
+Fetched 50 holders, total: 8050
+Fetched 50 holders, total: 8100
+Fetched 50 holders, total: 8150
+Fetched 50 holders, total: 8200
+Fetched 50 holders, total: 8250
+Fetched 50 holders, total: 8300
+Fetched 50 holders, total: 8350
+Fetched 50 holders, total: 8400
+Fetched 50 holders, total: 8450
+Fetched 50 holders, total: 8500
+Fetched 50 holders, total: 8550
+Fetched 50 holders, total: 8600
+Fetched 50 holders, total: 8650
+Fetched 50 holders, total: 8700
+Fetched 50 holders, total: 8750
+Fetched 50 holders, total: 8800
+Fetched 50 holders, total: 8850
+Fetched 50 holders, total: 8900
+Fetched 50 holders, total: 8950
+Fetched 50 holders, total: 9000
+Fetched 50 holders, total: 9050
+Fetched 50 holders, total: 9100
+Fetched 50 holders, total: 9150
+Fetched 50 holders, total: 9200
+Fetched 50 holders, total: 9250
+Fetched 50 holders, total: 9300
+Fetched 50 holders, total: 9350
+Fetched 50 holders, total: 9400
+Fetched 50 holders, total: 9450
+Fetched 50 holders, total: 9500
+Fetched 50 holders, total: 9550
+Fetched 50 holders, total: 9600
+Fetched 50 holders, total: 9650
+Fetched 50 holders, total: 9700
+Fetched 50 holders, total: 9750
+Fetched 50 holders, total: 9800
+Fetched 50 holders, total: 9850
+Fetched 50 holders, total: 9900
+Fetched 50 holders, total: 9950
+Fetched 50 holders, total: 10000
+Fetched 50 holders, total: 10050
+Fetched 50 holders, total: 10100
+Fetched 50 holders, total: 10150
+Fetched 50 holders, total: 10200
+Fetched 50 holders, total: 10250
+Fetched 50 holders, total: 10300
+Fetched 50 holders, total: 10350
+Fetched 50 holders, total: 10400
+Fetched 50 holders, total: 10450
+Fetched 50 holders, total: 10500
+Fetched 50 holders, total: 10550
+Fetched 50 holders, total: 10600
+Fetched 50 holders, total: 10650
+Fetched 50 holders, total: 10700
+Fetched 50 holders, total: 10750
+Fetched 50 holders, total: 10800
+Fetched 50 holders, total: 10850
+Fetched 50 holders, total: 10900
+Fetched 50 holders, total: 10950
+Fetched 50 holders, total: 11000
+Fetched 50 holders, total: 11050
+Fetched 50 holders, total: 11100
+Fetched 50 holders, total: 11150
+Fetched 50 holders, total: 11200
+Fetched 50 holders, total: 11250
+Fetched 50 holders, total: 11300
+Fetched 50 holders, total: 11350
+Fetched 50 holders, total: 11400
+Fetched 50 holders, total: 11450
+Fetched 50 holders, total: 11500
+Fetched 50 holders, total: 11550
+Fetched 50 holders, total: 11600
+Fetched 50 holders, total: 11650
+Fetched 50 holders, total: 11700
+Fetched 50 holders, total: 11750
+Fetched 50 holders, total: 11800
+Fetched 50 holders, total: 11850
+Fetched 50 holders, total: 11900
+Fetched 50 holders, total: 11950
+Fetched 50 holders, total: 12000
+Fetched 50 holders, total: 12050
+Fetched 50 holders, total: 12100
+Fetched 50 holders, total: 12150
+Fetched 50 holders, total: 12200
+Fetched 50 holders, total: 12250
+Fetched 50 holders, total: 12300
+Fetched 50 holders, total: 12350
+Fetched 50 holders, total: 12400
+Fetched 50 holders, total: 12450
+Fetched 50 holders, total: 12500
+Fetched 50 holders, total: 12550
+Fetched 50 holders, total: 12600
+Fetched 50 holders, total: 12650
+Fetched 50 holders, total: 12700
+Fetched 50 holders, total: 12750
+Fetched 50 holders, total: 12800
+Fetched 50 holders, total: 12850
+Fetched 50 holders, total: 12900
+Fetched 50 holders, total: 12950
+Fetched 50 holders, total: 13000
+Fetched 50 holders, total: 13050
+Fetched 50 holders, total: 13100
+Fetched 50 holders, total: 13150
+Fetched 50 holders, total: 13200
+Fetched 50 holders, total: 13250
+Fetched 50 holders, total: 13300
+Fetched 50 holders, total: 13350
+Fetched 50 holders, total: 13400
+Fetched 50 holders, total: 13450
+Fetched 50 holders, total: 13500
+Fetched 50 holders, total: 13550
+Fetched 50 holders, total: 13600
+Fetched 50 holders, total: 13650
+Fetched 50 holders, total: 13700
+Fetched 50 holders, total: 13750
+Fetched 50 holders, total: 13800
+Fetched 50 holders, total: 13850
+Fetched 50 holders, total: 13900
+Fetched 50 holders, total: 13950
+Fetched 50 holders, total: 14000
+Fetched 50 holders, total: 14050
+Fetched 50 holders, total: 14100
+Fetched 50 holders, total: 14150
+Fetched 50 holders, total: 14200
+Fetched 50 holders, total: 14250
+Fetched 50 holders, total: 14300
+Fetched 50 holders, total: 14350
+Fetched 50 holders, total: 14400
+Fetched 50 holders, total: 14450
+Fetched 50 holders, total: 14500
+Fetched 50 holders, total: 14550
+Fetched 50 holders, total: 14600
+Fetched 50 holders, total: 14650
+Fetched 50 holders, total: 14700
+Fetched 50 holders, total: 14750
+Fetched 50 holders, total: 14800
+Fetched 50 holders, total: 14850
+Fetched 50 holders, total: 14900
+Fetched 50 holders, total: 14950
+Fetched 50 holders, total: 15000
+Fetched 50 holders, total: 15050
+Fetched 50 holders, total: 15100
+Fetched 50 holders, total: 15150
+Fetched 50 holders, total: 15200
+Fetched 50 holders, total: 15250
+Fetched 50 holders, total: 15300
+Fetched 50 holders, total: 15350
+Fetched 50 holders, total: 15400
+Fetched 50 holders, total: 15450
+Fetched 50 holders, total: 15500
+Fetched 50 holders, total: 15550
+Fetched 50 holders, total: 15600
+Fetched 50 holders, total: 15650
+Fetched 50 holders, total: 15700
+Fetched 50 holders, total: 15750
+Fetched 50 holders, total: 15800
+Fetched 50 holders, total: 15850
+Fetched 50 holders, total: 15900
+Fetched 50 holders, total: 15950
+Fetched 50 holders, total: 16000
+Fetched 50 holders, total: 16050
+Fetched 50 holders, total: 16100
+Fetched 50 holders, total: 16150
+Fetched 50 holders, total: 16200
+Fetched 50 holders, total: 16250
+Fetched 50 holders, total: 16300
+Fetched 50 holders, total: 16350
+Fetched 50 holders, total: 16400
+Fetched 50 holders, total: 16450
+Fetched 50 holders, total: 16500
+Fetched 50 holders, total: 16550
+Fetched 50 holders, total: 16600
+Fetched 50 holders, total: 16650
+Fetched 50 holders, total: 16700
+Fetched 50 holders, total: 16750
+Fetched 50 holders, total: 16800
+Fetched 50 holders, total: 16850
+Fetched 50 holders, total: 16900
+Fetched 50 holders, total: 16950
+Fetched 50 holders, total: 17000
+Fetched 50 holders, total: 17050
+Fetched 50 holders, total: 17100
+Fetched 50 holders, total: 17150
+Fetched 50 holders, total: 17200
+Fetched 50 holders, total: 17250
+Fetched 50 holders, total: 17300
+Fetched 50 holders, total: 17350
+Fetched 50 holders, total: 17400
+Fetched 50 holders, total: 17450
+Fetched 50 holders, total: 17500
+Fetched 50 holders, total: 17550
+Fetched 50 holders, total: 17600
+Fetched 50 holders, total: 17650
+Fetched 50 holders, total: 17700
+Fetched 50 holders, total: 17750
+Fetched 50 holders, total: 17800
+Fetched 50 holders, total: 17850
+Fetched 50 holders, total: 17900
+Fetched 50 holders, total: 17950
+Fetched 50 holders, total: 18000
+Fetched 50 holders, total: 18050
+Fetched 50 holders, total: 18100
+Fetched 50 holders, total: 18150
+Fetched 50 holders, total: 18200
+Fetched 50 holders, total: 18250
+Fetched 50 holders, total: 18300
+Fetched 50 holders, total: 18350
+Fetched 50 holders, total: 18400
+Fetched 50 holders, total: 18450
+Fetched 50 holders, total: 18500
+Fetched 50 holders, total: 18550
+Fetched 50 holders, total: 18600
+Fetched 50 holders, total: 18650
+Fetched 50 holders, total: 18700
+Fetched 50 holders, total: 18750
+Fetched 50 holders, total: 18800
+Fetched 50 holders, total: 18850
+Fetched 50 holders, total: 18900
+Fetched 50 holders, total: 18950
+Fetched 50 holders, total: 19000
+Fetched 50 holders, total: 19050
+Fetched 50 holders, total: 19100
+Fetched 50 holders, total: 19150
+Fetched 50 holders, total: 19200
+Fetched 50 holders, total: 19250
+Fetched 50 holders, total: 19300
+Fetched 50 holders, total: 19350
+Fetched 50 holders, total: 19400
+Fetched 50 holders, total: 19450
+Fetched 50 holders, total: 19500
+Fetched 50 holders, total: 19550
+Fetched 50 holders, total: 19600
+Fetched 50 holders, total: 19650
+Fetched 50 holders, total: 19700
+Fetched 50 holders, total: 19750
+Fetched 50 holders, total: 19800
+Fetched 50 holders, total: 19850
+Fetched 50 holders, total: 19900
+Fetched 50 holders, total: 19950
+Fetched 50 holders, total: 20000
+Fetched 50 holders, total: 20050
+Fetched 50 holders, total: 20100
+Fetched 50 holders, total: 20150
+Fetched 50 holders, total: 20200
+Fetched 50 holders, total: 20250
+Fetched 50 holders, total: 20300
+Fetched 50 holders, total: 20350
+Fetched 50 holders, total: 20400
+Fetched 50 holders, total: 20450
+Fetched 50 holders, total: 20500
+Fetched 50 holders, total: 20550
+Fetched 50 holders, total: 20600
+Fetched 50 holders, total: 20650
+Fetched 50 holders, total: 20700
+Fetched 50 holders, total: 20750
+Fetched 50 holders, total: 20800
+Fetched 50 holders, total: 20850
+Fetched 50 holders, total: 20900
+Fetched 50 holders, total: 20950
+Fetched 50 holders, total: 21000
+Fetched 50 holders, total: 21050
+Fetched 50 holders, total: 21100
+Fetched 50 holders, total: 21150
+Fetched 50 holders, total: 21200
+Fetched 50 holders, total: 21250
+Fetched 50 holders, total: 21300
+Fetched 50 holders, total: 21350
+Fetched 50 holders, total: 21400
+Fetched 50 holders, total: 21450
+Fetched 50 holders, total: 21500
+Fetched 50 holders, total: 21550
+Fetched 50 holders, total: 21600
+Fetched 50 holders, total: 21650
+Fetched 50 holders, total: 21700
+Fetched 50 holders, total: 21750
+Fetched 50 holders, total: 21800
+Fetched 50 holders, total: 21850
+Fetched 50 holders, total: 21900
+Fetched 50 holders, total: 21950
+Fetched 50 holders, total: 22000
+Fetched 50 holders, total: 22050
+Fetched 50 holders, total: 22100
+Fetched 50 holders, total: 22150
+Fetched 50 holders, total: 22200
+Fetched 50 holders, total: 22250
+Fetched 50 holders, total: 22300
+Fetched 50 holders, total: 22350
+Fetched 50 holders, total: 22400
+Fetched 50 holders, total: 22450
+Fetched 50 holders, total: 22500
+Fetched 50 holders, total: 22550
+Fetched 50 holders, total: 22600
+Fetched 50 holders, total: 22650
+Fetched 50 holders, total: 22700
+Fetched 50 holders, total: 22750
+Fetched 50 holders, total: 22800
+Fetched 50 holders, total: 22850
+Fetched 50 holders, total: 22900
+Fetched 50 holders, total: 22950
+Fetched 50 holders, total: 23000
+Fetched 50 holders, total: 23050
+Fetched 50 holders, total: 23100
+Fetched 50 holders, total: 23150
+Fetched 50 holders, total: 23200
+Fetched 50 holders, total: 23250
+Fetched 50 holders, total: 23300
+Fetched 50 holders, total: 23350
+Fetched 50 holders, total: 23400
+Fetched 50 holders, total: 23450
+Fetched 50 holders, total: 23500
+Fetched 50 holders, total: 23550
+Fetched 50 holders, total: 23600
+Fetched 50 holders, total: 23650
+Fetched 50 holders, total: 23700
+Fetched 50 holders, total: 23750
+Fetched 50 holders, total: 23800
+Fetched 50 holders, total: 23850
+Fetched 50 holders, total: 23900
+Fetched 50 holders, total: 23950
+Fetched 50 holders, total: 24000
+Fetched 50 holders, total: 24050
+Fetched 50 holders, total: 24100
+Fetched 50 holders, total: 24150
+Fetched 50 holders, total: 24200
+Fetched 50 holders, total: 24250
+Fetched 50 holders, total: 24300
+Fetched 50 holders, total: 24350
+Fetched 50 holders, total: 24400
+Fetched 50 holders, total: 24450
+Fetched 50 holders, total: 24500
+Fetched 50 holders, total: 24550
+Fetched 50 holders, total: 24600
+Fetched 50 holders, total: 24650
+Fetched 50 holders, total: 24700
+Fetched 50 holders, total: 24750
+Fetched 50 holders, total: 24800
+Fetched 50 holders, total: 24850
+Fetched 50 holders, total: 24900
+Fetched 50 holders, total: 24950
+Fetched 50 holders, total: 25000
+Fetched 50 holders, total: 25050
+Fetched 50 holders, total: 25100
+Fetched 50 holders, total: 25150
+Fetched 50 holders, total: 25200
+Fetched 50 holders, total: 25250
+Fetched 50 holders, total: 25300
+Fetched 50 holders, total: 25350
+Fetched 50 holders, total: 25400
+Fetched 50 holders, total: 25450
+Fetched 50 holders, total: 25500
+Fetched 50 holders, total: 25550
+Fetched 50 holders, total: 25600
+Fetched 50 holders, total: 25650
+Fetched 50 holders, total: 25700
+Fetched 50 holders, total: 25750
+Fetched 50 holders, total: 25800
+Fetched 50 holders, total: 25850
+Fetched 50 holders, total: 25900
+Fetched 50 holders, total: 25950
+Fetched 50 holders, total: 26000
+Fetched 50 holders, total: 26050
+Fetched 50 holders, total: 26100
+Fetched 50 holders, total: 26150
+Fetched 50 holders, total: 26200
+Fetched 50 holders, total: 26250
+Fetched 50 holders, total: 26300
+Fetched 50 holders, total: 26350
+Fetched 50 holders, total: 26400
+Fetched 50 holders, total: 26450
+Fetched 50 holders, total: 26500
+Fetched 50 holders, total: 26550
+Fetched 50 holders, total: 26600
+Fetched 50 holders, total: 26650
+Fetched 50 holders, total: 26700
+Fetched 50 holders, total: 26750
+Fetched 50 holders, total: 26800
+Fetched 50 holders, total: 26850
+Fetched 50 holders, total: 26900
+Fetched 50 holders, total: 26950
+Fetched 50 holders, total: 27000
+Fetched 50 holders, total: 27050
+Fetched 50 holders, total: 27100
+Fetched 50 holders, total: 27150
+Fetched 50 holders, total: 27200
+Fetched 50 holders, total: 27250
+Fetched 50 holders, total: 27300
+Fetched 50 holders, total: 27350
+Fetched 50 holders, total: 27400
+Fetched 50 holders, total: 27450
+Fetched 50 holders, total: 27500
+Fetched 50 holders, total: 27550
+Fetched 50 holders, total: 27600
+Fetched 50 holders, total: 27650
+Fetched 50 holders, total: 27700
+Fetched 50 holders, total: 27750
+Fetched 50 holders, total: 27800
+Fetched 50 holders, total: 27850
+Fetched 50 holders, total: 27900
+Fetched 50 holders, total: 27950
+Fetched 50 holders, total: 28000
+Fetched 50 holders, total: 28050
+Fetched 50 holders, total: 28100
+Fetched 50 holders, total: 28150
+Fetched 50 holders, total: 28200
+Fetched 50 holders, total: 28250
+Fetched 50 holders, total: 28300
+Fetched 50 holders, total: 28350
+Fetched 50 holders, total: 28400
+Fetched 50 holders, total: 28450
+Fetched 50 holders, total: 28500
+Fetched 50 holders, total: 28550
+Fetched 50 holders, total: 28600
+Fetched 50 holders, total: 28650
+Fetched 50 holders, total: 28700
+Fetched 50 holders, total: 28750
+Fetched 50 holders, total: 28800
+Fetched 50 holders, total: 28850
+Fetched 50 holders, total: 28900
+Fetched 50 holders, total: 28950
+Fetched 50 holders, total: 29000
+Fetched 50 holders, total: 29050
+Fetched 50 holders, total: 29100
+Fetched 50 holders, total: 29150
+Fetched 50 holders, total: 29200
+Fetched 50 holders, total: 29250
+Fetched 50 holders, total: 29300
+Fetched 50 holders, total: 29350
+Fetched 50 holders, total: 29400
+Fetched 50 holders, total: 29450
+Fetched 50 holders, total: 29500
+Fetched 50 holders, total: 29550
+Fetched 50 holders, total: 29600
+Fetched 50 holders, total: 29650
+Fetched 50 holders, total: 29700
+Fetched 50 holders, total: 29750
+Fetched 50 holders, total: 29800
+Fetched 50 holders, total: 29850
+Fetched 50 holders, total: 29900
+Fetched 50 holders, total: 29950
+Fetched 50 holders, total: 30000
+Fetched 50 holders, total: 30050
+Fetched 50 holders, total: 30100
+Fetched 50 holders, total: 30150
+Fetched 50 holders, total: 30200
+Fetched 50 holders, total: 30250
+Fetched 50 holders, total: 30300
+Fetched 50 holders, total: 30350
+Fetched 50 holders, total: 30400
+Fetched 50 holders, total: 30450
+Fetched 50 holders, total: 30500
+Fetched 50 holders, total: 30550
+Fetched 50 holders, total: 30600
+Fetched 50 holders, total: 30650
+Fetched 50 holders, total: 30700
+Fetched 50 holders, total: 30750
+Fetched 50 holders, total: 30800
+Fetched 50 holders, total: 30850
+Fetched 50 holders, total: 30900
+Fetched 50 holders, total: 30950
+Fetched 50 holders, total: 31000
+Fetched 50 holders, total: 31050
+Fetched 50 holders, total: 31100
+Fetched 50 holders, total: 31150
+Fetched 50 holders, total: 31200
+Fetched 50 holders, total: 31250
+Fetched 50 holders, total: 31300
+Fetched 50 holders, total: 31350
+Fetched 50 holders, total: 31400
+Fetched 50 holders, total: 31450
+Fetched 50 holders, total: 31500
+Fetched 50 holders, total: 31550
+Fetched 50 holders, total: 31600
+Fetched 50 holders, total: 31650
+Fetched 50 holders, total: 31700
+Fetched 50 holders, total: 31750
+Fetched 50 holders, total: 31800
+Fetched 50 holders, total: 31850
+Fetched 50 holders, total: 31900
+Fetched 50 holders, total: 31950
+Fetched 50 holders, total: 32000
+Fetched 50 holders, total: 32050
+Fetched 50 holders, total: 32100
+Fetched 50 holders, total: 32150
+Fetched 50 holders, total: 32200
+Fetched 50 holders, total: 32250
+Fetched 50 holders, total: 32300
+Fetched 50 holders, total: 32350
+Fetched 50 holders, total: 32400
+Fetched 50 holders, total: 32450
+Fetched 50 holders, total: 32500
+Fetched 50 holders, total: 32550
+Fetched 50 holders, total: 32600
+Fetched 50 holders, total: 32650
+Fetched 50 holders, total: 32700
+Fetched 50 holders, total: 32750
+Fetched 50 holders, total: 32800
+Fetched 50 holders, total: 32850
+Fetched 50 holders, total: 32900
+Fetched 50 holders, total: 32950
+Fetched 50 holders, total: 33000
+Fetched 50 holders, total: 33050
+Fetched 50 holders, total: 33100
+Fetched 50 holders, total: 33150
+Fetched 50 holders, total: 33200
+Fetched 50 holders, total: 33250
+Fetched 50 holders, total: 33300
+Fetched 50 holders, total: 33350
+Fetched 50 holders, total: 33400
+Fetched 50 holders, total: 33450
+Fetched 50 holders, total: 33500
+Fetched 50 holders, total: 33550
+Fetched 50 holders, total: 33600
+Fetched 50 holders, total: 33650
+Fetched 50 holders, total: 33700
+Fetched 50 holders, total: 33750
+Fetched 50 holders, total: 33800
+Fetched 50 holders, total: 33850
+Fetched 50 holders, total: 33900
+Fetched 50 holders, total: 33950
+Fetched 50 holders, total: 34000
+Fetched 50 holders, total: 34050
+Fetched 50 holders, total: 34100
+Fetched 50 holders, total: 34150
+Fetched 50 holders, total: 34200
+Fetched 50 holders, total: 34250
+Fetched 50 holders, total: 34300
+Fetched 50 holders, total: 34350
+Fetched 50 holders, total: 34400
+Fetched 50 holders, total: 34450
+Fetched 50 holders, total: 34500
+Fetched 50 holders, total: 34550
+Fetched 50 holders, total: 34600
+Fetched 50 holders, total: 34650
+Fetched 50 holders, total: 34700
+Fetched 50 holders, total: 34750
+Fetched 50 holders, total: 34800
+Fetched 50 holders, total: 34850
+Fetched 50 holders, total: 34900
+Fetched 50 holders, total: 34950
+Fetched 50 holders, total: 35000
+Fetched 50 holders, total: 35050
+Fetched 50 holders, total: 35100
+Fetched 50 holders, total: 35150
+Fetched 50 holders, total: 35200
+Fetched 50 holders, total: 35250
+Fetched 50 holders, total: 35300
+Fetched 50 holders, total: 35350
+Fetched 50 holders, total: 35400
+Fetched 50 holders, total: 35450
+Fetched 50 holders, total: 35500
+Fetched 50 holders, total: 35550
+Fetched 50 holders, total: 35600
+Fetched 50 holders, total: 35650
+Fetched 50 holders, total: 35700
+Fetched 50 holders, total: 35750
+Fetched 50 holders, total: 35800
+Fetched 50 holders, total: 35850
+Fetched 50 holders, total: 35900
+Fetched 50 holders, total: 35950
+Fetched 50 holders, total: 36000
+Fetched 50 holders, total: 36050
+Fetched 50 holders, total: 36100
+Fetched 50 holders, total: 36150
+Fetched 50 holders, total: 36200
+Fetched 50 holders, total: 36250
+Fetched 50 holders, total: 36300
+Fetched 50 holders, total: 36350
+Fetched 50 holders, total: 36400
+Fetched 50 holders, total: 36450
+Fetched 50 holders, total: 36500
+Fetched 50 holders, total: 36550
+Fetched 50 holders, total: 36600
+Fetched 50 holders, total: 36650
+Fetched 50 holders, total: 36700
+Fetched 50 holders, total: 36750
+Fetched 50 holders, total: 36800
+Fetched 50 holders, total: 36850
+Fetched 50 holders, total: 36900
+Fetched 50 holders, total: 36950
+Fetched 50 holders, total: 37000
+Fetched 50 holders, total: 37050
+Fetched 50 holders, total: 37100
+Fetched 50 holders, total: 37150
+Fetched 50 holders, total: 37200
+Fetched 50 holders, total: 37250
+Fetched 50 holders, total: 37300
+Fetched 50 holders, total: 37350
+Fetched 50 holders, total: 37400
+Fetched 50 holders, total: 37450
+Fetched 50 holders, total: 37500
+Fetched 50 holders, total: 37550
+Fetched 50 holders, total: 37600
+Fetched 50 holders, total: 37650
+Fetched 50 holders, total: 37700
+Fetched 50 holders, total: 37750
+Fetched 50 holders, total: 37800
+Fetched 50 holders, total: 37850
+Fetched 50 holders, total: 37900
+Fetched 50 holders, total: 37950
+Fetched 50 holders, total: 38000
+Fetched 50 holders, total: 38050
+Fetched 50 holders, total: 38100
+Fetched 50 holders, total: 38150
+Fetched 50 holders, total: 38200
+Fetched 50 holders, total: 38250
+Fetched 50 holders, total: 38300
+Fetched 50 holders, total: 38350
+Fetched 50 holders, total: 38400
+Fetched 50 holders, total: 38450
+Fetched 50 holders, total: 38500
+Fetched 50 holders, total: 38550
+Fetched 50 holders, total: 38600
+Fetched 50 holders, total: 38650
+Fetched 50 holders, total: 38700
+Fetched 50 holders, total: 38750
+Fetched 50 holders, total: 38800
+Fetched 50 holders, total: 38850
+Fetched 50 holders, total: 38900
+Fetched 50 holders, total: 38950
+Fetched 50 holders, total: 39000
+Fetched 50 holders, total: 39050
+Fetched 50 holders, total: 39100
+Fetched 50 holders, total: 39150
+Fetched 50 holders, total: 39200
+Fetched 50 holders, total: 39250
+Fetched 50 holders, total: 39300
+Fetched 50 holders, total: 39350
+Fetched 50 holders, total: 39400
+Fetched 50 holders, total: 39450
+Fetched 50 holders, total: 39500
+Fetched 50 holders, total: 39550
+Fetched 50 holders, total: 39600
+Fetched 50 holders, total: 39650
+Fetched 50 holders, total: 39700
+Fetched 50 holders, total: 39750
+Fetched 50 holders, total: 39800
+Fetched 50 holders, total: 39850
+Fetched 50 holders, total: 39900
+Fetched 50 holders, total: 39950
+Fetched 50 holders, total: 40000
+Fetched 50 holders, total: 40050
+Fetched 50 holders, total: 40100
+Fetched 50 holders, total: 40150
+Fetched 50 holders, total: 40200
+Fetched 50 holders, total: 40250
+Fetched 50 holders, total: 40300
+Fetched 50 holders, total: 40350
+Fetched 50 holders, total: 40400
+Fetched 50 holders, total: 40450
+Fetched 50 holders, total: 40500
+Fetched 50 holders, total: 40550
+Fetched 50 holders, total: 40600
+Fetched 50 holders, total: 40650
+Fetched 50 holders, total: 40700
+Fetched 50 holders, total: 40750
+Fetched 50 holders, total: 40800
+Fetched 50 holders, total: 40850
+Fetched 50 holders, total: 40900
+Fetched 50 holders, total: 40950
+Fetched 50 holders, total: 41000
+Fetched 50 holders, total: 41050
+Fetched 50 holders, total: 41100
+Fetched 50 holders, total: 41150
+Fetched 50 holders, total: 41200
+Fetched 50 holders, total: 41250
+Fetched 50 holders, total: 41300
+Fetched 50 holders, total: 41350
+Fetched 50 holders, total: 41400
+Fetched 50 holders, total: 41450
+Fetched 50 holders, total: 41500
+Fetched 50 holders, total: 41550
+Fetched 50 holders, total: 41600
+Fetched 50 holders, total: 41650
+Fetched 50 holders, total: 41700
+Fetched 50 holders, total: 41750
+Fetched 50 holders, total: 41800
+Fetched 50 holders, total: 41850
+Fetched 50 holders, total: 41900
+Fetched 50 holders, total: 41950
+Fetched 50 holders, total: 42000
+Fetched 50 holders, total: 42050
+Fetched 50 holders, total: 42100
+Fetched 50 holders, total: 42150
+Fetched 50 holders, total: 42200
+Fetched 50 holders, total: 42250
+Fetched 50 holders, total: 42300
+Fetched 50 holders, total: 42350
+Fetched 50 holders, total: 42400
+Fetched 50 holders, total: 42450
+Fetched 50 holders, total: 42500
+Fetched 50 holders, total: 42550
+Fetched 50 holders, total: 42600
+Fetched 50 holders, total: 42650
+Fetched 50 holders, total: 42700
+Fetched 50 holders, total: 42750
+Fetched 50 holders, total: 42800
+Fetched 50 holders, total: 42850
+Fetched 50 holders, total: 42900
+Fetched 50 holders, total: 42950
+Fetched 50 holders, total: 43000
+Fetched 50 holders, total: 43050
+Fetched 50 holders, total: 43100
+Fetched 50 holders, total: 43150
+Fetched 50 holders, total: 43200
+Fetched 50 holders, total: 43250
+Fetched 50 holders, total: 43300
+Fetched 50 holders, total: 43350
+Fetched 50 holders, total: 43400
+Fetched 50 holders, total: 43450
+Fetched 50 holders, total: 43500
+Fetched 50 holders, total: 43550
+Fetched 50 holders, total: 43600
+Fetched 50 holders, total: 43650
+Fetched 50 holders, total: 43700
+Fetched 50 holders, total: 43750
+Fetched 50 holders, total: 43800
+Fetched 50 holders, total: 43850
+Fetched 50 holders, total: 43900
+Fetched 50 holders, total: 43950
+Fetched 50 holders, total: 44000
+Fetched 50 holders, total: 44050
+Fetched 50 holders, total: 44100
+Fetched 50 holders, total: 44150
+Fetched 50 holders, total: 44200
+Fetched 50 holders, total: 44250
+Fetched 50 holders, total: 44300
+Fetched 50 holders, total: 44350
+Fetched 50 holders, total: 44400
+Fetched 50 holders, total: 44450
+Fetched 50 holders, total: 44500
+Fetched 50 holders, total: 44550
+Fetched 50 holders, total: 44600
+Fetched 50 holders, total: 44650
+Fetched 50 holders, total: 44700
+Fetched 50 holders, total: 44750
+Fetched 50 holders, total: 44800
+Fetched 50 holders, total: 44850
+Fetched 50 holders, total: 44900
+Fetched 50 holders, total: 44950
+Fetched 50 holders, total: 45000
+Fetched 50 holders, total: 45050
+Fetched 50 holders, total: 45100
+Fetched 50 holders, total: 45150
+Fetched 50 holders, total: 45200
+Fetched 50 holders, total: 45250
+Fetched 50 holders, total: 45300
+Fetched 50 holders, total: 45350
+Fetched 50 holders, total: 45400
+Fetched 50 holders, total: 45450
+Fetched 50 holders, total: 45500
+Fetched 50 holders, total: 45550
+Fetched 50 holders, total: 45600
+Fetched 50 holders, total: 45650
+Fetched 50 holders, total: 45700
+Fetched 50 holders, total: 45750
+Fetched 50 holders, total: 45800
+Fetched 50 holders, total: 45850
+Fetched 50 holders, total: 45900
+Fetched 50 holders, total: 45950
+Fetched 50 holders, total: 46000
+Fetched 50 holders, total: 46050
+Fetched 50 holders, total: 46100
+Fetched 50 holders, total: 46150
+Fetched 50 holders, total: 46200
+Fetched 50 holders, total: 46250
+Fetched 50 holders, total: 46300
+Fetched 50 holders, total: 46350
+Fetched 50 holders, total: 46400
+Fetched 50 holders, total: 46450
+Fetched 50 holders, total: 46500
+Fetched 50 holders, total: 46550
+Fetched 50 holders, total: 46600
+Fetched 50 holders, total: 46650
+Fetched 50 holders, total: 46700
+Fetched 50 holders, total: 46750
+Fetched 50 holders, total: 46800
+Fetched 50 holders, total: 46850
+Fetched 50 holders, total: 46900
+Fetched 50 holders, total: 46950
+Fetched 50 holders, total: 47000
+Fetched 50 holders, total: 47050
+Fetched 50 holders, total: 47100
+Fetched 50 holders, total: 47150
+Fetched 50 holders, total: 47200
+Fetched 50 holders, total: 47250
+Fetched 50 holders, total: 47300
+Fetched 50 holders, total: 47350
+Fetched 50 holders, total: 47400
+Fetched 50 holders, total: 47450
+Fetched 50 holders, total: 47500
+Fetched 50 holders, total: 47550
+Fetched 50 holders, total: 47600
+Fetched 50 holders, total: 47650
+Fetched 50 holders, total: 47700
+Fetched 50 holders, total: 47750
+Fetched 50 holders, total: 47800
+Fetched 50 holders, total: 47850
+Fetched 50 holders, total: 47900
+Fetched 50 holders, total: 47950
+Fetched 50 holders, total: 48000
+Fetched 50 holders, total: 48050
+Fetched 50 holders, total: 48100
+Fetched 50 holders, total: 48150
+Fetched 50 holders, total: 48200
+Fetched 50 holders, total: 48250
+Fetched 50 holders, total: 48300
+Fetched 50 holders, total: 48350
+Fetched 50 holders, total: 48400
+Fetched 50 holders, total: 48450
+Fetched 50 holders, total: 48500
+Fetched 50 holders, total: 48550
+Fetched 50 holders, total: 48600
+Fetched 50 holders, total: 48650
+Fetched 50 holders, total: 48700
+Fetched 50 holders, total: 48750
+Fetched 50 holders, total: 48800
+Fetched 50 holders, total: 48850
+Fetched 50 holders, total: 48900
+Fetched 50 holders, total: 48950
+Fetched 50 holders, total: 49000
+Fetched 50 holders, total: 49050
+Fetched 50 holders, total: 49100
+Fetched 50 holders, total: 49150
+Fetched 50 holders, total: 49200
+Fetched 50 holders, total: 49250
+Fetched 50 holders, total: 49300
+Fetched 50 holders, total: 49350
+Fetched 50 holders, total: 49400
+Fetched 50 holders, total: 49450
+Fetched 50 holders, total: 49500
+Fetched 50 holders, total: 49550
+Fetched 50 holders, total: 49600
+Fetched 50 holders, total: 49650
+Fetched 50 holders, total: 49700
+Fetched 50 holders, total: 49750
+Fetched 50 holders, total: 49800
+Fetched 50 holders, total: 49850
+Fetched 50 holders, total: 49900
+Fetched 50 holders, total: 49950
+Fetched 50 holders, total: 50000
+Fetched 50 holders, total: 50050
+Fetched 50 holders, total: 50100
+Fetched 50 holders, total: 50150
+Fetched 50 holders, total: 50200
+Fetched 50 holders, total: 50250
+Fetched 50 holders, total: 50300
+Fetched 50 holders, total: 50350
+Fetched 50 holders, total: 50400
+Fetched 50 holders, total: 50450
+Fetched 50 holders, total: 50500
+Fetched 50 holders, total: 50550
+Fetched 50 holders, total: 50600
+Fetched 50 holders, total: 50650
+Fetched 50 holders, total: 50700
+Fetched 50 holders, total: 50750
+Fetched 50 holders, total: 50800
+Fetched 50 holders, total: 50850
+Fetched 50 holders, total: 50900
+Fetched 50 holders, total: 50950
+Fetched 50 holders, total: 51000
+Fetched 50 holders, total: 51050
+Fetched 50 holders, total: 51100
+Fetched 50 holders, total: 51150
+Fetched 50 holders, total: 51200
+Fetched 50 holders, total: 51250
+Fetched 50 holders, total: 51300
+Fetched 50 holders, total: 51350
+Fetched 50 holders, total: 51400
+Fetched 50 holders, total: 51450
+Fetched 50 holders, total: 51500
+Fetched 50 holders, total: 51550
+Fetched 50 holders, total: 51600
+Fetched 50 holders, total: 51650
+Fetched 50 holders, total: 51700
+Fetched 50 holders, total: 51750
+Fetched 50 holders, total: 51800
+Fetched 50 holders, total: 51850
+Fetched 50 holders, total: 51900
+Fetched 50 holders, total: 51950
+Fetched 50 holders, total: 52000
+Fetched 50 holders, total: 52050
+Fetched 50 holders, total: 52100
+Fetched 50 holders, total: 52150
+Fetched 50 holders, total: 52200
+Fetched 50 holders, total: 52250
+Fetched 50 holders, total: 52300
+Fetched 50 holders, total: 52350
+Fetched 50 holders, total: 52400
+Fetched 50 holders, total: 52450
+Fetched 50 holders, total: 52500
+Fetched 50 holders, total: 52550
+Fetched 50 holders, total: 52600
+Fetched 50 holders, total: 52650
+Fetched 50 holders, total: 52700
+Fetched 50 holders, total: 52750
+Fetched 50 holders, total: 52800
+Fetched 50 holders, total: 52850
+Fetched 50 holders, total: 52900
+Fetched 50 holders, total: 52950
+Fetched 50 holders, total: 53000
+Fetched 50 holders, total: 53050
+Fetched 50 holders, total: 53100
+Fetched 50 holders, total: 53150
+Fetched 50 holders, total: 53200
+Fetched 50 holders, total: 53250
+Fetched 50 holders, total: 53300
+Fetched 50 holders, total: 53350
+Fetched 50 holders, total: 53400
+Fetched 50 holders, total: 53450
+Fetched 50 holders, total: 53500
+Fetched 50 holders, total: 53550
+Fetched 50 holders, total: 53600
+Fetched 50 holders, total: 53650
+Fetched 50 holders, total: 53700
+Fetched 50 holders, total: 53750
+Fetched 50 holders, total: 53800
+Fetched 50 holders, total: 53850
+Fetched 50 holders, total: 53900
+Fetched 50 holders, total: 53950
+Fetched 50 holders, total: 54000
+Fetched 50 holders, total: 54050
+Fetched 50 holders, total: 54100
+Fetched 50 holders, total: 54150
+Fetched 50 holders, total: 54200
+Fetched 50 holders, total: 54250
+Fetched 50 holders, total: 54300
+Fetched 50 holders, total: 54350
+Fetched 50 holders, total: 54400
+Fetched 50 holders, total: 54450
+Fetched 50 holders, total: 54500
+Fetched 50 holders, total: 54550
+Fetched 50 holders, total: 54600
+Fetched 50 holders, total: 54650
+Fetched 50 holders, total: 54700
+Fetched 50 holders, total: 54750
+Fetched 50 holders, total: 54800
+Fetched 50 holders, total: 54850
+Fetched 50 holders, total: 54900
+Fetched 50 holders, total: 54950
+Fetched 50 holders, total: 55000
+Fetched 50 holders, total: 55050
+Fetched 50 holders, total: 55100
+Fetched 50 holders, total: 55150
+Fetched 50 holders, total: 55200
+Fetched 50 holders, total: 55250
+Fetched 50 holders, total: 55300
+Fetched 50 holders, total: 55350
+Fetched 50 holders, total: 55400
+Fetched 50 holders, total: 55450
+Fetched 50 holders, total: 55500
+Fetched 50 holders, total: 55550
+Fetched 50 holders, total: 55600
+Fetched 50 holders, total: 55650
+Fetched 50 holders, total: 55700
+Fetched 50 holders, total: 55750
+Fetched 50 holders, total: 55800
+Fetched 50 holders, total: 55850
+Fetched 50 holders, total: 55900
+Fetched 50 holders, total: 55950
+Fetched 50 holders, total: 56000
+Fetched 50 holders, total: 56050
+Fetched 50 holders, total: 56100
+Fetched 50 holders, total: 56150
+Fetched 50 holders, total: 56200
+Fetched 50 holders, total: 56250
+Fetched 50 holders, total: 56300
+Fetched 50 holders, total: 56350
+Fetched 50 holders, total: 56400
+Fetched 50 holders, total: 56450
+Fetched 50 holders, total: 56500
+Fetched 50 holders, total: 56550
+Fetched 50 holders, total: 56600
+Fetched 50 holders, total: 56650
+Fetched 50 holders, total: 56700
+Fetched 50 holders, total: 56750
+Fetched 50 holders, total: 56800
+Fetched 50 holders, total: 56850
+Fetched 50 holders, total: 56900
+Fetched 50 holders, total: 56950
+Fetched 50 holders, total: 57000
+Fetched 50 holders, total: 57050
+Fetched 50 holders, total: 57100
+Fetched 50 holders, total: 57150
+Fetched 50 holders, total: 57200
+Fetched 50 holders, total: 57250
+Fetched 50 holders, total: 57300
+Fetched 50 holders, total: 57350
+Fetched 50 holders, total: 57400
+Fetched 50 holders, total: 57450
+Fetched 50 holders, total: 57500
+Fetched 50 holders, total: 57550
+Fetched 50 holders, total: 57600
+Fetched 50 holders, total: 57650
+Fetched 50 holders, total: 57700
+Fetched 50 holders, total: 57750
+Fetched 50 holders, total: 57800
+Fetched 50 holders, total: 57850
+Fetched 50 holders, total: 57900
+Fetched 50 holders, total: 57950
+Fetched 50 holders, total: 58000
+Fetched 50 holders, total: 58050
+Fetched 50 holders, total: 58100
+Fetched 50 holders, total: 58150
+Fetched 50 holders, total: 58200
+Fetched 50 holders, total: 58250
+Fetched 50 holders, total: 58300
+Fetched 50 holders, total: 58350
+Fetched 50 holders, total: 58400
+Fetched 50 holders, total: 58450
+Fetched 50 holders, total: 58500
+Fetched 50 holders, total: 58550
+Fetched 50 holders, total: 58600
+Fetched 50 holders, total: 58650
+Fetched 50 holders, total: 58700
+Fetched 50 holders, total: 58750
+Fetched 50 holders, total: 58800
+Fetched 50 holders, total: 58850
+Fetched 50 holders, total: 58900
+Fetched 50 holders, total: 58950
+Fetched 50 holders, total: 59000
+Fetched 50 holders, total: 59050
+Fetched 50 holders, total: 59100
+Fetched 50 holders, total: 59150
+Fetched 50 holders, total: 59200
+Fetched 50 holders, total: 59250
+Fetched 50 holders, total: 59300
+Fetched 50 holders, total: 59350
+Fetched 50 holders, total: 59400
+Fetched 50 holders, total: 59450
+Fetched 50 holders, total: 59500
+Fetched 50 holders, total: 59550
+Fetched 50 holders, total: 59600
+Fetched 50 holders, total: 59650
+Fetched 50 holders, total: 59700
+Fetched 50 holders, total: 59750
+Fetched 50 holders, total: 59800
+Fetched 50 holders, total: 59850
+Fetched 50 holders, total: 59900
+Fetched 50 holders, total: 59950
+Fetched 50 holders, total: 60000
+Fetched 50 holders, total: 60050
+Fetched 50 holders, total: 60100
+Fetched 50 holders, total: 60150
+Fetched 50 holders, total: 60200
+Fetched 50 holders, total: 60250
+Fetched 50 holders, total: 60300
+Fetched 50 holders, total: 60350
+Fetched 50 holders, total: 60400
+Fetched 50 holders, total: 60450
+Fetched 50 holders, total: 60500
+Fetched 50 holders, total: 60550
+Fetched 50 holders, total: 60600
+Fetched 50 holders, total: 60650
+Fetched 50 holders, total: 60700
+Fetched 50 holders, total: 60750
+Fetched 50 holders, total: 60800
+Fetched 50 holders, total: 60850
+Fetched 50 holders, total: 60900
+Fetched 50 holders, total: 60950
+Fetched 50 holders, total: 61000
+Fetched 50 holders, total: 61050
+Fetched 50 holders, total: 61100
+Fetched 50 holders, total: 61150
+Fetched 50 holders, total: 61200
+Fetched 50 holders, total: 61250
+Fetched 50 holders, total: 61300
+Fetched 50 holders, total: 61350
+Fetched 50 holders, total: 61400
+Fetched 50 holders, total: 61450
+Fetched 50 holders, total: 61500
+Fetched 50 holders, total: 61550
+Fetched 50 holders, total: 61600
+Fetched 50 holders, total: 61650
+Fetched 50 holders, total: 61700
+Fetched 50 holders, total: 61750
+Fetched 50 holders, total: 61800
+Fetched 50 holders, total: 61850
+Fetched 50 holders, total: 61900
+Fetched 50 holders, total: 61950
+Fetched 50 holders, total: 62000
+Fetched 50 holders, total: 62050
+Fetched 50 holders, total: 62100
+Fetched 50 holders, total: 62150
+Fetched 50 holders, total: 62200
+Fetched 50 holders, total: 62250
+Fetched 50 holders, total: 62300
+Fetched 50 holders, total: 62350
+Fetched 50 holders, total: 62400
+Fetched 50 holders, total: 62450
+Fetched 50 holders, total: 62500
+Fetched 50 holders, total: 62550
+Fetched 50 holders, total: 62600
+Fetched 50 holders, total: 62650
+Fetched 50 holders, total: 62700
+Fetched 50 holders, total: 62750
+Fetched 50 holders, total: 62800
+Fetched 50 holders, total: 62850
+Fetched 50 holders, total: 62900
+Fetched 50 holders, total: 62950
+Fetched 50 holders, total: 63000
+Fetched 50 holders, total: 63050
+Fetched 50 holders, total: 63100
+Fetched 50 holders, total: 63150
+Fetched 50 holders, total: 63200
+Fetched 50 holders, total: 63250
+Fetched 50 holders, total: 63300
+Fetched 50 holders, total: 63350
+Fetched 50 holders, total: 63400
+Fetched 50 holders, total: 63450
+Fetched 50 holders, total: 63500
+Fetched 50 holders, total: 63550
+Fetched 50 holders, total: 63600
+Fetched 50 holders, total: 63650
+Fetched 50 holders, total: 63700
+Fetched 50 holders, total: 63750
+Fetched 50 holders, total: 63800
+Fetched 50 holders, total: 63850
+Fetched 50 holders, total: 63900
+Fetched 50 holders, total: 63950
+Fetched 50 holders, total: 64000
+Fetched 50 holders, total: 64050
+Fetched 50 holders, total: 64100
+Fetched 50 holders, total: 64150
+Fetched 50 holders, total: 64200
+Fetched 50 holders, total: 64250
+Fetched 50 holders, total: 64300
+Fetched 50 holders, total: 64350
+Fetched 50 holders, total: 64400
+Fetched 50 holders, total: 64450
+Fetched 50 holders, total: 64500
+Fetched 50 holders, total: 64550
+Fetched 50 holders, total: 64600
+Fetched 50 holders, total: 64650
+Fetched 50 holders, total: 64700
+Fetched 50 holders, total: 64750
+Fetched 50 holders, total: 64800
+Fetched 50 holders, total: 64850
+Fetched 50 holders, total: 64900
+Fetched 50 holders, total: 64950
+Fetched 50 holders, total: 65000
+Fetched 50 holders, total: 65050
+Fetched 50 holders, total: 65100
+Fetched 50 holders, total: 65150
+Fetched 50 holders, total: 65200
+Fetched 50 holders, total: 65250
+Fetched 50 holders, total: 65300
+Fetched 50 holders, total: 65350
+Fetched 50 holders, total: 65400
+Fetched 50 holders, total: 65450
+Fetched 50 holders, total: 65500
+Fetched 50 holders, total: 65550
+Fetched 50 holders, total: 65600
+Fetched 50 holders, total: 65650
+Fetched 50 holders, total: 65700
+Fetched 50 holders, total: 65750
+Fetched 50 holders, total: 65800
+Fetched 50 holders, total: 65850
+Fetched 50 holders, total: 65900
+Fetched 50 holders, total: 65950
+Fetched 50 holders, total: 66000
+Fetched 50 holders, total: 66050
+Fetched 50 holders, total: 66100
+Fetched 50 holders, total: 66150
+Fetched 50 holders, total: 66200
+Fetched 50 holders, total: 66250
+Fetched 50 holders, total: 66300
+Fetched 50 holders, total: 66350
+Fetched 50 holders, total: 66400
+Fetched 50 holders, total: 66450
+Fetched 50 holders, total: 66500
+Fetched 50 holders, total: 66550
+Fetched 50 holders, total: 66600
+Fetched 50 holders, total: 66650
+Fetched 50 holders, total: 66700
+Fetched 50 holders, total: 66750
+Fetched 50 holders, total: 66800
+Fetched 50 holders, total: 66850
+Fetched 50 holders, total: 66900
+Fetched 50 holders, total: 66950
+Fetched 50 holders, total: 67000
+Fetched 50 holders, total: 67050
+Fetched 50 holders, total: 67100
+Fetched 50 holders, total: 67150
+Fetched 50 holders, total: 67200
+Fetched 50 holders, total: 67250
+Fetched 50 holders, total: 67300
+Fetched 50 holders, total: 67350
+Fetched 50 holders, total: 67400
+Fetched 50 holders, total: 67450
+Fetched 50 holders, total: 67500
+Fetched 50 holders, total: 67550
+Fetched 50 holders, total: 67600
+Fetched 50 holders, total: 67650
+Fetched 50 holders, total: 67700
+Fetched 50 holders, total: 67750
+Fetched 50 holders, total: 67800
+Fetched 50 holders, total: 67850
+Fetched 50 holders, total: 67900
+Fetched 50 holders, total: 67950
+Fetched 50 holders, total: 68000
+Fetched 50 holders, total: 68050
+Fetched 50 holders, total: 68100
+Fetched 50 holders, total: 68150
+Fetched 50 holders, total: 68200
+Fetched 50 holders, total: 68250
+Fetched 50 holders, total: 68300
+Fetched 50 holders, total: 68350
+Fetched 50 holders, total: 68400
+Fetched 50 holders, total: 68450
+Fetched 50 holders, total: 68500
+Fetched 50 holders, total: 68550
+Fetched 50 holders, total: 68600
+Fetched 50 holders, total: 68650
+Fetched 50 holders, total: 68700
+Fetched 50 holders, total: 68750
+Fetched 50 holders, total: 68800
+Fetched 50 holders, total: 68850
+Fetched 50 holders, total: 68900
+Fetched 50 holders, total: 68950
+Fetched 50 holders, total: 69000
+Fetched 50 holders, total: 69050
+Fetched 50 holders, total: 69100
+Fetched 50 holders, total: 69150
+Fetched 50 holders, total: 69200
+Fetched 50 holders, total: 69250
+Fetched 50 holders, total: 69300
+Fetched 50 holders, total: 69350
+Fetched 50 holders, total: 69400
+Fetched 50 holders, total: 69450
+Fetched 50 holders, total: 69500
+Fetched 50 holders, total: 69550
+Fetched 50 holders, total: 69600
+Fetched 50 holders, total: 69650
+Fetched 50 holders, total: 69700
+Fetched 50 holders, total: 69750
+Fetched 50 holders, total: 69800
+Fetched 50 holders, total: 69850
+Fetched 50 holders, total: 69900
+Fetched 50 holders, total: 69950
+Fetched 50 holders, total: 70000
+Fetched 50 holders, total: 70050
+Fetched 50 holders, total: 70100
+Fetched 50 holders, total: 70150
+Fetched 50 holders, total: 70200
+Fetched 50 holders, total: 70250
+Fetched 50 holders, total: 70300
+Fetched 50 holders, total: 70350
+Fetched 50 holders, total: 70400
+Fetched 50 holders, total: 70450
+Fetched 50 holders, total: 70500
+Fetched 50 holders, total: 70550
+Fetched 50 holders, total: 70600
+Fetched 50 holders, total: 70650
+Fetched 50 holders, total: 70700
+Fetched 50 holders, total: 70750
+Fetched 50 holders, total: 70800
+Fetched 50 holders, total: 70850
+Fetched 50 holders, total: 70900
+Fetched 50 holders, total: 70950
+Fetched 50 holders, total: 71000
+Fetched 50 holders, total: 71050
+Fetched 50 holders, total: 71100
+Fetched 50 holders, total: 71150
+Fetched 50 holders, total: 71200
+Fetched 50 holders, total: 71250
+Fetched 50 holders, total: 71300
+Fetched 50 holders, total: 71350
+Fetched 50 holders, total: 71400
+Fetched 50 holders, total: 71450
+Fetched 50 holders, total: 71500
+Fetched 50 holders, total: 71550
+Fetched 50 holders, total: 71600
+Fetched 50 holders, total: 71650
+Fetched 50 holders, total: 71700
+Fetched 50 holders, total: 71750
+Fetched 50 holders, total: 71800
+Fetched 50 holders, total: 71850
+Fetched 50 holders, total: 71900
+Fetched 50 holders, total: 71950
+Fetched 50 holders, total: 72000
+Fetched 50 holders, total: 72050
+Fetched 50 holders, total: 72100
+Fetched 50 holders, total: 72150
+Fetched 50 holders, total: 72200
+Fetched 50 holders, total: 72250
+Fetched 50 holders, total: 72300
+Fetched 50 holders, total: 72350
+Fetched 50 holders, total: 72400
+Fetched 50 holders, total: 72450
+Fetched 50 holders, total: 72500
+Fetched 50 holders, total: 72550
+Fetched 50 holders, total: 72600
+Fetched 50 holders, total: 72650
+Fetched 50 holders, total: 72700
+Fetched 50 holders, total: 72750
+Fetched 50 holders, total: 72800
+Fetched 50 holders, total: 72850
+Fetched 50 holders, total: 72900
+Fetched 50 holders, total: 72950
+Fetched 50 holders, total: 73000
+Fetched 50 holders, total: 73050
+Fetched 50 holders, total: 73100
+Fetched 50 holders, total: 73150
+Fetched 50 holders, total: 73200
+Fetched 50 holders, total: 73250
+Fetched 50 holders, total: 73300
+Fetched 50 holders, total: 73350
+Fetched 50 holders, total: 73400
+Fetched 50 holders, total: 73450
+Fetched 50 holders, total: 73500
+Fetched 50 holders, total: 73550
+Fetched 50 holders, total: 73600
+Fetched 50 holders, total: 73650
+Fetched 50 holders, total: 73700
+Fetched 50 holders, total: 73750
+Fetched 50 holders, total: 73800
+Fetched 50 holders, total: 73850
+Fetched 50 holders, total: 73900
+Fetched 50 holders, total: 73950
+Fetched 50 holders, total: 74000
+Fetched 50 holders, total: 74050
+Fetched 50 holders, total: 74100
+Fetched 50 holders, total: 74150
+Fetched 50 holders, total: 74200
+Fetched 50 holders, total: 74250
+Fetched 50 holders, total: 74300
+Fetched 50 holders, total: 74350
+Fetched 50 holders, total: 74400
+Fetched 50 holders, total: 74450
+Fetched 50 holders, total: 74500
+Fetched 50 holders, total: 74550
+Fetched 50 holders, total: 74600
+Fetched 50 holders, total: 74650
+Fetched 50 holders, total: 74700
+Fetched 50 holders, total: 74750
+Fetched 50 holders, total: 74800
+Fetched 50 holders, total: 74850
+Fetched 50 holders, total: 74900
+Fetched 50 holders, total: 74950
+Fetched 50 holders, total: 75000
+Fetched 50 holders, total: 75050
+Fetched 50 holders, total: 75100
+Fetched 50 holders, total: 75150
+Fetched 50 holders, total: 75200
+Fetched 50 holders, total: 75250
+Fetched 50 holders, total: 75300
+Fetched 50 holders, total: 75350
+Fetched 50 holders, total: 75400
+Fetched 50 holders, total: 75450
+Fetched 50 holders, total: 75500
+Fetched 50 holders, total: 75550
+Fetched 50 holders, total: 75600
+Fetched 50 holders, total: 75650
+Fetched 50 holders, total: 75700
+Fetched 50 holders, total: 75750
+Fetched 50 holders, total: 75800
+Fetched 50 holders, total: 75850
+Fetched 50 holders, total: 75900
+Fetched 50 holders, total: 75950
+Fetched 50 holders, total: 76000
+Fetched 50 holders, total: 76050
+Fetched 50 holders, total: 76100
+Fetched 50 holders, total: 76150
+Fetched 50 holders, total: 76200
+Fetched 50 holders, total: 76250
+Fetched 50 holders, total: 76300
+Fetched 50 holders, total: 76350
+Fetched 50 holders, total: 76400
+Fetched 50 holders, total: 76450
+Fetched 50 holders, total: 76500
+Fetched 50 holders, total: 76550
+Fetched 50 holders, total: 76600
+Fetched 50 holders, total: 76650
+Fetched 50 holders, total: 76700
+Fetched 50 holders, total: 76750
+Fetched 50 holders, total: 76800
+Fetched 50 holders, total: 76850
+Fetched 50 holders, total: 76900
+Fetched 50 holders, total: 76950
+Fetched 50 holders, total: 77000
+Fetched 50 holders, total: 77050
+Fetched 50 holders, total: 77100
+Fetched 50 holders, total: 77150
+Fetched 50 holders, total: 77200
+Fetched 50 holders, total: 77250
+Fetched 50 holders, total: 77300
+Fetched 50 holders, total: 77350
+Fetched 50 holders, total: 77400
+Fetched 50 holders, total: 77450
+Fetched 50 holders, total: 77500
+Fetched 50 holders, total: 77550
+Fetched 50 holders, total: 77600
+Fetched 50 holders, total: 77650
+Fetched 50 holders, total: 77700
+Fetched 50 holders, total: 77750
+Fetched 50 holders, total: 77800
+Fetched 50 holders, total: 77850
+Fetched 50 holders, total: 77900
+Fetched 50 holders, total: 77950
+Fetched 50 holders, total: 78000
+Fetched 50 holders, total: 78050
+Fetched 50 holders, total: 78100
+Fetched 50 holders, total: 78150
+Fetched 50 holders, total: 78200
+Fetched 50 holders, total: 78250
+Fetched 50 holders, total: 78300
+Fetched 50 holders, total: 78350
+Fetched 50 holders, total: 78400
+Fetched 50 holders, total: 78450
+Fetched 50 holders, total: 78500
+Fetched 50 holders, total: 78550
+Fetched 50 holders, total: 78600
+Fetched 50 holders, total: 78650
+Fetched 50 holders, total: 78700
+Fetched 50 holders, total: 78750
+Fetched 50 holders, total: 78800
+Fetched 50 holders, total: 78850
+Fetched 50 holders, total: 78900
+Fetched 50 holders, total: 78950
+Fetched 50 holders, total: 79000
+Fetched 50 holders, total: 79050
+Fetched 50 holders, total: 79100
+Fetched 50 holders, total: 79150
+Fetched 50 holders, total: 79200
+Fetched 50 holders, total: 79250
+Fetched 50 holders, total: 79300
+Fetched 50 holders, total: 79350
+Fetched 50 holders, total: 79400
+Fetched 50 holders, total: 79450
+Fetched 50 holders, total: 79500
+Fetched 50 holders, total: 79550
+Fetched 50 holders, total: 79600
+Fetched 50 holders, total: 79650
+Fetched 50 holders, total: 79700
+Fetched 50 holders, total: 79750
+Fetched 50 holders, total: 79800
+Fetched 50 holders, total: 79850
+Fetched 50 holders, total: 79900
+Fetched 50 holders, total: 79950
+Fetched 50 holders, total: 80000
+Fetched 50 holders, total: 80050
+Fetched 50 holders, total: 80100
+Fetched 50 holders, total: 80150
+Fetched 50 holders, total: 80200
+Fetched 50 holders, total: 80250
+Fetched 50 holders, total: 80300
+Fetched 50 holders, total: 80350
+Fetched 50 holders, total: 80400
+Fetched 50 holders, total: 80450
+Fetched 50 holders, total: 80500
+Fetched 50 holders, total: 80550
+Fetched 50 holders, total: 80600
+Fetched 50 holders, total: 80650
+Fetched 50 holders, total: 80700
+Fetched 50 holders, total: 80750
+Fetched 50 holders, total: 80800
+Fetched 50 holders, total: 80850
+Fetched 50 holders, total: 80900
+Fetched 50 holders, total: 80950
+Fetched 50 holders, total: 81000
+Fetched 50 holders, total: 81050
+Fetched 50 holders, total: 81100
+Fetched 50 holders, total: 81150
+Fetched 50 holders, total: 81200
+Fetched 50 holders, total: 81250
+Fetched 50 holders, total: 81300
+Fetched 50 holders, total: 81350
+Fetched 50 holders, total: 81400
+Fetched 50 holders, total: 81450
+Fetched 50 holders, total: 81500
+Fetched 50 holders, total: 81550
+Fetched 50 holders, total: 81600
+Fetched 50 holders, total: 81650
+Fetched 50 holders, total: 81700
+Fetched 50 holders, total: 81750
+Fetched 50 holders, total: 81800
+Fetched 50 holders, total: 81850
+Fetched 50 holders, total: 81900
+Fetched 50 holders, total: 81950
+Fetched 50 holders, total: 82000
+Fetched 50 holders, total: 82050
+Fetched 50 holders, total: 82100
+Fetched 50 holders, total: 82150
+Fetched 50 holders, total: 82200
+Fetched 50 holders, total: 82250
+Fetched 50 holders, total: 82300
+Fetched 50 holders, total: 82350
+Fetched 50 holders, total: 82400
+Fetched 50 holders, total: 82450
+Fetched 50 holders, total: 82500
+Fetched 50 holders, total: 82550
+Fetched 50 holders, total: 82600
+Fetched 50 holders, total: 82650
+Fetched 50 holders, total: 82700
+Fetched 50 holders, total: 82750
+Fetched 50 holders, total: 82800
+Fetched 50 holders, total: 82850
+Fetched 50 holders, total: 82900
+Fetched 50 holders, total: 82950
+Fetched 50 holders, total: 83000
+Fetched 50 holders, total: 83050
+Fetched 50 holders, total: 83100
+Fetched 50 holders, total: 83150
+Fetched 50 holders, total: 83200
+Fetched 50 holders, total: 83250
+Fetched 50 holders, total: 83300
+Fetched 50 holders, total: 83350
+Fetched 50 holders, total: 83400
+Fetched 50 holders, total: 83450
+Fetched 50 holders, total: 83500
+Fetched 50 holders, total: 83550
+Fetched 50 holders, total: 83600
+Fetched 50 holders, total: 83650
+Fetched 50 holders, total: 83700
+Fetched 50 holders, total: 83750
+Fetched 50 holders, total: 83800
+Fetched 50 holders, total: 83850
+Fetched 50 holders, total: 83900
+Fetched 50 holders, total: 83950
+Fetched 50 holders, total: 84000
+Fetched 50 holders, total: 84050
+Fetched 50 holders, total: 84100
+Fetched 50 holders, total: 84150
+Fetched 50 holders, total: 84200
+Fetched 50 holders, total: 84250
+Fetched 50 holders, total: 84300
+Fetched 50 holders, total: 84350
+Fetched 50 holders, total: 84400
+Fetched 50 holders, total: 84450
+Fetched 50 holders, total: 84500
+Fetched 50 holders, total: 84550
+Fetched 50 holders, total: 84600
+Fetched 50 holders, total: 84650
+Fetched 50 holders, total: 84700
+Fetched 50 holders, total: 84750
+Fetched 50 holders, total: 84800
+Fetched 50 holders, total: 84850
+Fetched 50 holders, total: 84900
+Fetched 50 holders, total: 84950
+Fetched 50 holders, total: 85000
+Fetched 50 holders, total: 85050
+Fetched 50 holders, total: 85100
+Fetched 50 holders, total: 85150
+Fetched 50 holders, total: 85200
+Fetched 50 holders, total: 85250
+Fetched 50 holders, total: 85300
+Fetched 50 holders, total: 85350
+Fetched 50 holders, total: 85400
+Fetched 50 holders, total: 85450
+Fetched 50 holders, total: 85500
+Fetched 50 holders, total: 85550
+Fetched 50 holders, total: 85600
+Fetched 50 holders, total: 85650
+Fetched 50 holders, total: 85700
+Fetched 50 holders, total: 85750
+Fetched 50 holders, total: 85800
+Fetched 50 holders, total: 85850
+Fetched 50 holders, total: 85900
+Fetched 50 holders, total: 85950
+Fetched 50 holders, total: 86000
+Fetched 50 holders, total: 86050
+Fetched 50 holders, total: 86100
+Fetched 50 holders, total: 86150
+Fetched 50 holders, total: 86200
+Fetched 50 holders, total: 86250
+Fetched 50 holders, total: 86300
+Fetched 50 holders, total: 86350
+Fetched 50 holders, total: 86400
+Fetched 50 holders, total: 86450
+Fetched 50 holders, total: 86500
+Fetched 50 holders, total: 86550
+Fetched 50 holders, total: 86600
+Fetched 50 holders, total: 86650
+Fetched 50 holders, total: 86700
+Fetched 50 holders, total: 86750
+Fetched 50 holders, total: 86800
+Fetched 50 holders, total: 86850
+Fetched 50 holders, total: 86900
+Fetched 50 holders, total: 86950
+Fetched 50 holders, total: 87000
+Fetched 50 holders, total: 87050
+Fetched 50 holders, total: 87100
+Fetched 50 holders, total: 87150
+Fetched 50 holders, total: 87200
+Fetched 50 holders, total: 87250
+Fetched 50 holders, total: 87300
+Fetched 50 holders, total: 87350
+Fetched 50 holders, total: 87400
+Fetched 50 holders, total: 87450
+Fetched 50 holders, total: 87500
+Fetched 50 holders, total: 87550
+Fetched 50 holders, total: 87600
+Fetched 50 holders, total: 87650
+Fetched 50 holders, total: 87700
+Fetched 50 holders, total: 87750
+Fetched 50 holders, total: 87800
+Fetched 50 holders, total: 87850
+Fetched 50 holders, total: 87900
+Fetched 50 holders, total: 87950
+Fetched 50 holders, total: 88000
+Fetched 50 holders, total: 88050
+Fetched 50 holders, total: 88100
+Fetched 50 holders, total: 88150
+Fetched 50 holders, total: 88200
+Fetched 50 holders, total: 88250
+Fetched 50 holders, total: 88300
+Fetched 50 holders, total: 88350
+Fetched 50 holders, total: 88400
+Fetched 50 holders, total: 88450
+Fetched 50 holders, total: 88500
+Fetched 50 holders, total: 88550
+Fetched 50 holders, total: 88600
+Fetched 50 holders, total: 88650
+Fetched 50 holders, total: 88700
+Fetched 50 holders, total: 88750
+Fetched 50 holders, total: 88800
+Fetched 50 holders, total: 88850
+Fetched 50 holders, total: 88900
+Fetched 50 holders, total: 88950
+Fetched 50 holders, total: 89000
+Fetched 50 holders, total: 89050
+Fetched 50 holders, total: 89100
+Fetched 50 holders, total: 89150
+Fetched 50 holders, total: 89200
+Fetched 50 holders, total: 89250
+Fetched 50 holders, total: 89300
+Fetched 50 holders, total: 89350
+Fetched 50 holders, total: 89400
+Fetched 50 holders, total: 89450
+Fetched 50 holders, total: 89500
+Fetched 50 holders, total: 89550
+Fetched 50 holders, total: 89600
+Fetched 50 holders, total: 89650
+Fetched 50 holders, total: 89700
+Fetched 50 holders, total: 89750
+Fetched 50 holders, total: 89800
+Fetched 50 holders, total: 89850
+Fetched 50 holders, total: 89900
+Fetched 50 holders, total: 89950
+Fetched 50 holders, total: 90000
+Fetched 50 holders, total: 90050
+Fetched 50 holders, total: 90100
+Fetched 50 holders, total: 90150
+Fetched 50 holders, total: 90200
+Fetched 50 holders, total: 90250
+Fetched 50 holders, total: 90300
+Fetched 50 holders, total: 90350
+Fetched 50 holders, total: 90400
+Fetched 50 holders, total: 90450
+Fetched 50 holders, total: 90500
+Fetched 50 holders, total: 90550
+Fetched 50 holders, total: 90600
+Fetched 50 holders, total: 90650
+Fetched 50 holders, total: 90700
+Fetched 50 holders, total: 90750
+Fetched 50 holders, total: 90800
+Fetched 50 holders, total: 90850
+Fetched 50 holders, total: 90900
+Fetched 50 holders, total: 90950
+Fetched 50 holders, total: 91000
+Fetched 50 holders, total: 91050
+Fetched 50 holders, total: 91100
+Fetched 50 holders, total: 91150
+Fetched 50 holders, total: 91200
+Fetched 50 holders, total: 91250
+Fetched 50 holders, total: 91300
+Fetched 50 holders, total: 91350
+Fetched 50 holders, total: 91400
+Fetched 50 holders, total: 91450
+Fetched 50 holders, total: 91500
+Fetched 50 holders, total: 91550
+Fetched 50 holders, total: 91600
+Fetched 50 holders, total: 91650
+Fetched 50 holders, total: 91700
+Fetched 50 holders, total: 91750
+Fetched 50 holders, total: 91800
+Fetched 50 holders, total: 91850
+Fetched 50 holders, total: 91900
+Fetched 50 holders, total: 91950
+Fetched 50 holders, total: 92000
+Fetched 50 holders, total: 92050
+Fetched 50 holders, total: 92100
+Fetched 50 holders, total: 92150
+Fetched 42 holders, total: 92192
+No more pages available
+Assertion failed
+Written 92192 holders to /Users/mario/zk/zk-nft-migration/src/data/Yoki_holders.csv

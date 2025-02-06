@@ -14,8 +14,7 @@ interface TokenInstance {
 interface ApiResponse {
     items: TokenInstance[];
     next_page_params: {
-        index: string;
-        items_count: string;
+        items_count?: number;
     } | null;
 }
 
@@ -29,6 +28,7 @@ interface TokenCounters {
     transfers_count: string;
 }
 const BASE_API_URL = 'https://astar-zkevm.explorer.startale.com/api/v2';
+const INPUT_PROJECTS_JSON = 'data/zk_input.json';
 
 /**
  * Fetches all token instances for a given contract address
@@ -38,7 +38,7 @@ const BASE_API_URL = 'https://astar-zkevm.explorer.startale.com/api/v2';
 async function fetchAllInstances(contractAddress: string): Promise<Map<string, string>> {
     const ownership = new Map<string, string>();
     let nextPageParams = null;
-    
+
     while (true) {
         try {
             const response: { data: ApiResponse } = await axios.get<ApiResponse>(
@@ -47,23 +47,23 @@ async function fetchAllInstances(contractAddress: string): Promise<Map<string, s
                     params: nextPageParams || {}
                 }
             );
-            
+
             for (const instance of response.data.items) {
                 ownership.set(instance.id, instance.owner.hash);
             }
-            
+
             console.log(`Fetched ${response.data.items.length} instances, total: ${ownership.size}`);
-            
+
             if (!response.data.next_page_params) break;
             nextPageParams = response.data.next_page_params;
             await new Promise(resolve => setTimeout(resolve, 200));
-            
+
         } catch (error) {
             console.error('Error fetching instances:', error);
             break;
         }
     }
-    
+
     return ownership;
 }
 
@@ -81,14 +81,14 @@ async function fetchAllInstances(contractAddress: string): Promise<Map<string, s
  * 0x456...,2
  */
 async function writeOwnershipToCsv(projectName: string, ownership: Map<string, string>) {
-    const outputPath = path.join(__dirname, `data/${projectName}_instances.csv`);
+    const outputPath = path.join(__dirname, `instances/${projectName}_instances.csv`);
     const csvContent = ['address,tokenId\n'];
-    
+
     // Convert to array and sort by tokenId
     const entries = Array.from(ownership.entries())
         .map(([tokenId, address]) => ({ tokenId: parseInt(tokenId), address }))
         .sort((a, b) => a.tokenId - b.tokenId);
-    
+
     // Add sorted entries to CSV
     for (const entry of entries) {
         csvContent.push(`${entry.address},${entry.tokenId}\n`);
@@ -116,14 +116,14 @@ async function getTokenCounters(contractAddress: string): Promise<TokenCounters 
 }
 
 async function main() {
-    const inputPath = path.join(__dirname, 'data/zk_input_test.json');
+    const inputPath = path.join(__dirname, INPUT_PROJECTS_JSON);
     const inputJson: Record<string, ProjectConfig> = JSON.parse(
         fs.readFileSync(inputPath, 'utf-8')
     );
 
     for (const [projectName, config] of Object.entries(inputJson)) {
         console.log(`Processing ${projectName}...`);
-        
+
         const counters = await getTokenCounters(config.address);
         if (!counters) {
             console.error(`Failed to get counters for ${projectName}`);
@@ -131,21 +131,21 @@ async function main() {
         }
 
         console.log(`Token has ${counters.token_holders_count} holders`);
-        
+
         try {
             const ownership = await fetchAllInstances(config.address);
             const totalSupply = await axios.get(`${BASE_API_URL}/tokens/${config.address}`);
-            
+
             // Verify we got all instances
             if (ownership.size !== parseInt(totalSupply.data.total_supply)) {
                 throw new Error(`Mismatch: got ${ownership.size} instances, expected ${totalSupply.data.total_supply}`);
             }
-            
+
             await writeOwnershipToCsv(projectName, ownership);
         } catch (error) {
             console.error(`Error processing ${projectName}:`, error);
         }
-        
+
         await wait(2000);
     }
 }

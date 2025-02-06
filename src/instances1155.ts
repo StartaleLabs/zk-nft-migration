@@ -101,12 +101,12 @@ async function fetchAllInstances(contractAddress: string): Promise<Map<string, M
             for (const instance of response.data.items) {
                 const balances = await fetchTokenBalance(contractAddress, instance.id);
                 ownership.set(instance.id, balances);
+                await wait(200); // Rate limiting
             }
 
-            break
-            // if (!response.data.next_page_params) break;
-            // nextPageParams = response.data.next_page_params;
-            // await wait(200);
+            if (!response.data.next_page_params) break;
+            nextPageParams = response.data.next_page_params;
+            await wait(200);
 
         } catch (error) {
             console.error('Error fetching instances:', error);

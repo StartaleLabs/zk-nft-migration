@@ -80,13 +80,14 @@ interface ProjectConfig {
 
 async function readTotalSupply(contract: any, totalSupplyFunction: string): Promise<string> {
     try {
-        // Workaround for contract not having totalSupply function
+        // Workaround for contracts not having totalSupply function
         if (contract.address === '0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC') { // JR Kyushu Free
             return '6967';
         }
         if (contract.address === '0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4') { // Neemo
             return '0';
         }
+        // End of workaround
 
         // @ts-ignore - dynamic function call
         const totalSupply = await contract.read.totalSupply() as unknown as bigint;
@@ -180,8 +181,7 @@ async function main() {
     fs.writeFileSync(
         outputFilePath,
         JSON.stringify(outputJson, (key, value) =>
-            typeof value === 'bigint' ? value.toString() : value
-            , 2)
+            typeof value === 'bigint' ? value.toString() : value, 2)
     ); console.log("Output written to output.json");
 }
 

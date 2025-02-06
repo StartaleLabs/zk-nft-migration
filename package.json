@@ -5,6 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
+    "holders": "ts-node src/getHolders.ts",
+    "transfers": "ts-node src/transfers.ts",
+    "instances": "ts-node src/instances.ts",
     "build": "tsc"
   },
   "keywords": [],
@@ -16,6 +19,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "viem": "^2.22.15"
   }

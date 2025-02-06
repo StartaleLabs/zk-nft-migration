@@ -108,8 +108,8 @@
     "contractType": "ERC721"
   },
   "Neemo": {
-    "totalSupply": "0",
-    "name": "Neemo Loyalty Badge",
+    "totalSupply": "375",
+    "name": "NeemoLoyaltyBadge",
     "symbol": "NLB",
     "contractType": "ERC721"
   },
@@ -132,9 +132,27 @@
     "contractType": "ERC721"
   },
   "Yoki": {
-    "totalSupply": "448235",
+    "totalSupply": "448259",
     "name": "Yoki Origins",
     "symbol": "YOKI",
     "contractType": "ERC1155"
+  },
+  "Bitget": {
+    "totalSupply": "450",
+    "name": "Bitget x Suzuki Jimny NFT",
+    "symbol": "BGJIMNY",
+    "contractType": "ERC1155"
+  },
+  "Packs": {
+    "totalSupply": "150",
+    "name": "PACKS",
+    "symbol": "PACKS",
+    "contractType": "ERC721"
+  },
+  "Airian": {
+    "totalSupply": "2000",
+    "name": "AIRian Avatar",
+    "symbol": "AIRian",
+    "contractType": "ERC721"
   }
 }

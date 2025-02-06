@@ -1,7 +1,7 @@
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
-
+import { wait } from './utils';
 
 interface TokenInstance {
     id: string;
@@ -146,7 +146,7 @@ async function main() {
             console.error(`Error processing ${projectName}:`, error);
         }
         
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await wait(2000);
     }
 }
 

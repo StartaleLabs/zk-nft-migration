@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "snap": "ts-node src/getHolders.ts",
+    "holders": "ts-node src/getHolders.ts",
     "transfers": "ts-node src/transfers.ts",
     "instances": "ts-node src/instances.ts",
     "build": "tsc"

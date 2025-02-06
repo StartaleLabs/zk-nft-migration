@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 import { assert } from 'console';
+import { wait } from './utils';
 
 interface ProjectConfig {
     address: string;
@@ -30,7 +31,7 @@ interface TokenCounters {
 }
 
 const BASE_API_URL = 'https://astar-zkevm.explorer.startale.com/api/v2';
-const INPUT_PATH = path.join(__dirname, 'data/zk_input.json');
+const INPUT_PATH = path.join(__dirname, 'data/zk_input_town.json');
 
 async function writeHoldersToCsv(projectName: string, holders: Holder[]) {
     const outputPath = path.join(__dirname, `data/${projectName}_holders.csv`);
@@ -88,7 +89,7 @@ async function fetchAllHolders(contractAddress: string): Promise<Holder[]> {
                 break;
             }
 
-            await new Promise(resolve => setTimeout(resolve, 500));
+            await wait(500);
             
         } catch (error) {
             console.error('Error fetching holders:', error);
@@ -122,7 +123,7 @@ async function main() {
             await writeHoldersToCsv(projectName, holders);
         }
         
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await wait(2000);
     }
 }
 

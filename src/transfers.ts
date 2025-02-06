@@ -1,6 +1,7 @@
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
+import { wait } from './utils';
 
 interface Transfer {
     total: {
@@ -42,7 +43,7 @@ async function fetchAllTransfers(contractAddress: string): Promise<Transfer[]> {
         
         if (!response.data.next_page_params) break;
         nextPageParams = response.data.next_page_params;
-        await new Promise(resolve => setTimeout(resolve, 200));
+        await wait(200);
     }
     
     return transfers;

@@ -26,13 +26,15 @@ interface ApiResponse {
     } | null;
 }
 
+const BASE_API_URL = 'https://astar-zkevm.explorer.startale.com/api/v2';
+
 async function fetchAllTransfers(contractAddress: string): Promise<Transfer[]> {
     const transfers: Transfer[] = [];
     let nextPageParams = null;
     
     while (true) {
         const response: { data: ApiResponse } = await axios.get<ApiResponse>(
-            `https://astar-zkevm.explorer.startale.com/api/v2/tokens/${contractAddress}/transfers`,
+            `${BASE_API_URL}/tokens/${contractAddress}/transfers`,
             {
                 params: nextPageParams || {}
             }
@@ -87,7 +89,7 @@ function processTransfers(transfers: Transfer[]): Map<string, Set<string>> {
 }
 
 async function main() {
-    const CONTRACT_ADDRESS = '0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e'; 
+    const CONTRACT_ADDRESS = '0x35e9f0E783140dad67e2A3502362805c7E65Ed69'; 
     const transfers = await fetchAllTransfers(CONTRACT_ADDRESS);
     const ownership = processTransfers(transfers);
     
@@ -100,7 +102,7 @@ async function main() {
     }
     
     fs.writeFileSync(
-        path.join(__dirname, 'data/casio.csv'),
+        path.join(__dirname, 'data/his_transfers.csv'),
         csvRows.join('\n')
     );
 }

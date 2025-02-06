@@ -1,8 +1,11 @@
 {
-  "Yoki": {
-    "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905"
+  "his": {
+    "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69"
   },
   "Bitget": {
     "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0"
+  },
+  "Yoki": {
+    "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905"
   }
 }

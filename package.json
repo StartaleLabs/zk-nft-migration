@@ -8,6 +8,7 @@
     "holders": "ts-node src/getHolders.ts",
     "transfers": "ts-node src/transfers.ts",
     "instances": "ts-node src/instances.ts",
+    "instances1155": "ts-node src/instances1155.ts",
     "build": "tsc"
   },
   "keywords": [],

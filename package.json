@@ -9,6 +9,7 @@
     "transfers": "ts-node src/transfers.ts",
     "instances": "ts-node src/instances.ts",
     "instances1155": "ts-node src/instances1155.ts",
+    "tokens1155": "ts-node src/instances1155tokens.ts",
     "build": "tsc"
   },
   "keywords": [],

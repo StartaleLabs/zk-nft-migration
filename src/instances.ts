@@ -93,7 +93,6 @@ async function writeOwnershipToCsv(projectName: string, ownership: Map<string, s
     for (const entry of entries) {
         csvContent.push(`${entry.address},${entry.tokenId}\n`);
     }
-    
     fs.writeFileSync(outputPath, csvContent.join(''));
     console.log(`Written ${ownership.size} entries to ${outputPath}`);
 }

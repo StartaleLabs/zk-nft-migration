@@ -56,7 +56,7 @@
     "address": "0xdd25a366b972691ECDd23093Ab5F9BF35047Ca77"
   },
   "Neemo": {
-    "address": "0xC213594DDfDEc9ad65aCA5078A2557E68A4AF9f4"
+    "address": "0x33362F864232b16E699bA3c5cC75b93B4f55fa5E"
   },
   "On1force": {
     "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1"
@@ -69,5 +69,14 @@
   },
   "Yoki": {
     "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905"
+  },
+  "Bitget": {
+    "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0"
+  },
+  "Packs": {
+    "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7"
+  },
+  "Airian": {
+    "address": "0x2C30a56279Be0A3d1bDe1f1C0375764362726B72"
   }
 }

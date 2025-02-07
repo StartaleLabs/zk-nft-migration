@@ -10,6 +10,9 @@
     "instances": "ts-node src/instances.ts",
     "instances1155": "ts-node src/instances1155.ts",
     "tokens1155": "ts-node src/instances1155tokens.ts",
+    "verify": "ts-node src/verify.ts",
+    "verify1155": "ts-node src/verify1155.ts",
+    "baseuri": "ts-node src/baseuri.ts",
     "build": "tsc"
   },
   "keywords": [],

@@ -1,0 +1,108 @@
+{
+  "casio": {
+    "address": "0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e",
+    "tokenURIchangeNeeded": "7 meta",
+    "logoUrl": "https://423wryv3ejugj6cjeryup3rfg5shx3ikpymoonj3qxxijoqcpkta.arweave.net/5rdo4rsiaGT4SSRxR-4lN2R77Qp-GOc1O4XuhLoCeqY/"
+  },
+  "origamiKokyo": {
+    "address": "0xD524DD5ca9272BEE145c6577910448421e1F5e69",
+    "tokenURIchangeNeeded": "NO EXTENSION",
+    "logoUrl": "ipfs://bafybeiekt2dawpzewttjdv6m3xhwjv4mvh64l7n2u3iin7txri4nmr5564/"
+  },
+  "jrKyushuFree": {
+    "address": "0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC",
+    "logoUrl": "ipfs://bafybeie4brnucfxtphaxpo4x5cna7tivetskvc3dqzoy34qg3km2qurcei/"
+  },
+  "jrKyushuPaid": {
+    "address": "0xDE782Cc4bf15Df5791261C126da1942BA8d805c4",
+    "logoUrl": "ipfs://bafybeig67mjo5x2m6gc5a3tb7d2fbbfw4lvpycabhg6rp2eivgaksdhnka/"
+  },
+  "onigiriman": {
+    "address": "0x0CFd649E37882944342Ec0f8A2ac8ABca01f6934",
+    "logoUrl": "https://arweave.net/88gyvXsmQTee9dDZPZIrH9M72NJ4CPuKoR084klKQcs/"
+  },
+  "mazda": {
+    "address": "0x8Ade4c707630d2F3aB0e36cde5c81dA8F56fE0b6",
+    "logoUrl": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/"
+  },
+  "candyGirl": {
+    "address": "0xe3A4dBF34e21C7D24F86ef032A3E3beC39220B86",
+    "logoUrl": "ipfs://bafybeiggtqqhp37mvwahxiplzjcebbo6i4i3tr6ne3kdp6mkkfvpfhqlqe/"
+  },
+  "his": {
+    "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69",
+    "logoUrl": "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/"
+  },
+  "sashimi": {
+    "address": "0x682cD0890C9c3aC423D534a50a96E9C6EF9983D2",
+    "logoUrl": "https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/"
+  },
+  "UZNo": {
+    "address": "0xC384342Ad561B6791F4E38dE7A5e8b7747Bca5eE",
+    "logoUrl": "https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/"
+  },
+  "DenDekaDen": {
+    "address": "0x6d99156004e7DDD41b3CBF7E60A8AF2438609542",
+    "logoUrl": "ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/"
+  },
+  "CityPopTokyo": {
+    "address": "0x9D640D61FaFB620C6473eB87B5FD093a0392902B",
+    "logoUrl": "https://arweave.net/Eanyr2y8yKFtdzmAhZ-i0pk0-2cVMspqUhM25r8HB80/"
+  },
+  "JapanCreatorCollection": {
+    "address": "0xAd61e3700A9ABa6dC5B986Ec39604167db33Fe09",
+    "logoUrl": "https://arweave.net/QVg9_emuvPlV5fukK2nJJ0E54H7xahu2R6yLawyBb6c/"
+  },
+  "Walkmon": {
+    "address": "0x580c0d3b8d4E146E7d8f99457a34248c9C988D1b",
+    "logoUrl": "https://walkmon-nft.sonoisy.team/meta/"
+  },
+  "DenShinSanKa": {
+    "address": "0x91843Af2fA625975FD9249ecD5a6c20d3EBAb482",
+    "logoUrl": "https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/"
+  },
+  "SNPIT": {
+    "address": "0x5d9FfaFed1F17550846c27Ee57110BAa9609F6D0",
+    "logoUrl": "https://file.snpit.xyz/ZCB/"
+  },
+  "DoF": {
+    "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6",
+    "logoUrl": ""
+  },
+  "DEKSA": {
+    "address": "0xdd25a366b972691ECDd23093Ab5F9BF35047Ca77",
+    "logoUrl": "ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/"
+  },
+  "Neemo": {
+    "address": "0x33362F864232b16E699bA3c5cC75b93B4f55fa5E",
+    "logoUrl": "https://app.neemo.finance/api/loyaltybadge/"
+  },
+  "On1force": {
+    "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
+    "logoUrl": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/"
+  },
+  "SkyLabs": {
+    "address": "0x4eFC1FbED6598551c30A830758244eCC9706dFb4",
+    "logoUrl": "https://raw.githubusercontent.com/niklabh/sample-nft/main/"
+  },
+  "Kamui": {
+    "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
+    "logoUrl": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/"
+  },
+  "Yoki": {
+    "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905",
+    "logoUrl": ""
+  },
+  "Bitget": {
+    "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
+    "logoUrl": ""
+  },
+  "Packs": {
+    "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",
+    "logoUrl": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/"
+  },
+  "Airian": {
+    "address": "0x2C30a56279Be0A3d1bDe1f1C0375764362726B72",
+    "logoUrl": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/"
+  }
+}

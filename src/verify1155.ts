@@ -36,7 +36,7 @@ async function verifyInstances(projectName: string, contractAddress: Address) {
     const csvContent = fs.readFileSync(csvPath, 'utf-8');
     const lines = csvContent.split('\n').slice(1);
     
-    const sampleSize = Math.max(Math.floor(lines.length * 0.01), 1);
+    const sampleSize = Math.max(Math.floor(lines.length * 0.2), 1);
     const samples = lines
         .sort(() => 0.5 - Math.random())
         .slice(0, sampleSize)

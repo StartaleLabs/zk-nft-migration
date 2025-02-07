@@ -1,0 +1,79 @@
+➜ npm run verify1155
+
+> migration@1.0.0 verify1155
+> ts-node src/verify1155.ts
+
+
+Starting verification process at: 2025-02-07T09:28:56.816Z
+Results for his with total 2469:
+  Total samples: 24
+  Verified: 24
+  Failed: 0
+-------------------
+Results for Bitget with total 191:
+  Total samples: 1
+  Verified: 1
+  Failed: 0
+-------------------
+Results for Yoki with total 100713:
+  Total samples: 1007
+  Verified: 1007
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-07T09:30:29.951Z
+Total duration: 1m 33s
+
+zk-nft-migration on  verify-snapshot [📝🌱] via  v23.3.0 took 1m35s 
+➜ npm run verify1155
+
+> migration@1.0.0 verify1155
+> ts-node src/verify1155.ts
+
+
+Starting verification process at: 2025-02-07T09:31:32.772Z
+Results for his with total 2469:
+  Total samples: 247
+  Verified: 247
+  Failed: 0
+-------------------
+Results for Bitget with total 191:
+  Total samples: 19
+  Verified: 19
+  Failed: 0
+-------------------
+Results for Yoki with total 100713:
+  Total samples: 10071
+  Verified: 10071
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-07T09:46:47.373Z
+Total duration: 15m 14s
+
+zk-nft-migration on  verify-snapshot [📝🌱] via  v23.3.0 took 15m16s 
+➜ npm run verify1155
+(node:72990) ExperimentalWarning: CommonJS module /Users/mario/.nvm/versions/node/v23.3.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mario/.nvm/versions/node/v23.3.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> migration@1.0.0 verify1155
+> ts-node src/verify1155.ts
+
+
+Starting verification process at: 2025-02-07T14:09:39.451Z
+Results for his with total 2469:
+  Total samples: 494
+  Verified: 494
+  Failed: 0
+-------------------
+Results for Bitget with total 191:
+  Total samples: 38
+  Verified: 38
+  Failed: 0
+-------------------
+Results for Yoki with total 100713:
+  Total samples: 20142
+  Verified: 20142
+  Failed: 0
+-------------------

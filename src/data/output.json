@@ -1,23 +1,23 @@
 {
   "casio": {
     "address": "0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e",
-    "tokenURIchangeNeeded": "7 meta",
     "totalSupply": "2075",
     "name": "CASIO WATCHES NFT",
     "symbol": "CASIO WATCHES NFT",
     "contractType": "ERC721",
     "startsWithToken0": true,
-    "baseURI": "https://423wryv3ejugj6cjeryup3rfg5shx3ikpymoonj3qxxijoqcpkta.arweave.net/5rdo4rsiaGT4SSRxR-4lN2R77Qp-GOc1O4XuhLoCeqY/"
+    "baseURI": "https://423wryv3ejugj6cjeryup3rfg5shx3ikpymoonj3qxxijoqcpkta.arweave.net/5rdo4rsiaGT4SSRxR-4lN2R77Qp-GOc1O4XuhLoCeqY/",
+    "isMintPayable": true
   },
   "origamiKokyo": {
     "address": "0xD524DD5ca9272BEE145c6577910448421e1F5e69",
-    "tokenURIchangeNeeded": "NO EXTENSION",
     "totalSupply": "3000",
     "name": "ORIGAMI NFT by KOKYO NFT",
     "symbol": "ORIGAMI",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "ipfs://bafybeiekt2dawpzewttjdv6m3xhwjv4mvh64l7n2u3iin7txri4nmr5564/"
+    "baseURI": "ipfs://bafybeiekt2dawpzewttjdv6m3xhwjv4mvh64l7n2u3iin7txri4nmr5564/",
+    "isMintPayable": true
   },
   "jrKyushuFree": {
     "address": "0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC",
@@ -26,7 +26,8 @@
     "symbol": "JRKYUSHUNFT",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "ipfs://bafybeie4brnucfxtphaxpo4x5cna7tivetskvc3dqzoy34qg3km2qurcei/"
+    "baseURI": "ipfs://bafybeie4brnucfxtphaxpo4x5cna7tivetskvc3dqzoy34qg3km2qurcei/",
+    "isMintPayable": false
   },
   "jrKyushuPaid": {
     "address": "0xDE782Cc4bf15Df5791261C126da1942BA8d805c4",
@@ -35,7 +36,8 @@
     "symbol": "JRKYUSHUNFT",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "ipfs://bafybeig67mjo5x2m6gc5a3tb7d2fbbfw4lvpycabhg6rp2eivgaksdhnka/"
+    "baseURI": "ipfs://bafybeig67mjo5x2m6gc5a3tb7d2fbbfw4lvpycabhg6rp2eivgaksdhnka/",
+    "isMintPayable": true
   },
   "onigiriman": {
     "address": "0x0CFd649E37882944342Ec0f8A2ac8ABca01f6934",
@@ -44,7 +46,8 @@
     "symbol": "MJLG",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://arweave.net/88gyvXsmQTee9dDZPZIrH9M72NJ4CPuKoR084klKQcs/"
+    "baseURI": "https://arweave.net/88gyvXsmQTee9dDZPZIrH9M72NJ4CPuKoR084klKQcs/",
+    "isMintPayable": true
   },
   "mazda": {
     "address": "0x8Ade4c707630d2F3aB0e36cde5c81dA8F56fE0b6",
@@ -53,7 +56,8 @@
     "symbol": "METAMAZDA",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/"
+    "baseURI": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/",
+    "isMintPayable": true
   },
   "candyGirl": {
     "address": "0xe3A4dBF34e21C7D24F86ef032A3E3beC39220B86",
@@ -62,7 +66,8 @@
     "symbol": "CANDYGIRL1YEAR",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "ipfs://bafybeiggtqqhp37mvwahxiplzjcebbo6i4i3tr6ne3kdp6mkkfvpfhqlqe/"
+    "baseURI": "ipfs://bafybeiggtqqhp37mvwahxiplzjcebbo6i4i3tr6ne3kdp6mkkfvpfhqlqe/",
+    "isMintPayable": true
   },
   "his": {
     "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69",
@@ -71,7 +76,8 @@
     "symbol": "HISVTUBERNFT",
     "contractType": "ERC1155",
     "startsWithToken0": false,
-    "baseURI": "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/"
+    "baseURI": "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/",
+    "isMintPayable": true
   },
   "sashimi": {
     "address": "0x682cD0890C9c3aC423D534a50a96E9C6EF9983D2",
@@ -80,7 +86,8 @@
     "symbol": "SJ",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/"
+    "baseURI": "https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/",
+    "isMintPayable": true
   },
   "UZNo": {
     "address": "0xC384342Ad561B6791F4E38dE7A5e8b7747Bca5eE",
@@ -89,7 +96,8 @@
     "symbol": "ULC",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/"
+    "baseURI": "https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/",
+    "isMintPayable": true
   },
   "DenDekaDen": {
     "address": "0x6d99156004e7DDD41b3CBF7E60A8AF2438609542",
@@ -98,7 +106,8 @@
     "symbol": "DGY",
     "contractType": "ERC721",
     "startsWithToken0": true,
-    "baseURI": "ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/"
+    "baseURI": "ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/",
+    "isMintPayable": true
   },
   "CityPopTokyo": {
     "address": "0x9D640D61FaFB620C6473eB87B5FD093a0392902B",
@@ -107,7 +116,8 @@
     "symbol": "CPTC",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://arweave.net/Eanyr2y8yKFtdzmAhZ-i0pk0-2cVMspqUhM25r8HB80/"
+    "baseURI": "https://arweave.net/Eanyr2y8yKFtdzmAhZ-i0pk0-2cVMspqUhM25r8HB80/",
+    "isMintPayable": true
   },
   "JapanCreatorCollection": {
     "address": "0xAd61e3700A9ABa6dC5B986Ec39604167db33Fe09",
@@ -116,7 +126,8 @@
     "symbol": "JCC",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://arweave.net/QVg9_emuvPlV5fukK2nJJ0E54H7xahu2R6yLawyBb6c/"
+    "baseURI": "https://arweave.net/QVg9_emuvPlV5fukK2nJJ0E54H7xahu2R6yLawyBb6c/",
+    "isMintPayable": true
   },
   "Walkmon": {
     "address": "0x580c0d3b8d4E146E7d8f99457a34248c9C988D1b",
@@ -125,7 +136,8 @@
     "symbol": "WMOG",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://walkmon-nft.sonoisy.team/meta/"
+    "baseURI": "https://walkmon-nft.sonoisy.team/meta/",
+    "isMintPayable": true
   },
   "DenShinSanKa": {
     "address": "0x91843Af2fA625975FD9249ecD5a6c20d3EBAb482",
@@ -134,7 +146,8 @@
     "symbol": "DSSK",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/"
+    "baseURI": "https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/",
+    "isMintPayable": true
   },
   "SNPIT": {
     "address": "0x5d9FfaFed1F17550846c27Ee57110BAa9609F6D0",
@@ -143,7 +156,8 @@
     "symbol": "SNPITCOMBADGE",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://file.snpit.xyz/ZCB/"
+    "baseURI": "https://file.snpit.xyz/ZCB/",
+    "isMintPayable": true
   },
   "DoF": {
     "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6",
@@ -152,7 +166,8 @@
     "symbol": "DoF OG",
     "contractType": "ERC721",
     "startsWithToken0": true,
-    "baseURI": "https://ipfs.io/ipfs/QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce"
+    "baseURI": "https://ipfs.io/ipfs/QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce",
+    "isMintPayable": true
   },
   "DEKSA": {
     "address": "0xdd25a366b972691ECDd23093Ab5F9BF35047Ca77",
@@ -161,7 +176,8 @@
     "symbol": "PNDW",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/"
+    "baseURI": "ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/",
+    "isMintPayable": true
   },
   "Neemo": {
     "address": "0x33362F864232b16E699bA3c5cC75b93B4f55fa5E",
@@ -170,7 +186,8 @@
     "symbol": "NLB",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://app.neemo.finance/api/loyaltybadge/"
+    "baseURI": "https://app.neemo.finance/api/loyaltybadge/",
+    "isMintPayable": true
   },
   "On1force": {
     "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
@@ -179,7 +196,8 @@
     "symbol": "0N1FORCE",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/"
+    "baseURI": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/",
+    "isMintPayable": true
   },
   "SkyLabs": {
     "address": "0x4eFC1FbED6598551c30A830758244eCC9706dFb4",
@@ -188,7 +206,8 @@
     "symbol": "SKY",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://raw.githubusercontent.com/niklabh/sample-nft/main/"
+    "baseURI": "https://raw.githubusercontent.com/niklabh/sample-nft/main/",
+    "isMintPayable": true
   },
   "Kamui": {
     "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
@@ -197,7 +216,8 @@
     "symbol": "KAMUI",
     "contractType": "ERC721",
     "startsWithToken0": true,
-    "baseURI": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/"
+    "baseURI": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/",
+    "isMintPayable": true
   },
   "Yoki": {
     "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905",
@@ -206,7 +226,8 @@
     "symbol": "YOKI",
     "contractType": "ERC1155",
     "startsWithToken0": true,
-    "baseURI": "ipfs://bafybeieavjq2az24tkzk32dkjfz3cw6dfiy5khmmoezylbneyaiuukghqm/"
+    "baseURI": "ipfs://bafybeieavjq2az24tkzk32dkjfz3cw6dfiy5khmmoezylbneyaiuukghqm/",
+    "isMintPayable": false
   },
   "Bitget": {
     "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
@@ -215,7 +236,8 @@
     "symbol": "BGJIMNY",
     "contractType": "ERC1155",
     "startsWithToken0": false,
-    "baseURI": " ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/"
+    "baseURI": " ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/",
+    "isMintPayable": true
   },
   "Packs": {
     "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",
@@ -224,7 +246,8 @@
     "symbol": "PACKS",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/"
+    "baseURI": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/",
+    "isMintPayable": true
   },
   "Airian": {
     "address": "0x2C30a56279Be0A3d1bDe1f1C0375764362726B72",
@@ -233,6 +256,7 @@
     "symbol": "AIRian",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/"
+    "baseURI": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/",
+    "isMintPayable": true
   }
 }

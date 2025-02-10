@@ -5,7 +5,6 @@ import path from 'path'
 
 interface InputProject {
     address: string;
-    tokenURIchangeNeeded?: string;
 }
 
 interface OutputProject extends InputProject {

@@ -2,6 +2,8 @@ import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
 import { wait } from './utils';
+import type { ProjectConfig } from './types/config';
+
 interface TokenInstance1155 {
     id: string;
     token: {
@@ -38,10 +40,6 @@ interface HoldersResponse {
     } | null;
 }
 
-interface ProjectConfig {
-    address: string;
-    tokenURIchangeNeeded: string;
-}
 
 const INPUT_PROJECTS_JSON = 'data/zk_input_1155.json';
 

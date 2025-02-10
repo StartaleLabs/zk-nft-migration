@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 import { ABI } from './abi721a'
+import type { ProjectConfig } from './types/config';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -73,12 +74,7 @@ interface ContractDetails {
     contractType: 'ERC721' | 'ERC1155' | 'UNKNOWN';
 }
 
-interface ProjectConfig {
-    address: Address;
-    totalSupplyFunction: string;
-}
-
-async function readTotalSupply(contract: any, totalSupplyFunction: string): Promise<string> {
+async function readTotalSupply(contract: any): Promise<string> {
     try {
         // Workaround for contracts not having totalSupply function
         if (contract.address === '0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC') { // JR Kyushu Free
@@ -143,7 +139,7 @@ async function getContractType(contract: any): Promise<'ERC721' | 'ERC1155' | 'U
     }
 }
 
-async function getContractDetails(address: `0x${string}`, totalSupplyFunction: string): Promise<ContractDetails> {
+async function getContractDetails(address: `0x${string}`): Promise<ContractDetails> {
     const contract = getContract({
         address,
         abi: erc721Abi,
@@ -151,7 +147,7 @@ async function getContractDetails(address: `0x${string}`, totalSupplyFunction: s
     });
 
     const [totalSupply, name, symbol, contractType] = await Promise.all([
-        readTotalSupply(contract, totalSupplyFunction),
+        readTotalSupply(contract),
         readName(contract),
         readSymbol(contract),
         getContractType(contract)
@@ -166,7 +162,7 @@ async function main() {
 
     for (const [key, config] of Object.entries(inputJson)) {
         // console.log(`Getting contract details for ${key} at address ${config.address}`);
-        const details = await getContractDetails(config.address as `0x${string}`, config.totalSupplyFunction);
+        const details = await getContractDetails(config.address as `0x${string}`);
         const totalSupply = String(details.totalSupply)
         console.log(`${config.address}: totalSupply=${totalSupply}, ${key}=${details.name}, ${details.symbol}, type=${details.contractType}`);
         outputJson[key] = {

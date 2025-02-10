@@ -18,42 +18,50 @@ const client = createPublicClient({
 });
 
 async function checkTokenZero() {
-  console.log('Checking tokenId 0 existence for all projects...\n');
+  console.log('Checking tokenId 0 existence and updating output.json...\n');
 
   const inputPath = path.join(__dirname, 'data/zk_input_721.json');
-  const config: Record<string, ProjectConfig> = JSON.parse(
-    fs.readFileSync(inputPath, 'utf-8'));
+  const outputPath = path.join(__dirname, 'data/output.json');
+  
+  const inputConfig: Record<string, ProjectConfig> = JSON.parse(
+    fs.readFileSync(inputPath, 'utf-8')
+  );
+
+  let outputConfig: Record<string, ProjectConfig> = {};
+  if (fs.existsSync(outputPath)) {
+    outputConfig = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
+  }
+
   const results = await Promise.allSettled(
-      Object.entries(config as Record<string, { address: string }>).map(async ([project, data]: [string, { address: string }]) => {
-        try {
-          const contract = getContract({
-            address: data.address as Address,
-            abi: erc721Abi,
-            client
-          });
+    Object.entries(inputConfig).map(async ([project, data]) => {
+      try {
+        const contract = getContract({
+          address: data.address as Address,
+          abi: erc721Abi,
+          client
+        });
 
-          const owner = await contract.read.ownerOf([BigInt(0)]);
-          return { project, exists: true, owner };
-        } catch (error) {
-          return { project, exists: false, error: (error as any).message };
-        }
-      })
-    );
-
-  console.log('Results:');
-  console.log('Project'.padEnd(25), 'Token 0 Exists'.padEnd(15), 'Owner/Error');
-  console.log('-'.repeat(80));
+        const owner = await contract.read.ownerOf([BigInt(0)]);
+        return { project, exists: true };
+      } catch (error) {
+        return { project, exists: false };
+      }
+    })
+  );
 
   results.forEach((result) => {
     if (result.status === 'fulfilled') {
-      const { project, exists, owner } = result.value;
-      console.log(
-        project.padEnd(25),
-        exists ? 'Yes'.padEnd(15) : 'No'.padEnd(15),
-        exists ? owner : 'N/A'
-      );
+      const { project, exists } = result.value;
+      outputConfig[project] = {
+        ...inputConfig[project],
+        ...outputConfig[project],
+        startsWithToken0: exists
+      };
     }
   });
+
+  fs.writeFileSync(outputPath, JSON.stringify(outputConfig, null, 2));
+  console.log(`Updated output.json with token0 existence information`);
 }
 
 checkTokenZero().catch(console.error);

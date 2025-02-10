@@ -1,158 +1,213 @@
 {
   "casio": {
+    "address": "0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e",
+    "tokenURIchangeNeeded": "7 meta",
     "totalSupply": "2075",
     "name": "CASIO WATCHES NFT",
     "symbol": "CASIO WATCHES NFT",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": true
   },
   "origamiKokyo": {
+    "address": "0xD524DD5ca9272BEE145c6577910448421e1F5e69",
+    "tokenURIchangeNeeded": "NO EXTENSION",
     "totalSupply": "3000",
     "name": "ORIGAMI NFT by KOKYO NFT",
     "symbol": "ORIGAMI",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "jrKyushuFree": {
+    "address": "0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC",
     "totalSupply": "6967",
     "name": "JR九州NFT",
     "symbol": "JRKYUSHUNFT",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "jrKyushuPaid": {
+    "address": "0xDE782Cc4bf15Df5791261C126da1942BA8d805c4",
     "totalSupply": "1126",
     "name": "JR九州NFT",
     "symbol": "JRKYUSHUNFT",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "onigiriman": {
+    "address": "0x0CFd649E37882944342Ec0f8A2ac8ABca01f6934",
     "totalSupply": "390",
     "name": "Memory of a Japanese landscapes and girs",
     "symbol": "MJLG",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "mazda": {
+    "address": "0x8Ade4c707630d2F3aB0e36cde5c81dA8F56fE0b6",
     "totalSupply": "2088",
     "name": "Meta-Mazda",
     "symbol": "METAMAZDA",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "candyGirl": {
+    "address": "0xe3A4dBF34e21C7D24F86ef032A3E3beC39220B86",
     "totalSupply": "12725",
     "name": "CANDY GIRL 1 Year Anniversary x ASTAR zkEVM NFT",
     "symbol": "CANDYGIRL1YEAR",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "his": {
+    "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69",
     "totalSupply": "2708",
     "name": "ご当地vtuber図鑑　コラボNFT",
     "symbol": "HISVTUBERNFT",
-    "contractType": "UNKNOWN"
+    "contractType": "UNKNOWN",
+    "startsWithToken0": false
   },
   "sashimi": {
+    "address": "0x682cD0890C9c3aC423D534a50a96E9C6EF9983D2",
     "totalSupply": "451",
     "name": "Sashimic Japan",
     "symbol": "SJ",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "UZNo": {
+    "address": "0xC384342Ad561B6791F4E38dE7A5e8b7747Bca5eE",
     "totalSupply": "2050",
     "name": "UZNo Leonarudo Collection",
     "symbol": "ULC",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "DenDekaDen": {
+    "address": "0x6d99156004e7DDD41b3CBF7E60A8AF2438609542",
     "totalSupply": "8888",
     "name": "DenDekaDen Garden YoPort",
     "symbol": "DGY",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": true
   },
   "CityPopTokyo": {
+    "address": "0x9D640D61FaFB620C6473eB87B5FD093a0392902B",
     "totalSupply": "3641",
     "name": "City Pop TOKYO Card",
     "symbol": "CPTC",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "JapanCreatorCollection": {
+    "address": "0xAd61e3700A9ABa6dC5B986Ec39604167db33Fe09",
     "totalSupply": "50000",
     "name": "Japan Creators Collection",
     "symbol": "JCC",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "Walkmon": {
+    "address": "0x580c0d3b8d4E146E7d8f99457a34248c9C988D1b",
     "totalSupply": "1979",
     "name": "WALKMON OG",
     "symbol": "WMOG",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "DenShinSanKa": {
+    "address": "0x91843Af2fA625975FD9249ecD5a6c20d3EBAb482",
     "totalSupply": "756",
     "name": "DenDekaDen DenShinSanKa",
     "symbol": "DSSK",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "SNPIT": {
+    "address": "0x5d9FfaFed1F17550846c27Ee57110BAa9609F6D0",
     "totalSupply": "1000",
     "name": "SNPIT Special Commemorative NFT Badge",
     "symbol": "SNPITCOMBADGE",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "DoF": {
+    "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6",
     "totalSupply": "1000",
     "name": "DoF OG Pass",
     "symbol": "DoF OG",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": true
   },
   "DEKSA": {
+    "address": "0xdd25a366b972691ECDd23093Ab5F9BF35047Ca77",
     "totalSupply": "999",
     "name": "Pandawa",
     "symbol": "PNDW",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "Neemo": {
+    "address": "0x33362F864232b16E699bA3c5cC75b93B4f55fa5E",
     "totalSupply": "375",
     "name": "NeemoLoyaltyBadge",
     "symbol": "NLB",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "On1force": {
+    "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
     "totalSupply": "777",
     "name": "0N1 FORCE 0N1 Doll and F0N1 Doll Collectible",
     "symbol": "0N1FORCE",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "SkyLabs": {
+    "address": "0x4eFC1FbED6598551c30A830758244eCC9706dFb4",
     "totalSupply": "192",
     "name": "SkyLabs NFT",
     "symbol": "SKY",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "Kamui": {
+    "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
     "totalSupply": "706",
     "name": "Kamui",
     "symbol": "KAMUI",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": true
   },
   "Yoki": {
+    "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905",
     "totalSupply": "448241",
     "name": "Yoki Origins",
     "symbol": "YOKI",
-    "contractType": "ERC1155"
+    "contractType": "ERC1155",
+    "startsWithToken0": true
+    
   },
   "Bitget": {
+    "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
     "totalSupply": "450",
     "name": "Bitget x Suzuki Jimny NFT",
     "symbol": "BGJIMNY",
-    "contractType": "ERC1155"
+    "contractType": "ERC1155",
+    "startsWithToken0": false
   },
   "Packs": {
+    "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",
     "totalSupply": "150",
     "name": "PACKS",
     "symbol": "PACKS",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   },
   "Airian": {
+    "address": "0x2C30a56279Be0A3d1bDe1f1C0375764362726B72",
     "totalSupply": "2000",
     "name": "AIRian Avatar",
     "symbol": "AIRian",
-    "contractType": "ERC721"
+    "contractType": "ERC721",
+    "startsWithToken0": false
   }
 }

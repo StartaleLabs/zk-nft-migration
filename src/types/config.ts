@@ -5,5 +5,6 @@ export type ProjectConfig = {
     isMintPayable?: boolean | null;
     contractName?: string | null;
     price?: string | null;
+    metadataEntries: string | null;
 }
 

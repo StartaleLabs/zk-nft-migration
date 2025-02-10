@@ -2,31 +2,33 @@
   "casio": {
     "address": "0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e",
     "totalSupply": "2075",
-    "metadataEntries": 2075,
+    "metadataEntries": "8",
     "name": "CASIO WATCHES NFT",
     "symbol": "CASIO WATCHES NFT",
     "contractType": "ERC721",
     "startsWithToken0": true,
     "baseURI": "https://423wryv3ejugj6cjeryup3rfg5shx3ikpymoonj3qxxijoqcpkta.arweave.net/5rdo4rsiaGT4SSRxR-4lN2R77Qp-GOc1O4XuhLoCeqY/",
-    "isMintPayable": true,
+    "isMintPayable": false,
     "contractName": "CasioWatches",
     "price": null
   },
   "origamiKokyo": {
     "address": "0xD524DD5ca9272BEE145c6577910448421e1F5e69",
     "totalSupply": "3000",
+    "metadataEntries": "3000",
     "name": "ORIGAMI NFT by KOKYO NFT",
     "symbol": "ORIGAMI",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeiekt2dawpzewttjdv6m3xhwjv4mvh64l7n2u3iin7txri4nmr5564/",
-    "isMintPayable": true,
+    "isMintPayable": false,
     "contractName": "Origami",
     "price": null
   },
   "jrKyushuFree": {
     "address": "0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC",
     "totalSupply": "6967",
+    "metadataEntries": 15000,
     "name": "JR九州NFT",
     "symbol": "JRKYUSHUNFT",
     "contractType": "ERC721",
@@ -39,6 +41,7 @@
   "jrKyushuPaid": {
     "address": "0xDE782Cc4bf15Df5791261C126da1942BA8d805c4",
     "totalSupply": "1126",
+    "metadataEntries": "1126",
     "name": "JR九州NFT",
     "symbol": "JRKYUSHUNFT",
     "contractType": "ERC721",
@@ -51,6 +54,7 @@
   "onigiriman": {
     "address": "0x0CFd649E37882944342Ec0f8A2ac8ABca01f6934",
     "totalSupply": "390",
+    "metadataEntries": "390",
     "name": "Memory of a Japanese landscapes and girs",
     "symbol": "MJLG",
     "contractType": "ERC721",
@@ -70,7 +74,8 @@
     "baseURI": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/",
     "isMintPayable": true,
     "contractName": "MetaMazda",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/2086.json"
   },
   "candyGirl": {
     "address": "0xe3A4dBF34e21C7D24F86ef032A3E3beC39220B86",
@@ -82,7 +87,8 @@
     "baseURI": "ipfs://bafybeiggtqqhp37mvwahxiplzjcebbo6i4i3tr6ne3kdp6mkkfvpfhqlqe/",
     "isMintPayable": true,
     "contractName": "CandyGirl",
-    "price": null
+    "price": null,
+    "metadataEntries": "ipfs://bafybeiggtqqhp37mvwahxiplzjcebbo6i4i3tr6ne3kdp6mkkfvpfhqlqe/12723"
   },
   "his": {
     "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69",
@@ -93,7 +99,8 @@
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/",
     "isMintPayable": true,
-    "contractName": "HISVtuber"
+    "contractName": "HISVtuber",
+    "metadataEntries": null
   },
   "sashimi": {
     "address": "0x682cD0890C9c3aC423D534a50a96E9C6EF9983D2",
@@ -105,7 +112,8 @@
     "baseURI": "https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/",
     "isMintPayable": true,
     "contractName": "SashimicJapan",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/449.json"
   },
   "UZNo": {
     "address": "0xC384342Ad561B6791F4E38dE7A5e8b7747Bca5eE",
@@ -117,7 +125,8 @@
     "baseURI": "https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/",
     "isMintPayable": true,
     "contractName": "UNZo",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/2048.json"
   },
   "DenDekaDen": {
     "address": "0x6d99156004e7DDD41b3CBF7E60A8AF2438609542",
@@ -129,7 +138,8 @@
     "baseURI": "ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/",
     "isMintPayable": true,
     "contractName": "DenDekaDen",
-    "price": null
+    "price": null,
+    "metadataEntries": "ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/8886"
   },
   "CityPopTokyo": {
     "address": "0x9D640D61FaFB620C6473eB87B5FD093a0392902B",
@@ -141,7 +151,8 @@
     "baseURI": "https://arweave.net/Eanyr2y8yKFtdzmAhZ-i0pk0-2cVMspqUhM25r8HB80/",
     "isMintPayable": true,
     "contractName": "CityPopTokyo",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://arweave.net/Eanyr2y8yKFtdzmAhZ-i0pk0-2cVMspqUhM25r8HB80/3639.json"
   },
   "JapanCreatorCollection": {
     "address": "0xAd61e3700A9ABa6dC5B986Ec39604167db33Fe09",
@@ -153,7 +164,8 @@
     "baseURI": "https://arweave.net/QVg9_emuvPlV5fukK2nJJ0E54H7xahu2R6yLawyBb6c/",
     "isMintPayable": true,
     "contractName": "JapanCreatorsCollection",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://arweave.net/QVg9_emuvPlV5fukK2nJJ0E54H7xahu2R6yLawyBb6c/49998.json"
   },
   "Walkmon": {
     "address": "0x580c0d3b8d4E146E7d8f99457a34248c9C988D1b",
@@ -165,7 +177,8 @@
     "baseURI": "https://walkmon-nft.sonoisy.team/meta/",
     "isMintPayable": true,
     "contractName": "WalkmonOG",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://walkmon-nft.sonoisy.team/meta/1977.json"
   },
   "DenShinSanKa": {
     "address": "0x91843Af2fA625975FD9249ecD5a6c20d3EBAb482",
@@ -177,7 +190,8 @@
     "baseURI": "https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/",
     "isMintPayable": true,
     "contractName": "DenShinSanKa",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/754.json"
   },
   "SNPIT": {
     "address": "0x5d9FfaFed1F17550846c27Ee57110BAa9609F6D0",
@@ -189,7 +203,8 @@
     "baseURI": "https://file.snpit.xyz/ZCB/",
     "isMintPayable": true,
     "contractName": "SnipitComBadge",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://file.snpit.xyz/ZCB/998.json"
   },
   "DoF": {
     "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6",
@@ -201,7 +216,8 @@
     "baseURI": "https://ipfs.io/ipfs/QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce",
     "isMintPayable": true,
     "contractName": "DoFOG",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://ipfs.io/ipfs/QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce"
   },
   "DEKSA": {
     "address": "0xdd25a366b972691ECDd23093Ab5F9BF35047Ca77",
@@ -213,7 +229,8 @@
     "baseURI": "ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/",
     "isMintPayable": true,
     "contractName": "Pandawa",
-    "price": null
+    "price": null,
+    "metadataEntries": "ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/997.json"
   },
   "Neemo": {
     "address": "0x33362F864232b16E699bA3c5cC75b93B4f55fa5E",
@@ -225,7 +242,8 @@
     "baseURI": "https://app.neemo.finance/api/loyaltybadge/",
     "isMintPayable": true,
     "contractName": "NeemoLoyaltyBadge",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://app.neemo.finance/api/loyaltybadge/373"
   },
   "On1force": {
     "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
@@ -237,7 +255,8 @@
     "baseURI": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/",
     "isMintPayable": true,
     "contractName": "0N1Force",
-    "price": null
+    "price": null,
+    "metadataEntries": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/775"
   },
   "SkyLabs": {
     "address": "0x4eFC1FbED6598551c30A830758244eCC9706dFb4",
@@ -249,7 +268,8 @@
     "baseURI": "https://raw.githubusercontent.com/niklabh/sample-nft/main/",
     "isMintPayable": true,
     "contractName": "SkyLabs",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://raw.githubusercontent.com/niklabh/sample-nft/main/190"
   },
   "Kamui": {
     "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
@@ -261,7 +281,8 @@
     "baseURI": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/",
     "isMintPayable": true,
     "contractName": "Kamui",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/7.json"
   },
   "Yoki": {
     "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905",
@@ -272,7 +293,8 @@
     "startsWithToken0": true,
     "baseURI": "ipfs://bafybeieavjq2az24tkzk32dkjfz3cw6dfiy5khmmoezylbneyaiuukghqm/",
     "isMintPayable": false,
-    "contractName": "Yoki Origins"
+    "contractName": "Yoki Origins",
+    "metadataEntries": null
   },
   "Bitget": {
     "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
@@ -283,7 +305,8 @@
     "startsWithToken0": false,
     "baseURI": " ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/",
     "isMintPayable": true,
-    "contractName": "BitgetSuzukiJimny"
+    "contractName": "BitgetSuzukiJimny",
+    "metadataEntries": null
   },
   "Packs": {
     "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",
@@ -295,7 +318,8 @@
     "baseURI": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/",
     "isMintPayable": true,
     "contractName": "Packs",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/148.json"
   },
   "Airian": {
     "address": "0x2C30a56279Be0A3d1bDe1f1C0375764362726B72",
@@ -307,6 +331,7 @@
     "baseURI": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/",
     "isMintPayable": true,
     "contractName": "AIRianAvatar",
-    "price": null
+    "price": null,
+    "metadataEntries": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/1998.json"
   }
 }

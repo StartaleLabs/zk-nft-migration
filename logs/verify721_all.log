@@ -1,0 +1,352 @@
+➜ npx ts-node src/verify721all.ts
+(node:19782) ExperimentalWarning: CommonJS module /Users/mario/.nvm/versions/node/v23.3.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mario/.nvm/versions/node/v23.3.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+Starting verification process at: 2025-02-10T09:02:23.471Z
+Verifying casio...
+[casio] Progress: 500/2075 (500 verified, 0 failed)
+[casio] Progress: 1000/2075 (1000 verified, 0 failed)
+[casio] Progress: 1500/2075 (1500 verified, 0 failed)
+[casio] Progress: 2000/2075 (2000 verified, 0 failed)
+Results for casio:
+  Total processed: 2075
+  Verified: 2075
+  Failed: 0
+-------------------
+Verifying origamiKokyo...
+[origamiKokyo] Progress: 500/3000 (500 verified, 0 failed)
+[origamiKokyo] Progress: 1000/3000 (1000 verified, 0 failed)
+[origamiKokyo] Progress: 1500/3000 (1500 verified, 0 failed)
+[origamiKokyo] Progress: 2000/3000 (2000 verified, 0 failed)
+[origamiKokyo] Progress: 2500/3000 (2500 verified, 0 failed)
+[origamiKokyo] Progress: 3000/3000 (3000 verified, 0 failed)
+Results for origamiKokyo:
+  Total processed: 3000
+  Verified: 3000
+  Failed: 0
+-------------------
+Verifying jrKyushuFree...
+[jrKyushuFree] Progress: 500/6967 (500 verified, 0 failed)
+[jrKyushuFree] Progress: 1000/6967 (1000 verified, 0 failed)
+[jrKyushuFree] Progress: 1500/6967 (1500 verified, 0 failed)
+[jrKyushuFree] Progress: 2000/6967 (2000 verified, 0 failed)
+[jrKyushuFree] Progress: 2500/6967 (2500 verified, 0 failed)
+[jrKyushuFree] Progress: 3000/6967 (3000 verified, 0 failed)
+[jrKyushuFree] Progress: 3500/6967 (3500 verified, 0 failed)
+[jrKyushuFree] Progress: 4000/6967 (4000 verified, 0 failed)
+[jrKyushuFree] Progress: 4500/6967 (4500 verified, 0 failed)
+[jrKyushuFree] Progress: 5000/6967 (5000 verified, 0 failed)
+[jrKyushuFree] Progress: 5500/6967 (5500 verified, 0 failed)
+[jrKyushuFree] Progress: 6000/6967 (6000 verified, 0 failed)
+[jrKyushuFree] Progress: 6500/6967 (6500 verified, 0 failed)
+Results for jrKyushuFree:
+  Total processed: 6967
+  Verified: 6967
+  Failed: 0
+-------------------
+Verifying jrKyushuPaid...
+[jrKyushuPaid] Progress: 500/1126 (500 verified, 0 failed)
+[jrKyushuPaid] Progress: 1000/1126 (1000 verified, 0 failed)
+Results for jrKyushuPaid:
+  Total processed: 1126
+  Verified: 1126
+  Failed: 0
+-------------------
+Verifying onigiriman...
+Results for onigiriman:
+  Total processed: 390
+  Verified: 390
+  Failed: 0
+-------------------
+Verifying mazda...
+[mazda] Progress: 500/2088 (500 verified, 0 failed)
+[mazda] Progress: 1000/2088 (1000 verified, 0 failed)
+[mazda] Progress: 1500/2088 (1500 verified, 0 failed)
+[mazda] Progress: 2000/2088 (2000 verified, 0 failed)
+Results for mazda:
+  Total processed: 2088
+  Verified: 2088
+  Failed: 0
+
+
+
+❯ npx ts-node src/verify721all.ts
+(node:31905) ExperimentalWarning: CommonJS module /Users/mario/.nvm/versions/node/v23.3.0/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /Users/mario/.nvm/versions/node/v23.3.0/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+Starting verification process at: 2025-02-10T09:37:58.565Z
+Verifying candyGirl...
+[candyGirl] Progress: 500/12725 (500 verified, 0 failed)
+[candyGirl] Progress: 1000/12725 (1000 verified, 0 failed)
+[candyGirl] Progress: 1500/12725 (1500 verified, 0 failed)
+[candyGirl] Progress: 2000/12725 (2000 verified, 0 failed)
+[candyGirl] Progress: 2500/12725 (2500 verified, 0 failed)
+[candyGirl] Progress: 3000/12725 (3000 verified, 0 failed)
+[candyGirl] Progress: 3500/12725 (3500 verified, 0 failed)
+[candyGirl] Progress: 4000/12725 (4000 verified, 0 failed)
+[candyGirl] Progress: 4500/12725 (4500 verified, 0 failed)
+[candyGirl] Progress: 5000/12725 (5000 verified, 0 failed)
+[candyGirl] Progress: 5500/12725 (5500 verified, 0 failed)
+[candyGirl] Progress: 6000/12725 (6000 verified, 0 failed)
+[candyGirl] Progress: 6500/12725 (6500 verified, 0 failed)
+[candyGirl] Progress: 7000/12725 (7000 verified, 0 failed)
+[candyGirl] Progress: 7500/12725 (7500 verified, 0 failed)
+[candyGirl] Progress: 8000/12725 (8000 verified, 0 failed)
+[candyGirl] Progress: 8500/12725 (8500 verified, 0 failed)
+[candyGirl] Progress: 9000/12725 (9000 verified, 0 failed)
+[candyGirl] Progress: 9500/12725 (9500 verified, 0 failed)
+[candyGirl] Progress: 10000/12725 (10000 verified, 0 failed)
+[candyGirl] Progress: 10500/12725 (10500 verified, 0 failed)
+[candyGirl] Progress: 11000/12725 (11000 verified, 0 failed)
+[candyGirl] Progress: 11500/12725 (11500 verified, 0 failed)
+[candyGirl] Progress: 12000/12725 (12000 verified, 0 failed)
+[candyGirl] Progress: 12500/12725 (12500 verified, 0 failed)
+Results for candyGirl:
+  Total processed: 12725
+  Verified: 12725
+  Failed: 0
+-------------------
+Verifying sashimi...
+Results for sashimi:
+  Total processed: 451
+  Verified: 451
+  Failed: 0
+-------------------
+Verifying UZNo...
+[UZNo] Progress: 500/2050 (500 verified, 0 failed)
+[UZNo] Progress: 1000/2050 (1000 verified, 0 failed)
+[UZNo] Progress: 1500/2050 (1500 verified, 0 failed)
+[UZNo] Progress: 2000/2050 (2000 verified, 0 failed)
+Results for UZNo:
+  Total processed: 2050
+  Verified: 2050
+  Failed: 0
+-------------------
+Verifying DenDekaDen...
+[DenDekaDen] Progress: 500/8888 (500 verified, 0 failed)
+[DenDekaDen] Progress: 1000/8888 (1000 verified, 0 failed)
+[DenDekaDen] Progress: 1500/8888 (1500 verified, 0 failed)
+[DenDekaDen] Progress: 2000/8888 (2000 verified, 0 failed)
+[DenDekaDen] Progress: 2500/8888 (2500 verified, 0 failed)
+[DenDekaDen] Progress: 3000/8888 (3000 verified, 0 failed)
+[DenDekaDen] Progress: 3500/8888 (3500 verified, 0 failed)
+[DenDekaDen] Progress: 4000/8888 (4000 verified, 0 failed)
+[DenDekaDen] Progress: 4500/8888 (4500 verified, 0 failed)
+[DenDekaDen] Progress: 5000/8888 (5000 verified, 0 failed)
+[DenDekaDen] Progress: 5500/8888 (5500 verified, 0 failed)
+[DenDekaDen] Progress: 6000/8888 (6000 verified, 0 failed)
+[DenDekaDen] Progress: 6500/8888 (6500 verified, 0 failed)
+[DenDekaDen] Progress: 7000/8888 (7000 verified, 0 failed)
+[DenDekaDen] Progress: 7500/8888 (7500 verified, 0 failed)
+[DenDekaDen] Progress: 8000/8888 (8000 verified, 0 failed)
+[DenDekaDen] Progress: 8500/8888 (8500 verified, 0 failed)
+Results for DenDekaDen:
+  Total processed: 8888
+  Verified: 8888
+  Failed: 0
+-------------------
+Verifying CityPopTokyo...
+[CityPopTokyo] Progress: 500/3641 (500 verified, 0 failed)
+[CityPopTokyo] Progress: 1000/3641 (1000 verified, 0 failed)
+[CityPopTokyo] Progress: 1500/3641 (1500 verified, 0 failed)
+[CityPopTokyo] Progress: 2000/3641 (2000 verified, 0 failed)
+[CityPopTokyo] Progress: 2500/3641 (2500 verified, 0 failed)
+[CityPopTokyo] Progress: 3000/3641 (3000 verified, 0 failed)
+[CityPopTokyo] Progress: 3500/3641 (3500 verified, 0 failed)
+Results for CityPopTokyo:
+  Total processed: 3641
+  Verified: 3641
+  Failed: 0
+-------------------
+Verifying JapanCreatorCollection...
+[JapanCreatorCollection] Progress: 500/50000 (500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 1000/50000 (1000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 1500/50000 (1500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 2000/50000 (2000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 2500/50000 (2500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 3000/50000 (3000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 3500/50000 (3500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 4000/50000 (4000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 4500/50000 (4500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 5000/50000 (5000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 5500/50000 (5500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 6000/50000 (6000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 6500/50000 (6500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 7000/50000 (7000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 7500/50000 (7500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 8000/50000 (8000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 8500/50000 (8500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 9000/50000 (9000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 9500/50000 (9500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 10000/50000 (10000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 10500/50000 (10500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 11000/50000 (11000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 11500/50000 (11500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 12000/50000 (12000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 12500/50000 (12500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 13000/50000 (13000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 13500/50000 (13500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 14000/50000 (14000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 14500/50000 (14500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 15000/50000 (15000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 15500/50000 (15500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 16000/50000 (16000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 16500/50000 (16500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 17000/50000 (17000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 17500/50000 (17500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 18000/50000 (18000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 18500/50000 (18500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 19000/50000 (19000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 19500/50000 (19500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 20000/50000 (20000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 20500/50000 (20500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 21000/50000 (21000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 21500/50000 (21500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 22000/50000 (22000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 22500/50000 (22500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 23000/50000 (23000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 23500/50000 (23500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 24000/50000 (24000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 24500/50000 (24500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 25000/50000 (25000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 25500/50000 (25500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 26000/50000 (26000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 26500/50000 (26500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 27000/50000 (27000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 27500/50000 (27500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 28000/50000 (28000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 28500/50000 (28500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 29000/50000 (29000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 29500/50000 (29500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 30000/50000 (30000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 30500/50000 (30500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 31000/50000 (31000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 31500/50000 (31500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 32000/50000 (32000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 32500/50000 (32500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 33000/50000 (33000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 33500/50000 (33500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 34000/50000 (34000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 34500/50000 (34500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 35000/50000 (35000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 35500/50000 (35500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 36000/50000 (36000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 36500/50000 (36500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 37000/50000 (37000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 37500/50000 (37500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 38000/50000 (38000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 38500/50000 (38500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 39000/50000 (39000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 39500/50000 (39500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 40000/50000 (40000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 40500/50000 (40500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 41000/50000 (41000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 41500/50000 (41500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 42000/50000 (42000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 42500/50000 (42500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 43000/50000 (43000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 43500/50000 (43500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 44000/50000 (44000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 44500/50000 (44500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 45000/50000 (45000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 45500/50000 (45500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 46000/50000 (46000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 46500/50000 (46500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 47000/50000 (47000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 47500/50000 (47500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 48000/50000 (48000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 48500/50000 (48500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 49000/50000 (49000 verified, 0 failed)
+[JapanCreatorCollection] Progress: 49500/50000 (49500 verified, 0 failed)
+[JapanCreatorCollection] Progress: 50000/50000 (50000 verified, 0 failed)
+Results for JapanCreatorCollection:
+  Total processed: 50000
+  Verified: 50000
+  Failed: 0
+-------------------
+Verifying Walkmon...
+[Walkmon] Progress: 500/1979 (500 verified, 0 failed)
+[Walkmon] Progress: 1000/1979 (1000 verified, 0 failed)
+[Walkmon] Progress: 1500/1979 (1500 verified, 0 failed)
+Results for Walkmon:
+  Total processed: 1979
+  Verified: 1979
+  Failed: 0
+-------------------
+Verifying DenShinSanKa...
+[DenShinSanKa] Progress: 500/756 (500 verified, 0 failed)
+Results for DenShinSanKa:
+  Total processed: 756
+  Verified: 756
+  Failed: 0
+-------------------
+Verifying SNPIT...
+[SNPIT] Progress: 500/1000 (500 verified, 0 failed)
+[SNPIT] Progress: 1000/1000 (1000 verified, 0 failed)
+Results for SNPIT:
+  Total processed: 1000
+  Verified: 1000
+  Failed: 0
+-------------------
+Verifying DoF...
+[DoF] Progress: 500/1000 (500 verified, 0 failed)
+[DoF] Progress: 1000/1000 (1000 verified, 0 failed)
+Results for DoF:
+  Total processed: 1000
+  Verified: 1000
+  Failed: 0
+-------------------
+Verifying DEKSA...
+[DEKSA] Progress: 500/999 (500 verified, 0 failed)
+Results for DEKSA:
+  Total processed: 999
+  Verified: 999
+  Failed: 0
+-------------------
+Verifying Neemo...
+Results for Neemo:
+  Total processed: 375
+  Verified: 375
+  Failed: 0
+-------------------
+Verifying On1force...
+[On1force] Progress: 500/777 (500 verified, 0 failed)
+Results for On1force:
+  Total processed: 777
+  Verified: 777
+  Failed: 0
+-------------------
+Verifying SkyLabs...
+Results for SkyLabs:
+  Total processed: 192
+  Verified: 192
+  Failed: 0
+-------------------
+Verifying Kamui...
+[Kamui] Progress: 500/706 (500 verified, 0 failed)
+Results for Kamui:
+  Total processed: 706
+  Verified: 706
+  Failed: 0
+-------------------
+Verifying Packs...
+Results for Packs:
+  Total processed: 150
+  Verified: 150
+  Failed: 0
+-------------------
+Verifying Airian...
+[Airian] Progress: 500/2000 (500 verified, 0 failed)
+[Airian] Progress: 1000/2000 (1000 verified, 0 failed)
+[Airian] Progress: 1500/2000 (1500 verified, 0 failed)
+[Airian] Progress: 2000/2000 (2000 verified, 0 failed)
+Results for Airian:
+  Total processed: 2000
+  Verified: 2000
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-10T11:38:19.267Z
+Total duration: 120m 20s

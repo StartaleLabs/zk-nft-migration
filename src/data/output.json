@@ -69,7 +69,7 @@
     "totalSupply": "2708",
     "name": "ご当地vtuber図鑑　コラボNFT",
     "symbol": "HISVTUBERNFT",
-    "contractType": "UNKNOWN",
+    "contractType": "ERC1155",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/"
   },
@@ -206,7 +206,7 @@
     "symbol": "YOKI",
     "contractType": "ERC1155",
     "startsWithToken0": true,
-    "baseURI": null
+    "baseURI": "ipfs://bafybeieavjq2az24tkzk32dkjfz3cw6dfiy5khmmoezylbneyaiuukghqm/"
   },
   "Bitget": {
     "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
@@ -215,7 +215,7 @@
     "symbol": "BGJIMNY",
     "contractType": "ERC1155",
     "startsWithToken0": false,
-    "baseURI": null
+    "baseURI": " ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/"
   },
   "Packs": {
     "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",

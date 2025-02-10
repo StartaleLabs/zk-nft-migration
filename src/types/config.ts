@@ -4,5 +4,6 @@ export type ProjectConfig = {
     baseURI?: string | null;
     isMintPayable?: boolean | null;
     contractName?: string | null;
+    price?: string | null;
 }
 

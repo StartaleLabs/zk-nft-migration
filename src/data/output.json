@@ -8,8 +8,8 @@
     "contractType": "ERC721",
     "startsWithToken0": true,
     "baseURI": "https://423wryv3ejugj6cjeryup3rfg5shx3ikpymoonj3qxxijoqcpkta.arweave.net/5rdo4rsiaGT4SSRxR-4lN2R77Qp-GOc1O4XuhLoCeqY/",
-    "isMintPayable": false,
     "contractName": "CasioWatches",
+    "isMintPayable": false,
     "price": null
   },
   "origamiKokyo": {
@@ -21,21 +21,21 @@
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeiekt2dawpzewttjdv6m3xhwjv4mvh64l7n2u3iin7txri4nmr5564/",
-    "isMintPayable": false,
     "contractName": "Origami",
+    "isMintPayable": false,
     "price": null
   },
   "jrKyushuFree": {
     "address": "0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC",
     "totalSupply": "6967",
-    "metadataEntries": 15000,
+    "metadataEntries": "6967",
     "name": "JR九州NFT",
     "symbol": "JRKYUSHUNFT",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeie4brnucfxtphaxpo4x5cna7tivetskvc3dqzoy34qg3km2qurcei/",
-    "isMintPayable": false,
     "contractName": "JrKyushuFM",
+    "isMintPayable": false,
     "price": null
   },
   "jrKyushuPaid": {
@@ -47,8 +47,8 @@
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeig67mjo5x2m6gc5a3tb7d2fbbfw4lvpycabhg6rp2eivgaksdhnka/",
-    "isMintPayable": true,
     "contractName": "JrKyushu",
+    "isMintPayable": true,
     "price": null
   },
   "onigiriman": {
@@ -60,103 +60,105 @@
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://arweave.net/88gyvXsmQTee9dDZPZIrH9M72NJ4CPuKoR084klKQcs/",
-    "isMintPayable": true,
     "contractName": "Onigiriman",
+    "isMintPayable": true,
     "price": null
   },
   "mazda": {
     "address": "0x8Ade4c707630d2F3aB0e36cde5c81dA8F56fE0b6",
     "totalSupply": "2088",
+    "metadataEntries": "2088",
     "name": "Meta-Mazda",
     "symbol": "METAMAZDA",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/",
-    "isMintPayable": true,
     "contractName": "MetaMazda",
-    "price": null,
-    "metadataEntries": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/2086.json"
+    "isMintPayable": true,
+    "price": null
   },
   "candyGirl": {
     "address": "0xe3A4dBF34e21C7D24F86ef032A3E3beC39220B86",
     "totalSupply": "12725",
+    "metadataEntries": "12725",
     "name": "CANDY GIRL 1 Year Anniversary x ASTAR zkEVM NFT",
     "symbol": "CANDYGIRL1YEAR",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeiggtqqhp37mvwahxiplzjcebbo6i4i3tr6ne3kdp6mkkfvpfhqlqe/",
-    "isMintPayable": true,
     "contractName": "CandyGirl",
-    "price": null,
-    "metadataEntries": "ipfs://bafybeiggtqqhp37mvwahxiplzjcebbo6i4i3tr6ne3kdp6mkkfvpfhqlqe/12723"
+    "isMintPayable": true,
+    "price": null
   },
   "his": {
     "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69",
     "totalSupply": "2708",
+    "metadataEntries": "2708",
     "name": "ご当地vtuber図鑑　コラボNFT",
     "symbol": "HISVTUBERNFT",
     "contractType": "ERC1155",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/",
-    "isMintPayable": true,
     "contractName": "HISVtuber",
-    "metadataEntries": null
+    "isMintPayable": true,
+    "price": null
   },
   "sashimi": {
     "address": "0x682cD0890C9c3aC423D534a50a96E9C6EF9983D2",
     "totalSupply": "451",
+    "metadataEntries": "451",
     "name": "Sashimic Japan",
     "symbol": "SJ",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/",
-    "isMintPayable": true,
     "contractName": "SashimicJapan",
-    "price": null,
-    "metadataEntries": "https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/449.json"
+    "isMintPayable": true,
+    "price": null
   },
   "UZNo": {
     "address": "0xC384342Ad561B6791F4E38dE7A5e8b7747Bca5eE",
     "totalSupply": "2050",
+    "metadataEntries": "2050",
     "name": "UZNo Leonarudo Collection",
     "symbol": "ULC",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/",
-    "isMintPayable": true,
     "contractName": "UNZo",
-    "price": null,
-    "metadataEntries": "https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/2048.json"
+    "isMintPayable": true,
+    "price": null
   },
   "DenDekaDen": {
     "address": "0x6d99156004e7DDD41b3CBF7E60A8AF2438609542",
     "totalSupply": "8888",
+    "metadataEntries": "8888",
     "name": "DenDekaDen Garden YoPort",
     "symbol": "DGY",
     "contractType": "ERC721",
     "startsWithToken0": true,
     "baseURI": "ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/",
-    "isMintPayable": true,
     "contractName": "DenDekaDen",
-    "price": null,
-    "metadataEntries": "ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/8886"
+    "isMintPayable": true,
+    "price": null
   },
   "CityPopTokyo": {
     "address": "0x9D640D61FaFB620C6473eB87B5FD093a0392902B",
     "totalSupply": "3641",
+    "metadataEntries": "3641",
     "name": "City Pop TOKYO Card",
     "symbol": "CPTC",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://arweave.net/Eanyr2y8yKFtdzmAhZ-i0pk0-2cVMspqUhM25r8HB80/",
-    "isMintPayable": true,
     "contractName": "CityPopTokyo",
-    "price": null,
-    "metadataEntries": "https://arweave.net/Eanyr2y8yKFtdzmAhZ-i0pk0-2cVMspqUhM25r8HB80/3639.json"
+    "isMintPayable": true,
+    "price": null
   },
   "JapanCreatorCollection": {
     "address": "0xAd61e3700A9ABa6dC5B986Ec39604167db33Fe09",
     "totalSupply": "50000",
+    "metadataEntries": "5000",
     "name": "Japan Creators Collection",
     "symbol": "JCC",
     "contractType": "ERC721",
@@ -164,174 +166,175 @@
     "baseURI": "https://arweave.net/QVg9_emuvPlV5fukK2nJJ0E54H7xahu2R6yLawyBb6c/",
     "isMintPayable": true,
     "contractName": "JapanCreatorsCollection",
-    "price": null,
-    "metadataEntries": "https://arweave.net/QVg9_emuvPlV5fukK2nJJ0E54H7xahu2R6yLawyBb6c/49998.json"
+    "price": null
   },
   "Walkmon": {
     "address": "0x580c0d3b8d4E146E7d8f99457a34248c9C988D1b",
     "totalSupply": "1979",
+    "metadataEntries": "1979",
     "name": "WALKMON OG",
     "symbol": "WMOG",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://walkmon-nft.sonoisy.team/meta/",
-    "isMintPayable": true,
     "contractName": "WalkmonOG",
-    "price": null,
-    "metadataEntries": "https://walkmon-nft.sonoisy.team/meta/1977.json"
+    "isMintPayable": true,
+    "price": null
   },
   "DenShinSanKa": {
     "address": "0x91843Af2fA625975FD9249ecD5a6c20d3EBAb482",
     "totalSupply": "756",
+    "metadataEntries": "https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/754.json",
     "name": "DenDekaDen DenShinSanKa",
     "symbol": "DSSK",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/",
-    "isMintPayable": true,
     "contractName": "DenShinSanKa",
-    "price": null,
-    "metadataEntries": "https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/754.json"
+    "isMintPayable": true,
+    "price": null
   },
   "SNPIT": {
     "address": "0x5d9FfaFed1F17550846c27Ee57110BAa9609F6D0",
     "totalSupply": "1000",
+    "metadataEntries": "https://file.snpit.xyz/ZCB/998.json",
     "name": "SNPIT Special Commemorative NFT Badge",
     "symbol": "SNPITCOMBADGE",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://file.snpit.xyz/ZCB/",
-    "isMintPayable": true,
     "contractName": "SnipitComBadge",
-    "price": null,
-    "metadataEntries": "https://file.snpit.xyz/ZCB/998.json"
+    "isMintPayable": true,
+    "price": null
   },
   "DoF": {
     "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6",
     "totalSupply": "1000",
+    "metadataEntries": "https://ipfs.io/ipfs/QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce",
     "name": "DoF OG Pass",
     "symbol": "DoF OG",
     "contractType": "ERC721",
     "startsWithToken0": true,
     "baseURI": "https://ipfs.io/ipfs/QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce",
-    "isMintPayable": true,
     "contractName": "DoFOG",
-    "price": null,
-    "metadataEntries": "https://ipfs.io/ipfs/QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce"
+    "isMintPayable": true,
+    "price": null
   },
   "DEKSA": {
     "address": "0xdd25a366b972691ECDd23093Ab5F9BF35047Ca77",
     "totalSupply": "999",
+    "metadataEntries": "ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/997.json",
     "name": "Pandawa",
     "symbol": "PNDW",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/",
-    "isMintPayable": true,
     "contractName": "Pandawa",
-    "price": null,
-    "metadataEntries": "ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/997.json"
+    "isMintPayable": true,
+    "price": null
   },
   "Neemo": {
     "address": "0x33362F864232b16E699bA3c5cC75b93B4f55fa5E",
     "totalSupply": "375",
+    "metadataEntries": "https://app.neemo.finance/api/loyaltybadge/373",
     "name": "NeemoLoyaltyBadge",
     "symbol": "NLB",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://app.neemo.finance/api/loyaltybadge/",
-    "isMintPayable": true,
     "contractName": "NeemoLoyaltyBadge",
-    "price": null,
-    "metadataEntries": "https://app.neemo.finance/api/loyaltybadge/373"
+    "isMintPayable": true,
+    "price": null
   },
   "On1force": {
     "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
     "totalSupply": "777",
+    "metadataEntries": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/775",
     "name": "0N1 FORCE 0N1 Doll and F0N1 Doll Collectible",
     "symbol": "0N1FORCE",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/",
-    "isMintPayable": true,
     "contractName": "0N1Force",
-    "price": null,
-    "metadataEntries": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/775"
+    "isMintPayable": true,
+    "price": null
   },
   "SkyLabs": {
     "address": "0x4eFC1FbED6598551c30A830758244eCC9706dFb4",
     "totalSupply": "192",
+    "metadataEntries": "https://raw.githubusercontent.com/niklabh/sample-nft/main/190",
     "name": "SkyLabs NFT",
     "symbol": "SKY",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://raw.githubusercontent.com/niklabh/sample-nft/main/",
-    "isMintPayable": true,
     "contractName": "SkyLabs",
-    "price": null,
-    "metadataEntries": "https://raw.githubusercontent.com/niklabh/sample-nft/main/190"
+    "isMintPayable": true,
+    "price": null
   },
   "Kamui": {
     "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
     "totalSupply": "706",
+    "metadataEntries": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/7.json",
     "name": "Kamui",
     "symbol": "KAMUI",
     "contractType": "ERC721",
     "startsWithToken0": true,
     "baseURI": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/",
-    "isMintPayable": true,
     "contractName": "Kamui",
-    "price": null,
-    "metadataEntries": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/7.json"
+    "isMintPayable": true,
+    "price": null
   },
   "Yoki": {
     "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905",
     "totalSupply": "448241",
+    "metadataEntries": null,
     "name": "Yoki Origins",
     "symbol": "YOKI",
     "contractType": "ERC1155",
     "startsWithToken0": true,
     "baseURI": "ipfs://bafybeieavjq2az24tkzk32dkjfz3cw6dfiy5khmmoezylbneyaiuukghqm/",
-    "isMintPayable": false,
     "contractName": "Yoki Origins",
-    "metadataEntries": null
+    "isMintPayable": false,
+    "price": null
   },
   "Bitget": {
     "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
     "totalSupply": "450",
+    "metadataEntries": null,
     "name": "Bitget x Suzuki Jimny NFT",
     "symbol": "BGJIMNY",
     "contractType": "ERC1155",
     "startsWithToken0": false,
     "baseURI": " ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/",
-    "isMintPayable": true,
     "contractName": "BitgetSuzukiJimny",
-    "metadataEntries": null
+    "isMintPayable": true,
+    "price": null
   },
   "Packs": {
     "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",
     "totalSupply": "150",
+    "metadataEntries": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/148.json",
     "name": "PACKS",
     "symbol": "PACKS",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/",
-    "isMintPayable": true,
     "contractName": "Packs",
-    "price": null,
-    "metadataEntries": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/148.json"
+    "isMintPayable": true,
+    "price": null
   },
   "Airian": {
     "address": "0x2C30a56279Be0A3d1bDe1f1C0375764362726B72",
     "totalSupply": "2000",
+    "metadataEntries": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/1998.json",
     "name": "AIRian Avatar",
     "symbol": "AIRian",
     "contractType": "ERC721",
     "startsWithToken0": false,
     "baseURI": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/",
-    "isMintPayable": true,
     "contractName": "AIRianAvatar",
-    "price": null,
-    "metadataEntries": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/1998.json"
+    "isMintPayable": true,
+    "price": null
   }
 }

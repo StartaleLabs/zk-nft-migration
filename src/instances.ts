@@ -2,6 +2,7 @@ import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
 import { wait } from './utils';
+import type { ProjectConfig } from './types/config';
 
 interface TokenInstance {
     id: string;
@@ -16,11 +17,6 @@ interface ApiResponse {
     next_page_params: {
         items_count?: number;
     } | null;
-}
-
-interface ProjectConfig {
-    address: string;
-    tokenURIchangeNeeded: string;
 }
 
 interface TokenCounters {

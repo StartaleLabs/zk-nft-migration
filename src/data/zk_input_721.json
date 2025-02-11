@@ -1,11 +1,9 @@
 {
   "casio": {
-    "address": "0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e",
-    "tokenURIchangeNeeded": "7 meta"
+    "address": "0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e"
   },
   "origamiKokyo": {
-    "address": "0xD524DD5ca9272BEE145c6577910448421e1F5e69",
-    "tokenURIchangeNeeded": "NO EXTENSION"
+    "address": "0xD524DD5ca9272BEE145c6577910448421e1F5e69"
   },
   "jrKyushuFree": {
     "address": "0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC"

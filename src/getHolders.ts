@@ -3,11 +3,7 @@ import path from 'path';
 import axios from 'axios';
 import { assert } from 'console';
 import { wait } from './utils';
-
-interface ProjectConfig {
-    address: string;
-    tokenURIchangeNeeded: string;
-}
+import type { ProjectConfig } from './types/config';
 
 interface Holder {
     address: {

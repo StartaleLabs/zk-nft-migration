@@ -5,6 +5,7 @@ import { astarZkEVM } from 'viem/chains';
 import fs from 'fs';
 import path from 'path';
 import { wait } from './utils';
+import type { ProjectConfig } from './types/config';
 
 // Basic ERC721 ABI for ownerOf function
 const erc721Abi = [
@@ -22,10 +23,6 @@ const client = createPublicClient({
     chain: astarZkEVM,
     transport: http()
 });
-
-interface ProjectConfig {
-    address: Address;
-}
 
 async function verifyInstances(projectName: string, contractAddress: Address) {
     console.log(`Verifying ${projectName}...`);
@@ -92,7 +89,7 @@ async function main() {
     );
 
     for (const [projectName, config] of Object.entries(inputJson)) {
-        await verifyInstances(projectName, config.address);
+        await verifyInstances(projectName, config.address as Address);
         await wait(1000);
     }
 

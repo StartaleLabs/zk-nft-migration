@@ -22,7 +22,7 @@ async function checkTokenZero() {
 
   const inputPath = path.join(__dirname, 'data/zk_input_721.json');
   const outputPath = path.join(__dirname, 'data/output.json');
-  
+
   const inputConfig: Record<string, ProjectConfig> = JSON.parse(
     fs.readFileSync(inputPath, 'utf-8')
   );

@@ -2,7 +2,7 @@
   "casio": {
     "address": "0x35EdfFB12F93253f1c567a7e207F06E1B0de9D8e",
     "totalSupply": "2075",
-    "metadataEntries": "7",
+    "metadataEntries": "8",
     "name": "CASIO WATCHES NFT",
     "symbol": "CASIO WATCHES NFT",
     "contractType": "ERC721",
@@ -227,7 +227,7 @@
   "DoF": {
     "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6",
     "totalSupply": "1000",
-    "metadataEntries": "QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce",
+    "metadataEntries": "1",
     "name": "DoF OG Pass",
     "symbol": "DoF OG",
     "contractType": "ERC721",
@@ -302,15 +302,18 @@
   "Kamui": {
     "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
     "totalSupply": "706",
-    "metadataEntries": "6",
+    "metadataEntries": "706",
+    "metadataExtension": ".json",
     "name": "Kamui",
     "symbol": "KAMUI",
     "contractType": "ERC721",
     "startsWithToken0": true,
     "baseURI": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/",
     "contractName": "Kamui",
-    "isMintPayable": false,
-    "price": null
+    "maxSupply": "1000",
+    "mintLimit": "0",
+    "isMintPayable": true,
+    "price": "0.001"
   },
   "Packs": {
     "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",
@@ -322,6 +325,8 @@
     "startsWithToken0": false,
     "baseURI": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/",
     "contractName": "Packs",
+    "maxSupply": null,
+    "mintLimit": null,
     "isMintPayable": true,
     "price": null
   },
@@ -335,6 +340,8 @@
     "startsWithToken0": false,
     "baseURI": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/",
     "contractName": "AIRianAvatar",
+    "maxSupply": null,
+    "mintLimit": null,
     "isMintPayable": false,
     "price": null
   },
@@ -354,13 +361,15 @@
   "Bitget": {
     "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
     "totalSupply": "450",
-    "metadataEntries": null,
+    "metadataEntries": "1",
     "name": "Bitget x Suzuki Jimny NFT",
     "symbol": "BGJIMNY",
     "contractType": "ERC1155",
     "startsWithToken0": false,
     "baseURI": " ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/",
     "contractName": "BitgetSuzukiJimny",
+    "maxSupply": "450",
+    "mintLimit": "0",
     "isMintPayable": false,
     "price": null
   },
@@ -368,13 +377,16 @@
     "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69",
     "totalSupply": "2708",
     "metadataEntries": "2708",
+    "tokensIDs": "",
     "name": "ご当地vtuber図鑑　コラボNFT",
     "symbol": "HISVTUBERNFT",
     "contractType": "ERC1155",
     "startsWithToken0": false,
     "baseURI": "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/",
     "contractName": "HISVtuber",
+    "maxSupply": "2000",
+    "mintLimit": "0",
     "isMintPayable": true,
-    "price": null
+    "price": "0.00065"
   }
 }

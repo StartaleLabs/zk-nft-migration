@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import hre from "hardhat";
 import { loadFixture } from "@nomicfoundation/hardhat-toolbox-viem/network-helpers";
-import { getAddress, zeroAddress } from "viem";
+import { getAddress, zeroAddress, Address } from "viem";
 
 describe("FreeMint", function () {
   async function deployTokenFixture () {
@@ -160,6 +160,21 @@ describe("FreeMint", function () {
       expect(balance).to.equal(largeAmount);
     });
 
+    it("should start minting from startWithTokenId value", async function () {
+      const { FreeMint, owner, recipient1 } = await loadFixture(deployTokenFixture);
+
+      // Mint first token
+      await FreeMint.write.mint([recipient1.account.address, 1n]);
+
+      // Check first token ID
+      const tokenOwner = (await FreeMint.read.ownerOf([1n])) as Address;
+      expect(getAddress(tokenOwner)).to.equal(getAddress(recipient1.account.address));
+
+      // Verify token ID 0 doesn't exist
+      await expect(FreeMint.read.ownerOf([0n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
+    });
+
     it("should fail when contract is paused", async function () {
       const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
 
@@ -170,7 +185,7 @@ describe("FreeMint", function () {
 
     it("should fail when minting over mint limit", async function () {
       const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
-      const mintLimit = await FreeMint.read.mintLimit();
+      const mintLimit = (await FreeMint.read.mintLimit()) as bigint;
 
       await expect(FreeMint.write.mint([nonOwner.account.address, mintLimit + 1n]))
         .to.be.rejectedWith("Exceeds mint limit");
@@ -178,7 +193,7 @@ describe("FreeMint", function () {
 
     it("should fail when minting would exceed max supply", async function () {
       const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
-      const maxSupply = await FreeMint.read.maxSupply();
+      const maxSupply = (await FreeMint.read.maxSupply()) as bigint;
 
       await expect(FreeMint.write.mint([nonOwner.account.address, maxSupply + 1n]))
         .to.be.rejectedWith("Max supply reached");
@@ -335,8 +350,8 @@ describe("FreeMint", function () {
           [2n]
         ]);
 
-        const owner1 = await FreeMint.read.ownerOf([1n]);
-        const owner2 = await FreeMint.read.ownerOf([2n]);
+        const owner1 = await FreeMint.read.ownerOf([1n])
+        const owner2 = await FreeMint.read.ownerOf([2n])
 
         // Use getAddress to normalize address case
         expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
@@ -347,7 +362,7 @@ describe("FreeMint", function () {
         const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
 
         // Get initial supply
-        const initialSupply = await FreeMint.read.totalSupply();
+        const initialSupply = await FreeMint.read.totalSupply() as bigint;
 
         await FreeMint.write.bulkMint([
           [recipient1.account.address, recipient2.account.address],
@@ -355,8 +370,8 @@ describe("FreeMint", function () {
         ]);
 
         // Check that supply increased by exactly 5
-        const finalSupply = await FreeMint.read.totalSupply();
-        expect(finalSupply - initialSupply).to.equal(5n);
+        const finalSupply = (await FreeMint.read.totalSupply()) as bigint;
+        expect(finalSupply- initialSupply).to.equal(5n);
       });
     });
 

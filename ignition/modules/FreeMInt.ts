@@ -4,10 +4,10 @@ import path from 'path';
 
 const FreeMintModule = buildModule("FreeMintModule", (m) => {
   // Get project name from parameters or default to "casio"
-  const projectName = "casio";
+  const projectName = "Walkmon";
 
   // Read and parse the JSON file
-  const outputPath = path.join(__dirname, '../zk_snapshot_scripts/src/data/output.json');
+  const outputPath = path.join(__dirname, '../../zk_snapshot_scripts/src/data/output.json');
   const outputData = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
 
   // Get project data
@@ -28,6 +28,9 @@ const FreeMintModule = buildModule("FreeMintModule", (m) => {
   }
   if (projectData.isMintPayable) {
     throw new Error(`Project ${projectName} is payable and cannot be deployed with this contract`);
+  }
+  if (projectData.totalSupply != projectData.metadataEntries) {
+    throw new Error(`Project ${projectName} has different metadata handling`);
   }
 
   // Convert values to proper types and handle defaults
@@ -52,7 +55,7 @@ const FreeMintModule = buildModule("FreeMintModule", (m) => {
   console.log(`Start Token ID: ${startWithTokenId}`);
   console.log("=====================\n");
 
-  const freeMint = m.contract("FreeMint", [
+  const freeMint = m.contract("Setac", [
     name,
     symbol,
     baseURI,

@@ -371,7 +371,7 @@ describe("FreeMint", function () {
 
         // Check that supply increased by exactly 5
         const finalSupply = (await FreeMint.read.totalSupply()) as bigint;
-        expect(finalSupply- initialSupply).to.equal(5n);
+        expect(finalSupply - initialSupply).to.equal(5n);
       });
     });
 
@@ -386,6 +386,38 @@ describe("FreeMint", function () {
           [1n, 2n]
         ])).to.be.rejectedWith("EnforcedPause");
       });
+    });
+  });
+
+  describe("TokenURI function", function () {
+    it("should fail for non-existent token", async function () {
+      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
+
+      // Mint token ID 1
+      await FreeMint.write.mint([recipient1.account.address, 1n]);
+
+      // Try to get URI for token 0 (should not exist)
+      await expect(FreeMint.read.tokenURI([0n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
+    });
+
+    it("should return correct URI for minted token", async function () {
+      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
+
+      // Mint token ID 1
+      await FreeMint.write.mint([recipient1.account.address, 1n]);
+
+      // Get URI for token 1 (should exist)
+      const uri = await FreeMint.read.tokenURI([1n]);
+      expect(uri).to.equal("ipfs://example/1.json");
+    });
+
+    it("should fail for unminted token ID", async function () {
+      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
+
+      // Try to get URI for unminted token 1
+      await expect(FreeMint.read.tokenURI([1n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
     });
   });
 });

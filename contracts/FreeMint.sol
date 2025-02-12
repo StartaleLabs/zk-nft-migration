@@ -142,6 +142,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     function tokenURI(
         uint256 tokenId
     ) public view override(ERC721, ERC721URIStorage) returns (string memory) {
+        _requireOwned(tokenId);
         require(tokenId < _nextTokenId, "Token ID is invalid");
 
         // Check if the last character in baseURI is a slash.

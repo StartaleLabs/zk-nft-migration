@@ -45,8 +45,10 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     function mint(address to, uint256 amount) public whenNotPaused {
         require(amount > 0, "Invalid amount");
         require(_nextTokenId + amount < maxSupply, "Max supply reached");
-        require(balanceOf(to) + amount <= mintLimit, "Exceeds mint limit");
-
+        // Allow unlimited minting if mintLimit is 0
+        if (mintLimit != 0) {
+            require(balanceOf(to) + amount <= mintLimit, "Exceeds mint limit");
+        }
         for (uint256 i = 0; i < amount; i++) {
             _safeMint(to, _nextTokenId++);
         }
@@ -74,10 +76,13 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
         );
 
         for (uint256 i = 0; i < recipients.length; i++) {
-            require(
-                balanceOf(recipients[i]) + amounts[i] <= mintLimit,
-                "Exceeds mint limit"
-            );
+            // Allow unlimited minting if mintLimit is 0
+            if (mintLimit != 0) {
+                require(
+                    balanceOf(recipients[i]) + amounts[i] <= mintLimit,
+                    "Exceeds mint limit"
+                );
+            }
             for (uint256 j = 0; j < amounts[i]; j++) {
                 _safeMint(recipients[i], _nextTokenId++);
             }

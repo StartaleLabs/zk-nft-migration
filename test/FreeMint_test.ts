@@ -141,6 +141,25 @@ describe("FreeMint", function () {
   });
 
   describe("Mint function", function () {
+
+    it("should allow unlimited minting when mintLimit is 0", async function () {
+      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
+
+      // Set mintLimit to 0
+      await FreeMint.write.setMintLimit([0n]);
+
+      // Try to mint more than the original mint limit
+      const largeAmount = 20n; // This is well above the default mint limit of 5
+
+      // Should succeed because mintLimit is 0
+      await expect(FreeMint.write.mint([nonOwner.account.address, largeAmount]))
+        .to.be.fulfilled;
+
+      // Verify the balance
+      const balance = await FreeMint.read.balanceOf([nonOwner.account.address]);
+      expect(balance).to.equal(largeAmount);
+    });
+
     it("should fail when contract is paused", async function () {
       const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
 
@@ -169,7 +188,7 @@ describe("FreeMint", function () {
       const { FreeMint, owner } = await loadFixture(deployTokenFixture);
 
       await expect(FreeMint.write.mint([zeroAddress, 1n]))
-      .to.be.rejectedWith(`ERC721InvalidOwner("${zeroAddress}")`);
+        .to.be.rejectedWith(`ERC721InvalidOwner("${zeroAddress}")`);
     });
 
     it("should succeed when minting one token", async function () {
@@ -201,139 +220,157 @@ describe("FreeMint", function () {
     });
   });
 
-    describe("Bulk mint function", function () {
-      it("should allow owner to bulk mint tokens", async function () {
-          const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
-          const recipients = [nonOwner.account.address, owner.account.address];
-          const amounts = [2n, 3n];
+  describe("Bulk mint function", function () {
+    it("should allow owner to bulk mint tokens", async function () {
+      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
+      const recipients = [nonOwner.account.address, owner.account.address];
+      const amounts = [2n, 3n];
 
-          await expect(FreeMint.write.bulkMint([recipients, amounts]))
-              .to.be.fulfilled;
+      await expect(FreeMint.write.bulkMint([recipients, amounts]))
+        .to.be.fulfilled;
 
-          const balance1 = await FreeMint.read.balanceOf([recipients[0]]);
-          const balance2 = await FreeMint.read.balanceOf([recipients[1]]);
-          expect(balance1).to.equal(2n);
-          expect(balance2).to.equal(3n);
-      });
+      const balance1 = await FreeMint.read.balanceOf([recipients[0]]);
+      const balance2 = await FreeMint.read.balanceOf([recipients[1]]);
+      expect(balance1).to.equal(2n);
+      expect(balance2).to.equal(3n);
+    });
 
+    it("should allow unlimited minting when mintLimit is 0", async function () {
+      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
+
+      // Set mintLimit to 0
+      await FreeMint.write.setMintLimit([0n]);
+
+      // Try to mint more than the original mint limit
+      const largeAmount = 20n; // This is well above the default mint limit of 5
+
+      // Should succeed because mintLimit is 0
+      await expect(FreeMint.write.mint([nonOwner.account.address, largeAmount]))
+        .to.be.fulfilled;
+
+      // Verify the balance
+      const balance = await FreeMint.read.balanceOf([nonOwner.account.address]);
+      expect(balance).to.equal(largeAmount);
+    });
+
+    it("should fail when arrays length mismatch", async function () {
+      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
+      const recipients = [nonOwner.account.address];
+      const amounts = [2n, 3n];
+
+      await expect(FreeMint.write.bulkMint([recipients, amounts]))
+        .to.be.rejectedWith("Recipients and amounts length mismatch");
+    });
+
+    describe("Input Validation", function () {
       it("should fail when arrays length mismatch", async function () {
-          const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture);
-          const recipients = [nonOwner.account.address];
-          const amounts = [2n, 3n];
+        const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
 
-          await expect(FreeMint.write.bulkMint([recipients, amounts]))
-              .to.be.rejectedWith("Recipients and amounts length mismatch");
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address],
+          [1n, 2n]
+        ])).to.be.rejectedWith("Recipients and amounts length mismatch");
       });
 
-      describe("Input Validation", function () {
-        it("should fail when arrays length mismatch", async function () {
-          const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
+      it("should fail when any amount is zero", async function () {
+        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
 
-          await expect(FreeMint.write.bulkMint([
-            [recipient1.account.address],
-            [1n, 2n]
-          ])).to.be.rejectedWith("Recipients and amounts length mismatch");
-        });
-
-        it("should fail when any amount is zero", async function () {
-          const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
-
-          await expect(FreeMint.write.bulkMint([
-            [recipient1.account.address, recipient2.account.address],
-            [1n, 0n]
-          ])).to.be.rejectedWith("Invalid amount");
-        });
-
-        it("should fail when minting to zero address", async function () {
-          const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
-
-          await expect(FreeMint.write.bulkMint([
-            [zeroAddress, recipient1.account.address],
-            [1n, 1n]
-          ])).to.be.rejectedWith("ERC721InvalidOwner");
-        });
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient2.account.address],
+          [1n, 0n]
+        ])).to.be.rejectedWith("Invalid amount");
       });
 
-      describe("Supply Limits", function () {
-        it("should fail when total amount exceeds max supply", async function () {
-          const { FreeMint, recipient1, recipient2, MAX_SUPPLY } = await loadFixture(deployTokenFixture);
+      it("should fail when minting to zero address", async function () {
+        const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
 
-          await expect(FreeMint.write.bulkMint([
-            [recipient1.account.address, recipient2.account.address],
-            [MAX_SUPPLY, 1n]
-          ])).to.be.rejectedWith("Max supply reached");
-        });
+        await expect(FreeMint.write.bulkMint([
+          [zeroAddress, recipient1.account.address],
+          [1n, 1n]
+        ])).to.be.rejectedWith("ERC721InvalidOwner");
+      });
+    });
 
-        it("should fail when amount exceeds recipient's mint limit", async function () {
-          const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture);
+    describe("Supply Limits", function () {
+      it("should fail when total amount exceeds max supply", async function () {
+        const { FreeMint, recipient1, recipient2, MAX_SUPPLY } = await loadFixture(deployTokenFixture);
 
-          await expect(FreeMint.write.bulkMint([
-            [recipient1.account.address],
-            [MINT_LIMIT + 1n]
-          ])).to.be.rejectedWith("Exceeds mint limit");
-        });
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient2.account.address],
+          [MAX_SUPPLY, 1n]
+        ])).to.be.rejectedWith("Max supply reached");
       });
 
-      describe("Successful Minting", function () {
-        it("should correctly mint multiple tokens to multiple addresses", async function () {
-          const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
+      it("should fail when amount exceeds recipient's mint limit", async function () {
+        const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture);
 
-          await FreeMint.write.bulkMint([
-            [recipient1.account.address, recipient2.account.address],
-            [2n, 3n]
-          ]);
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address],
+          [MINT_LIMIT + 1n]
+        ])).to.be.rejectedWith("Exceeds mint limit");
+      });
+    });
 
-          const balance1 = await FreeMint.read.balanceOf([recipient1.account.address]);
-          const balance2 = await FreeMint.read.balanceOf([recipient2.account.address]);
+    describe("Successful Minting", function () {
+      it("should correctly mint multiple tokens to multiple addresses", async function () {
+        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
 
-          expect(balance1).to.equal(2n);
-          expect(balance2).to.equal(3n);
-        });
+        await FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient2.account.address],
+          [2n, 3n]
+        ]);
 
-        it("should increment token IDs correctly", async function () {
-          const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
+        const balance1 = await FreeMint.read.balanceOf([recipient1.account.address]);
+        const balance2 = await FreeMint.read.balanceOf([recipient2.account.address]);
 
-          await FreeMint.write.bulkMint([
-            [recipient1.account.address],
-            [2n]
-          ]);
-
-          const owner1 = await FreeMint.read.ownerOf([1n]);
-          const owner2 = await FreeMint.read.ownerOf([2n]);
-
-          // Use getAddress to normalize address case
-          expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
-          expect(getAddress(owner2)).to.equal(getAddress(recipient1.account.address));
-        });
-
-        it("should update total supply correctly", async function () {
-          const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
-
-          // Get initial supply
-          const initialSupply = await FreeMint.read.totalSupply();
-
-          await FreeMint.write.bulkMint([
-            [recipient1.account.address, recipient2.account.address],
-            [2n, 3n]
-          ]);
-
-          // Check that supply increased by exactly 5
-          const finalSupply = await FreeMint.read.totalSupply();
-          expect(finalSupply - initialSupply).to.equal(5n);
-        });
+        expect(balance1).to.equal(2n);
+        expect(balance2).to.equal(3n);
       });
 
-      describe("Pausable Behavior", function () {
-        it("should fail when contract is paused", async function () {
-          const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
+      it("should increment token IDs correctly", async function () {
+        const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
 
-          await FreeMint.write.pause();
+        await FreeMint.write.bulkMint([
+          [recipient1.account.address],
+          [2n]
+        ]);
 
-          await expect(FreeMint.write.bulkMint([
-            [recipient1.account.address, recipient2.account.address],
-            [1n, 2n]
-          ])).to.be.rejectedWith("EnforcedPause");
-        });
+        const owner1 = await FreeMint.read.ownerOf([1n]);
+        const owner2 = await FreeMint.read.ownerOf([2n]);
+
+        // Use getAddress to normalize address case
+        expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
+        expect(getAddress(owner2)).to.equal(getAddress(recipient1.account.address));
       });
+
+      it("should update total supply correctly", async function () {
+        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
+
+        // Get initial supply
+        const initialSupply = await FreeMint.read.totalSupply();
+
+        await FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient2.account.address],
+          [2n, 3n]
+        ]);
+
+        // Check that supply increased by exactly 5
+        const finalSupply = await FreeMint.read.totalSupply();
+        expect(finalSupply - initialSupply).to.equal(5n);
+      });
+    });
+
+    describe("Pausable Behavior", function () {
+      it("should fail when contract is paused", async function () {
+        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture);
+
+        await FreeMint.write.pause();
+
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient2.account.address],
+          [1n, 2n]
+        ])).to.be.rejectedWith("EnforcedPause");
+      });
+    });
   });
 });

@@ -25,6 +25,8 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
 
     uint256 public mintLimit;
 
+    uint256 public startWithTokenId;
+
     constructor(
         string memory _name,
         string memory _symbol,
@@ -39,12 +41,17 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
         maxSupply = _maxSupply;
         mintLimit = _mintLimit;
         require(_startWithTokenId <= 1, "Invalid startWithTokenId");
+        startWithTokenId = _startWithTokenId;
         _nextTokenId = _startWithTokenId;
     }
 
     function mint(address to, uint256 amount) public whenNotPaused {
         require(amount > 0, "Invalid amount");
-        require(_nextTokenId + amount < maxSupply, "Max supply reached");
+        require(
+            _nextTokenId + amount - startWithTokenId <= maxSupply,
+            "Max supply reached"
+        );
+
         // Allow unlimited minting if mintLimit is 0
         if (mintLimit != 0) {
             require(balanceOf(to) + amount <= mintLimit, "Exceeds mint limit");
@@ -68,15 +75,15 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
             "Recipients and amounts length mismatch"
         );
 
-        uint256 totalAmount = 0;
+        uint256 amountToBeMinted = 0;
         for (uint256 i = 0; i < amounts.length; i++) {
             require(amounts[i] > 0, "Invalid amount");
-            totalAmount += amounts[i];
-        }
+            amountToBeMinted += amounts[i];
+            require(
+                _nextTokenId + amountToBeMinted <= maxSupply,
+                "Max supply reached"
+            );
 
-        require(_nextTokenId + totalAmount <= maxSupply, "Max supply reached");
-
-        for (uint256 i = 0; i < recipients.length; i++) {
             for (uint256 j = 0; j < amounts[i]; j++) {
                 _safeMint(recipients[i], _nextTokenId++);
             }
@@ -126,7 +133,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
 
     //@notice totalSupply
     function totalSupply() public view returns (uint256) {
-        return _nextTokenId;
+        return _nextTokenId - startWithTokenId;
     }
 
     // ---------- Getter Functions ---------- //

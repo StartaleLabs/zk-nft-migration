@@ -277,6 +277,15 @@ describe("FreeMint", function () {
         .to.be.rejectedWith("Recipients and amounts length mismatch");
     });
 
+    it("should fail when arrays are empty", async function () {
+      const { FreeMint } = await loadFixture(deployTokenFixture);
+
+      await expect(FreeMint.write.bulkMint([
+        [], // empty recipients array
+        []  // empty amounts array
+      ])).to.be.rejectedWith("Empty arrays not allowed");
+    });
+
     describe("Input Validation", function () {
       it("should fail when arrays length mismatch", async function () {
         const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
@@ -302,7 +311,7 @@ describe("FreeMint", function () {
         await expect(FreeMint.write.bulkMint([
           [zeroAddress, recipient1.account.address],
           [1n, 1n]
-        ])).to.be.rejectedWith("ERC721InvalidOwner");
+        ])).to.be.rejectedWith("ERC721InvalidReceiver");
       });
     });
 
@@ -316,13 +325,16 @@ describe("FreeMint", function () {
         ])).to.be.rejectedWith("Max supply reached");
       });
 
-      it("should fail when amount exceeds recipient's mint limit", async function () {
+      it("should pass for owner when amount exceeds recipient's mint limit", async function () {
         const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture);
 
         await expect(FreeMint.write.bulkMint([
-          [recipient1.account.address],
-          [MINT_LIMIT + 1n]
-        ])).to.be.rejectedWith("Exceeds mint limit");
+          [recipient1.account.address], [MINT_LIMIT + 1n] // Try to mint more than original limit
+        ])).to.be.fulfilled;
+
+        // Verify the balance
+        const balance = await FreeMint.read.balanceOf([recipient1.account.address]);
+        expect(balance).to.equal(MINT_LIMIT + 1n);
       });
     });
 

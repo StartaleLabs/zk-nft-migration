@@ -38,7 +38,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
         baseExtension = _baseExtension;
         maxSupply = _maxSupply;
         mintLimit = _mintLimit;
-        require (_startWithTokenId <= 1, "Invalid startWithTokenId");
+        require(_startWithTokenId <= 1, "Invalid startWithTokenId");
         _nextTokenId = _startWithTokenId;
     }
 
@@ -60,6 +60,10 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
         uint256[] calldata amounts
     ) public onlyOwner whenNotPaused {
         require(
+            recipients.length > 0 && amounts.length > 0,
+            "Empty arrays not allowed"
+        );
+        require(
             recipients.length == amounts.length,
             "Recipients and amounts length mismatch"
         );
@@ -70,19 +74,9 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
             totalAmount += amounts[i];
         }
 
-        require(
-            _nextTokenId + totalAmount <= maxSupply,
-            "Max supply reached"
-        );
+        require(_nextTokenId + totalAmount <= maxSupply, "Max supply reached");
 
         for (uint256 i = 0; i < recipients.length; i++) {
-            // Allow unlimited minting if mintLimit is 0
-            if (mintLimit != 0) {
-                require(
-                    balanceOf(recipients[i]) + amounts[i] <= mintLimit,
-                    "Exceeds mint limit"
-                );
-            }
             for (uint256 j = 0; j < amounts[i]; j++) {
                 _safeMint(recipients[i], _nextTokenId++);
             }
@@ -137,7 +131,6 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
 
     // ---------- Getter Functions ---------- //
 
-
     //@notice tokenURI override
     function tokenURI(
         uint256 tokenId
@@ -154,11 +147,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
         return
             bytes(baseURI).length > 0
                 ? string(
-                    abi.encodePacked(
-                        baseURI,
-                        tokenId.toString(),
-                        baseExtension
-                    )
+                    abi.encodePacked(baseURI, tokenId.toString(), baseExtension)
                 )
                 : "";
     }

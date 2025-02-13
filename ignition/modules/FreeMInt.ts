@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const FreeMintModule = buildModule("FreeMintModule", (m) => {
-  // Get project name from parameters or default to "casio"
+  // Set project name to read it's parameters from output.json
   const projectName = "Walkmon";
 
   // Read and parse the JSON file

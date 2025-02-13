@@ -253,6 +253,22 @@ describe("FreeMint", function () {
       await expect(FreeMint.write.mint([nonOwner.account.address, 0n]))
         .to.be.rejectedWith("Invalid amount");
     });
+
+    it("should set correct initial state when deployed with startWithTokenId=1", async function () {
+      const { FreeMint } = await loadFixture(deployTokenFixture1);
+
+      // Get first token ID 0 before any minting
+      await expect(FreeMint.read.ownerOf([0n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
+
+      // Get first token ID 1 before any minting
+      await expect(FreeMint.read.ownerOf([1n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
+
+      // Verify starting point
+      const totalSupply = await FreeMint.read.totalSupply();
+      expect(totalSupply).to.equal(0n);
+    });
   });
 
   describe("Bulk mint function", function () {
@@ -508,6 +524,79 @@ describe("FreeMint", function () {
       // Try to get URI for unminted token 1
       await expect(FreeMint.read.tokenURI([1n]))
         .to.be.rejectedWith("ERC721NonexistentToken");
+    });
+  });
+
+  describe("StartTokenID 0 specific behavior", function () {
+    it("should calculate correct totalSupply when starting from 0", async function () {
+      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture0);
+
+      // Mint 3 tokens (IDs: 0,1,2)
+      await FreeMint.write.mint([recipient1.account.address, 3n]);
+
+      const totalSupply = await FreeMint.read.totalSupply();
+      expect(totalSupply).to.equal(3n);
+    });
+
+    it("should return correct tokenURI when starting from 0", async function () {
+      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture0);
+
+      // Mint token with ID 0
+      await FreeMint.write.mint([recipient1.account.address, 1n]);
+
+      const uri = await FreeMint.read.tokenURI([0n]);
+      expect(uri).to.equal("ipfs://example/0.json");
+    });
+
+    it("should handle bulkMint correctly when starting from 0", async function () {
+      const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture0);
+
+      await FreeMint.write.bulkMint([
+        [recipient1.account.address, recipient2.account.address],
+        [2n, 2n]
+      ]);
+
+      // First recipient should own tokens 0,1
+      const owner0 = await FreeMint.read.ownerOf([0n]) as Address;
+      const owner1 = await FreeMint.read.ownerOf([1n]) as Address;
+      expect(getAddress(owner0)).to.equal(getAddress(recipient1.account.address));
+      expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
+
+      // Second recipient should own tokens 2,3
+      const owner2 = await FreeMint.read.ownerOf([2n]) as Address;
+      const owner3 = await FreeMint.read.ownerOf([3n]) as Address;
+      expect(getAddress(owner2)).to.equal(getAddress(recipient2.account.address));
+      expect(getAddress(owner3)).to.equal(getAddress(recipient2.account.address));
+    });
+
+    it("should set correct initial state when deployed with startWithTokenId=0", async function () {
+      const { FreeMint } = await loadFixture(deployTokenFixture0);
+
+      // Get first token ID before any minting
+      await expect(FreeMint.read.ownerOf([0n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
+
+      // Verify starting point
+      const totalSupply = await FreeMint.read.totalSupply();
+      expect(totalSupply).to.equal(0n);
+    });
+
+    it("should handle setMaxSupply correctly when starting from 0", async function () {
+      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture0);
+
+      // Set maxSupply to 3
+      await FreeMint.write.setMaxSupply([3n]);
+
+      // Mint 3 tokens (IDs: 0,1,2)
+      await FreeMint.write.mint([recipient1.account.address, 3n]);
+
+      // Try to mint one more
+      await expect(FreeMint.write.mint([recipient1.account.address, 1n]))
+        .to.be.rejectedWith("Max supply reached");
+
+      // Verify total supply
+      const totalSupply = await FreeMint.read.totalSupply();
+      expect(totalSupply).to.equal(3n);
     });
   });
 });

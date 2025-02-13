@@ -1,14 +1,28 @@
-# Sample Hardhat Project
+# Set of Solidity smart contracts to be used for NFT migration
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+[![Smart Contract Tests](https://github.com/StartaleLabs/zk-nft-migration/actions/workflows/test.yml/badge.svg)](https://github.com/StartaleLabs/zk-nft-migration/actions/workflows/test.yml)
 
-Try running some of the following tasks:
 
-```shell
-npm i
+NFT contract with free mint capability and configurable token ID starting point.
 
-npx hardhat compile
+## Features
+
+- Free minting
+- Configurable start token ID (0 or 1)
+- Bulk minting capability
+- Pausable
+- Owner-only functions
+- Customizable URI structure
+
+## Testing
+
+```bash
+# Install dependencies
+npm install
+
+# Run tests
 npx hardhat test
 
-npx hardhat ignition deploy ignition/modules/FreeMint.ts --network minato --verify
+# Run coverage
+npx hardhat coverage
 ```

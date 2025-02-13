@@ -156,7 +156,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
                 ? string(
                     abi.encodePacked(
                         baseURI,
-                        (tokenId % 5 == 0 ? 5 : tokenId % 5).toString(),
+                        tokenId.toString(),
                         baseExtension
                     )
                 )

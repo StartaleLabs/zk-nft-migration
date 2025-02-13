@@ -399,17 +399,24 @@ describe("FreeMint", function () {
       // Try to get URI for token 0 (should not exist)
       await expect(FreeMint.read.tokenURI([0n]))
         .to.be.rejectedWith("ERC721NonexistentToken");
+
+      // Try to get URI for token 2 (should not exist)
+      await expect(FreeMint.read.tokenURI([2n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
     });
 
-    it("should return correct URI for minted token", async function () {
+    it("should return correct URI for ten minted tokens", async function () {
       const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture);
+      await FreeMint.write.setMintLimit([10n]);
 
-      // Mint token ID 1
-      await FreeMint.write.mint([recipient1.account.address, 1n]);
+      // Mint 10 tokens
+      await FreeMint.write.mint([recipient1.account.address, 10n]);
 
-      // Get URI for token 1 (should exist)
-      const uri = await FreeMint.read.tokenURI([1n]);
-      expect(uri).to.equal("ipfs://example/1.json");
+      // Get and verify URIs for all tokens
+      for (let i = 1; i <= 10; i++) {
+        const uri = await FreeMint.read.tokenURI([BigInt(i)]);
+        expect(uri).to.equal(`ipfs://example/${i}.json`);
+      }
     });
 
     it("should fail for unminted token ID", async function () {

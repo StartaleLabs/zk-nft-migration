@@ -55,7 +55,7 @@ const FreeMintModule = buildModule("FreeMintModule", (m) => {
   console.log(`Start Token ID: ${startWithTokenId}`);
   console.log("=====================\n");
 
-  const freeMint = m.contract("Setac", [
+  const freeMint = m.contract("FreeMint", [
     name,
     symbol,
     baseURI,

@@ -21,7 +21,9 @@ const config: HardhatUserConfig = {
   },
   networks: {
     localhost: {
-      accounts: [process.env.TESTNET_PRIVATE_KEY || ""],
+      accounts: {
+        mnemonic: "test test test test test test test test test test test junk",
+      },
       url: "http://localhost:8545/",
     },
     sepolia: {
@@ -76,6 +78,7 @@ const config: HardhatUserConfig = {
     apiKey: {
       minato: " ",
       soneium: " ",
+      sepolia: " ",
       astarZkEvm: " "
     },
     customChains: [
@@ -85,6 +88,14 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://soneium-minato.blockscout.com/api",
           browserURL: "https://soneium-minato.blockscout.com/",
+        },
+      },
+      {
+        network: "sepolia",
+        chainId: 11155111,
+        urls: {
+          apiURL: "https://eth-sepolia.blockscout.com/api",
+          browserURL: "https://eth-sepolia.blockscout.com/",
         },
       },
       {

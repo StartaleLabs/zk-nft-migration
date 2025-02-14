@@ -66,21 +66,26 @@ async function groupsPerContractType() {
       groups.unknown[project] = projectData;
       continue;
     }
-
-    const isMetadataEqual = projectData.maxSupply === projectData.metadataEntries;
+    const isMetadataEqual = Number(projectData.totalSupply) === Number(projectData.metadataEntries);
     const isFreeMint = projectData.price === null && !projectData.isMintPayable;
     const isPaidMint = projectData.price !== null && projectData.isMintPayable;
 
+    console.log(`Project: ${project}, isMetadataEqual: ${isMetadataEqual}, isFreeMint: ${isFreeMint}, isPaidMint: ${isPaidMint}`);
     if (isFreeMint && isMetadataEqual) {
       groups.FreeMint[project] = projectData;
+      console.log("added to FreeMint");
     } else if (isFreeMint && !isMetadataEqual) {
       groups.FreeMintLimitedMetadata[project] = projectData;
+      console.log("added to FreeMintLimitedMetadata");
     } else if (isPaidMint && isMetadataEqual) {
       groups.PaidMint[project] = projectData;
+      console.log("added to PaidMint");
     } else if (isPaidMint && !isMetadataEqual) {
       groups.PaidMintLimitedMetadata[project] = projectData;
+      console.log("added to PaidMintLimitedMetadata");
     } else {
       groups.unknown[project] = projectData;
+      console.log("added to unknown");
     }
   }
 

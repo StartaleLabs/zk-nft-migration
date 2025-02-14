@@ -12,7 +12,8 @@
     "maxSupply": null,
     "mintLimit": "8",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "origamiKokyo": {
     "address": "0xD524DD5ca9272BEE145c6577910448421e1F5e69",
@@ -27,7 +28,8 @@
     "maxSupply": "3000",
     "mintLimit": "1",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ""
   },
   "jrKyushuFree": {
     "address": "0xF83E63aa96B1fE8d3CbdF419b22bFb3CCcF99eBC",
@@ -42,7 +44,8 @@
     "maxSupply": "15000",
     "mintLimit": "2",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ""
   },
   "jrKyushuPaid": {
     "address": "0xDE782Cc4bf15Df5791261C126da1942BA8d805c4",
@@ -57,7 +60,8 @@
     "maxSupply": "5000",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.003"
+    "price": "0.003",
+    "baseUriExtension": ""
   },
   "onigiriman": {
     "address": "0x0CFd649E37882944342Ec0f8A2ac8ABca01f6934",
@@ -72,7 +76,8 @@
     "maxSupply": "20000",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.015"
+    "price": "0.015",
+    "baseUriExtension": ".json"
   },
   "mazda": {
     "address": "0x8Ade4c707630d2F3aB0e36cde5c81dA8F56fE0b6",
@@ -87,7 +92,8 @@
     "maxSupply": "22222",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.003"
+    "price": "0.003",
+    "baseUriExtension": ".json"
   },
   "candyGirl": {
     "address": "0xe3A4dBF34e21C7D24F86ef032A3E3beC39220B86",
@@ -102,7 +108,8 @@
     "maxSupply": "300000",
     "mintLimit": "3",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ""
   },
   "sashimi": {
     "address": "0x682cD0890C9c3aC423D534a50a96E9C6EF9983D2",
@@ -117,7 +124,8 @@
     "maxSupply": "20000",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.015"
+    "price": "0.015",
+    "baseUriExtension": ".json"
   },
   "UZNo": {
     "address": "0xC384342Ad561B6791F4E38dE7A5e8b7747Bca5eE",
@@ -132,7 +140,8 @@
     "maxSupply": "40000",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.001"
+    "price": "0.001",
+    "baseUriExtension": ".json"
   },
   "DenDekaDen": {
     "address": "0x6d99156004e7DDD41b3CBF7E60A8AF2438609542",
@@ -147,7 +156,8 @@
     "maxSupply": "8888",
     "mintLimit": "8",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ""
   },
   "CityPopTokyo": {
     "address": "0x9D640D61FaFB620C6473eB87B5FD093a0392902B",
@@ -162,7 +172,8 @@
     "maxSupply": "10000",
     "mintLimit": "0",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "JapanCreatorCollection": {
     "address": "0xAd61e3700A9ABa6dC5B986Ec39604167db33Fe09",
@@ -177,7 +188,8 @@
     "maxSupply": "50000",
     "mintLimit": "0",
     "contractName": "JapanCreatorsCollection",
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "Walkmon": {
     "address": "0x580c0d3b8d4E146E7d8f99457a34248c9C988D1b",
@@ -192,7 +204,8 @@
     "maxSupply": "10000",
     "mintLimit": "0",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "DenShinSanKa": {
     "address": "0x91843Af2fA625975FD9249ecD5a6c20d3EBAb482",
@@ -207,7 +220,8 @@
     "maxSupply": "756",
     "mintLimit": "0",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "SNPIT": {
     "address": "0x5d9FfaFed1F17550846c27Ee57110BAa9609F6D0",
@@ -222,7 +236,8 @@
     "maxSupply": "1000",
     "mintLimit": "0",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "DoF": {
     "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6",
@@ -237,7 +252,8 @@
     "maxSupply": "1000",
     "mintLimit": "0",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ""
   },
   "DEKSA": {
     "address": "0xdd25a366b972691ECDd23093Ab5F9BF35047Ca77",
@@ -252,7 +268,8 @@
     "maxSupply": "999",
     "mintLimit": "0",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "Neemo": {
     "address": "0x33362F864232b16E699bA3c5cC75b93B4f55fa5E",
@@ -267,7 +284,8 @@
     "maxSupply": null,
     "mintLimit": null,
     "isMintPayable": null,
-    "price": null
+    "price": null,
+    "baseUriExtension": ""
   },
   "On1force": {
     "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
@@ -282,7 +300,8 @@
     "maxSupply": "777",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.01777"
+    "price": "0.01777",
+    "baseUriExtension": ""
   },
   "SkyLabs": {
     "address": "0x4eFC1FbED6598551c30A830758244eCC9706dFb4",
@@ -297,7 +316,8 @@
     "maxSupply": "10000",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.01"
+    "price": "0.01",
+    "baseUriExtension": ""
   },
   "Kamui": {
     "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
@@ -313,7 +333,8 @@
     "maxSupply": "1000",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.001"
+    "price": "0.001",
+    "baseUriExtension": ".json"
   },
   "Packs": {
     "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",
@@ -328,7 +349,8 @@
     "maxSupply": null,
     "mintLimit": null,
     "isMintPayable": true,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "Airian": {
     "address": "0x2C30a56279Be0A3d1bDe1f1C0375764362726B72",
@@ -343,7 +365,8 @@
     "maxSupply": null,
     "mintLimit": null,
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "Yoki": {
     "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905",
@@ -356,7 +379,8 @@
     "baseURI": "ipfs://bafybeieavjq2az24tkzk32dkjfz3cw6dfiy5khmmoezylbneyaiuukghqm/",
     "contractName": "Yoki Origins",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ".json"
   },
   "Bitget": {
     "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
@@ -371,7 +395,8 @@
     "maxSupply": "450",
     "mintLimit": "0",
     "isMintPayable": false,
-    "price": null
+    "price": null,
+    "baseUriExtension": ""
   },
   "his": {
     "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69",
@@ -387,6 +412,7 @@
     "maxSupply": "2000",
     "mintLimit": "0",
     "isMintPayable": true,
-    "price": "0.00065"
+    "price": "0.00065",
+    "baseUriExtension": ""
   }
 }

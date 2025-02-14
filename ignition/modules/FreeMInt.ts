@@ -39,7 +39,7 @@ const FreeMintModule = buildModule("FreeMintModule", (m) => {
   const name = projectData.name;
   const symbol = projectData.symbol;
   const baseURI = projectData.baseURI || "";
-  const baseExtension = ".json";
+  const baseExtension = projectData.baseUriExtension || "";
   const maxSupply = projectData.maxSupply;
   const mintLimit = projectData.mintLimit;
   const startWithTokenId = projectData.startsWithToken0 ? 0n : 1n;

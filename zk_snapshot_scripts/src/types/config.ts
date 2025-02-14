@@ -6,5 +6,6 @@ export type ProjectConfig = {
     contractName?: string | null;
     price?: string | null;
     metadataEntries: string | null;
+    baseUriExtension?: string | null;
 }
 

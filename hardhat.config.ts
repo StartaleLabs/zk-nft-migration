@@ -21,7 +21,9 @@ const config: HardhatUserConfig = {
   },
   networks: {
     localhost: {
-      accounts: [process.env.TESTNET_PRIVATE_KEY || ""],
+      accounts: {
+        mnemonic: "test test test test test test test test test test test junk",
+      },
       url: "http://localhost:8545/",
     },
     sepolia: {

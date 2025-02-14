@@ -64,30 +64,27 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     //@notice bulk mint function for owner
     function bulkMint(
         address[] calldata recipients,
-        uint256[] calldata amounts
+        uint256[] calldata tokenIds
     ) public onlyOwner whenNotPaused {
         require(
-            recipients.length > 0 && amounts.length > 0,
+            recipients.length > 0 && tokenIds.length > 0,
             "Empty arrays not allowed"
         );
         require(
-            recipients.length == amounts.length,
-            "Recipients and amounts length mismatch"
+            recipients.length == tokenIds.length,
+            "Recipients and tokenIds length mismatch"
+        );
+        require(
+            _nextTokenId + tokenIds.length - startWithTokenId <= maxSupply,
+            "Max supply reached"
         );
 
-        uint256 amountToBeMinted = 0;
-        for (uint256 i = 0; i < amounts.length; i++) {
-            require(amounts[i] > 0, "Invalid amount");
-            amountToBeMinted += amounts[i];
-            require(
-                _nextTokenId + amountToBeMinted <= maxSupply,
-                "Max supply reached"
-            );
-
-            for (uint256 j = 0; j < amounts[i]; j++) {
-                _safeMint(recipients[i], _nextTokenId++);
-            }
+        for (uint256 i = 0; i < tokenIds.length; i++) {
+            require(tokenIds[i] <= maxSupply, "Token ID exceeds maxSupply");
+            
+            _safeMint(recipients[i], tokenIds[i]);
         }
+        _nextTokenId += tokenIds.length;
     }
 
     // ---- The following functions are overrides required by Solidity. ---- //

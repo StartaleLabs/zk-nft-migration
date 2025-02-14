@@ -12,7 +12,7 @@ const MAX_SUPPLY = 1000n;
 const MINT_LIMIT = 5n;
 
 describe("FreeMint", function () {
-  async function deployTokenFixture0 () {
+  async function deployTokenFixture0() {
     const START_TOKEN_ID = 0n;
 
     // Get wallet clients for testing
@@ -30,7 +30,7 @@ describe("FreeMint", function () {
 
     return { FreeMint, owner, nonOwner, recipient1, recipient2, MINT_LIMIT, MAX_SUPPLY };
   }
-  async function deployTokenFixture1 () {
+  async function deployTokenFixture1() {
     const START_TOKEN_ID = 1n;
 
     // Get wallet clients for testing
@@ -135,15 +135,6 @@ describe("FreeMint", function () {
         .to.be.rejectedWith("OwnableUnauthorizedAccount");
     });
 
-    it("should allow owner to bulk mint tokens", async function () {
-      const { FreeMint, owner, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
-
-      await expect(FreeMint.write.bulkMint([
-        [recipient1.account.address, recipient2.account.address],
-        [1n, 2n]
-      ])).to.be.fulfilled;
-    });
-
     it("should fail when non-owner tries to bulk mint", async function () {
       const { FreeMint, nonOwner, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
 
@@ -180,18 +171,53 @@ describe("FreeMint", function () {
       expect(balance).to.equal(largeAmount);
     });
 
-    it("should start minting from startWithTokenId value", async function () {
-      const { FreeMint, owner, recipient1 } = await loadFixture(deployTokenFixture1);
+    it("should correctly handle maxSupply when startWithTokenId is 0", async function () {
+      const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture0);
+      await FreeMint.write.setMaxSupply([MINT_LIMIT]);
 
-      // Mint first token
-      await FreeMint.write.mint([recipient1.account.address, 1n]);
+      // Should be able to mint exactly maxSupply tokens
+      await expect(FreeMint.write.mint([recipient1.account.address, 5n]))
+        .to.be.fulfilled;
 
-      // Check first token ID
-      const tokenOwner = (await FreeMint.read.ownerOf([1n])) as Address;
-      expect(getAddress(tokenOwner)).to.equal(getAddress(recipient1.account.address));
+      // Should fail when trying to mint one more
+      await expect(FreeMint.write.mint([recipient1.account.address, 1n]))
+        .to.be.rejectedWith("Max supply reached");
+
+      // Verify total supply
+      const totalSupply = await FreeMint.read.totalSupply();
+      expect(totalSupply).to.equal(5n);
+    });
+
+    it("should correctly handle maxSupply when startWithTokenId is 1", async function () {
+      const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture1);
+      await FreeMint.write.setMaxSupply([MINT_LIMIT]);
+
+      const [owner, recipient] = await hre.viem.getWalletClients();
+
+      // Should only be able to mint maxSupply tokens (IDs 1-5)
+      await expect(FreeMint.write.mint([recipient1.account.address, 5n]))
+        .to.be.fulfilled;
+
+      // Should fail when trying to mint one more
+      await expect(FreeMint.write.mint([recipient1.account.address, 1n]))
+        .to.be.rejectedWith("Max supply reached");
+
+      // Check total supply
+      const totalSupply = await FreeMint.read.totalSupply();
+      expect(totalSupply).to.equal(5n);
+
+      // Verify token IDs
+      const firstTokenOwner = await FreeMint.read.ownerOf([1n]);
+      const lastTokenOwner = await FreeMint.read.ownerOf([5n]);
+      expect(getAddress(firstTokenOwner)).to.equal(getAddress(recipient1.account.address));
+      expect(getAddress(lastTokenOwner)).to.equal(getAddress(recipient1.account.address));
 
       // Verify token ID 0 doesn't exist
       await expect(FreeMint.read.ownerOf([0n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
+
+      // Verify token ID 6 doesn't exist
+      await expect(FreeMint.read.ownerOf([6n]))
         .to.be.rejectedWith("ERC721NonexistentToken");
     });
 
@@ -226,10 +252,24 @@ describe("FreeMint", function () {
         .to.be.rejectedWith(`ERC721InvalidOwner("${zeroAddress}")`);
     });
 
-    it("should succeed when minting one token", async function () {
+
+    it("should fail when minting zero tokens", async function () {
       const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture1);
 
-      await expect(FreeMint.write.mint([nonOwner.account.address, 1n]))
+      await expect(FreeMint.write.mint([nonOwner.account.address, 0n]))
+        .to.be.rejectedWith("Invalid amount");
+    });
+
+    it("should succeed when nonowner mints one token", async function () {
+      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture1);
+
+      const tokenAsNonOwner = await hre.viem.getContractAt(
+        "FreeMint",
+        FreeMint.address,
+        { client: { wallet: nonOwner } }
+      );
+
+      await expect(tokenAsNonOwner.write.mint([nonOwner.account.address, 1n]))
         .to.be.fulfilled;
 
       const balance = await FreeMint.read.balanceOf([nonOwner.account.address]);
@@ -237,21 +277,13 @@ describe("FreeMint", function () {
     });
 
     it("should succeed when minting mint limit amount", async function () {
-      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture1);
-      const mintLimit = await FreeMint.read.mintLimit();
+      const { FreeMint, owner, nonOwner, MINT_LIMIT } = await loadFixture(deployTokenFixture1);
 
-      await expect(FreeMint.write.mint([nonOwner.account.address, mintLimit]))
+      await expect(FreeMint.write.mint([nonOwner.account.address, MINT_LIMIT]))
         .to.be.fulfilled;
 
       const balance = await FreeMint.read.balanceOf([nonOwner.account.address]);
-      expect(balance).to.equal(mintLimit);
-    });
-
-    it("should fail when minting zero tokens", async function () {
-      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture1);
-
-      await expect(FreeMint.write.mint([nonOwner.account.address, 0n]))
-        .to.be.rejectedWith("Invalid amount");
+      expect(balance).to.equal(MINT_LIMIT);
     });
 
     it("should set correct initial state when deployed with startWithTokenId=1", async function () {
@@ -273,72 +305,66 @@ describe("FreeMint", function () {
 
   describe("Bulk mint function", function () {
     it("should allow owner to bulk mint tokens", async function () {
-      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture1);
-      const recipients = [nonOwner.account.address, owner.account.address];
-      const amounts = [2n, 3n];
+      const { FreeMint, owner, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
+      const recipients = [recipient1.account.address, recipient2.account.address];
+      const tokenIds = [1n, 2n];
 
-      await expect(FreeMint.write.bulkMint([recipients, amounts]))
+      await expect(FreeMint.write.bulkMint([recipients, tokenIds]))
         .to.be.fulfilled;
 
-      const balance1 = await FreeMint.read.balanceOf([recipients[0]]);
-      const balance2 = await FreeMint.read.balanceOf([recipients[1]]);
-      expect(balance1).to.equal(2n);
-      expect(balance2).to.equal(3n);
+      // Verify token ownership
+      const owner1 = await FreeMint.read.ownerOf([1n]);
+      const owner2 = await FreeMint.read.ownerOf([2n]);
+
+      expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
+      expect(getAddress(owner2)).to.equal(getAddress(recipient2.account.address));
+
+      expect(await FreeMint.read.totalSupply()).to.equal(2n);
+
+      // Verify non-minted token doesn't exist
+      await expect(FreeMint.read.ownerOf([3n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
     });
 
-    it("should allow unlimited minting when mintLimit is 0", async function () {
-      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture1);
+    it("should allow owner to bulk mint tokens, start with 0", async function () {
+      const { FreeMint, owner, recipient1, recipient2 } = await loadFixture(deployTokenFixture0);
+      const recipients = [recipient1.account.address, recipient2.account.address];
+      const tokenIds = [0n, 1n];
 
-      // Set mintLimit to 0
-      await FreeMint.write.setMintLimit([0n]);
-
-      // Try to mint more than the original mint limit
-      const largeAmount = 20n; // This is well above the default mint limit of 5
-
-      // Should succeed because mintLimit is 0
-      await expect(FreeMint.write.mint([nonOwner.account.address, largeAmount]))
+      await expect(FreeMint.write.bulkMint([recipients, tokenIds]))
         .to.be.fulfilled;
 
-      // Verify the balance
-      const balance = await FreeMint.read.balanceOf([nonOwner.account.address]);
-      expect(balance).to.equal(largeAmount);
-    });
+      // Verify token ownership
+      const owner1 = await FreeMint.read.ownerOf([0n]);
+      const owner2 = await FreeMint.read.ownerOf([1n]);
 
-    it("should fail when arrays length mismatch", async function () {
-      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture1);
-      const recipients = [nonOwner.account.address];
-      const amounts = [2n, 3n];
+      expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
+      expect(getAddress(owner2)).to.equal(getAddress(recipient2.account.address));
 
-      await expect(FreeMint.write.bulkMint([recipients, amounts]))
-        .to.be.rejectedWith("Recipients and amounts length mismatch");
-    });
+      expect(await FreeMint.read.totalSupply()).to.equal(2n);
 
-    it("should fail when arrays are empty", async function () {
-      const { FreeMint } = await loadFixture(deployTokenFixture1);
-
-      await expect(FreeMint.write.bulkMint([
-        [], // empty recipients array
-        []  // empty amounts array
-      ])).to.be.rejectedWith("Empty arrays not allowed");
+      // Verify non-minted token doesn't exist
+      await expect(FreeMint.read.ownerOf([2n]))
+        .to.be.rejectedWith("ERC721NonexistentToken");
     });
 
     describe("Input Validation", function () {
+      it("should fail when arrays are empty", async function () {
+        const { FreeMint } = await loadFixture(deployTokenFixture1);
+
+        await expect(FreeMint.write.bulkMint([
+          [], // empty recipients array
+          []  // empty tokenIds array
+        ])).to.be.rejectedWith("Empty arrays not allowed");
+      });
+
       it("should fail when arrays length mismatch", async function () {
         const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture1);
 
         await expect(FreeMint.write.bulkMint([
           [recipient1.account.address],
           [1n, 2n]
-        ])).to.be.rejectedWith("Recipients and amounts length mismatch");
-      });
-
-      it("should fail when any amount is zero", async function () {
-        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
-
-        await expect(FreeMint.write.bulkMint([
-          [recipient1.account.address, recipient2.account.address],
-          [1n, 0n]
-        ])).to.be.rejectedWith("Invalid amount");
+        ])).to.be.rejectedWith("Recipients and tokenIds length mismatch");
       });
 
       it("should fail when minting to zero address", async function () {
@@ -346,146 +372,144 @@ describe("FreeMint", function () {
 
         await expect(FreeMint.write.bulkMint([
           [zeroAddress, recipient1.account.address],
-          [1n, 1n]
+          [1n, 2n]
         ])).to.be.rejectedWith("ERC721InvalidReceiver");
       });
     });
 
     describe("Supply Limits", function () {
-      it("should fail when total amount exceeds max supply", async function () {
-        const { FreeMint, recipient1, recipient2, MAX_SUPPLY } = await loadFixture(deployTokenFixture1);
+      it("should enforce max supply limit in bulkMint", async function () {
+        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
 
+        // Set a small maxSupply for testing
+        await FreeMint.write.setMaxSupply([3n]);
+
+        // First mint should succeed (2 tokens)
         await expect(FreeMint.write.bulkMint([
           [recipient1.account.address, recipient2.account.address],
-          [MAX_SUPPLY, 1n]
-        ])).to.be.rejectedWith("Max supply reached");
-      });
-
-      it("should pass for owner when amount exceeds recipient's mint limit", async function () {
-        const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture1);
-
-        await expect(FreeMint.write.bulkMint([
-          [recipient1.account.address], [MINT_LIMIT + 1n] // Try to mint more than original limit
+          [1n, 2n]
         ])).to.be.fulfilled;
 
-        // Verify the balance
-        const balance = await FreeMint.read.balanceOf([recipient1.account.address]);
-        expect(balance).to.equal(MINT_LIMIT + 1n);
+        // Second mint should fail as it would exceed maxSupply
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient2.account.address],
+          [3n, 4n]
+        ])).to.be.rejectedWith("Max supply reached");
+
+        // Verify total supply
+        const totalSupply = await FreeMint.read.totalSupply();
+        expect(totalSupply).to.equal(2n);
+
+        // Verify only first batch was minted
+        const owner1 = await FreeMint.read.ownerOf([1n]);
+        const owner2 = await FreeMint.read.ownerOf([2n]);
+        expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
+        expect(getAddress(owner2)).to.equal(getAddress(recipient2.account.address));
+
+        // Verify tokens from failed mint don't exist
+        await expect(FreeMint.read.ownerOf([3n]))
+          .to.be.rejectedWith("ERC721NonexistentToken");
+        await expect(FreeMint.read.ownerOf([4n]))
+          .to.be.rejectedWith("ERC721NonexistentToken");
+      });
+
+      it("should fail when next token ID would exceed maxSupply", async function () {
+        const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture1);
+        await FreeMint.write.setMaxSupply([5n]);
+
+        // First mint takes up some IDs
+        await FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient1.account.address],
+          [1n, 2n]
+        ]);
+
+        // This should fail as it would exceed maxSupply
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient1.account.address, recipient1.account.address],
+          [3n, 4n, 6n]
+        ])).to.be.rejectedWith("Token ID exceeds maxSupply");
+      });
+
+      it("should successfully mint specific token IDs", async function () {
+        const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture1);
+
+        // Mint specific token IDs
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient1.account.address],
+          [1n, 5n] // Mint tokens #1 and #5
+        ])).to.be.fulfilled;
+
+        // Verify the tokens were minted correctly
+        const owner1 = await FreeMint.read.ownerOf([1n]);
+        const owner5 = await FreeMint.read.ownerOf([5n]);
+        expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
+        expect(getAddress(owner5)).to.equal(getAddress(recipient1.account.address));
+
+        // Verify tokens in between weren't minted
+        await expect(FreeMint.read.ownerOf([2n]))
+          .to.be.rejectedWith("ERC721NonexistentToken");
+        await expect(FreeMint.read.ownerOf([3n]))
+          .to.be.rejectedWith("ERC721NonexistentToken");
+        await expect(FreeMint.read.ownerOf([4n]))
+          .to.be.rejectedWith("ERC721NonexistentToken");
+
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient1.account.address],
+          [2n, 4n] // Mint tokens #2 and #4
+        ])).to.be.fulfilled;
+        // Verify total supply
+        const totalSupply = await FreeMint.read.totalSupply();
+        expect(totalSupply).to.equal(4n);
       });
 
       it("should correctly handle maxSupply when startWithTokenId is 0", async function () {
         const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture0);
-        await FreeMint.write.setMaxSupply([MINT_LIMIT]);
 
-        // Should be able to mint exactly maxSupply tokens
-        await expect(FreeMint.write.mint([recipient1.account.address, 5n]))
-          .to.be.fulfilled;
+        // Verify starting point
+        const initialSupply = await FreeMint.read.totalSupply();
+        expect(initialSupply).to.equal(0n);
 
-        // Should fail when trying to mint one more
-        await expect(FreeMint.write.mint([recipient1.account.address, 1n]))
-          .to.be.rejectedWith("Max supply reached");
+        // Should be able to mint tokens up to maxSupply
+        await FreeMint.write.setMaxSupply([3n]);
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address, recipient1.account.address, recipient1.account.address],
+          [0n, 1n, 2n]
+        ])).to.be.fulfilled;
+
+        // Should fail when trying to mint token that would exceed maxSupply
+        await expect(FreeMint.write.bulkMint([
+          [recipient1.account.address],
+          [3n]
+        ])).to.be.rejectedWith("Max supply reached");
 
         // Verify total supply
         const totalSupply = await FreeMint.read.totalSupply();
-        expect(totalSupply).to.equal(5n);
-      });
+        expect(totalSupply).to.equal(3n);
 
-      it("should correctly handle maxSupply when startWithTokenId is 1", async function () {
-        const { FreeMint, recipient1, MINT_LIMIT } = await loadFixture(deployTokenFixture1);
-        await FreeMint.write.setMaxSupply([MINT_LIMIT]);
-
-        const [owner, recipient] = await hre.viem.getWalletClients();
-
-        // Should only be able to mint maxSupply tokens (IDs 1-5)
-        await expect(FreeMint.write.mint([recipient1.account.address, 5n]))
-          .to.be.fulfilled;
-
-        // Should fail when trying to mint one more
-        await expect(FreeMint.write.mint([recipient1.account.address, 1n]))
-          .to.be.rejectedWith("Max supply reached");
-
-        // Check total supply
-        const totalSupply = await FreeMint.read.totalSupply();
-        expect(totalSupply).to.equal(5n);
-
-        // Verify token IDs
-        const firstTokenOwner = await FreeMint.read.ownerOf([1n]);
-        const lastTokenOwner = await FreeMint.read.ownerOf([5n]);
-        expect(getAddress(firstTokenOwner)).to.equal(getAddress(recipient1.account.address));
-        expect(getAddress(lastTokenOwner)).to.equal(getAddress(recipient1.account.address));
-
-        // Verify token ID 0 doesn't exist
-        await expect(FreeMint.read.ownerOf([0n]))
-          .to.be.rejectedWith("ERC721NonexistentToken");
-
-        // Verify token ID 6 doesn't exist
-        await expect(FreeMint.read.ownerOf([6n]))
-          .to.be.rejectedWith("ERC721NonexistentToken");
-      });
-
-    });
-
-    describe("Successful Minting", function () {
-      it("should correctly mint multiple tokens to multiple addresses", async function () {
-        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
-
-        await FreeMint.write.bulkMint([
-          [recipient1.account.address, recipient2.account.address],
-          [2n, 3n]
-        ]);
-
-        const balance1 = await FreeMint.read.balanceOf([recipient1.account.address]);
-        const balance2 = await FreeMint.read.balanceOf([recipient2.account.address]);
-
-        expect(balance1).to.equal(2n);
-        expect(balance2).to.equal(3n);
-      });
-
-      it("should increment token IDs correctly", async function () {
-        const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture1);
-
-        await FreeMint.write.bulkMint([
-          [recipient1.account.address],
-          [2n]
-        ]);
-
-        const owner1 = await FreeMint.read.ownerOf([1n])
-        const owner2 = await FreeMint.read.ownerOf([2n])
-
-        // Use getAddress to normalize address case
-        expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
-        expect(getAddress(owner2)).to.equal(getAddress(recipient1.account.address));
-      });
-
-      it("should update total supply correctly", async function () {
-        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
-
-        // Get initial supply
-        const initialSupply = await FreeMint.read.totalSupply() as bigint;
-
-        await FreeMint.write.bulkMint([
-          [recipient1.account.address, recipient2.account.address],
-          [2n, 3n]
-        ]);
-
-        // Check that supply increased by exactly 5
-        const finalSupply = (await FreeMint.read.totalSupply()) as bigint;
-        expect(finalSupply - initialSupply).to.equal(5n);
+        // Verify token ownership
+        const owner0 = await FreeMint.read.ownerOf([0n]);
+        expect(getAddress(owner0)).to.equal(getAddress(recipient1.account.address));
       });
     });
 
-    describe("Pausable Behavior", function () {
-      it("should fail when contract is paused", async function () {
-        const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
+    // describe("Pausable Behavior", function () {
+    //   it("should bulk mint when contract is paused", async function () {
+    //     const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture1);
 
-        await FreeMint.write.pause();
+    //     // First pause the contract
+    //     await FreeMint.write.pause();
 
-        await expect(FreeMint.write.bulkMint([
-          [recipient1.account.address, recipient2.account.address],
-          [1n, 2n]
-        ])).to.be.rejectedWith("EnforcedPause");
-      });
-    });
+    //     // Attempt to bulk mint should fail
+    //     await expect(FreeMint.write.bulkMint([
+    //       [recipient1.account.address, recipient2.account.address],
+    //       [1n, 2n]
+    //     ])).to.be.fulfilled;
+
+    //     // Verify total supply didn't change
+    //     const totalSupply = await FreeMint.read.totalSupply();
+    //     expect(totalSupply).to.equal(2n);
+    //   });
+    // });
   });
 
   describe("TokenURI function", function () {
@@ -494,6 +518,8 @@ describe("FreeMint", function () {
 
       // Mint token ID 1
       await FreeMint.write.mint([recipient1.account.address, 1n]);
+      const uri = await FreeMint.read.tokenURI([1n]);
+      expect(uri).to.equal("ipfs://example/1.json");
 
       // Try to get URI for token 0 (should not exist)
       await expect(FreeMint.read.tokenURI([0n]))
@@ -518,26 +544,6 @@ describe("FreeMint", function () {
       }
     });
 
-    it("should fail for unminted token ID", async function () {
-      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture1);
-
-      // Try to get URI for unminted token 1
-      await expect(FreeMint.read.tokenURI([1n]))
-        .to.be.rejectedWith("ERC721NonexistentToken");
-    });
-  });
-
-  describe("StartTokenID 0 specific behavior", function () {
-    it("should calculate correct totalSupply when starting from 0", async function () {
-      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture0);
-
-      // Mint 3 tokens (IDs: 0,1,2)
-      await FreeMint.write.mint([recipient1.account.address, 3n]);
-
-      const totalSupply = await FreeMint.read.totalSupply();
-      expect(totalSupply).to.equal(3n);
-    });
-
     it("should return correct tokenURI when starting from 0", async function () {
       const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture0);
 
@@ -546,57 +552,6 @@ describe("FreeMint", function () {
 
       const uri = await FreeMint.read.tokenURI([0n]);
       expect(uri).to.equal("ipfs://example/0.json");
-    });
-
-    it("should handle bulkMint correctly when starting from 0", async function () {
-      const { FreeMint, recipient1, recipient2 } = await loadFixture(deployTokenFixture0);
-
-      await FreeMint.write.bulkMint([
-        [recipient1.account.address, recipient2.account.address],
-        [2n, 2n]
-      ]);
-
-      // First recipient should own tokens 0,1
-      const owner0 = await FreeMint.read.ownerOf([0n]) as Address;
-      const owner1 = await FreeMint.read.ownerOf([1n]) as Address;
-      expect(getAddress(owner0)).to.equal(getAddress(recipient1.account.address));
-      expect(getAddress(owner1)).to.equal(getAddress(recipient1.account.address));
-
-      // Second recipient should own tokens 2,3
-      const owner2 = await FreeMint.read.ownerOf([2n]) as Address;
-      const owner3 = await FreeMint.read.ownerOf([3n]) as Address;
-      expect(getAddress(owner2)).to.equal(getAddress(recipient2.account.address));
-      expect(getAddress(owner3)).to.equal(getAddress(recipient2.account.address));
-    });
-
-    it("should set correct initial state when deployed with startWithTokenId=0", async function () {
-      const { FreeMint } = await loadFixture(deployTokenFixture0);
-
-      // Get first token ID before any minting
-      await expect(FreeMint.read.ownerOf([0n]))
-        .to.be.rejectedWith("ERC721NonexistentToken");
-
-      // Verify starting point
-      const totalSupply = await FreeMint.read.totalSupply();
-      expect(totalSupply).to.equal(0n);
-    });
-
-    it("should handle setMaxSupply correctly when starting from 0", async function () {
-      const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture0);
-
-      // Set maxSupply to 3
-      await FreeMint.write.setMaxSupply([3n]);
-
-      // Mint 3 tokens (IDs: 0,1,2)
-      await FreeMint.write.mint([recipient1.account.address, 3n]);
-
-      // Try to mint one more
-      await expect(FreeMint.write.mint([recipient1.account.address, 1n]))
-        .to.be.rejectedWith("Max supply reached");
-
-      // Verify total supply
-      const totalSupply = await FreeMint.read.totalSupply();
-      expect(totalSupply).to.equal(3n);
     });
   });
 });

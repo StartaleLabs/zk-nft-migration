@@ -1,3 +1,5 @@
+// npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network localhost
+
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 import fs from 'fs';
 import path from 'path';
@@ -55,7 +57,7 @@ const FreeMintModule = buildModule("FreeMintModule", (m) => {
   console.log(`Start Token ID: ${startWithTokenId}`);
   console.log("=====================\n");
 
-  const freeMint = m.contract("Setac", [
+  const freeMint = m.contract("FreeMint", [
     name,
     symbol,
     baseURI,

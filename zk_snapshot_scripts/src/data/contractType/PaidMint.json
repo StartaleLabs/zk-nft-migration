@@ -1,0 +1,18 @@
+{
+  "On1force": {
+    "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
+    "totalSupply": "777",
+    "metadataEntries": "777",
+    "name": "0N1 FORCE 0N1 Doll and F0N1 Doll Collectible",
+    "symbol": "0N1FORCE",
+    "contractType": "ERC721",
+    "startsWithToken0": false,
+    "baseURI": "ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/",
+    "contractName": "0N1Force",
+    "maxSupply": "777",
+    "mintLimit": "0",
+    "isMintPayable": true,
+    "price": "0.01777",
+    "baseUriExtension": ""
+  }
+}

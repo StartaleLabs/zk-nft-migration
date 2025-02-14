@@ -1,0 +1,49 @@
+{
+  "Bitget": {
+    "address": "0x721040Fa869501cfe826Abc9e40AB3cbf8178Ea0",
+    "totalSupply": "450",
+    "metadataEntries": "1",
+    "name": "Bitget x Suzuki Jimny NFT",
+    "symbol": "BGJIMNY",
+    "contractType": "ERC1155",
+    "startsWithToken0": false,
+    "baseURI": " ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/",
+    "contractName": "BitgetSuzukiJimny",
+    "maxSupply": "450",
+    "mintLimit": "0",
+    "isMintPayable": false,
+    "price": null,
+    "baseUriExtension": ""
+  },
+  "his": {
+    "address": "0x35e9f0E783140dad67e2A3502362805c7E65Ed69",
+    "totalSupply": "2708",
+    "metadataEntries": "2708",
+    "tokensIDs": "",
+    "name": "ご当地vtuber図鑑　コラボNFT",
+    "symbol": "HISVTUBERNFT",
+    "contractType": "ERC1155",
+    "startsWithToken0": false,
+    "baseURI": "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/",
+    "contractName": "HISVtuber",
+    "maxSupply": "2000",
+    "mintLimit": "0",
+    "isMintPayable": true,
+    "price": "0.00065",
+    "baseUriExtension": ""
+  },
+  "Yoki": {
+    "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905",
+    "totalSupply": "448241",
+    "metadataEntries": null,
+    "name": "Yoki Origins",
+    "symbol": "YOKI",
+    "contractType": "ERC1155",
+    "startsWithToken0": true,
+    "baseURI": "ipfs://bafybeieavjq2az24tkzk32dkjfz3cw6dfiy5khmmoezylbneyaiuukghqm/",
+    "contractName": "Yoki Origins",
+    "isMintPayable": false,
+    "price": null,
+    "baseUriExtension": ".json"
+  }
+}

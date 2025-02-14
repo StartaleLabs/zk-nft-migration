@@ -1,0 +1,18 @@
+{
+  "Packs": {
+    "address": "0xb462c58cB8a317c290aa27585E6Fc9C2CaCd71A7",
+    "totalSupply": "150",
+    "metadataEntries": "150",
+    "name": "PACKS",
+    "symbol": "PACKS",
+    "contractType": "ERC721",
+    "startsWithToken0": false,
+    "baseURI": "https://ipfs.io/ipfs/QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/",
+    "contractName": "Packs",
+    "maxSupply": null,
+    "mintLimit": null,
+    "isMintPayable": true,
+    "price": null,
+    "baseUriExtension": ".json"
+  }
+}

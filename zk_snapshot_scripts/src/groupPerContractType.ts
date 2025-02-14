@@ -69,9 +69,13 @@ async function groupsPerContractType() {
     const isMetadataEqual = Number(projectData.totalSupply) === Number(projectData.metadataEntries);
     const isFreeMint = projectData.price === null && !projectData.isMintPayable;
     const isPaidMint = projectData.price !== null && projectData.isMintPayable;
+    const isShortBaseUri = projectData.baseURI && !projectData.baseURI.endsWith('/');
 
     console.log(`Project: ${project}, isMetadataEqual: ${isMetadataEqual}, isFreeMint: ${isFreeMint}, isPaidMint: ${isPaidMint}`);
     if (isFreeMint && isMetadataEqual) {
+      groups.FreeMint[project] = projectData;
+      console.log("added to FreeMint");
+    } else if (isFreeMint && isShortBaseUri) {
       groups.FreeMint[project] = projectData;
       console.log("added to FreeMint");
     } else if (isFreeMint && !isMetadataEqual) {

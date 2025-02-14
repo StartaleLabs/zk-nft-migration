@@ -390,7 +390,7 @@
     "symbol": "BGJIMNY",
     "contractType": "ERC1155",
     "startsWithToken0": false,
-    "baseURI": " ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/",
+    "baseURI": "ipfs://QmRD4w6rFQPbg2dhfFwy76x8inyvegeH81D57MsVmSeJ8Q/",
     "contractName": "BitgetSuzukiJimny",
     "maxSupply": "450",
     "mintLimit": "0",

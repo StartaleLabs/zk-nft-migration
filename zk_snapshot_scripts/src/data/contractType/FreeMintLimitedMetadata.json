@@ -14,21 +14,5 @@
     "isMintPayable": false,
     "price": null,
     "baseUriExtension": ".json"
-  },
-  "DoF": {
-    "address": "0x67713036aF45376Df83729cA7Ca46b643d8bD3C6",
-    "totalSupply": "1000",
-    "metadataEntries": "1",
-    "name": "DoF OG Pass",
-    "symbol": "DoF OG",
-    "contractType": "ERC721",
-    "startsWithToken0": true,
-    "baseURI": "https://ipfs.io/ipfs/QmdvYLpLR9PqtV6oivVjkR7BnogYzsFiFPBGamGUbBV3Ce",
-    "contractName": "DoFOG",
-    "maxSupply": "1000",
-    "mintLimit": "0",
-    "isMintPayable": false,
-    "price": null,
-    "baseUriExtension": ""
   }
 }

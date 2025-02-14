@@ -8,7 +8,7 @@ const MAINNET_PRIVATE_KEY = process.env.MAINNET_PRIVATE_KEY || "";
 console.log("PrivateKey set:", !!MAINNET_PRIVATE_KEY)
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.22",
+    version: "0.8.20",
     settings: {
       optimizer: {
         enabled: true,

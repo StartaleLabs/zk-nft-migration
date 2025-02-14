@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import hre from "hardhat";
 import { loadFixture } from "@nomicfoundation/hardhat-toolbox-viem/network-helpers";
-import { getAddress, zeroAddress, Address } from "viem";
+import { getAddress, zeroAddress, parseEther } from "viem";
 
 // Global test configuration
 const TOKEN_NAME = "FreeMint";
@@ -120,18 +120,24 @@ describe("FreeMint", function () {
         .to.be.rejectedWith("OwnableUnauthorizedAccount");
     });
 
-    it("should allow owner to withdraw and non-owner should fail", async function () {
-      const { FreeMint, owner, nonOwner } = await loadFixture(deployTokenFixture1);
+    it("should fail for non-owner to withdraw", async function () {
+      const { FreeMint, nonOwner } = await loadFixture(deployTokenFixture1);
+      const depositAmount = parseEther("1"); // 1 ETH
 
-      // Get contract instance for non-owner
-      const tokenAsNonOwner = await hre.viem.getContractAt(
+      // Send 1 ETH to the contract
+      await nonOwner.sendTransaction({
+        to: FreeMint.address,
+        value: depositAmount,
+      });
+
+      // Try to withdraw as non-owner
+      const FreeMintAsNonOwner = await hre.viem.getContractAt(
         "FreeMint",
         FreeMint.address,
         { client: { wallet: nonOwner } }
       );
 
-      await expect(FreeMint.write.withdraw()).to.be.fulfilled;
-      await expect(tokenAsNonOwner.write.withdraw())
+      await expect(FreeMintAsNonOwner.write.withdraw())
         .to.be.rejectedWith("OwnableUnauthorizedAccount");
     });
 
@@ -326,7 +332,7 @@ describe("FreeMint", function () {
         .to.be.rejectedWith("ERC721NonexistentToken");
     });
 
-    it("should allow owner to bulk mint tokens, start with 0", async function () {
+    it("should allow owner to bulk mint tokens when startWithTokenId is 0", async function () {
       const { FreeMint, owner, recipient1, recipient2 } = await loadFixture(deployTokenFixture0);
       const recipients = [recipient1.account.address, recipient2.account.address];
       const tokenIds = [0n, 1n];
@@ -544,7 +550,7 @@ describe("FreeMint", function () {
       }
     });
 
-    it("should return correct tokenURI when starting from 0", async function () {
+    it("should return correct tokenURI when startWithTokenId is 0", async function () {
       const { FreeMint, recipient1 } = await loadFixture(deployTokenFixture0);
 
       // Mint token with ID 0
@@ -554,4 +560,51 @@ describe("FreeMint", function () {
       expect(uri).to.equal("ipfs://example/0.json");
     });
   });
+
+  describe("Withdraw function", function () {
+    it("should allow owner to withdraw contract balance", async function () {
+      const { FreeMint, owner } = await loadFixture(deployTokenFixture1);
+      const publicClient = await hre.viem.getPublicClient();
+
+      const depositAmount = parseEther("1"); // 1 ETH
+
+      // Send 1 ETH to the contract
+      await owner.sendTransaction({
+        to: FreeMint.address,
+        value: depositAmount,
+      });
+
+      // Verify contract balance
+      expect(await publicClient.getBalance({
+        address: FreeMint.address
+      })).to.equal(depositAmount);
+
+      // Get owner's balance before withdrawal
+      const ownerBalanceBefore = await publicClient.getBalance({
+        address: owner.account.address
+      });
+
+      // Withdraw funds
+      await FreeMint.write.withdraw();
+
+      // Verify contract balance is 0
+      expect(await publicClient.getBalance({
+        address: FreeMint.address
+      })).to.equal(0n);
+
+      // Verify owner received the funds (approximately, considering gas costs)
+      const ownerBalanceAfter = await publicClient.getBalance({
+        address: owner.account.address
+      });
+      expect(ownerBalanceAfter > ownerBalanceBefore).to.be.true;
+    });
+
+    it("should revert when contract has no balance", async function () {
+      const { FreeMint } = await loadFixture(deployTokenFixture1);
+
+      await expect(FreeMint.write.withdraw())
+        .to.be.rejectedWith("No balance to withdraw");
+    });
+  });
+
 });

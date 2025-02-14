@@ -155,7 +155,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
         }
 
         return bytes(baseURI).length > 0
-            ? string.concat(baseURI, tokenId.toString(), baseExtension) : "";
+                ? string.concat(baseURI, tokenId.toString(), baseExtension) : "";
     }
 
     function supportsInterface(
@@ -174,6 +174,15 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
 
     //@notice withdraw function
     function withdraw() public onlyOwner {
-        payable(owner()).transfer(address(this).balance);
+        uint256 balance = address(this).balance;
+        require(balance > 0, "No balance to withdraw");
+        (bool success, ) = payable(owner()).call{value: balance}("");
+        require(success, "Transfer failed");
     }
+
+    // Add receive function to accept ETH
+    receive() external payable {}
+
+    // Add fallback function as a backup
+    fallback() external payable {}
 }

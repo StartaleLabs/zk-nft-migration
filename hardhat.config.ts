@@ -78,7 +78,8 @@ const config: HardhatUserConfig = {
     apiKey: {
       minato: " ",
       soneium: " ",
-      astarZkEvm: " "
+      astarZkEvm: " ",
+      sepolia: " "
     },
     customChains: [
       {
@@ -95,6 +96,14 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://astar-zkevm.explorer.startale.com/api",
           browserURL: "https://astar-zkevm.explorer.startale.com/",
+        },
+      },
+      {
+        network: "sepolia",
+        chainId: 11155111,
+        urls: {
+          apiURL: "https://eth-sepolia.blockscout.com/api",
+          browserURL: "https:/eth-sepolia.blockscout.com/",
         },
       }
     ],

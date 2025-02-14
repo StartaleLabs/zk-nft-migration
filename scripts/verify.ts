@@ -59,9 +59,6 @@ async function verifyInstances(projectName: string, contractAddress: Address) {
   const lines = csvContent.split('\n').slice(1); // Skip header
   const validLines = lines.filter(line => line.trim());
 
-  // Take only first 5 tokens
-  const linesToVerify = validLines.slice(0, 5);
-
   const contract = getContract({
     address: contractAddress,
     abi: erc721Abi,
@@ -70,28 +67,32 @@ async function verifyInstances(projectName: string, contractAddress: Address) {
 
   let verified = 0;
   let failed = 0;
-  const totalTokens = linesToVerify.length;
+  const totalTokens = validLines.length;
+  const STATUS_INTERVAL = 100;
 
-  console.log(`Starting verification of first ${totalTokens} tokens...`);
+  console.log(`Starting verification of ${totalTokens} tokens...`);
 
-  for (const [index, line] of linesToVerify.entries()) {
+  for (const [index, line] of validLines.entries()) {
     const [csvAddress, tokenId] = line.split(',');
     try {
-      console.log(`[${index + 1}/${totalTokens}] Checking token ${tokenId}...`);
       const onchainOwner = await retryOwnerOf(contract, BigInt(tokenId));
 
       if (onchainOwner.toLowerCase() === csvAddress.toLowerCase()) {
         verified++;
-        console.log(`✅ Token ${tokenId} verified`);
       } else {
         failed++;
         console.error(`❌ Mismatch for token ${tokenId}:`);
         console.error(`  CSV owner: ${csvAddress}`);
         console.error(`  Chain owner: ${onchainOwner}`);
       }
+      // Print status every STATUS_INTERVAL tokens
+      if ((index + 1) % STATUS_INTERVAL === 0 || index === totalTokens - 1) {
+        const progress = ((index + 1) / totalTokens * 100).toFixed(2);
+        console.log(`Progress: ${index + 1}/${totalTokens} (${progress}%) - Verified: ${verified}, Failed: ${failed}`);
+      }
 
       // Add small delay between checks
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 100));
     } catch (error: any) {
       failed++;
       console.error(`❌ Error verifying token ${tokenId}:`, {
@@ -103,8 +104,8 @@ async function verifyInstances(projectName: string, contractAddress: Address) {
     }
   }
 
-  console.log(`\nResults for ${projectName}:`);
-  console.log(`  Total tokens checked: ${totalTokens}`);
+  console.log(`\nFinal Results for ${projectName}:`);
+  console.log(`  Total tokens: ${totalTokens}`);
   console.log(`  Verified: ${verified}`);
   console.log(`  Failed: ${failed}`);
   console.log('-------------------');

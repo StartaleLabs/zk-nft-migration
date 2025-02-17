@@ -8,9 +8,9 @@ import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-/// @title FreeMint NFT Contract
-/// @notice Contract for minting NFTs with free mint capability
-contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
+/// @title PaidMint NFT Contract
+/// @notice Contract for minting NFTs with payable mint capability
+contract PaidMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     using Strings for uint256;
 
     uint256 public nextTokenId;
@@ -27,6 +27,8 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
 
     uint256 public immutable startWithTokenId;
 
+    uint256 public price;
+    
     /// @notice Emitted when the contract URI is updated.
     event ContractURIUpdated(string prevURI, string newURI);
 
@@ -37,7 +39,8 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
         string memory baseExtension_,
         uint256 maxSupply_,
         uint256 mintLimit_,
-        uint256 startWithTokenId_
+        uint256 startWithTokenId_,
+        uint256 price_
     ) ERC721(name_, symbol_) Ownable(msg.sender) {
         setBaseURI(baseURI_);
         baseExtension = baseExtension_;
@@ -46,14 +49,22 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
         require(startWithTokenId_ <= 1, "Invalid startWithTokenId");
         startWithTokenId = startWithTokenId_;
         nextTokenId = startWithTokenId_;
+        price = price_;
     }
 
-    function mint(address to, uint256 amount) public whenNotPaused {
+    function mint(address to, uint256 amount) public payable whenNotPaused {
         require(amount > 0, "Invalid amount");
         require(
             nextTokenId + amount - startWithTokenId <= maxSupply,
             "Max supply reached"
         );
+
+        // Check price if set
+        if (price > 0) {
+            require(msg.value == price * amount, "Incorrect payment amount");
+        } else {
+            require(msg.value == 0, "This is a free mint");
+        }
 
         // Allow unlimited minting if mintLimit is 0
         if (mintLimit != 0) {

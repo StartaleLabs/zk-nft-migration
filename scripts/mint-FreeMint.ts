@@ -1,6 +1,6 @@
 // npx hardhat run scripts/mint-FreeMint.ts
 import { createPublicClient, createWalletClient, http, PublicClient } from 'viem';
-import { privateKeyToAccount, PrivateKeyAccount } from 'viem/accounts';
+import { privateKeyToAccount } from 'viem/accounts';
 import * as fs from 'fs';
 import * as path from 'path';
 import { parse } from 'csv-parse/sync';
@@ -14,7 +14,8 @@ const FreeMintABI = FreeMintArtifact.abi;
 const { projectName, chain, contractAddress } = readConfig();
 
 // Constants
-const BATCH_SIZE = 500;
+const BATCH_SIZE = 200;
+const START_TOKEN_ID = 12201;
 
 function printBatchInfo(
     batchNumber: number,
@@ -58,28 +59,34 @@ async function main() {
     const privateKey = `0x${rawKey}` as `0x${string}`;
     const account = privateKeyToAccount(privateKey);
 
-    console.log(`Using address: ${account.address}`);
-
     const publicClient = createPublicClient({
         chain: chain,
         transport: http()
     });
-
+    
     const walletClient = createWalletClient({
         account,
         chain: chain,
         transport: http()
     });
-
+    
+    console.log(`Minting with ${account.address}, Balance: ${await publicClient.getBalance({ address: account.address })}\n`);
+    
     // Read and parse CSV file
     const csvPath = path.join(__dirname, `../zk_snapshot_scripts/src/instances/${projectName}_instances.csv`);
     const fileContent = fs.readFileSync(csvPath, 'utf-8');
-    const records = parse(fileContent, {
+    const allRecords = parse(fileContent, {
         columns: true,
         skip_empty_lines: true
     });
 
-    console.log(`\nTotal records to process: ${records.length}`);
+    // Filter records starting from specified token ID
+    const records = allRecords.filter((record: any) =>
+        parseInt(record.tokenId) >= START_TOKEN_ID
+    );
+
+    console.log(`\nStarting from token ID: ${START_TOKEN_ID}`);
+    console.log(`Records to process: ${records.length} out of ${allRecords.length}`);
 
     // Process in batches
     for (let i = 0; i < records.length; i += BATCH_SIZE) {

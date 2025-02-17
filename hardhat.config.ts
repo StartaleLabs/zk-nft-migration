@@ -20,6 +20,9 @@ const config: HardhatUserConfig = {
   paths: {
     artifacts: "./artifacts",
   },
+  ignition: {
+    requiredConfirmations: 1
+  },
   networks: {
     localhost: {
       accounts: {

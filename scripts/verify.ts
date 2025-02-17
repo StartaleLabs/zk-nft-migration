@@ -1,4 +1,4 @@
-// src/verify-instances.ts
+// npx hardhat run scripts/verify.ts
 
 import { createPublicClient, http, getContract, type Address } from 'viem';
 import { sepolia, soneium } from 'viem/chains';
@@ -6,11 +6,10 @@ import fs from 'fs';
 import path from 'path';
 import { wait } from '../zk_snapshot_scripts/src/utils';
 import type { ProjectConfig } from '../zk_snapshot_scripts/src/types/config';
+import { readConfig } from './readConfig';
 
-const projectName = "Walkmon";
-const contractAddress = "0xEC3F4d6a2435ee513c39BD6Bdf0FE8a362559002" as `0x${string}`;
-const CHAIN = sepolia
-
+// Read configuration
+const { projectName, chain, contractAddress } = readConfig();
 
 // Basic ERC721 ABI for ownerOf function
 const erc721Abi = [
@@ -25,7 +24,7 @@ const erc721Abi = [
 
 // Initialize the client
 const client = createPublicClient({
-  chain: CHAIN,
+  chain: chain,
   transport: http()
 });
 

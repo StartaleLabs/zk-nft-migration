@@ -1,18 +1,17 @@
 import { createPublicClient, createWalletClient, http, PublicClient } from 'viem';
 import { privateKeyToAccount, PrivateKeyAccount } from 'viem/accounts';
-import { sepolia } from 'viem/chains';
 import * as fs from 'fs';
 import * as path from 'path';
 import { parse } from 'csv-parse/sync';
 import FreeMintArtifact from '../artifacts/contracts/FreeMint.sol/FreeMint.json';
-import * as dotenv from "dotenv";
+import { readConfig } from './readConfig';
 
 const FreeMintABI = FreeMintArtifact.abi;
-dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
-// Project configuration
-const projectName = "Walkmon";
-const contractAddress = "0xEC3F4d6a2435ee513c39BD6Bdf0FE8a362559002" as `0x${string}`;
+// Read configuration
+const { projectName, chain, contractAddress } = readConfig();
+
+// Constants
 const BATCH_SIZE = 500;
 
 interface GasEstimate {
@@ -104,13 +103,13 @@ async function main() {
     console.log(`Using address: ${account.address}`);
 
     const publicClient = createPublicClient({
-        chain: sepolia,
+        chain: chain,
         transport: http()
     });
 
     const walletClient = createWalletClient({
         account,
-        chain: sepolia,
+        chain: chain,
         transport: http()
     });
 

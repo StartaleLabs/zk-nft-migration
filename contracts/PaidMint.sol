@@ -14,9 +14,9 @@ interface IERC7572 {
     event ContractURIUpdated();
 }
 
-/// @title FreeMint NFT Contract
-/// @notice Contract for minting NFTs with free mint capability
-contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
+/// @title PaidMint NFT Contract
+/// @notice Contract for minting NFTs with payable mint capability
+contract PaidMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
     using Strings for uint256;
 
     uint256 public nextTokenId;
@@ -33,6 +33,8 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572
 
     uint256 public immutable startWithTokenId;
 
+    uint256 public price;
+
     constructor(
         string memory name_,
         string memory symbol_,
@@ -40,7 +42,8 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572
         string memory baseExtension_,
         uint256 maxSupply_,
         uint256 mintLimit_,
-        uint256 startWithTokenId_
+        uint256 startWithTokenId_,
+        uint256 price_
     ) ERC721(name_, symbol_) Ownable(msg.sender) {
         setBaseURI(baseURI_);
         baseExtension = baseExtension_;
@@ -49,14 +52,22 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572
         require(startWithTokenId_ <= 1, "Invalid startWithTokenId");
         startWithTokenId = startWithTokenId_;
         nextTokenId = startWithTokenId_;
+        price = price_;
     }
 
-    function mint(address to, uint256 amount) public whenNotPaused {
+    function mint(address to, uint256 amount) public payable whenNotPaused {
         require(amount > 0, "Invalid amount");
         require(
             nextTokenId + amount - startWithTokenId <= maxSupply,
             "Max supply reached"
         );
+
+        // Check price if set
+        if (price > 0) {
+            require(msg.value == price * amount, "Incorrect payment amount");
+        } else {
+            require(msg.value == 0, "This is a free mint");
+        }
 
         // Allow unlimited minting if mintLimit is 0
         if (mintLimit != 0) {
@@ -114,7 +125,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572
     }
 
     // ---------- Setter Functions ---------- //
-    
+
     //@notice Lets a contract admin set the URI for contract-level metadata.
     function setContractURI(string memory newContractURI) public onlyOwner {
         _contractURI = newContractURI;
@@ -170,7 +181,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572
     function contractURI() public view returns (string memory) {
         return _contractURI;
     }
-
+    
     function supportsInterface(
         bytes4 interfaceId
     ) public view override(ERC721, ERC721URIStorage) returns (bool) {

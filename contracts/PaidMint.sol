@@ -133,11 +133,6 @@ contract PaidMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572
         emit ContractURIUpdated();
     }
 
-    //@notice contractURI 
-    function contractURI() public view returns (string memory) {
-        return _contractURI;
-    }
-
     //@notice to tokenUri
     function setBaseURI(string memory newBaseURI) public onlyOwner {
         baseURI = newBaseURI;
@@ -182,6 +177,11 @@ contract PaidMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572
                 ? string.concat(baseURI, tokenId.toString(), baseExtension) : "";
     }
 
+    //@notice contractURI 
+    function contractURI() public view returns (string memory) {
+        return _contractURI;
+    }
+    
     function supportsInterface(
         bytes4 interfaceId
     ) public view override(ERC721, ERC721URIStorage) returns (bool) {

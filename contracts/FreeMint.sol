@@ -8,14 +8,20 @@ import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
+interface IERC7572 {
+    function contractURI() external view returns (string memory);
+
+    event ContractURIUpdated();
+}
+
 /// @title FreeMint NFT Contract
 /// @notice Contract for minting NFTs with free mint capability
-contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
+contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
     using Strings for uint256;
 
     uint256 public nextTokenId;
 
-    string public contractURI;
+    string public _contractURI;
 
     string public baseURI;
 
@@ -26,9 +32,6 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     uint256 public mintLimit;
 
     uint256 public immutable startWithTokenId;
-
-    /// @notice Emitted when the contract URI is updated.
-    event ContractURIUpdated(string prevURI, string newURI);
 
     constructor(
         string memory name_,
@@ -114,10 +117,9 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     
     //@notice Lets a contract admin set the URI for contract-level metadata.
     function setContractURI(string memory newContractURI) public onlyOwner {
-        string memory prevURI = contractURI;
-        contractURI = newContractURI;
+        _contractURI = newContractURI;
 
-        emit ContractURIUpdated(prevURI, contractURI);
+        emit ContractURIUpdated();
     }
 
     //@notice to tokenUri
@@ -162,6 +164,11 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
 
         return bytes(baseURI).length > 0
                 ? string.concat(baseURI, tokenId.toString(), baseExtension) : "";
+    }
+
+    //@notice contractURI 
+    function contractURI() public view returns (string memory) {
+        return _contractURI;
     }
 
     function supportsInterface(

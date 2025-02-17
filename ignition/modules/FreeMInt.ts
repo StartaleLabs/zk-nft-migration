@@ -1,45 +1,64 @@
 // npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network localhost
+// npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network sepolia --verify
+// npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network minato --verify
+// npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
 
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 import fs from 'fs';
 import path from 'path';
 
-const FreeMintModule = buildModule("FreeMintModule", (m) => {
-  // Set project name to read it's parameters from output.json
-  const projectName = "Walkmon";
-
-  // Read and parse the JSON file
-  const outputPath = path.join(__dirname, '../../zk_snapshot_scripts/src/data/output.json');
-  const outputData = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
-
-  // Get project data
-  const projectData = outputData[projectName];
-  if (!projectData) {
-    throw new Error(`Project ${projectName} not found in output.json`);
+function validateInput(projectName: string, projectData: any) {
+  if (projectData.name == undefined || projectData.name == null || projectData.name == "") {
+    throw new Error(`Project ${projectName} name=${projectData.name} is invalid`);
   }
-
-  // add tests for this class of projects
+  if (projectData.symbol == undefined || projectData.symbol == null || projectData.symbol == "") {
+    throw new Error(`Project ${projectName} symbol=${projectData.symbol} is invalid`);
+  }
+  if (!projectData.baseURI == undefined || projectData.baseURI == null || projectData.baseURI == null) {
+    throw new Error(`Project ${projectName} baseURI=${projectData.baseURI} is invalid`);
+  }
+  if (!projectData.baseUriExtension == undefined || projectData.baseUriExtension == null) {
+    throw new Error(`Project ${projectName} baseUriExtension=${projectData.baseUriExtension} is invalid`);
+  }
   if (projectData.maxSupply == undefined || projectData.maxSupply == 0 || projectData.maxSupply == null) {
     throw new Error(`Project ${projectName} maxSupply=${projectData.maxSupply} is invalid`);
   }
   if (projectData.mintLimit == undefined || projectData.mintLimit == null) {
     throw new Error(`Project ${projectName} mintLimit=${projectData.mintLimit} is invalid`);
   }
-  if (!projectData.baseURI == undefined || projectData.baseURI == null) {
-    throw new Error(`Project ${projectName} baseURI=${projectData.baseURI} is invalid`);
-  }
   if (projectData.isMintPayable) {
-    throw new Error(`Project ${projectName} is payable and cannot be deployed with this contract`);
+    throw new Error(`Project ${projectName} is payable and cannot be deployed with this script`);
   }
   if (projectData.totalSupply != projectData.metadataEntries) {
     throw new Error(`Project ${projectName} has different metadata handling`);
   }
+}
+  // Verify inputs for this class of projects
+const FreeMintModule = buildModule("FreeMintModule", (m) => {
+  // Set project name to read it's parameters from output.json
+  const projectName = process.env.CURRENT_PROJECT;
+  if (!projectName) {
+    throw new Error(`Current project not set in .env file`);
+  }
+
+  // Read and parse the JSON file
+  const inputPath = path.join(__dirname, '../../zk_snapshot_scripts/src/data/output.json');
+  const inputData = JSON.parse(fs.readFileSync(inputPath, 'utf-8'));
+
+  // Get project data
+  const projectData = inputData[projectName];
+  if (!projectData) {
+    throw new Error(`Project ${projectName} not found in output.json`);
+  }
+
+  // Verify inputs for this class of projects
+  validateInput(projectName, projectData);
 
   // Convert values to proper types and handle defaults
   const name = projectData.name;
   const symbol = projectData.symbol;
-  const baseURI = projectData.baseURI || "";
-  const baseExtension = projectData.baseUriExtension || "";
+  const baseURI = projectData.baseURI;
+  const baseExtension = projectData.baseUriExtension;
   const maxSupply = projectData.maxSupply;
   const mintLimit = projectData.mintLimit;
   const startWithTokenId = projectData.startsWithToken0 ? 0n : 1n;

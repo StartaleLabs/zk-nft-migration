@@ -1,11 +1,9 @@
 // npx hardhat run scripts/verify.ts
 
 import { createPublicClient, http, getContract, type Address } from 'viem';
-import { sepolia, soneium } from 'viem/chains';
 import fs from 'fs';
 import path from 'path';
 import { wait } from '../zk_snapshot_scripts/src/utils';
-import type { ProjectConfig } from '../zk_snapshot_scripts/src/types/config';
 import { readConfig } from './readConfig';
 
 // Read configuration

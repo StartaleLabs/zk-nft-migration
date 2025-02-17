@@ -1,5 +1,5 @@
 import { Chain } from 'viem';
-import { sepolia, soneium } from 'viem/chains';
+import { sepolia, soneium, soneiumMinato } from 'viem/chains';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from "dotenv";
@@ -31,24 +31,26 @@ export function readConfig(): ConfigResult {
     chain = sepolia;
   } else if (chainName === 'Soneium') {
     chain = soneium;
+  } else if (chainName === 'Minato') {
+    chain = soneiumMinato;
   } else {
     throw new Error(`Chain ${chainName} not supported`);
   }
 
   // Read contract address from JSON file
-  const contractsPath = path.join(__dirname, `./${chain.name}Contracts.json`);
+  const contractsPath = path.join(__dirname, `./${chainName}Contracts.json`);
   const contracts = JSON.parse(fs.readFileSync(contractsPath, 'utf-8'));
   
   if (!contracts[projectName]) {
-    throw new Error(`Project ${projectName} not found in ${chain.name}Contracts.json`);
+    throw new Error(`Project ${projectName} not found in ${chainName}Contracts.json`);
   }
   
   const contractAddress = contracts[projectName].address as `0x${string}`;
   if (!contractAddress) {
-    throw new Error(`Contract ${contractAddress} not found in ${chain.name}Contracts.json`);
+    throw new Error(`Contract ${contractAddress} not found in ${chainName}Contracts.json`);
   }
 
-  console.log(`\n=== Processing project: ${projectName}, ${chain.name}, Address: ${contractAddress} ===`);
+  console.log(`\n=== Processing project: ${projectName}, ${chainName}, Address: ${contractAddress} ===`);
 
   return {
     projectName,

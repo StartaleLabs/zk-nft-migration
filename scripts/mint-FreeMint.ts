@@ -1,3 +1,4 @@
+// npx hardhat run scripts/mint-FreeMint.ts
 import { createPublicClient, createWalletClient, http, PublicClient } from 'viem';
 import { privateKeyToAccount, PrivateKeyAccount } from 'viem/accounts';
 import * as fs from 'fs';
@@ -5,6 +6,7 @@ import * as path from 'path';
 import { parse } from 'csv-parse/sync';
 import FreeMintArtifact from '../artifacts/contracts/FreeMint.sol/FreeMint.json';
 import { readConfig } from './readConfig';
+import { estimateBulkMintGas, printGasEstimate } from './gasEstimate';
 
 const FreeMintABI = FreeMintArtifact.abi;
 
@@ -14,40 +16,6 @@ const { projectName, chain, contractAddress } = readConfig();
 // Constants
 const BATCH_SIZE = 500;
 
-interface GasEstimate {
-    gasEstimate: bigint;
-    gasPrice: bigint;
-    gasCostInWei: bigint;
-    gasCostInEth: number;
-}
-
-async function estimateBulkMintGas(
-    publicClient: PublicClient,
-    contractAddress: `0x${string}`,
-    account: PrivateKeyAccount,
-    recipients: `0x${string}`[],
-    tokenIds: bigint[]
-): Promise<GasEstimate> {
-    const gasEstimate = await publicClient.estimateContractGas({
-        address: contractAddress,
-        abi: FreeMintABI,
-        functionName: 'bulkMint',
-        args: [recipients, tokenIds],
-        account: account.address,
-    });
-
-    const gasPrice = await publicClient.getGasPrice();
-    const gasCostInWei = gasEstimate * gasPrice;
-    const gasCostInEth = Number(gasCostInWei) / 1e18;
-
-    return {
-        gasEstimate,
-        gasPrice,
-        gasCostInWei,
-        gasCostInEth
-    };
-}
-
 function printBatchInfo(
     batchNumber: number,
     batchSize: number,
@@ -56,18 +24,8 @@ function printBatchInfo(
 ) {
     console.log('\n=== Batch Information ===');
     console.log(`Batch Number: ${batchNumber}`);
-    console.log(`Batch Size: ${batchSize}`);
-    console.log(`First Address: ${recipients[0]}`);
-    console.log(`First TokenId: ${tokenIds[0].toString()}`);
-    console.log(`Last Address: ${recipients[recipients.length - 1]}`);
-    console.log(`Last TokenId: ${tokenIds[tokenIds.length - 1].toString()}`);
-}
-
-function printGasEstimate(gasEstimate: GasEstimate) {
-    console.log('\n=== Gas Estimation ===');
-    console.log(`Gas Units: ${gasEstimate.gasEstimate.toString()}`);
-    console.log(`Gas Price: ${gasEstimate.gasPrice.toString()} wei`);
-    console.log(`Total Cost: ${gasEstimate.gasCostInEth.toFixed(6)} ETH`);
+    console.log(`Batch Size: ${batchSize}, tokens: ${tokenIds[0].toString()}-${tokenIds[tokenIds.length - 1].toString()}`);
+    console.log(`First Address: ${recipients[0]}-${recipients[recipients.length - 1]}`);
 }
 
 async function verifyTotalSupply(

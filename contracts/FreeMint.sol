@@ -15,7 +15,7 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
 
     uint256 public nextTokenId;
 
-    string public baseContractURI;
+    string public contractURI;
 
     string public baseURI;
 
@@ -26,6 +26,9 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     uint256 public mintLimit;
 
     uint256 public immutable startWithTokenId;
+
+    /// @notice Emitted when the contract URI is updated.
+    event ContractURIUpdated(string prevURI, string newURI);
 
     constructor(
         string memory name_,
@@ -108,10 +111,13 @@ contract FreeMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     }
 
     // ---------- Setter Functions ---------- //
+    
+    //@notice Lets a contract admin set the URI for contract-level metadata.
+    function setContractURI(string memory newContractURI) public onlyOwner {
+        string memory prevURI = contractURI;
+        contractURI = newContractURI;
 
-    //@notice to contractUri
-    function setContractURI(string memory contractURI) public onlyOwner {
-        baseContractURI = contractURI;
+        emit ContractURIUpdated(prevURI, contractURI);
     }
 
     //@notice to tokenUri

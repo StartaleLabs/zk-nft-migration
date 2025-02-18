@@ -11,8 +11,8 @@
     "contractName": "CasioWatches",
     "maxSupply": null,
     "mintLimit": "8",
-    "isMintPayable": false,
-    "price": null,
+    "isMintPayable": true,
+    "price": 0.002,
     "baseUriExtension": ".json"
   },
   "origamiKokyo": {

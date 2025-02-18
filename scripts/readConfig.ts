@@ -1,5 +1,5 @@
 import { Chain } from 'viem';
-import { sepolia, soneium, soneiumMinato } from 'viem/chains';
+import { sepolia, soneium, soneiumMinato, hardhat } from 'viem/chains';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from "dotenv";
@@ -33,6 +33,8 @@ export function readConfig(): ConfigResult {
     chain = soneium;
   } else if (chainName === 'Minato') {
     chain = soneiumMinato;
+  } else if (chainName === 'Hardhat') {
+    chain = hardhat;
   } else {
     throw new Error(`Chain ${chainName} not supported`);
   }
@@ -50,7 +52,7 @@ export function readConfig(): ConfigResult {
     throw new Error(`Contract ${contractAddress} not found in ${chainName}Contracts.json`);
   }
 
-  console.log(`\n=== Processing project: ${projectName}, ${chainName}, Address: ${contractAddress} ===`);
+  console.log(`\n=== Processing project: ${projectName}, ${chainName}, ${chain.id} Address: ${contractAddress} ===`);
 
   return {
     projectName,

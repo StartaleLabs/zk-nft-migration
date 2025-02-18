@@ -1,12 +1,12 @@
-// npx hardhat run scripts/mint-FreeMint.ts
+// npx hardhat run scripts/mint-Yoki.ts
 import { createPublicClient, createWalletClient, http, PublicClient } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
 import * as fs from 'fs';
 import * as path from 'path';
 import { parse } from 'csv-parse/sync';
-import FreeMintArtifact from '../artifacts/contracts/FreeMint.sol/FreeMint.json';
 import { readConfig } from './readConfig';
-import { estimateBulkMintGas, printGasEstimate } from './utils';
+import FreeMintArtifact from '../artifacts/contracts/FreeMint.sol/FreeMint.json';
+import { estimateBulkMintGas1155, printGasEstimateShort, Yoki1155ABI } from './utils';
 
 const FreeMintABI = FreeMintArtifact.abi;
 
@@ -14,25 +14,24 @@ const FreeMintABI = FreeMintArtifact.abi;
 const { projectName, chain, contractAddress } = readConfig();
 
 // Constants
-const BATCH_SIZE = 200;
-const START_TOKEN_ID = 12201;
+const BATCH_SIZE = 500;
+const START_TOKEN_ID = 0;
+const WAIT_BEFORE_NEXT_BATCH = 2000;
 
 function printBatchInfo(
     batchNumber: number,
-    batchSize: number,
     recipients: `0x${string}`[],
-    tokenIds: bigint[]
+    tokenIds: bigint[],
+    totalRecords: number
 ) {
-    console.log('\n=== Batch Information ===');
-    console.log(`Batch Number: ${batchNumber}`);
-    console.log(`Batch Size: ${batchSize}, tokens: ${tokenIds[0].toString()}-${tokenIds[tokenIds.length - 1].toString()}`);
-    console.log(`First Address: ${recipients[0]}-${recipients[recipients.length - 1]}`);
+    console.log(`\n=== Batch Number: ${batchNumber}, start ${recipients[0].toString()},${tokenIds[0].toString()} ===`);
+    console.log(`Progress: ${BATCH_SIZE * batchNumber}(${totalRecords}) === ${Math.round((BATCH_SIZE * batchNumber) / totalRecords * 100)}%`);
 }
 
 async function verifyTotalSupply(
     publicClient: PublicClient,
     contractAddress: `0x${string}`,
-    expectedSupply: number
+    expectedSupply: bigint
 ) {
     const totalSupply = await publicClient.readContract({
         address: contractAddress,
@@ -63,15 +62,15 @@ async function main() {
         chain: chain,
         transport: http()
     });
-    
+
     const walletClient = createWalletClient({
         account,
         chain: chain,
         transport: http()
     });
-    
+
     console.log(`Minting with ${account.address}, Balance: ${await publicClient.getBalance({ address: account.address })}\n`);
-    
+
     // Read and parse CSV file
     const csvPath = path.join(__dirname, `../zk_snapshot_scripts/src/instances/${projectName}_instances.csv`);
     const fileContent = fs.readFileSync(csvPath, 'utf-8');
@@ -85,36 +84,51 @@ async function main() {
         parseInt(record.tokenId) >= START_TOKEN_ID
     );
 
+    const totalTokensToMint = records.reduce((sum: bigint, record: any) => {
+        return sum + BigInt(record.balance);
+    }, 0n);
+
     console.log(`\nStarting from token ID: ${START_TOKEN_ID}`);
     console.log(`Records to process: ${records.length} out of ${allRecords.length}`);
+    console.log(`Total tokens to mint: ${totalTokensToMint}`);
+    console.log(`Batch size: ${BATCH_SIZE}\n`);
+
+    let totalMinted = 0n;
 
     // Process in batches
     for (let i = 0; i < records.length; i += BATCH_SIZE) {
         const batch = records.slice(i, i + BATCH_SIZE);
         const recipients = batch.map((record: any) => record.address as `0x${string}`);
         const tokenIds = batch.map((record: any) => BigInt(record.tokenId));
+        const balances = batch.map((record: any) => BigInt(record.balance));
 
-        printBatchInfo(i / BATCH_SIZE + 1, batch.length, recipients, tokenIds);
+        // Calculate tokens in this batch
+        const batchTotal: bigint = balances.reduce((sum: bigint, balance: bigint) => sum + balance, 0n);
+        totalMinted += batchTotal;
+
+        printBatchInfo(i / BATCH_SIZE + 1, recipients, tokenIds, allRecords.length);
+        console.log(`Tokens in batch: ${batchTotal}, Total minted so far: ${totalMinted}/${totalTokensToMint}`);
 
         try {
-            const gasEstimate = await estimateBulkMintGas(
+            const gasEstimate = await estimateBulkMintGas1155(
                 publicClient,
                 contractAddress,
                 account,
                 recipients,
-                tokenIds
+                tokenIds,
+                balances
             );
 
-            printGasEstimate(gasEstimate);
+            printGasEstimateShort(gasEstimate);
 
             const hash = await walletClient.writeContract({
                 address: contractAddress,
-                abi: FreeMintABI,
+                abi: Yoki1155ABI,
                 functionName: 'bulkMint',
-                args: [recipients, tokenIds],
+                args: [recipients, tokenIds, balances],
             });
 
-            console.log(`\nTransaction hash: ${hash}`);
+            console.log(`Transaction hash: ${hash}`);
 
             const receipt = await publicClient.waitForTransactionReceipt({ hash });
             console.log('✅ Batch minted successfully\n');
@@ -124,15 +138,15 @@ async function main() {
         }
 
         if (i + BATCH_SIZE < records.length) {
-            console.log('Waiting 2 seconds before next batch...');
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            console.log('Waiting before next batch...');
+            await new Promise(resolve => setTimeout(resolve, WAIT_BEFORE_NEXT_BATCH));
         }
     }
 
     console.log('\n✨ All batches processed successfully');
 
     // Verify final total supply
-    await verifyTotalSupply(publicClient, contractAddress, records.length);
+    await verifyTotalSupply(publicClient, contractAddress, totalMinted);
 }
 
 main().catch((error) => {

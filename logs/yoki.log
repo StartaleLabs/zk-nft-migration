@@ -1,0 +1,2065 @@
+Last login: Tue Feb 18 14:53:01 on ttys010
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v23.3.0 
+➜ nvm use 20
+Now using node v20.16.0 (npm v10.9.0)
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat run scripts/mint-Yoki.ts
+PrivateKey set: true
+PrivateKey set: true
+
+=== Processing project: Yoki, Soneium, 1868, Contract: 0x5f2a5818DF3216Aa6ac44632541db8F3EC4e9954 ===
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 989998304563369657
+
+
+Starting from token ID: 0
+Records to process: 100713 out of 100713
+Total tokens to mint: 448241
+Batch size: 500
+
+
+=== Batch Number: 1, start 0x554C08a1Fec9C187CbabF5A0fc86135DaA879e21,0 ===
+Progress: 500(100713) === 0%
+Tokens in batch: 87730, Total minted so far: 87730/448241
+Gas Estimation: Units: 15813221, Price: 1018593 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xc806874711f9dfe6889cdde8262532fb0e0c59083d1a1fde9aa3ab8cbab4a597
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 2, start 0x80b645Fb98cC3037816305A07bAB870e58091E74,0 ===
+Progress: 1000(100713) === 1%
+Tokens in batch: 21905, Total minted so far: 109635/448241
+Gas Estimation: Units: 15778234, Price: 1018772 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xda35636b98b508c15b676d1604161b08a713ede63d4a2dad2a19a9e469e03319
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 3, start 0xEb01fF124D71b6C7E6613fd6E0A86c28C733F008,0 ===
+Progress: 1500(100713) === 1%
+Tokens in batch: 18097, Total minted so far: 127732/448241
+Gas Estimation: Units: 15778283, Price: 1018937 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xdce94896fbe7ea7841f28c138e2beabc73fc093ee67f8cf90607170692326186
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 4, start 0xA87e7535e6Aa294C69B4DdB85AD5D0d743ab0aFD,0 ===
+Progress: 2000(100713) === 2%
+Tokens in batch: 14642, Total minted so far: 142374/448241
+Gas Estimation: Units: 15778320, Price: 1019234 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x9f4120a5a5ec554ea12887e0917b864be95a5e422914e1baa764a18d55b1498e
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 5, start 0xbA03d01B3C9786Fe70FAB35EB31B1fC589709026,0 ===
+Progress: 2500(100713) === 2%
+Tokens in batch: 12053, Total minted so far: 154427/448241
+Gas Estimation: Units: 15778332, Price: 1019570 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x66c9b3803e294fcb24906b7e5b27df72606329d149e6f9f3a7832c7cc94d59cd
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 6, start 0xA080EE3095E3e79a8CE370a0c96A1f31270fa00D,0 ===
+Progress: 3000(100713) === 3%
+Tokens in batch: 9856, Total minted so far: 164283/448241
+Gas Estimation: Units: 15778381, Price: 1019772 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x8411722be7d7ea53443f2a22417e03ba80d7062da18ccf1a0dcff5ec06ef0e41
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 7, start 0x9F4E7b4B1f0fF1563ACe2DD56F73065a594cbF50,0 ===
+Progress: 3500(100713) === 3%
+Tokens in batch: 8582, Total minted so far: 172865/448241
+Gas Estimation: Units: 15778271, Price: 1020058 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xf7370a12e13af29718dd4b8e1d56239bca7a8bf3d1f3f3753e6ba5ed3de5c2f4
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 8, start 0xBdbA93c19e93826cC3cc0810Bc67A5dc76d0E596,0 ===
+Progress: 4000(100713) === 4%
+Tokens in batch: 6690, Total minted so far: 179555/448241
+Gas Estimation: Units: 15778320, Price: 1020378 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xc8a70dc84f951aa3a8134f34ad23cd1532879c492c2324987732944127043891
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 9, start 0xF34435f002c4e9238c1d2640Ed5b76a0cB63769a,0 ===
+Progress: 4500(100713) === 4%
+Tokens in batch: 6000, Total minted so far: 185555/448241
+Gas Estimation: Units: 15778247, Price: 1020637 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x0854cdbe2da6b0bd49909a5f7afd62904cbe68474f1fa8d4e143ce29f1ffd2d9
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 10, start 0xb2b4b4EdBDaDAD67925cD8F9C2499A5e50b5BAc1,0 ===
+Progress: 5000(100713) === 5%
+Tokens in batch: 6000, Total minted so far: 191555/448241
+Gas Estimation: Units: 15778320, Price: 1020894 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x6ce4dd233d2c38fc34df13d9e0dc1ddcba4718f5d53669af41f1836da10a30a9
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 11, start 0x740E0879CFb8f4b9E069E206e1305f70A14b43cB,0 ===
+Progress: 5500(100713) === 5%
+Tokens in batch: 6000, Total minted so far: 197555/448241
+Gas Estimation: Units: 15778198, Price: 1021098 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x58e882b6cb8e096f8cea8d3bbda0ebd7a2f88dd41eea3309f59ae56985ef31c3
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 12, start 0x30F08139B5702a953B345b0AE43fe4D37ED18463,0 ===
+Progress: 6000(100713) === 6%
+Tokens in batch: 5864, Total minted so far: 203419/448241
+Gas Estimation: Units: 15778222, Price: 1021388 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x23c0f02144c3e5c8bbd965dc51fa8b0e135ba399bfa58c2d58ba5c782fb2ffe5
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 13, start 0x66fc6B69f1A7E777f793D839F21E5947dE339F4C,0 ===
+Progress: 6500(100713) === 6%
+Tokens in batch: 4974, Total minted so far: 208393/448241
+Gas Estimation: Units: 15778308, Price: 1021710 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x2a4ba8c7ae5dfe7644228b17c95a3305bf52618b1aef6136bacb2715ddd0b754
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 14, start 0x55A9f78Cf98bf11c0813EEd0AB2a0e0183a650Bb,0 ===
+Progress: 7000(100713) === 7%
+Tokens in batch: 3930, Total minted so far: 212323/448241
+Gas Estimation: Units: 15778259, Price: 1021900 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x51d5aa5fc44eed99a34af967319367ab2a07d92f8d4374869b99ca0d74145d71
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 15, start 0x661BB008BCe49D78f7470F11cb53f2A25D634562,0 ===
+Progress: 7500(100713) === 7%
+Tokens in batch: 3089, Total minted so far: 215412/448241
+Gas Estimation: Units: 15778173, Price: 1022065 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x043f43b7cc39e8d3b68c2ff44c28a48e873ddf2d031023eab9b150cc9f686fdc
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 16, start 0xA5f977B121b74e9Fd679C9452c77Db044DEAcFda,0 ===
+Progress: 8000(100713) === 8%
+Tokens in batch: 3000, Total minted so far: 218412/448241
+Gas Estimation: Units: 15778381, Price: 1022299 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x77ffbd7b4b9ce81d1e1c1a2c1d743527cc1b0626a00f30f4238c1f11affc7354
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 17, start 0x36A12CC8e9A3FF2c66c339727581B31594B56c92,0 ===
+Progress: 8500(100713) === 8%
+Tokens in batch: 2756, Total minted so far: 221168/448241
+Gas Estimation: Units: 15778173, Price: 1022522 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xe5dbb6f5735bdebba19a4c0fb1e4b027dccd2b0dfbf8578d72f14bb843eecbc8
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 18, start 0x760eCBe184cBc7F4cdf313dA249B027660b1E8fE,0 ===
+Progress: 9000(100713) === 9%
+Tokens in batch: 2228, Total minted so far: 223396/448241
+Gas Estimation: Units: 15778308, Price: 1022845 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xf050b0e8a2dc84c79262c76762d1500d020f0b4370f7b7e695768f580e9ed332
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 19, start 0x2457C41946205b398030Ca16bF0B71D4BaEe56db,0 ===
+Progress: 9500(100713) === 9%
+Tokens in batch: 1380, Total minted so far: 224776/448241
+Gas Estimation: Units: 15778271, Price: 1023235 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x4d69e0c94335f4fe5a5776bfde41a8d9292afb901773303c531977b9c9fae3ad
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 20, start 0xbAE2Bb09E0B0b7adE4654D36E8401967aA6f7735,0 ===
+Progress: 10000(100713) === 10%
+Tokens in batch: 957, Total minted so far: 225733/448241
+Gas Estimation: Units: 15778222, Price: 1023518 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xcbe808f8b8b817d84e052a036149c1a2f5bb0fcd1792518a5b16cf9bf14e7db7
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 21, start 0xe6386827c99639CCBc253F70609fbB2b999b5895,0 ===
+Progress: 10500(100713) === 10%
+Tokens in batch: 2018, Total minted so far: 227751/448241
+Gas Estimation: Units: 15801153, Price: 1023800 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x649559a71f16d43facd065e5f5d58ddee3722d16126e23bb6cc2ee42a48441f8
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 22, start 0x1FA4D89f1d044dCa763610F30E51AAda92C6c38c,1 ===
+Progress: 11000(100713) === 11%
+Tokens in batch: 3039, Total minted so far: 230790/448241
+Gas Estimation: Units: 15784391, Price: 1024192 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x98ea9a6754556cd44ba175094f60b998c77859c6b153001f4a63be611b40b5fd
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 23, start 0xDd16f14AA9226E7ECC456f8b52427F92EB7B84ee,1 ===
+Progress: 11500(100713) === 11%
+Tokens in batch: 1256, Total minted so far: 232046/448241
+Gas Estimation: Units: 15784378, Price: 1024596 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xd835055fb0ca1ae6a4f3df83b827577fa95b8b8e45e50271d34a9dc52aa11759
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 24, start 0x98e5E226E4393C344cFFCb586FcF708c8AE581b8,1 ===
+Progress: 12000(100713) === 12%
+Tokens in batch: 862, Total minted so far: 232908/448241
+Gas Estimation: Units: 15784354, Price: 1025054 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xd1eeaf6d78789701a026f93b94227e621a32c89018ae5d54f0db4a7a483cae4a
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 25, start 0xe95b9c8f7087c70E5db8C74756C1dA6708C48e42,1 ===
+Progress: 12500(100713) === 12%
+Tokens in batch: 500, Total minted so far: 233408/448241
+Gas Estimation: Units: 15784330, Price: 1025487 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xf649c14b8cdd7a547bccd54ab3cdd769c8e678a2ada2a14b380dd5738f480101
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 26, start 0x88AFCB010F03b3b6E09C67D4DaE308030f7007cB,1 ===
+Progress: 13000(100713) === 13%
+Tokens in batch: 500, Total minted so far: 233908/448241
+Gas Estimation: Units: 15784439, Price: 1025910 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x1875111fd18c14e4e4a0bdc0a320c4cd5721d48570b771ec063f9f1d2050d9f7
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 27, start 0x2a7A8491077b70D3E1F39508be4CCe2e9aeBa783,1 ===
+Progress: 13500(100713) === 13%
+Tokens in batch: 4390, Total minted so far: 238298/448241
+Gas Estimation: Units: 15793964, Price: 1026212 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x3b92ede70c77ade843212bae9b2b897bf47aac6b24fade2c8cb8e1639d1d0403
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 28, start 0x0119DE85D18A4aA8Ee92bC025bFda33Ae0d0Fc68,2 ===
+Progress: 14000(100713) === 14%
+Tokens in batch: 1819, Total minted so far: 240117/448241
+Gas Estimation: Units: 15784159, Price: 1026638 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xefc83d66c631f959effe92f94ebce77bfe52ea788e2186ccf606f10d2529d58d
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 29, start 0x075aADE86dB14fbfC268c1ed10839F2126886E5C,2 ===
+Progress: 14500(100713) === 14%
+Tokens in batch: 1014, Total minted so far: 241131/448241
+Gas Estimation: Units: 15784391, Price: 1027101 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x5f4879b84ce80bc9efd97a3a7cab1d9b3815480c3d0772ca6f33dee616857776
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 30, start 0x45d0F9EC08b4a841B996Cdd11117A260cB0cf458,2 ===
+Progress: 15000(100713) === 15%
+Tokens in batch: 697, Total minted so far: 241828/448241
+Gas Estimation: Units: 15784354, Price: 1027404 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xe79c31a755d83bb2a8905d2195912bf7b7b5dd8f1c5b2bdaae05ecae963a610c
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 31, start 0xc4bD80aA32f3E88358c42D4620000a96a11c1413,2 ===
+Progress: 15500(100713) === 15%
+Tokens in batch: 500, Total minted so far: 242328/448241
+Gas Estimation: Units: 15784476, Price: 1027717 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xad1336b2bfe69d6e1ec629c1e9cf121d7ab172709f19da8fccab21241abc45a8
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 32, start 0x6ae9EEF910A819b4d1FeDb36f4701c418aeFF594,2 ===
+Progress: 16000(100713) === 16%
+Tokens in batch: 500, Total minted so far: 242828/448241
+Gas Estimation: Units: 15784452, Price: 1028027 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xf9cf4585d3bb5204bd7ec3ae1ccfc68b228960cc7116c599b5353cd419238df8
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 33, start 0x0D37ee8C6e5b12846F3f6Db4106824Da3F3B692c,2 ===
+Progress: 16500(100713) === 16%
+Tokens in batch: 4719, Total minted so far: 247547/448241
+Gas Estimation: Units: 15798970, Price: 1028342 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xbc6c4918222bc656099203843d0a88eb9ad2dfb6c9f7ba156cc820f93e9b6ac3
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 34, start 0xD1a4EF529b9D6682da7B6DCd8Cb2cfE0A856928D,3 ===
+Progress: 17000(100713) === 17%
+Tokens in batch: 1520, Total minted so far: 249067/448241
+Gas Estimation: Units: 15784257, Price: 1028753 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x75eb0e62374f190290b7287ec968e5b5a7df9e15c98968bf07e119ca05ad4c08
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 35, start 0xD8770D688F3deEfe536120801Bf15e107d14718b,3 ===
+Progress: 17500(100713) === 17%
+Tokens in batch: 1000, Total minted so far: 250067/448241
+Gas Estimation: Units: 15784330, Price: 1029084 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xfcf4debaa59f970e32cb1414a4caf4fc4ed33b21c4b571757ba7915bcac9c0af
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 36, start 0x0505b5d5f4cA2F23dd46605364A2F9AeE2883428,3 ===
+Progress: 18000(100713) === 18%
+Tokens in batch: 517, Total minted so far: 250584/448241
+Gas Estimation: Units: 15784549, Price: 1029359 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x9ee2d98578c1cd59fe514bb0d56b2f6eb2f69fe47a16d3770c99e7a34fbdf4cd
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 37, start 0xa8D9b453F92e875B57A3884F54466F1461FA651D,3 ===
+Progress: 18500(100713) === 18%
+Tokens in batch: 500, Total minted so far: 251084/448241
+Gas Estimation: Units: 15784452, Price: 1029588 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x1444adc811fec127d6cd8b5a042d48d32fdbf2b6cdfd1d3d573f05dca902c420
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 38, start 0x5020faA56e9f1ab6363262663143a139E808Bc59,3 ===
+Progress: 19000(100713) === 19%
+Tokens in batch: 1733, Total minted so far: 252817/448241
+Gas Estimation: Units: 15804013, Price: 1029847 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x40f7ca3ee3d48f27724928ccfad68c63ed727e2cc847d8a042c6f084f00432f0
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 39, start 0x30AA811649E7a6781a1E7f6c241885C0b655C22a,4 ===
+Progress: 19500(100713) === 19%
+Tokens in batch: 1997, Total minted so far: 254814/448241
+Gas Estimation: Units: 15784391, Price: 1030233 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x8e5d547e32fb74d5d6506bfefcb69d2ecf8c4efca345fdc3ba7f079bfd40025d
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 40, start 0xaA2a63Cc614b593F2Dcc7C8656Cac3fD5f82E6Bc,4 ===
+Progress: 20000(100713) === 20%
+Tokens in batch: 751, Total minted so far: 255565/448241
+Gas Estimation: Units: 15784439, Price: 1030572 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x81db6eb2b8b58d1796ef564c77cb61ce1e684ee0561c81c477c127ba873a6db1
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 41, start 0xa1Cd45953095210477ca7f6d7D0Dad4f48688c45,4 ===
+Progress: 20500(100713) === 20%
+Tokens in batch: 636, Total minted so far: 256201/448241
+Gas Estimation: Units: 15806589, Price: 1031058 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x3c743adc8a1650b77f8e0a380b147bac6e4f6a06d21a669caed6499212a98772
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 42, start 0xfe9a20a89608b621018D4c41CA564D91Df355eDe,5 ===
+Progress: 21000(100713) === 21%
+Tokens in batch: 3214, Total minted so far: 259415/448241
+Gas Estimation: Units: 15784452, Price: 1031287 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x2f98c248253da2928871e44b4a4c7262c662340db903de6a4eca1e91916746e9
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 43, start 0xDE44aEA008e9C285fe4CbE0470A96425e80F8D62,5 ===
+Progress: 21500(100713) === 21%
+Tokens in batch: 814, Total minted so far: 260229/448241
+Gas Estimation: Units: 15784391, Price: 1031755 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xc4e374512db628dd6b0cd730c85a6b2aa8d40dac215aecde6bc99f06899c960c
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 44, start 0xc631a97e154bB5e005DF7F04eb2Bc9977C94139A,5 ===
+Progress: 22000(100713) === 22%
+Tokens in batch: 500, Total minted so far: 260729/448241
+Gas Estimation: Units: 15784415, Price: 1032096 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x277ac8569a50f2d92eb799735513716768161e96ab7274faba7da7fa43134605
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 45, start 0x1C55D9c365F9cB5f09a6F98843F08C764a8F0f1D,5 ===
+Progress: 22500(100713) === 22%
+Tokens in batch: 3088, Total minted so far: 263817/448241
+Gas Estimation: Units: 15796345, Price: 1032353 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xc5d2d0e913ea1a267d04eed120116b3b42c2030904603fd2e2cf7af61e0964fa
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 46, start 0x57696a563B66dFA0c180747217d0EdCF17A9cD51,6 ===
+Progress: 23000(100713) === 23%
+Tokens in batch: 981, Total minted so far: 264798/448241
+Gas Estimation: Units: 15784317, Price: 1032754 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x6642d817999ab1b1dc774b03f49a5b7de5e982e859c15408fa406030fc3c5def
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 47, start 0xe331722E152aD138b31816ed737383725CFF994e,6 ===
+Progress: 23500(100713) === 23%
+Tokens in batch: 500, Total minted so far: 265298/448241
+Gas Estimation: Units: 15784305, Price: 1033083 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xbf43a1993749c423151c2d2f3abfbf83efbf4e3666d5efb7a1ae4c3f4eb3bd7e
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 48, start 0x433e8dAAD2178f5e9db70e0a75252F8F8f72c52d,6 ===
+Progress: 24000(100713) === 24%
+Tokens in batch: 2468, Total minted so far: 267766/448241
+Gas Estimation: Units: 15758396, Price: 1033501 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xf0e6d965065f935051deef0a036e920a7d66143d80df63c28c7da98e46b76fb1
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 49, start 0x301E9f8EDE93dFc2D414e8BB9d8cE042a681711e,7 ===
+Progress: 24500(100713) === 24%
+Tokens in batch: 813, Total minted so far: 268579/448241
+Gas Estimation: Units: 15784342, Price: 1033854 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xb2485a4ed9bbad7e20cf0c3bed5e93416a653603373d583561365d61525a553a
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 50, start 0xb2380715D068cEdDaA81bB048F523AF27257f63c,7 ===
+Progress: 25000(100713) === 25%
+Tokens in batch: 1813, Total minted so far: 270392/448241
+Gas Estimation: Units: 15793903, Price: 1034109 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x7ff84b60c352550f8664c5cbb2c783a157b07ef7115d2d4b36c9607771718a7b
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 51, start 0x489FDB909F2EC61A79C81c22a7619322a1cf1e13,8 ===
+Progress: 25500(100713) === 25%
+Tokens in batch: 1526, Total minted so far: 271918/448241
+Gas Estimation: Units: 15784403, Price: 1034483 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xeb1b2e9edbe4dccb39bf04c96ce1444876644117c4384bb914a3fd2841905c65
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 52, start 0x12D9e28b104B97e7263bed309Bd6011c3554aFAf,8 ===
+Progress: 26000(100713) === 26%
+Tokens in batch: 520, Total minted so far: 272438/448241
+Gas Estimation: Units: 15784378, Price: 1034889 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x0df7228b90ef6c1405066fad2f15520815ad52150575389fd8e29445d95794ca
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 53, start 0x40e2102Da557bB222338C8814513162927834677,8 ===
+Progress: 26500(100713) === 26%
+Tokens in batch: 2666, Total minted so far: 275104/448241
+Gas Estimation: Units: 15783879, Price: 1035248 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x39538a950ca9b603d819257a5c37d6dd8a58a563c170cac3e32215674bc9173d
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 54, start 0x09aeE9036Dd2A5836321dB5a193F53429CfBaf08,9 ===
+Progress: 27000(100713) === 27%
+Tokens in batch: 800, Total minted so far: 275904/448241
+Gas Estimation: Units: 15784354, Price: 1035584 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x4067968613d3082b08c142cd809fb0e610e75f7da04cbc7220ecd37a6273e88c
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 55, start 0xa4FAc9B1026caA3ed84435967CD1BB4Ad441d62C,9 ===
+Progress: 27500(100713) === 27%
+Tokens in batch: 1839, Total minted so far: 277743/448241
+Gas Estimation: Units: 15781302, Price: 1035848 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xea6c85bc5be11adf9c8dfb753701b2ee6c932ca9629af22e26b10e88f8f78bb3
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 56, start 0x89a8145E5fc02368D7463031E36EaE40f660FA8E,10 ===
+Progress: 28000(100713) === 28%
+Tokens in batch: 1344, Total minted so far: 279087/448241
+Gas Estimation: Units: 15784330, Price: 1036255 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xfa98827b97135e966bd13512bcb03188276e65fd44cf45f5f680b634c20f59c5
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 57, start 0xF6B087d269408007D351654986174d1BB22Ef32C,10 ===
+Progress: 28500(100713) === 28%
+Tokens in batch: 500, Total minted so far: 279587/448241
+Gas Estimation: Units: 15784378, Price: 1036516 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x227fae0757fc48ca46128ae6d41fc94aa9f5cdddf0ac6bc1275f7db14d5bc782
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 58, start 0x2200aa201d20FE4666dA67A832207d0C9F9c35d4,10 ===
+Progress: 29000(100713) === 29%
+Tokens in batch: 2713, Total minted so far: 282300/448241
+Gas Estimation: Units: 15786223, Price: 1036989 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x16f8814a4bb48d0e2732dcb0f369c57dc4d453943950d5d440773a58e147ee52
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 59, start 0x85dC1f89de4F3513Cb6EA94B4731768ecFf10847,11 ===
+Progress: 29500(100713) === 29%
+Tokens in batch: 642, Total minted so far: 282942/448241
+Gas Estimation: Units: 15784342, Price: 1037408 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x520be0dcade9ae3bb06695e7800f93ef983c23928a913532d5d88221c8a6c1a2
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 60, start 0x560bB4e7C5b35596AcdF360787f9F94601a2921f,11 ===
+Progress: 30000(100713) === 30%
+Tokens in batch: 2728, Total minted so far: 285670/448241
+Gas Estimation: Units: 15778726, Price: 1037754 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x07a3f6b17035238f5ce41f699f95fbe95fffda847acca390f6983a7a1d89e77f
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 61, start 0x5fd5138452aF00E092AaFfD84722CE4140db424D,12 ===
+Progress: 30500(100713) === 30%
+Tokens in batch: 846, Total minted so far: 286516/448241
+Gas Estimation: Units: 15784330, Price: 1038191 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x873be35f2cb83302df03ce11d0829a2b43280c3eab4f2cb1918d909fdbbdbcf5
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 62, start 0xa6498f1E08cCb9BCc688f6c386B4d24aD066b71D,12 ===
+Progress: 31000(100713) === 31%
+Tokens in batch: 513, Total minted so far: 287029/448241
+Gas Estimation: Units: 15804196, Price: 1038674 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x94d022f64294161668a3bfa38a42ae76f80c902943ae71365d868666b57b15e9
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 63, start 0x884108F0DCF10473732D549A48138fCdc68dbAd0,13 ===
+Progress: 31500(100713) === 31%
+Tokens in batch: 1679, Total minted so far: 288708/448241
+Gas Estimation: Units: 15801413, Price: 1039091 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xad4d6a9f2b7fcaa81316641b755ae2d1c8a450768bac98e56e1f7f7014cc7aec
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 64, start 0xE75b939B06552f193b87b874dB3b8b0b01457A4C,100 ===
+Progress: 32000(100713) === 32%
+Tokens in batch: 1000, Total minted so far: 289708/448241
+Gas Estimation: Units: 15784415, Price: 1039536 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x17df99327c669ad320aa4bc3b212f5b8fabb522b5bbca987e039609529bcec09
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 65, start 0x2cc5C3230cE768D386cDC0E68ED9C7065D92374a,100 ===
+Progress: 32500(100713) === 32%
+Tokens in batch: 606, Total minted so far: 290314/448241
+Gas Estimation: Units: 15784232, Price: 1039904 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xb0aef6dcbad0b5a57eef913633cb4a4af229aa1b8969cecdd98f86f92fb173bd
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 66, start 0xC4dD57D433F5CC14A78fEc1D61870E5e543892A6,100 ===
+Progress: 33000(100713) === 33%
+Tokens in batch: 500, Total minted so far: 290814/448241
+Gas Estimation: Units: 15784342, Price: 1040548 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xb3fc976cb5c1f0398b9b451346b66d3ced1cd4737407be292ffa59f5974543dd
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 67, start 0x7b681844fEB64167d069533050e23014193cF0de,100 ===
+Progress: 33500(100713) === 33%
+Tokens in batch: 500, Total minted so far: 291314/448241
+Gas Estimation: Units: 15784366, Price: 1041019 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x3685fa18335cd13a0dab00448b4765d8b5b6f31e2f91cc45757dd4646f731afd
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 68, start 0x35C3be2B66785E5761a58EaA74ABddBa9169b06C,100 ===
+Progress: 34000(100713) === 34%
+Tokens in batch: 3296, Total minted so far: 294610/448241
+Gas Estimation: Units: 15786382, Price: 1041617 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x1dbe0461a5e494df8a5c1cdedaf54825f4496f1e6441b1147011d5225f4afab9
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 69, start 0xd455712e43582134F101a0C686d26548B5438A3b,101 ===
+Progress: 34500(100713) === 34%
+Tokens in batch: 1688, Total minted so far: 296298/448241
+Gas Estimation: Units: 15784354, Price: 1042345 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x29e65c55d3af6624caf0aecce00867ed7b96aebeac31daf0f05bbbe028059a44
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 70, start 0xCc871FF51772a17D8DB6F8BAE368591f2252129B,101 ===
+Progress: 35000(100713) === 35%
+Tokens in batch: 918, Total minted so far: 297216/448241
+Gas Estimation: Units: 15784427, Price: 1042896 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xa201ce9887558b39030ec5315ae70d3e974073498b60269fb8cc045ccfc67017
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 71, start 0xEE219649DF63A76501B986D13F6884D019B2204e,101 ===
+Progress: 35500(100713) === 35%
+Tokens in batch: 500, Total minted so far: 297716/448241
+Gas Estimation: Units: 15784257, Price: 1043124 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x9e0b3ff37c61a546d0ff97a9d399124fd40f896c9b4216d4dea604e68ad35d73
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 72, start 0x91D789dd85577342AC9B597c1C7893e75f8c73E4,101 ===
+Progress: 36000(100713) === 36%
+Tokens in batch: 500, Total minted so far: 298216/448241
+Gas Estimation: Units: 15784427, Price: 1043790 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0xfc2b8969516dd662ae818d30deda756a95612467a95dbfe39a082c5d3706a12a
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 73, start 0x2D4c68C62648dcB47fB44997EfE0906f64A7074d,101 ===
+Progress: 36500(100713) === 36%
+Tokens in batch: 2746, Total minted so far: 300962/448241
+Gas Estimation: Units: 15803928, Price: 1044210 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xf4f8063a1f53aa05f17b06dec238c62a5643124eeafd1a871d76a02f28807993
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 74, start 0x51C18217Fd5cD24bFf32f272eff9f2Cac6A0Dd32,102 ===
+Progress: 37000(100713) === 37%
+Tokens in batch: 998, Total minted so far: 301960/448241
+Gas Estimation: Units: 15784403, Price: 1044841 wei, Total Cost: 0.000016 ETH
+Transaction hash: 0x42d8d4f405fc2e929d837e7f7d81d1508ea5592dad5f2f937e9b0da19e43231a
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 75, start 0xef1EdeA6A13f5A9eeFd1796F1635dBc19f2a49BE,102 ===
+Progress: 37500(100713) === 37%
+Tokens in batch: 500, Total minted so far: 302460/448241
+Gas Estimation: Units: 15784342, Price: 1045596 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xf46bb3f126a909eed832ef1c6ef4f9be9f504ffab1577f92f8e7ab74b31d3555
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 76, start 0x88Ae893350C6a715030946686Af3EfdF01c7c545,102 ===
+Progress: 38000(100713) === 38%
+Tokens in batch: 500, Total minted so far: 302960/448241
+Gas Estimation: Units: 15784452, Price: 1046211 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x41f8d3de49c2c752b069910d8e2ffaa2457f5abbf8e0242de6ee2942435c1474
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 77, start 0x2683850afe34e173E11A379CC1043c141f104034,102 ===
+Progress: 38500(100713) === 38%
+Tokens in batch: 1347, Total minted so far: 304307/448241
+Gas Estimation: Units: 15775991, Price: 1046798 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x2a8fb787ed4de7fbf6e8bcc05ac4ab743ac7f64876fed06ca6a01644195b14a9
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 78, start 0xf9dCA45C75EBCe43b2E506DDf4357275980bB5bD,103 ===
+Progress: 39000(100713) === 39%
+Tokens in batch: 500, Total minted so far: 304807/448241
+Gas Estimation: Units: 15784342, Price: 1047342 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xe93f6975d15657c1d0c1e240c8afa744f2393bf76e4d989e43e6a47ef213f1af
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 79, start 0x79531C966607591ca33b7E7df18285B913Cc4aBD,103 ===
+Progress: 39500(100713) === 39%
+Tokens in batch: 1023, Total minted so far: 305830/448241
+Gas Estimation: Units: 15791498, Price: 1047775 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x90fc51bea1d631d8bac84a2dbcee06c49d35a13a494deb0b58e1542350deca12
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 80, start 0xCa8BB2D7F68E313588E12a840f9f8A15344B6B85,200 ===
+Progress: 40000(100713) === 40%
+Tokens in batch: 1361, Total minted so far: 307191/448241
+Gas Estimation: Units: 15784269, Price: 1048260 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x2573449ef282b718700e9b1e2ef184d955990964c1bfd7aa9bcf80de5d705e35
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 81, start 0xA2AEAD4397f72fB460939fD5a7DF9De9f1E737c3,200 ===
+Progress: 40500(100713) === 40%
+Tokens in batch: 928, Total minted so far: 308119/448241
+Gas Estimation: Units: 15784427, Price: 1048752 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x779101191b5577a0686a8f20f91b8347543dffd984061bb17e0b040fefa35717
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 82, start 0xF447B405fC7b41DDfeF3CF66EC790EaBd6b26A47,200 ===
+Progress: 41000(100713) === 41%
+Tokens in batch: 500, Total minted so far: 308619/448241
+Gas Estimation: Units: 15784281, Price: 1049241 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x88e02d14eacbe6ddd79c22901c5bae226b420de076983aa2318d64c2dfcada71
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 83, start 0xa9e539deBd203ab74DdA82a22438e738eEe2Ec3E,200 ===
+Progress: 41500(100713) === 41%
+Tokens in batch: 500, Total minted so far: 309119/448241
+Gas Estimation: Units: 15784317, Price: 1049792 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xdf5903352578f9bbd943687d98379e753031a9fad2d09bdeaac209a5261e35cf
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 84, start 0x5d093DC86C31152caE184A8505EE8347a39C1871,200 ===
+Progress: 42000(100713) === 42%
+Tokens in batch: 500, Total minted so far: 309619/448241
+Gas Estimation: Units: 15784452, Price: 1050361 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x70f8a0ca91f5a3e639cf96514e4d3f14f5aac3acb0455bc817eed8f75acee896
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 85, start 0x127F68346601B5BB65BbcFdBC50791e11B59f05e,200 ===
+Progress: 42500(100713) === 42%
+Tokens in batch: 4175, Total minted so far: 313794/448241
+Gas Estimation: Units: 15773464, Price: 1051058 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x010422b8b08e9e4dae8fe3b2f5efa4ba7372a4ece6709619ca271df18e572e50
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 86, start 0xaA66b3d4ABE752c48f96E51e3d6Cbd7810C9ea56,201 ===
+Progress: 43000(100713) === 43%
+Tokens in batch: 1151, Total minted so far: 314945/448241
+Gas Estimation: Units: 15784330, Price: 1051605 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x93853ffc489448c7f5278e88926a91d782923194212b31d546c1e9681ba96945
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 87, start 0x4C93999EcBC2033410D7bcb458867319046dC811,201 ===
+Progress: 43500(100713) === 43%
+Tokens in batch: 640, Total minted so far: 315585/448241
+Gas Estimation: Units: 15784500, Price: 1052312 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xafa20aaebb3737a37f58d6a7fc5d99a86f3735bb9735eaa8270a9147702beeb3
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 88, start 0xb9C174eCaA4817f99dA26B09Be950828482fdE03,201 ===
+Progress: 44000(100713) === 44%
+Tokens in batch: 500, Total minted so far: 316085/448241
+Gas Estimation: Units: 15784366, Price: 1052917 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xe4bdc985d1ba771f070ffd19dc86b9163f7e12981d1ca1d79632d33706015f09
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 89, start 0x5762f2f83284EDe620FeDeeE53B3d54cd5A5CE2e,201 ===
+Progress: 44500(100713) === 44%
+Tokens in batch: 1937, Total minted so far: 318022/448241
+Gas Estimation: Units: 15806614, Price: 1053506 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x3b36cb5d6330918bcf8e5742100babb24930c38a4f0fb3ecc5bd90e2eeaf46b7
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 90, start 0x60bdAee2A58d8A6f9299E87CAcb381F3604DB183,202 ===
+Progress: 45000(100713) === 45%
+Tokens in batch: 1556, Total minted so far: 319578/448241
+Gas Estimation: Units: 15784122, Price: 1054301 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x9f625edc16e1ef08a06d265ac45eb654182f2aae7bfa15a04fe745b6c2ae30c7
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 91, start 0x76e3e524df9e29863B06cd858bb1D8ed7F3dd8Ab,202 ===
+Progress: 45500(100713) === 45%
+Tokens in batch: 677, Total minted so far: 320255/448241
+Gas Estimation: Units: 15784488, Price: 1055236 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xb39d30791a13e5b779158658ccc16b22efb8a77237abfea6e34642df3b59c820
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 92, start 0xbD6646A73c26DEdCaa966bC067C74359dC0D8Da9,202 ===
+Progress: 46000(100713) === 46%
+Tokens in batch: 500, Total minted so far: 320755/448241
+Gas Estimation: Units: 15784403, Price: 1055784 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x3026a9bad5bb7b07babca6ad1245645e1565dd6f1a8327d2914dfc2eb2295c8e
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 93, start 0x52cFa7C582bC31Ac294cEb2119C965B0b283d665,202 ===
+Progress: 46500(100713) === 46%
+Tokens in batch: 1149, Total minted so far: 321904/448241
+Gas Estimation: Units: 15806663, Price: 1056435 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x80210b568ee8902ac1f3ac1a5d509ee39d8f83f41d9452bae7ffdd5fbb21bd2e
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 94, start 0xd83e5a175C8d70c9c46F2B423760fac21EaF3fc0,203 ===
+Progress: 47000(100713) === 47%
+Tokens in batch: 739, Total minted so far: 322643/448241
+Gas Estimation: Units: 15784244, Price: 1057442 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x3d3e3af95236f3fa24328d4443dade2075e6c694b55b74000c0628c69101c6e2
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 95, start 0xAe196822d2061efE45a8484EE98286351D944a51,203 ===
+Progress: 47500(100713) === 47%
+Tokens in batch: 500, Total minted so far: 323143/448241
+Gas Estimation: Units: 15784476, Price: 1058396 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x1b6c3233c0636cd04237f1dda667ed2372631227359bd0e07eebedd71dfe458f
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 96, start 0x2Ff70cF77be5E1c07bC254F46be34a4A591fA1cf,203 ===
+Progress: 48000(100713) === 48%
+Tokens in batch: 1825, Total minted so far: 324968/448241
+Gas Estimation: Units: 15787694, Price: 1059184 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xd4c2e4debb4a8c2a4aff85657be58149d7efc6f19d7eb8c56ff92bf6a527aaee
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 97, start 0xFCa9fC919065c1d12BFF2e0c007595AB8bCCe8aD,300 ===
+Progress: 48500(100713) === 48%
+Tokens in batch: 1000, Total minted so far: 325968/448241
+Gas Estimation: Units: 15790437, Price: 1059637 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x8c7d2c4a75fba4565ced71b19c60f78fa901a7dca848e832a00b63928c160899
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 98, start 0x4A9dB0637f2B0Becf984Ef1A810f8f483fcBd030,300 ===
+Progress: 49000(100713) === 49%
+Tokens in batch: 703, Total minted so far: 326671/448241
+Gas Estimation: Units: 15790401, Price: 1060410 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xef503b8712cdc2d0d4472acefe09560cfd1518c13485f9026f1548a2a792bf54
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 99, start 0xd3F2F426EdB3E7fb63ac368bAa08B73e8515c557,300 ===
+Progress: 49500(100713) === 49%
+Tokens in batch: 500, Total minted so far: 327171/448241
+Gas Estimation: Units: 15790437, Price: 1061294 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xc29e8d9f36a6eb424e07216ebe7d391c50fb7c1b2bab45c134f3dbb97bfdfc2c
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 100, start 0x8d65D23A2A91B03Dc84f24e114213aC23Aca60C5,300 ===
+Progress: 50000(100713) === 50%
+Tokens in batch: 500, Total minted so far: 327671/448241
+Gas Estimation: Units: 15790449, Price: 1061903 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x68e253dcf3201da38171cb07654468421854c268af10fc29cb3f8f8fdfa78c0b
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 101, start 0x3c4e589a9921A48bF5861c440C40a4D7A5C828eB,300 ===
+Progress: 50500(100713) === 50%
+Tokens in batch: 3222, Total minted so far: 330893/448241
+Gas Estimation: Units: 15784894, Price: 1063004 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x0ae6171233175ac7db9630c996cfb3a9459867f9fa7a80017f8e3c9d5671fed8
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 102, start 0x4B7bcb3D16d9B3D04813d7814476EAE5aC4AC5E8,301 ===
+Progress: 51000(100713) === 51%
+Tokens in batch: 1725, Total minted so far: 332618/448241
+Gas Estimation: Units: 15790376, Price: 1063840 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x60d0990296eddb69ecbba6f4f13ac93d442102af5300cca663d055843e173b1e
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 103, start 0xceDDc8E4ebFae34E3DaE92C2339c79cAb7A0d2d9,301 ===
+Progress: 51500(100713) === 51%
+Tokens in batch: 896, Total minted so far: 333514/448241
+Gas Estimation: Units: 15790535, Price: 1064737 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x079c0a7ba675f0700b6f7bf19d946df6f40ff1d08114d0142e512933d4fd9d09
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 104, start 0xed47d0EFee68d415a9fCA9D7035Ea291A36327A5,301 ===
+Progress: 52000(100713) === 52%
+Tokens in batch: 500, Total minted so far: 334014/448241
+Gas Estimation: Units: 15790401, Price: 1066086 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x497adf0f453afd9489974c9d23aad46ee2db8c0451dddcf5ba08290a08ef86a4
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 105, start 0x8B3F03449c5986c00aA6332470857B106531CEF9,301 ===
+Progress: 52500(100713) === 52%
+Tokens in batch: 500, Total minted so far: 334514/448241
+Gas Estimation: Units: 15790486, Price: 1066970 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x496272456e554d50b63e54816e27690204b4ac05df79e91c1a2e56170666a61f
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 106, start 0x2783ff5bb4423AbECc15720549d1272f65e6390D,301 ===
+Progress: 53000(100713) === 53%
+Tokens in batch: 2776, Total minted so far: 337290/448241
+Gas Estimation: Units: 15792355, Price: 1067863 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xec7c86904f9817e7486ec61982a43648af9c76031128cc1f8cc6a0f61b9593f9
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 107, start 0x1E1FCeb2c10429f9d8e21Ef314B515c1507E51B6,302 ===
+Progress: 53500(100713) === 53%
+Tokens in batch: 966, Total minted so far: 338256/448241
+Gas Estimation: Units: 15790437, Price: 1068557 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x2530518e2e938b27192fd709c35d66efc26a7ff49131891fac8756c014ae1e2f
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 108, start 0xf3AfCef1b58f8DE569015448b73b85Af0F0Cc255,302 ===
+Progress: 54000(100713) === 54%
+Tokens in batch: 500, Total minted so far: 338756/448241
+Gas Estimation: Units: 15790449, Price: 1069235 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xb9b326bb7fd27761f79ed515f085c158f06ff774a8dc06ce788eac857b39f612
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 109, start 0x87C71da8a4745926A003471C88eB2603cCBe68dd,302 ===
+Progress: 54500(100713) === 54%
+Tokens in batch: 500, Total minted so far: 339256/448241
+Gas Estimation: Units: 15790535, Price: 1070228 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x81d12dcd5cb8b170b0d89d8e70fc9485d8eacb293e9575ca3a4040ad526fad77
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 110, start 0x16eE67356486D7b4682fbAe34f9e51e13BFF76e8,302 ===
+Progress: 55000(100713) === 55%
+Tokens in batch: 1353, Total minted so far: 340609/448241
+Gas Estimation: Units: 15794834, Price: 1071192 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xf302494d810f04fe1587b6f9f6f4b9d1bea91a5b5f57b9394fa481d2e2b73497
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 111, start 0xE20C4225a967a12c40b5CAC343CA3EC7D09a2f48,303 ===
+Progress: 55500(100713) === 55%
+Tokens in batch: 500, Total minted so far: 341109/448241
+Gas Estimation: Units: 15790522, Price: 1072043 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x15787ef8057410f071699a8f1e6fc6813fb7a4bab359508449f7a687c16c6ce2
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 112, start 0x5B81f894e5B0D3B7361DEFa454F50736C2aDD7eF,303 ===
+Progress: 56000(100713) === 56%
+Tokens in batch: 1155, Total minted so far: 342264/448241
+Gas Estimation: Units: 15779632, Price: 1072902 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x9051f2bb57fda40c7235b4005d07e3d11b981bb595d76ca657c4581efcda0c38
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 113, start 0xEE5B3ac3F6194B78cC5f94654BA914C00D6159A6,400 ===
+Progress: 56500(100713) === 56%
+Tokens in batch: 853, Total minted so far: 343117/448241
+Gas Estimation: Units: 15790315, Price: 1074271 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xc583ee58c3659278c6f5e1fb296751669bf0586c7240804720ed5e6d71f9379b
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 114, start 0xDE23fe18b15250AAe6e69435c529bfB9BF35d5Cd,400 ===
+Progress: 57000(100713) === 57%
+Tokens in batch: 500, Total minted so far: 343617/448241
+Gas Estimation: Units: 15790559, Price: 1074859 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x31c45dc56ce4313b7baecc862f5e3e5b9a704be2d3e31fa0de40a9530a2abdfd
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 115, start 0x64C9cc906fd051687E10E72c7cd051d5BDa2c063,400 ===
+Progress: 57500(100713) === 57%
+Tokens in batch: 2546, Total minted so far: 346163/448241
+Gas Estimation: Units: 15772184, Price: 1075638 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x58b251b0b10d77fec09acdfadd727fbcd5ef4fa922428bb9a7186359852233ba
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 116, start 0x60edaCED9D7a45c793B1f280aC6D189aaCB66991,401 ===
+Progress: 58000(100713) === 58%
+Tokens in batch: 1917, Total minted so far: 348080/448241
+Gas Estimation: Units: 15790425, Price: 1076611 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xc988075c05493e3dcd3c3944cc7a6c58ff28ce7d99a24fefa342d031708ef4f2
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 117, start 0xa4854578871297797aFd2dDD0F2fA69FC01e72eA,401 ===
+Progress: 58500(100713) === 58%
+Tokens in batch: 733, Total minted so far: 348813/448241
+Gas Estimation: Units: 15790425, Price: 1077866 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xec04c82016cdafa022405cc5e6814040f003ebbc887f482d43bb07b83843db2b
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 118, start 0xb82E730693EEbbfB800Cb1B9CB6d8b1808032398,401 ===
+Progress: 59000(100713) === 59%
+Tokens in batch: 500, Total minted so far: 349313/448241
+Gas Estimation: Units: 15790437, Price: 1078816 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xdf556eaafad5313b122e44586d81af34281c3215dd89dca32eeb4d55e5ffdf68
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 119, start 0x35CE8d0B0E681862893692e1eC985121C87dC390,401 ===
+Progress: 59500(100713) === 59%
+Tokens in batch: 2544, Total minted so far: 351857/448241
+Gas Estimation: Units: 15797508, Price: 1079894 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xb47dd3184f3e3cef416a88d315f03c3c2354e072aa40d6bccec18b9dc44e9815
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 120, start 0xE7294495206c1F5223D7F0C59B004Ce971760541,402 ===
+Progress: 60000(100713) === 60%
+Tokens in batch: 758, Total minted so far: 352615/448241
+Gas Estimation: Units: 15790401, Price: 1080753 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xe7debbb73fe41b390e9be07238eef13fa63584355540c1499fdd659b039b9853
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 121, start 0xb76735d1626DC524038d23f5F9DC2345F4EeF7aF,402 ===
+Progress: 60500(100713) === 60%
+Tokens in batch: 500, Total minted so far: 353115/448241
+Gas Estimation: Units: 15790522, Price: 1081751 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x988a4ca6feb1b8aec8f881be9c89e28abf99596e597933847289874140e1913b
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 122, start 0x361D6a0A6ce25c833081DAa7C31c416D4295eC5A,402 ===
+Progress: 61000(100713) === 61%
+Tokens in batch: 1289, Total minted so far: 354404/448241
+Gas Estimation: Units: 15779669, Price: 1083021 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x35cf34f7df3b3938f287cc12b631eeba79221c1ea82a4169f11e1e8682a1d5d2
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 123, start 0xe9B1bF903551b6905EF4E927c96d1EAEC4D65845,403 ===
+Progress: 61500(100713) === 61%
+Tokens in batch: 500, Total minted so far: 354904/448241
+Gas Estimation: Units: 15790449, Price: 1083977 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x748657e60e3059863d718ec986fa21808d3b9573313a61e9203c9ab79fc0afd6
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 124, start 0x3F9DEc537771bfF9e448B17d067aE8BBce8095F4,403 ===
+Progress: 62000(100713) === 62%
+Tokens in batch: 1239, Total minted so far: 356143/448241
+Gas Estimation: Units: 15799925, Price: 1085220 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x743d61163c78ee2dddb7d340aa4db47f529242504d3af0b6cdce2da9b675d112
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 125, start 0xa4FAc9B1026caA3ed84435967CD1BB4Ad441d62C,500 ===
+Progress: 62500(100713) === 62%
+Tokens in batch: 753, Total minted so far: 356896/448241
+Gas Estimation: Units: 15790401, Price: 1086178 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xfc83c241ec75f5d71fa137e68a53f874ac7837ce9bf390f65e71224ef15b6b89
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 126, start 0xC7bCbd19c156Fb95b0A8132F5F180f6cC1178841,500 ===
+Progress: 63000(100713) === 63%
+Tokens in batch: 500, Total minted so far: 357396/448241
+Gas Estimation: Units: 15790461, Price: 1087370 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x275c5af8ecbbc1f06718360e570b19884255f8711ed656751d55896acbb14626
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 127, start 0x4c2A9F904D97E868D3339AB98071140E46A458CF,500 ===
+Progress: 63500(100713) === 63%
+Tokens in batch: 3206, Total minted so far: 360602/448241
+Gas Estimation: Units: 15764516, Price: 1088311 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x0cde418ae97b999fa99805b0226e5596509ada045cc7fdb6075baaa0c70ead21
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 128, start 0x4F0De440a4039Be1F2aCC1414b35a2dD7Dda0845,501 ===
+Progress: 64000(100713) === 64%
+Tokens in batch: 1352, Total minted so far: 361954/448241
+Gas Estimation: Units: 15790461, Price: 1089143 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x81b4fd5666164966a6b77b871518e5e7511ba855095e02c77cc7a82b30ef551f
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 129, start 0x63c347d7e42b940e79AfEC3D172bFc2921b6c897,501 ===
+Progress: 64500(100713) === 64%
+Tokens in batch: 640, Total minted so far: 362594/448241
+Gas Estimation: Units: 15790364, Price: 1090355 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x08d2482eb746586491c18ef6edfa6b34305210e617da2c22071cefb8fd67d2d8
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 130, start 0x9c92C1ef6606396B8dE0D0620A4Dd37f7c0A7527,501 ===
+Progress: 65000(100713) === 65%
+Tokens in batch: 500, Total minted so far: 363094/448241
+Gas Estimation: Units: 15790498, Price: 1091352 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x4f6a60fa60f10fd657a5cc585d7b543e7c2160c77ff5a99e461302c5664fb591
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 131, start 0x104032B88EA3Fb5e8ef84a487A1Ab956fBa7c526,501 ===
+Progress: 65500(100713) === 65%
+Tokens in batch: 2727, Total minted so far: 365821/448241
+Gas Estimation: Units: 15802465, Price: 1092742 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xb001ad52ea609dab665e9438b889ed54c8d502e5aa55c25ec71467dfea1e7d8b
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 132, start 0x84332F37E6EB188Cc7f45325ea974F62310f6a06,502 ===
+Progress: 66000(100713) === 66%
+Tokens in batch: 632, Total minted so far: 366453/448241
+Gas Estimation: Units: 15790449, Price: 1094172 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xe5e7aed5ad2ad06cb5bd084eb5cc450ec25f28fbf93d81355e681df33424f1b2
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 133, start 0x977a2A86A8ce2F0e147fa97C882e50aee93b8aa6,502 ===
+Progress: 66500(100713) === 66%
+Tokens in batch: 500, Total minted so far: 366953/448241
+Gas Estimation: Units: 15790620, Price: 1095456 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xb26f564c7e615024a78c12a597dca872605763f9b8da94fd9964cc7edb215033
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 134, start 0x0904d8870e526c7E9106E80c227DeFE6A1055dbc,502 ===
+Progress: 67000(100713) === 67%
+Tokens in batch: 1238, Total minted so far: 368191/448241
+Gas Estimation: Units: 15807422, Price: 1096368 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x7aabf4fd1e6171333ee320e5b12944c421f5f26731c2b65b97a1fe629a660a98
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 135, start 0xacD416343f30B87108A508b5fC2584B626eB6850,503 ===
+Progress: 67500(100713) === 67%
+Tokens in batch: 906, Total minted so far: 369097/448241
+Gas Estimation: Units: 15812660, Price: 1097425 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x5028e397e3c33df6b8d70acaa90abd2dfa7abbf3cded031cba70a798d29fa348
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 136, start 0xce71974d1A1B6B4b6fb8AA86Bb105b42b054F8a3,600 ===
+Progress: 68000(100713) === 68%
+Tokens in batch: 1325, Total minted so far: 370422/448241
+Gas Estimation: Units: 15790461, Price: 1098990 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x6f7ac28349b4f6896408230a36c2e90f45ea1e42dfb775e661d920cca40d8e30
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 137, start 0x0a074814C8ed6d96D31EFA521c881d4d330d292F,600 ===
+Progress: 68500(100713) === 68%
+Tokens in batch: 511, Total minted so far: 370933/448241
+Gas Estimation: Units: 15790291, Price: 1099940 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xba941785f8fd2d2173f27cde5cf3b33989d2a13d79beceb30bf9db8eefec7220
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 138, start 0x894f1fdf83c322A6b35aFDe5F2942eBeb670ed30,600 ===
+Progress: 69000(100713) === 69%
+Tokens in batch: 500, Total minted so far: 371433/448241
+Gas Estimation: Units: 15790522, Price: 1100878 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x9dc1177fd81e27d785cf2acc0aa36a50d17e041a19ccd3ef385885b59e372bcf
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 139, start 0x1B8E0178598550343a3e457a8598bc3389E84C27,600 ===
+Progress: 69500(100713) === 69%
+Tokens in batch: 3633, Total minted so far: 375066/448241
+Gas Estimation: Units: 15777080, Price: 1102116 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x4be3b58b64cd509200ff7af9d4bcbcf53c07d458669afc839d4fd512eadf1451
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 140, start 0x3443ab1e5b0E08987eDe9FECf7276fBf5F51aBab,601 ===
+Progress: 70000(100713) === 70%
+Tokens in batch: 955, Total minted so far: 376021/448241
+Gas Estimation: Units: 15790486, Price: 1103347 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x7ce1347805f4bc8095537ef5ce8a360483ccc711195d9828e69041f970540e73
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 141, start 0xECB99F4Be352F8Ae7F3365f854cEa828fA507459,601 ===
+Progress: 70500(100713) === 70%
+Tokens in batch: 500, Total minted so far: 376521/448241
+Gas Estimation: Units: 15790388, Price: 1104513 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0x01e4842ba6eaef03a234b9a484db7d507d144c16155405a9a6945e967727830d
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 142, start 0x69654B275DA070617064BD7F29f8B500Ce54127D,601 ===
+Progress: 71000(100713) === 70%
+Tokens in batch: 1995, Total minted so far: 378516/448241
+Gas Estimation: Units: 15810194, Price: 1105523 wei, Total Cost: 0.000017 ETH
+Transaction hash: 0xd1015aecbc1f0a957795c7bfdfed0ae6f082e0f478a360a98fc5527ead9cbe40
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 143, start 0xfE8AaFdBF0a3Ef7D0Cf3DD11eaFe0e4A78821b82,602 ===
+Progress: 71500(100713) === 71%
+Tokens in batch: 1279, Total minted so far: 379795/448241
+Gas Estimation: Units: 15790291, Price: 1205452 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x1aa1b7538e49c63de2e04b8fd3b8916e1bcbaa062c2ab9425defa93275bb1270
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 144, start 0xf9FC9586C36ee40363721BA8688C03B2b76792F2,602 ===
+Progress: 72000(100713) === 71%
+Tokens in batch: 500, Total minted so far: 380295/448241
+Gas Estimation: Units: 15790388, Price: 1110267 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xf7fec5c9009155b974445e1efb5ebeafe1aaa2d712e10937160caadefc9c4202
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 145, start 0x69155E7cA2E688ccDc247f6c4DDF374b3ae77Bd6,602 ===
+Progress: 72500(100713) === 72%
+Tokens in batch: 1101, Total minted so far: 381396/448241
+Gas Estimation: Units: 15802550, Price: 1111532 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xd29f61bc6ee99046766ea4b33018416001d1a6bef71dc64f2a0fce90847651a3
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 146, start 0xd73405Af9eEfad3E5AD6de1f8Ef7ec709b0d223F,603 ===
+Progress: 73000(100713) === 72%
+Tokens in batch: 612, Total minted so far: 382008/448241
+Gas Estimation: Units: 15790522, Price: 1112592 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xb40440604dc886db125fd96e14ff471e01f24827709391a7cb42b69574d3823c
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 147, start 0x7694E0D4bcE5915e50185bB7E9809Ea544793Df2,603 ===
+Progress: 73500(100713) === 73%
+Tokens in batch: 1244, Total minted so far: 383252/448241
+Gas Estimation: Units: 15769461, Price: 1114149 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xaf39ee636ac12088bd4dba98514a303dd858029d540e1449f48033526ee24abc
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 148, start 0xD4528Ac470f233654e04b22eBfBa4c01D932D877,700 ===
+Progress: 74000(100713) === 73%
+Tokens in batch: 707, Total minted so far: 383959/448241
+Gas Estimation: Units: 15790413, Price: 1115397 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xb5843cdc5d8dbf72707f17caa1061a8f2f71746e316771bc8db9f946178e8953
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 149, start 0xa56b2F53e5193bB0B4263FAa032CC7E30CED733c,700 ===
+Progress: 74500(100713) === 74%
+Tokens in batch: 973, Total minted so far: 384932/448241
+Gas Estimation: Units: 15812794, Price: 1116884 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xc4165b9d19ed77eebe1ce33db75946f50757e2148c3baf69b53bb32f427faffb
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 150, start 0x6516DEDe38F2E0791FeFD07c2E550dF3C87E10eE,701 ===
+Progress: 75000(100713) === 74%
+Tokens in batch: 2849, Total minted so far: 387781/448241
+Gas Estimation: Units: 15790486, Price: 1117980 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xe8649b9a5fac434cd2874c8daa67958d7a1f869bc7e6387c4369ec0185d5335d
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 151, start 0x1824A65ABAb12Ff47122efD8c7309929547Aa492,701 ===
+Progress: 75500(100713) === 75%
+Tokens in batch: 520, Total minted so far: 388301/448241
+Gas Estimation: Units: 15790401, Price: 1119154 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xce4a5e798decf0630bb77de4c2de81b85fbae4535779c900f42ca057af6491ba
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 152, start 0x50889e629Ea47888a38b0b256bb0212183B6A1e9,701 ===
+Progress: 76000(100713) === 75%
+Tokens in batch: 2084, Total minted so far: 390385/448241
+Gas Estimation: Units: 15789864, Price: 1120503 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x977a04f643bae38b2d7f753e01713a6f757f75b116b14ba652e412625bd752bb
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 153, start 0xb4Eb7610C445d25f616EDb02E8034C6FDd997CC9,702 ===
+Progress: 76500(100713) === 76%
+Tokens in batch: 634, Total minted so far: 391019/448241
+Gas Estimation: Units: 15790413, Price: 1121538 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xb8276a746a479a2b2d7b95314f2cffc8b16c1907b9225e0a572697a739d134b3
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 154, start 0x6BdD192D8d2d5b10cDE28F87740431780F858Fcc,702 ===
+Progress: 77000(100713) === 76%
+Tokens in batch: 1144, Total minted so far: 392163/448241
+Gas Estimation: Units: 15779657, Price: 1122958 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x7357d886a57b2a35900f44e057895579c271893e2daf5058cc0a9720a42988fe
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 155, start 0xfbEa1765932D0C289ABdbc1e164D198146591f2C,703 ===
+Progress: 77500(100713) === 77%
+Tokens in batch: 500, Total minted so far: 392663/448241
+Gas Estimation: Units: 15790461, Price: 1124050 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x07c1e8b6a234e3ed1d87a4a3013aa2f34a815202aa2d0b49cbf4519576a5f3d5
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 156, start 0x12D42e79d07ab6273e1eef2CC19604391d707804,703 ===
+Progress: 78000(100713) === 77%
+Tokens in batch: 1249, Total minted so far: 393912/448241
+Gas Estimation: Units: 15802441, Price: 1125521 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xf701ccb8e2317f20573e3b2ff8544022b3fdae609285d54ffe0e29d7255c0cd0
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 157, start 0xDfCC81B35fa31a27ED4bcfdA88C318C336ef1733,800 ===
+Progress: 78500(100713) === 78%
+Tokens in batch: 500, Total minted so far: 394412/448241
+Gas Estimation: Units: 15790425, Price: 1126781 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x9445357644d27c13747e5a95f9b9d5951661da006408b2ddbc22432899f55cab
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 158, start 0x3e1BAE25bC4eeb818Eab90D51E3Af356802d4Db9,800 ===
+Progress: 79000(100713) === 78%
+Tokens in batch: 3074, Total minted so far: 397486/448241
+Gas Estimation: Units: 15751781, Price: 1128149 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x404abda7b62cd129c30a67136593e6487b614347e7c0a3c77f6f98c3aba3cc59
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 159, start 0xE20C4225a967a12c40b5CAC343CA3EC7D09a2f48,801 ===
+Progress: 79500(100713) === 79%
+Tokens in batch: 719, Total minted so far: 398205/448241
+Gas Estimation: Units: 15790486, Price: 1129108 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x04898a49b54bff6b4c42ea9df6cdc3fac08d9e1751e73b3fa035c9b532136e93
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 160, start 0x98a3B1202467a312414edc99aA4fd8B4Be714b72,801 ===
+Progress: 80000(100713) === 79%
+Tokens in batch: 1782, Total minted so far: 399987/448241
+Gas Estimation: Units: 15812819, Price: 1130151 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x01f8d4a0b698e5bd9be3af71ab059ebe87c4364521ab9d34c86e2629dc521327
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 161, start 0x48BD7f6658A7098B83b51b1b6E7A509e382D8aCf,802 ===
+Progress: 80500(100713) === 80%
+Tokens in batch: 1027, Total minted so far: 401014/448241
+Gas Estimation: Units: 15790449, Price: 1132178 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x4455d064d9d26651a86610a212faf7c210a7272b64a4b11513718bf9d201cc92
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 162, start 0xbBb8248386F506e27E2E1908F9AE71cAF2aDB97f,802 ===
+Progress: 81000(100713) === 80%
+Tokens in batch: 762, Total minted so far: 401776/448241
+Gas Estimation: Units: 15812648, Price: 1134858 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x7eb33f0c119ee9132dc569c6fb5433230851dade430e78c9d002a4ff235e8b50
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 163, start 0x67DaC0bBD22Ab2821eA982ac0542f6c409cAFe3A,803 ===
+Progress: 81500(100713) === 81%
+Tokens in batch: 849, Total minted so far: 402625/448241
+Gas Estimation: Units: 15790474, Price: 1136454 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xc01fd485f7090e7aefa995bdc9bde1626264ade17e4e71b676807162d86fb1d9
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 164, start 0x6A2F85751B13895FCEf31391806FF3067c28D611,803 ===
+Progress: 82000(100713) === 81%
+Tokens in batch: 1442, Total minted so far: 404067/448241
+Gas Estimation: Units: 15787288, Price: 1138211 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x7517c04d9d02115020f59853d12ed374367b2ed1f14f8b6f5d03b184ae101bd0
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 165, start 0x681ec56cE6bCb25eDb73ca14AF22F59c3D864424,900 ===
+Progress: 82500(100713) === 82%
+Tokens in batch: 592, Total minted so far: 404659/448241
+Gas Estimation: Units: 15790559, Price: 1140605 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xf0f53b50636e1d84205825a3fa4fe7d42b3961516aab7b1385302bc4bc62dd3f
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 166, start 0x75B23aa76077cF87010848017A65f498B95D0Ca9,900 ===
+Progress: 83000(100713) === 82%
+Tokens in batch: 2754, Total minted so far: 407413/448241
+Gas Estimation: Units: 15756897, Price: 1142861 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xb2a5291e3bb724fde62e33bf3432e630c474decacf302539fe7554bbebf3da05
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 167, start 0xfF764C5fAbf5Ed436a01B674DfC3952611e53bF8,901 ===
+Progress: 83500(100713) === 83%
+Tokens in batch: 1148, Total minted so far: 408561/448241
+Gas Estimation: Units: 15790437, Price: 1144175 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x46af19a7c0ebc8225c5f9f558dca2fc68c2152fb0f4eb882f5f6cc5151836044
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 168, start 0xDb50fC5E275Aa5d3CF7D31c6E101Db5f19227539,901 ===
+Progress: 84000(100713) === 83%
+Tokens in batch: 500, Total minted so far: 409061/448241
+Gas Estimation: Units: 15790401, Price: 1146190 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x3aba39c30a7126752068c889a5537a21e75edbc0a0f0b710a1d216e4f6bdd7c0
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 169, start 0x35B96a6B779cfb4c230B7Cb0a520193e1cA95810,901 ===
+Progress: 84500(100713) === 84%
+Tokens in batch: 2176, Total minted so far: 411237/448241
+Gas Estimation: Units: 15807642, Price: 1148580 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xc53a60d83b65594dd999bb6208959b896ff35c5727843a8f7b8ab9f78bb518ea
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 170, start 0x451cFBe715CCE467B201c68D411b75Fe7032E308,902 ===
+Progress: 85000(100713) === 84%
+Tokens in batch: 548, Total minted so far: 411785/448241
+Gas Estimation: Units: 15790437, Price: 1149657 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xce1ec02892d72c442884ea8d143ac921a800fc6396427ed895144b5dbf9fdf20
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 171, start 0x4f355A9C74Bd22A90fa32DE4cD129da1999520aA,902 ===
+Progress: 85500(100713) === 85%
+Tokens in batch: 1090, Total minted so far: 412875/448241
+Gas Estimation: Units: 15772147, Price: 1151676 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x5cf4e916feba9c489b0827c479a5bd233d51fcf41435f0104e2e9ef03582fa70
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 172, start 0xD4E3473b279661767FfdF3ac4113e2979dd5D075,903 ===
+Progress: 86000(100713) === 85%
+Tokens in batch: 859, Total minted so far: 413734/448241
+Gas Estimation: Units: 15805017, Price: 1153020 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x1e3f6b6fa5db3836cc5d93611685b425547a757ea8246baf11d9bff65c01c11d
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 173, start 0xEE219649DF63A76501B986D13F6884D019B2204e,1000 ===
+Progress: 86500(100713) === 86%
+Tokens in batch: 886, Total minted so far: 414620/448241
+Gas Estimation: Units: 15790315, Price: 1154585 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xba340c17bf4704ff1920123d9aa5c7749f12ef9cf766e5ccf0967ca93cf9ff62
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 174, start 0xc223E4c595D428DF4A8Ca2Fbc4A95C4dE42567B2,1000 ===
+Progress: 87000(100713) === 86%
+Tokens in batch: 500, Total minted so far: 415120/448241
+Gas Estimation: Units: 15790461, Price: 1156375 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0xc97dfd04a63f23ac32cfd968443a4714ce43548a972db5fb97b6621fb55ac104
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 175, start 0x161324631C0Fa0Af5de534E43BEB1DE3Ba90128a,1000 ===
+Progress: 87500(100713) === 87%
+Tokens in batch: 3614, Total minted so far: 418734/448241
+Gas Estimation: Units: 15789791, Price: 1159061 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x0329b99bb5c6b563b0801f14742be693b690dc37d25b07679fae37cbeba535a4
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 176, start 0x69a0FC963016741BfB83bCaEF86f55A80126D47d,1001 ===
+Progress: 88000(100713) === 87%
+Tokens in batch: 609, Total minted so far: 419343/448241
+Gas Estimation: Units: 15790425, Price: 1160935 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x48a9cb4fa741e57c43071f64dea885ddc6b32fa134ca3b69d92c0b2a13996cde
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 177, start 0x72e098257bc3167cF91Ab85Dfb6179E7bac8850E,1001 ===
+Progress: 88500(100713) === 88%
+Tokens in batch: 2306, Total minted so far: 421649/448241
+Gas Estimation: Units: 15800096, Price: 1162773 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x067149e71a21b3e9717aaae5987c0757d685231c0114849c76faedf7ee30454a
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 178, start 0x739dC8f3045F6ad394C62ED3Ef043E8cE1ae2E1b,1002 ===
+Progress: 89000(100713) === 88%
+Tokens in batch: 769, Total minted so far: 422418/448241
+Gas Estimation: Units: 15790364, Price: 1164677 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x0e9ae784028228c6620ffad412cb995bd9d5510186b032c888dadd07dc21989f
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 179, start 0xA26aF2851372264B5eD1A481b2a28EbEE26cf6f0,1002 ===
+Progress: 89500(100713) === 89%
+Tokens in batch: 977, Total minted so far: 423395/448241
+Gas Estimation: Units: 15812746, Price: 1166829 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x119d1f4bf82e4123771a8900a7b588503e57620f2a10ee17de321d79c620fb05
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 180, start 0xbB66Bfa31AD6e4fFE658dFa0599aeFD4696E4aE4,1003 ===
+Progress: 90000(100713) === 89%
+Tokens in batch: 725, Total minted so far: 424120/448241
+Gas Estimation: Units: 15790401, Price: 1168479 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x7333e68386347deac7cbe6a4886e587ce74f0ecacbbc0ea04d914fdc8e2f2254
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 181, start 0x5b51cd56B67d48132C2d687c865457E24F768F56,1003 ===
+Progress: 90500(100713) === 90%
+Tokens in batch: 1108, Total minted so far: 425228/448241
+Gas Estimation: Units: 15784773, Price: 1170818 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x229d0d7ddf768219aff36a2fafa92969f94ec398640e30c8018a5a20aa50e55c
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 182, start 0x5a26e2eBB9B5927b2b46a163481D3f82876cCF1F,1100 ===
+Progress: 91000(100713) === 90%
+Tokens in batch: 585, Total minted so far: 425813/448241
+Gas Estimation: Units: 15790437, Price: 1172557 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x3591eaf22047ac9ef671c8435aaeaa458634e60a7045e9bb4178db74e709ea08
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 183, start 0x6629caB4112D1Ac894EED3a2c14D57cBDDE21A14,1100 ===
+Progress: 91500(100713) === 91%
+Tokens in batch: 3243, Total minted so far: 429056/448241
+Gas Estimation: Units: 15741574, Price: 1174801 wei, Total Cost: 0.000018 ETH
+Transaction hash: 0x61100c9a2d4254be51c00e603707b61ff0f8b9f75384b4b767e7fb9552ba7e05
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 184, start 0xd565ee48560bE31bDa54e4E738E398216d43a664,1101 ===
+Progress: 92000(100713) === 91%
+Tokens in batch: 941, Total minted so far: 429997/448241
+Gas Estimation: Units: 15790449, Price: 1177018 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0xda9f901eb88d0f577584e645f22c818b92db38e7ef1d8be1cecad504b5529316
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 185, start 0xcf402385A9c33699bDa18af932488fD315EC835d,1101 ===
+Progress: 92500(100713) === 92%
+Tokens in batch: 500, Total minted so far: 430497/448241
+Gas Estimation: Units: 15790437, Price: 1181080 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0xd89b35e3603033e6078a24bb54b9adbc091c7ada9f32f905311b756846204260
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 186, start 0x246dc1Bc5050D8f5CFE4660C39a5d3a1BC880ef9,1101 ===
+Progress: 93000(100713) === 92%
+Tokens in batch: 2606, Total minted so far: 433103/448241
+Gas Estimation: Units: 15792392, Price: 1182591 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x5879a42294f8df81fc2e6ddb0e3d74375b3825a96e815a27d7ccb9f7eca00644
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 187, start 0x1076c2cfB8d1f3AA5Bf050D8C0d6D128175BFEee,1102 ===
+Progress: 93500(100713) === 93%
+Tokens in batch: 508, Total minted so far: 433611/448241
+Gas Estimation: Units: 15790388, Price: 1186390 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x958b2719cd01995cba88b1df37f126e004e2f2842954da96417ec57d7c9f0990
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 188, start 0x4A9dB0637f2B0Becf984Ef1A810f8f483fcBd030,1102 ===
+Progress: 94000(100713) === 93%
+Tokens in batch: 1189, Total minted so far: 434800/448241
+Gas Estimation: Units: 15789925, Price: 1189224 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0xf0280af0741ef651e17124cb5e54c445444ba8b94c5a08db3d77ed7d4ca987fa
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 189, start 0xd6946a5EEE09fd167B9920D5647253acE122E9CB,1103 ===
+Progress: 94500(100713) === 94%
+Tokens in batch: 808, Total minted so far: 435608/448241
+Gas Estimation: Units: 15805078, Price: 1192146 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0xeb42ca7fb9100795413e1d32def932f2235f32ff13f27724a4a3824f5a7311a3
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 190, start 0xeeDE9ACD5BbCd64915078323BDA6216dfb6565ef,1200 ===
+Progress: 95000(100713) === 94%
+Tokens in batch: 1023, Total minted so far: 436631/448241
+Gas Estimation: Units: 15790449, Price: 1194245 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0xf2797f9a4fbdd30e61d6c443118331060fdfb617f08d18b13065087a124ba8ad
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 191, start 0xd1a0fb650B11D4ddDB67502691E7A08b5C73Da29,1200 ===
+Progress: 95500(100713) === 95%
+Tokens in batch: 500, Total minted so far: 437131/448241
+Gas Estimation: Units: 15790437, Price: 1197206 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x3de073f4fc7da13f055e22e4de9c532be28ccb3e25e951de7f75aa17de3c40c0
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 192, start 0x1c6Da3AF338facB46c782051259ceAF8D739016d,1200 ===
+Progress: 96000(100713) === 95%
+Tokens in batch: 3461, Total minted so far: 440592/448241
+Gas Estimation: Units: 15792282, Price: 1200090 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x01f2a1d108ed95114651c781e153532cb3b2b5e20bed0b62254efcb0f72df919
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 193, start 0x762f29FE3a057945e3E6D79308e407996F812305,1201 ===
+Progress: 96500(100713) === 96%
+Tokens in batch: 615, Total minted so far: 441207/448241
+Gas Estimation: Units: 15790437, Price: 1203306 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x8067235deff60b139c42256845cd4cb262ae54504d6c90f1475880951dd2aa23
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 194, start 0x75B555ea9fb26f78E8014805DFA49E2AFb7b9778,1201 ===
+Progress: 97000(100713) === 96%
+Tokens in batch: 2238, Total minted so far: 443445/448241
+Gas Estimation: Units: 15800108, Price: 1207380 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x49258d7f78f26cd04855c4eb331fd1c5b0fbc91c9ac6b82473830d03d19d8bf2
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 195, start 0xde5EBBBd0D23A6A83300d52B958589bd9149De27,1202 ===
+Progress: 97500(100713) === 97%
+Tokens in batch: 799, Total minted so far: 444244/448241
+Gas Estimation: Units: 15790327, Price: 1210189 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0xb7d7c75027e5bbd51e8b8ec520534681441ec2d079f6fe3d1d1ec08da6b1e8a6
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 196, start 0xA90DFf4df9a4593f5b8e4C80dDBB1EFd5B95b6Ab,1202 ===
+Progress: 98000(100713) === 97%
+Tokens in batch: 974, Total minted so far: 445218/448241
+Gas Estimation: Units: 15812721, Price: 1212395 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x141aef6dea541111969df6025e08eb6e4c9b46ef4e9ff84b6b455b0018c03326
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 197, start 0x73b28f6F4326B572fA23EC9837fbDF6C75672d69,1203 ===
+Progress: 98500(100713) === 98%
+Tokens in batch: 779, Total minted so far: 445997/448241
+Gas Estimation: Units: 15790449, Price: 1216039 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x273c707e57977e2faee23bf69173805422c3d26a59d9a385694cac1bc87ef250
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 198, start 0x664C3a556ec04E26aFC054Aa2581aA3AFD3a61C5,1203 ===
+Progress: 99000(100713) === 98%
+Tokens in batch: 531, Total minted so far: 446528/448241
+Gas Estimation: Units: 15800035, Price: 1218198 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0xc19ac1a0e101561213a8d898e2dd462e38996c749f9bfd028254d11060ed87b2
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 199, start 0xE0aeD5f5ea5AD990E6F8F2c1b3dBaA49E367CfC4,1300 ===
+Progress: 99500(100713) === 99%
+Tokens in batch: 500, Total minted so far: 447028/448241
+Gas Estimation: Units: 15790352, Price: 1221687 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x81977eb025e7029d8eeda12c394fd356bcfc11da923d9822a58fd456309a3902
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 200, start 0xA13083A2d81E3AcbF2c66319d4A0584105F30274,1300 ===
+Progress: 100000(100713) === 99%
+Tokens in batch: 500, Total minted so far: 447528/448241
+Gas Estimation: Units: 15790449, Price: 1224596 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0x291fe60b66f448a22d5011e3d92dedf3672b063607b7faa9355e0259e2b8ec04
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 201, start 0x5e8cb2c4aeA7805c15C4aab30fbA16B427c4E741,1300 ===
+Progress: 100500(100713) === 100%
+Tokens in batch: 500, Total minted so far: 448028/448241
+Gas Estimation: Units: 15790596, Price: 1227767 wei, Total Cost: 0.000019 ETH
+Transaction hash: 0xdbabb3429cab4e6acf30706505f0683c7daec11bca94e6fe670abf2cc5ea7d0b
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 202, start 0x1bc8BCda1BF790216c612D6b0cC1D6fE3B930BA8,1300 ===
+Progress: 101000(100713) === 100%
+Tokens in batch: 213, Total minted so far: 448241/448241
+Gas Estimation: Units: 6748412, Price: 1230767 wei, Total Cost: 0.000008 ETH
+Transaction hash: 0x1585d69bab2f19794108e4a7da24ea827554a9fd36c747b64ede81c50cef3dfc
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 448241
+Actual total supply: 448241
+✅ Total supply matches expected value
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 34m46s 
+➜ 
+
+
+======================================================================================================
+➜ npx hardhat run scripts/verify1155.ts
+PrivateKey set: true
+PrivateKey set: true
+
+=== Processing project: Yoki, Soneium, 1868, Contract: 0x5f2a5818DF3216Aa6ac44632541db8F3EC4e9954 ===
+
+Starting verification process at: 2025-02-18T15:33:56.568Z
+[Yoki] Progress: 500/100713 (500 verified, 0 failed)
+[Yoki] Progress: 1000/100713 (1000 verified, 0 failed)
+[Yoki] Progress: 1500/100713 (1500 verified, 0 failed)
+[Yoki] Progress: 2000/100713 (2000 verified, 0 failed)
+[Yoki] Progress: 2500/100713 (2500 verified, 0 failed)
+[Yoki] Progress: 3000/100713 (3000 verified, 0 failed)
+[Yoki] Progress: 3500/100713 (3500 verified, 0 failed)
+[Yoki] Progress: 4000/100713 (4000 verified, 0 failed)
+[Yoki] Progress: 4500/100713 (4500 verified, 0 failed)
+[Yoki] Progress: 5000/100713 (5000 verified, 0 failed)
+[Yoki] Progress: 5500/100713 (5500 verified, 0 failed)
+[Yoki] Progress: 6000/100713 (6000 verified, 0 failed)
+[Yoki] Progress: 6500/100713 (6500 verified, 0 failed)
+[Yoki] Progress: 7000/100713 (7000 verified, 0 failed)
+[Yoki] Progress: 7500/100713 (7500 verified, 0 failed)
+[Yoki] Progress: 8000/100713 (8000 verified, 0 failed)
+[Yoki] Progress: 8500/100713 (8500 verified, 0 failed)
+[Yoki] Progress: 9000/100713 (9000 verified, 0 failed)
+[Yoki] Progress: 9500/100713 (9500 verified, 0 failed)
+[Yoki] Progress: 10000/100713 (10000 verified, 0 failed)
+[Yoki] Progress: 10500/100713 (10500 verified, 0 failed)
+[Yoki] Progress: 11000/100713 (11000 verified, 0 failed)
+[Yoki] Progress: 11500/100713 (11500 verified, 0 failed)
+[Yoki] Progress: 12000/100713 (12000 verified, 0 failed)
+[Yoki] Progress: 12500/100713 (12500 verified, 0 failed)
+[Yoki] Progress: 13000/100713 (13000 verified, 0 failed)
+[Yoki] Progress: 13500/100713 (13500 verified, 0 failed)
+[Yoki] Progress: 14000/100713 (14000 verified, 0 failed)
+[Yoki] Progress: 14500/100713 (14500 verified, 0 failed)
+[Yoki] Progress: 15000/100713 (15000 verified, 0 failed)
+[Yoki] Progress: 15500/100713 (15500 verified, 0 failed)
+[Yoki] Progress: 16000/100713 (16000 verified, 0 failed)
+[Yoki] Progress: 16500/100713 (16500 verified, 0 failed)
+[Yoki] Progress: 17000/100713 (17000 verified, 0 failed)
+[Yoki] Progress: 17500/100713 (17500 verified, 0 failed)
+[Yoki] Progress: 18000/100713 (18000 verified, 0 failed)
+[Yoki] Progress: 18500/100713 (18500 verified, 0 failed)
+[Yoki] Progress: 19000/100713 (19000 verified, 0 failed)
+[Yoki] Progress: 19500/100713 (19500 verified, 0 failed)
+[Yoki] Progress: 20000/100713 (20000 verified, 0 failed)
+[Yoki] Progress: 20500/100713 (20500 verified, 0 failed)
+[Yoki] Progress: 21000/100713 (21000 verified, 0 failed)
+[Yoki] Progress: 21500/100713 (21500 verified, 0 failed)
+[Yoki] Progress: 22000/100713 (22000 verified, 0 failed)
+[Yoki] Progress: 22500/100713 (22500 verified, 0 failed)
+[Yoki] Progress: 23000/100713 (23000 verified, 0 failed)
+[Yoki] Progress: 23500/100713 (23500 verified, 0 failed)
+[Yoki] Progress: 24000/100713 (24000 verified, 0 failed)
+[Yoki] Progress: 24500/100713 (24500 verified, 0 failed)
+[Yoki] Progress: 25000/100713 (25000 verified, 0 failed)
+[Yoki] Progress: 25500/100713 (25500 verified, 0 failed)
+[Yoki] Progress: 26000/100713 (26000 verified, 0 failed)
+[Yoki] Progress: 26500/100713 (26500 verified, 0 failed)
+[Yoki] Progress: 27000/100713 (27000 verified, 0 failed)
+[Yoki] Progress: 27500/100713 (27500 verified, 0 failed)
+[Yoki] Progress: 28000/100713 (28000 verified, 0 failed)
+[Yoki] Progress: 28500/100713 (28500 verified, 0 failed)
+[Yoki] Progress: 29000/100713 (29000 verified, 0 failed)
+[Yoki] Progress: 29500/100713 (29500 verified, 0 failed)
+[Yoki] Progress: 30000/100713 (30000 verified, 0 failed)
+[Yoki] Progress: 30500/100713 (30500 verified, 0 failed)
+[Yoki] Progress: 31000/100713 (31000 verified, 0 failed)
+[Yoki] Progress: 31500/100713 (31500 verified, 0 failed)
+[Yoki] Progress: 32000/100713 (32000 verified, 0 failed)
+[Yoki] Progress: 32500/100713 (32500 verified, 0 failed)
+[Yoki] Progress: 33000/100713 (33000 verified, 0 failed)
+[Yoki] Progress: 33500/100713 (33500 verified, 0 failed)
+[Yoki] Progress: 34000/100713 (34000 verified, 0 failed)
+[Yoki] Progress: 34500/100713 (34500 verified, 0 failed)
+[Yoki] Progress: 35000/100713 (35000 verified, 0 failed)
+[Yoki] Progress: 35500/100713 (35500 verified, 0 failed)
+[Yoki] Progress: 36000/100713 (36000 verified, 0 failed)
+[Yoki] Progress: 36500/100713 (36500 verified, 0 failed)
+[Yoki] Progress: 37000/100713 (37000 verified, 0 failed)
+[Yoki] Progress: 37500/100713 (37500 verified, 0 failed)
+[Yoki] Progress: 38000/100713 (38000 verified, 0 failed)
+[Yoki] Progress: 38500/100713 (38500 verified, 0 failed)
+[Yoki] Progress: 39000/100713 (39000 verified, 0 failed)
+[Yoki] Progress: 39500/100713 (39500 verified, 0 failed)
+[Yoki] Progress: 40000/100713 (40000 verified, 0 failed)
+[Yoki] Progress: 40500/100713 (40500 verified, 0 failed)
+[Yoki] Progress: 41000/100713 (41000 verified, 0 failed)
+[Yoki] Progress: 41500/100713 (41500 verified, 0 failed)
+[Yoki] Progress: 42000/100713 (42000 verified, 0 failed)
+[Yoki] Progress: 42500/100713 (42500 verified, 0 failed)
+[Yoki] Progress: 43000/100713 (43000 verified, 0 failed)
+[Yoki] Progress: 43500/100713 (43500 verified, 0 failed)
+[Yoki] Progress: 44000/100713 (44000 verified, 0 failed)
+[Yoki] Progress: 44500/100713 (44500 verified, 0 failed)
+[Yoki] Progress: 45000/100713 (45000 verified, 0 failed)
+[Yoki] Progress: 45500/100713 (45500 verified, 0 failed)
+[Yoki] Progress: 46000/100713 (46000 verified, 0 failed)
+[Yoki] Progress: 46500/100713 (46500 verified, 0 failed)
+[Yoki] Progress: 47000/100713 (47000 verified, 0 failed)
+[Yoki] Progress: 47500/100713 (47500 verified, 0 failed)
+[Yoki] Progress: 48000/100713 (48000 verified, 0 failed)
+[Yoki] Progress: 48500/100713 (48500 verified, 0 failed)
+[Yoki] Progress: 49000/100713 (49000 verified, 0 failed)
+[Yoki] Progress: 49500/100713 (49500 verified, 0 failed)
+[Yoki] Progress: 50000/100713 (50000 verified, 0 failed)
+[Yoki] Progress: 50500/100713 (50500 verified, 0 failed)
+[Yoki] Progress: 51000/100713 (51000 verified, 0 failed)
+[Yoki] Progress: 51500/100713 (51500 verified, 0 failed)
+[Yoki] Progress: 52000/100713 (52000 verified, 0 failed)
+[Yoki] Progress: 52500/100713 (52500 verified, 0 failed)
+[Yoki] Progress: 53000/100713 (53000 verified, 0 failed)
+[Yoki] Progress: 53500/100713 (53500 verified, 0 failed)
+[Yoki] Progress: 54000/100713 (54000 verified, 0 failed)
+[Yoki] Progress: 54500/100713 (54500 verified, 0 failed)
+[Yoki] Progress: 55000/100713 (55000 verified, 0 failed)
+[Yoki] Progress: 55500/100713 (55500 verified, 0 failed)
+[Yoki] Progress: 56000/100713 (56000 verified, 0 failed)
+[Yoki] Progress: 56500/100713 (56500 verified, 0 failed)
+[Yoki] Progress: 57000/100713 (57000 verified, 0 failed)
+[Yoki] Progress: 57500/100713 (57500 verified, 0 failed)
+[Yoki] Progress: 58000/100713 (58000 verified, 0 failed)
+[Yoki] Progress: 58500/100713 (58500 verified, 0 failed)
+[Yoki] Progress: 59000/100713 (59000 verified, 0 failed)
+[Yoki] Progress: 59500/100713 (59500 verified, 0 failed)
+[Yoki] Progress: 60000/100713 (60000 verified, 0 failed)
+[Yoki] Progress: 60500/100713 (60500 verified, 0 failed)
+[Yoki] Progress: 61000/100713 (61000 verified, 0 failed)
+[Yoki] Progress: 61500/100713 (61500 verified, 0 failed)
+[Yoki] Progress: 62000/100713 (62000 verified, 0 failed)
+[Yoki] Progress: 62500/100713 (62500 verified, 0 failed)
+[Yoki] Progress: 63000/100713 (63000 verified, 0 failed)
+[Yoki] Progress: 63500/100713 (63500 verified, 0 failed)
+[Yoki] Progress: 64000/100713 (64000 verified, 0 failed)
+[Yoki] Progress: 64500/100713 (64500 verified, 0 failed)
+[Yoki] Progress: 65000/100713 (65000 verified, 0 failed)
+[Yoki] Progress: 65500/100713 (65500 verified, 0 failed)
+[Yoki] Progress: 66000/100713 (66000 verified, 0 failed)
+[Yoki] Progress: 66500/100713 (66500 verified, 0 failed)
+[Yoki] Progress: 67000/100713 (67000 verified, 0 failed)
+[Yoki] Progress: 67500/100713 (67500 verified, 0 failed)
+[Yoki] Progress: 68000/100713 (68000 verified, 0 failed)
+[Yoki] Progress: 68500/100713 (68500 verified, 0 failed)
+[Yoki] Progress: 69000/100713 (69000 verified, 0 failed)
+[Yoki] Progress: 69500/100713 (69500 verified, 0 failed)
+[Yoki] Progress: 70000/100713 (70000 verified, 0 failed)
+[Yoki] Progress: 70500/100713 (70500 verified, 0 failed)
+[Yoki] Progress: 71000/100713 (71000 verified, 0 failed)
+[Yoki] Progress: 71500/100713 (71500 verified, 0 failed)
+[Yoki] Progress: 72000/100713 (72000 verified, 0 failed)
+[Yoki] Progress: 72500/100713 (72500 verified, 0 failed)
+[Yoki] Progress: 73000/100713 (73000 verified, 0 failed)
+[Yoki] Progress: 73500/100713 (73500 verified, 0 failed)
+[Yoki] Progress: 74000/100713 (74000 verified, 0 failed)
+[Yoki] Progress: 74500/100713 (74500 verified, 0 failed)
+[Yoki] Progress: 75000/100713 (75000 verified, 0 failed)
+[Yoki] Progress: 75500/100713 (75500 verified, 0 failed)
+[Yoki] Progress: 76000/100713 (76000 verified, 0 failed)
+[Yoki] Progress: 76500/100713 (76500 verified, 0 failed)
+[Yoki] Progress: 77000/100713 (77000 verified, 0 failed)
+[Yoki] Progress: 77500/100713 (77500 verified, 0 failed)
+[Yoki] Progress: 78000/100713 (78000 verified, 0 failed)
+[Yoki] Progress: 78500/100713 (78500 verified, 0 failed)
+[Yoki] Progress: 79000/100713 (79000 verified, 0 failed)
+[Yoki] Progress: 79500/100713 (79500 verified, 0 failed)
+[Yoki] Progress: 80000/100713 (80000 verified, 0 failed)
+[Yoki] Progress: 80500/100713 (80500 verified, 0 failed)
+[Yoki] Progress: 81000/100713 (81000 verified, 0 failed)
+[Yoki] Progress: 81500/100713 (81500 verified, 0 failed)
+[Yoki] Progress: 82000/100713 (82000 verified, 0 failed)
+[Yoki] Progress: 82500/100713 (82500 verified, 0 failed)
+[Yoki] Progress: 83000/100713 (83000 verified, 0 failed)
+[Yoki] Progress: 83500/100713 (83500 verified, 0 failed)
+[Yoki] Progress: 84000/100713 (84000 verified, 0 failed)
+[Yoki] Progress: 84500/100713 (84500 verified, 0 failed)
+[Yoki] Progress: 85000/100713 (85000 verified, 0 failed)
+[Yoki] Progress: 85500/100713 (85500 verified, 0 failed)
+[Yoki] Progress: 86000/100713 (86000 verified, 0 failed)
+[Yoki] Progress: 86500/100713 (86500 verified, 0 failed)
+[Yoki] Progress: 87000/100713 (87000 verified, 0 failed)
+[Yoki] Progress: 87500/100713 (87500 verified, 0 failed)
+[Yoki] Progress: 88000/100713 (88000 verified, 0 failed)
+[Yoki] Progress: 88500/100713 (88500 verified, 0 failed)
+[Yoki] Progress: 89000/100713 (89000 verified, 0 failed)
+[Yoki] Progress: 89500/100713 (89500 verified, 0 failed)
+[Yoki] Progress: 90000/100713 (90000 verified, 0 failed)
+[Yoki] Progress: 90500/100713 (90500 verified, 0 failed)
+[Yoki] Progress: 91000/100713 (91000 verified, 0 failed)
+[Yoki] Progress: 91500/100713 (91500 verified, 0 failed)
+[Yoki] Progress: 92000/100713 (92000 verified, 0 failed)
+[Yoki] Progress: 92500/100713 (92500 verified, 0 failed)
+[Yoki] Progress: 93000/100713 (93000 verified, 0 failed)
+[Yoki] Progress: 93500/100713 (93500 verified, 0 failed)
+[Yoki] Progress: 94000/100713 (94000 verified, 0 failed)
+[Yoki] Progress: 94500/100713 (94500 verified, 0 failed)
+[Yoki] Progress: 95000/100713 (95000 verified, 0 failed)
+[Yoki] Progress: 95500/100713 (95500 verified, 0 failed)
+[Yoki] Progress: 96000/100713 (96000 verified, 0 failed)
+[Yoki] Progress: 96500/100713 (96500 verified, 0 failed)
+[Yoki] Progress: 97000/100713 (97000 verified, 0 failed)
+[Yoki] Progress: 97500/100713 (97500 verified, 0 failed)
+[Yoki] Progress: 98000/100713 (98000 verified, 0 failed)
+[Yoki] Progress: 98500/100713 (98500 verified, 0 failed)
+[Yoki] Progress: 99000/100713 (99000 verified, 0 failed)
+[Yoki] Progress: 99500/100713 (99500 verified, 0 failed)
+[Yoki] Progress: 100000/100713 (100000 verified, 0 failed)
+[Yoki] Progress: 100500/100713 (100500 verified, 0 failed)
+Results for Yoki with total 100712:
+  Verified: 100713
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-18T17:20:35.800Z
+Total duration: 106m 39s

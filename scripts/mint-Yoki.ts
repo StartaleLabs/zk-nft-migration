@@ -54,7 +54,7 @@ async function verifyTotalSupply(
 async function main() {
 
     // Setup Viem clients
-    const rawKey = process.env.TESTNET_PRIVATE_KEY;
+    const rawKey = process.env.MAINNET_PRIVATE_KEY;
     const privateKey = `0x${rawKey}` as `0x${string}`;
     const account = privateKeyToAccount(privateKey);
 

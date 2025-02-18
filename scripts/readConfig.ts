@@ -52,7 +52,7 @@ export function readConfig(): ConfigResult {
     throw new Error(`Contract ${contractAddress} not found in ${chainName}Contracts.json`);
   }
 
-  console.log(`\n=== Processing project: ${projectName}, ${chainName}, ${chain.id} Address: ${contractAddress} ===`);
+  console.log(`\n=== Processing project: ${projectName}, ${chainName}, ${chain.id}, Contract: ${contractAddress} ===`);
 
   return {
     projectName,

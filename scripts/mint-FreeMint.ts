@@ -6,7 +6,7 @@ import * as path from 'path';
 import { parse } from 'csv-parse/sync';
 import FreeMintArtifact from '../artifacts/contracts/FreeMint.sol/FreeMint.json';
 import { readConfig } from './readConfig';
-import { estimateBulkMintGas, printGasEstimate } from './gasEstimate';
+import { estimateBulkMintGas, printGasEstimate } from './utils';
 
 const FreeMintABI = FreeMintArtifact.abi;
 

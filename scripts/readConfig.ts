@@ -1,5 +1,5 @@
 import { Chain } from 'viem';
-import { sepolia, soneium, soneiumMinato } from 'viem/chains';
+import { sepolia, soneium, soneiumMinato, localhost } from 'viem/chains';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from "dotenv";
@@ -33,6 +33,8 @@ export function readConfig(): ConfigResult {
     chain = soneium;
   } else if (chainName === 'Minato') {
     chain = soneiumMinato;
+  } else if (chainName === 'Localhost') {
+    chain = localhost;
   } else {
     throw new Error(`Chain ${chainName} not supported`);
   }

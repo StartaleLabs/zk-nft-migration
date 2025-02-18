@@ -85,7 +85,7 @@ export async function estimateBulkMintGas1155(
 ): Promise<GasEstimate> {
     const gasEstimate = await publicClient.estimateContractGas({
         address: contractAddress,
-        abi: FreeMintABI,
+        abi: Yoki1155ABI,
         functionName: 'bulkMint',
         args: [recipients, tokenIds, balances],
         account: account.address,

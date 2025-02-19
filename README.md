@@ -22,7 +22,3 @@ npm install
 
 # Run tests
 npx hardhat test
-
-# Run coverage
-npx hardhat coverage
-```

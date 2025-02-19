@@ -1,0 +1,197 @@
+Last login: Wed Feb 19 17:14:33 on ttys006
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: Walkmon
+===================================
+Name: WALKMON OG
+Symbol: WMOG
+Base URI: https://walkmon-nft.sonoisy.team/meta/
+Base Extension: .json
+Max Supply: 10000
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: No
+Total Supply: 1979
+Metadata Entries: 1979
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 23 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 3s 
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: Walkmon
+Name: WALKMON OG
+Symbol: WMOG
+Base URI: https://walkmon-nft.sonoisy.team/meta/
+Base Extension: .json
+Max Supply: 10000
+Mint Limit: 0
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0x869a541D89d98e8e78C08DA4cC68AA7412C0710D
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 10s 
+❯ hardhat ignition verify chain-1868 --include-unrelated-contracts
+zsh: command not found: hardhat
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Successfully verified contract "contracts/FreeMint.sol:FreeMint" for network soneium:
+  - https://soneium.blockscout.com//address/0x869a541D89d98e8e78C08DA4cC68AA7412C0710D#code
+
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 10s 
+➜ npx hardhat run scripts/mint-FreeMint.ts
+/Users/mario/zk/zk-nft-migration/scripts/readConfig.ts:59
+    throw new Error(`Project ${projectName} not found in ${chainName}Contracts.json`);
+          ^
+Error: Project Walkmon not found in SoneiumContracts.json
+    at readConfig (/Users/mario/zk/zk-nft-migration/scripts/readConfig.ts:59:11)
+    at Object.<anonymous> (/Users/mario/zk/zk-nft-migration/scripts/mint-FreeMint.ts:14:71)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module.m._compile (/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/mario/zk/zk-nft-migration/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+❯ npx hardhat run scripts/mint-FreeMint.ts
+
+=== Processing project: Walkmon, Soneium, 1868, Contract: 0x869a541D89d98e8e78C08DA4cC68AA7412C0710D ===
+
+Starting minting process at: 2025-02-19T19:36:26.467Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 867172000019557986
+
+
+Starting from token ID: 1
+Records to process: 1979 out of 1979
+
+=== Batch Number: 1, start 0x3631E31116a6B89faf508AC8A401E05745f15c99,1 ===
+Progress: 500(1979) === 25%
+Gas Estimation: Units: 18311890, Price: 1542100 wei, Total Cost: 0.000028 ETH
+Transaction hash: 0xa31116ee61ae402110c724466d64fc6456537a7a2c685c66205fad50f9aec9a6
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0xA26e6DACE10B89F83AFf74EE888664910fAf274c,501 ===
+Progress: 1000(1979) === 51%
+Gas Estimation: Units: 20131506, Price: 1548993 wei, Total Cost: 0.000031 ETH
+Transaction hash: 0x9461fa52639d31af21a4beb9e4fe46e6d1c92fbf8f6dcd5a14f03ac352f0c605
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0xA7c88205a332fA1942c58a91e3fd6525A096F214,1001 ===
+Progress: 1500(1979) === 76%
+Gas Estimation: Units: 18564076, Price: 1557271 wei, Total Cost: 0.000029 ETH
+Transaction hash: 0x6330cd9227c3776b3bed986acda6e8a2443381f2dae90351564be560003e9e5e
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0xf0A73F433C74f41eC168B4c3B345Db6e61c04875,1501 ===
+Progress: 2000(1979) === 101%
+Gas Estimation: Units: 17342885, Price: 1560093 wei, Total Cost: 0.000027 ETH
+Transaction hash: 0x81bbe71d4f17f2e38cadf85d607e8e6dd621c71a31b5b5d6cdd0a7b584557001
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 1979
+Actual total supply: 1979
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-19T19:37:09.070Z
+Total duration: 0m 42s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 48s 
+➜ npx hardhat run scripts/verify.ts 
+
+=== Processing project: Walkmon, Soneium, 1868, Contract: 0x869a541D89d98e8e78C08DA4cC68AA7412C0710D ===
+
+Starting verification process at: 2025-02-19T19:37:29.876Z
+Verifying Walkmon...
+Starting verification of 1979 tokens...
+Progress: 100/1979 (5.05%) - Verified: 100, Failed: 0
+Progress: 200/1979 (10.11%) - Verified: 200, Failed: 0
+Progress: 300/1979 (15.16%) - Verified: 300, Failed: 0
+Progress: 400/1979 (20.21%) - Verified: 400, Failed: 0
+Progress: 500/1979 (25.27%) - Verified: 500, Failed: 0
+Progress: 600/1979 (30.32%) - Verified: 600, Failed: 0
+Progress: 700/1979 (35.37%) - Verified: 700, Failed: 0
+Progress: 800/1979 (40.42%) - Verified: 800, Failed: 0
+Progress: 900/1979 (45.48%) - Verified: 900, Failed: 0
+Progress: 1000/1979 (50.53%) - Verified: 1000, Failed: 0
+Progress: 1100/1979 (55.58%) - Verified: 1100, Failed: 0
+Progress: 1200/1979 (60.64%) - Verified: 1200, Failed: 0
+Progress: 1300/1979 (65.69%) - Verified: 1300, Failed: 0
+Progress: 1400/1979 (70.74%) - Verified: 1400, Failed: 0
+Progress: 1500/1979 (75.80%) - Verified: 1500, Failed: 0
+Progress: 1600/1979 (80.85%) - Verified: 1600, Failed: 0
+Progress: 1700/1979 (85.90%) - Verified: 1700, Failed: 0
+Progress: 1800/1979 (90.96%) - Verified: 1800, Failed: 0
+Progress: 1900/1979 (96.01%) - Verified: 1900, Failed: 0
+Progress: 1979/1979 (100.00%) - Verified: 1979, Failed: 0
+
+Final Results for Walkmon:
+  Total tokens: 1979
+  Verified: 1979
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-19T19:43:05.229Z
+Total duration: 5m 35s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 5m37s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: Walkmon, Soneium, 1868, Contract: 0x869a541D89d98e8e78C08DA4cC68AA7412C0710D ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+

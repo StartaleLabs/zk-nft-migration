@@ -1,0 +1,419 @@
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: candyGirl
+Name: CANDY GIRL 1 Year Anniversary x ASTAR zkEVM NFT
+Symbol: CANDYGIRL1YEAR
+Base URI: ipfs://bafybeiggtqqhp37mvwahxiplzjcebbo6i4i3tr6ne3kdp6mkkfvpfhqlqe/
+Base Extension: 
+Max Supply: 300000
+Mint Limit: 3
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0xC6697fb54f2CB19f307DfeA3bf7dAC4F24DAa392
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 12s 
+❯ npx hardhat run scripts/mint-FreeMint.ts
+
+=== Processing project: candyGirl, Soneium, 1868, Contract: 0xC6697fb54f2CB19f307DfeA3bf7dAC4F24DAa392 ===
+
+Starting minting process at: 2025-02-19T14:29:04.627Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 943190467499063000
+
+
+Starting from token ID: 1
+Records to process: 12725 out of 12725
+
+=== Batch Number: 1, start 0x12BbfcD97B792E614eF346061C05f4a98277f9Ac,1 ===
+Progress: 500(12725) === 4%
+Gas Estimation: Units: 19934575, Price: 69593562 wei, Total Cost: 0.001387 ETH
+Transaction hash: 0x9f1b141f4503d0597e84411ea28616dd1bec43503c20bb6995da5dd7a3bef08a
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x37aC1fbf5C0f0b717A760bCB789C032BbE1cDEdB,501 ===
+Progress: 1000(12725) === 8%
+Gas Estimation: Units: 19580435, Price: 70443266 wei, Total Cost: 0.001379 ETH
+Transaction hash: 0xac797c41fbbc78f158c44efec6e48f893fc40199df55c61364a9aa4ad55e9834
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0x104140a0344c0f41c135aAAef9fA7153769dC1ca,1001 ===
+Progress: 1500(12725) === 12%
+Gas Estimation: Units: 19378170, Price: 71282723 wei, Total Cost: 0.001381 ETH
+Transaction hash: 0x6997b6051b61a00298622de6c66c97ade5a1dac2f64da1f94b5ce546e496e4c4
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0x139f2916CF105A494EfA59645BdC0598A5D4C256,1501 ===
+Progress: 2000(12725) === 16%
+Gas Estimation: Units: 19228076, Price: 72006192 wei, Total Cost: 0.001385 ETH
+Transaction hash: 0x77bb3fd7bca190b6057a87432ce6a6547c3072dbc9770c4eda6511ab0c877582
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 5, start 0xd76bB40d855dece19de5D84a6a42a07F2B82fe72,2001 ===
+Progress: 2500(12725) === 20%
+Gas Estimation: Units: 20029966, Price: 72620968 wei, Total Cost: 0.001455 ETH
+Transaction hash: 0x7c7c587f84736d7c4b943b8b4de3b44b24e7923fb872cd36dbe791dd08c2a00c
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 6, start 0x64d4FCC3Bb197E4252BF44a2a9166fFf1faa90B9,2501 ===
+Progress: 3000(12725) === 24%
+Gas Estimation: Units: 19594772, Price: 73261258 wei, Total Cost: 0.001436 ETH
+Transaction hash: 0x4b17d2e63b8f52d92fde647752e74aaf1dba7fdbedc90c848562b733d0315bda
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 7, start 0x120e3e0D76E21db42B2812E45630b248FceE8bf8,3001 ===
+Progress: 3500(12725) === 28%
+Gas Estimation: Units: 19491442, Price: 74093400 wei, Total Cost: 0.001444 ETH
+Transaction hash: 0x8b0fc050b02729b06708eb662d3f553e13547be185c15abf37b9fcf7a48e105e
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 8, start 0x23038B2BeccAe773D9b830dDE765EBDEB0249fBA,3501 ===
+Progress: 4000(12725) === 31%
+Gas Estimation: Units: 18982462, Price: 74713878 wei, Total Cost: 0.001418 ETH
+Transaction hash: 0xca88755699330423caff55d7b3e945ed774eb2da1c00dec61bc7cc775a532137
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 9, start 0xFDDc6DAB64f5f9c0Ed326c073Be8767ba86b26A8,4001 ===
+Progress: 4500(12725) === 35%
+Gas Estimation: Units: 19213239, Price: 75273670 wei, Total Cost: 0.001446 ETH
+Transaction hash: 0xad4c3ca84c3243600edc9543c18b6a1abf4ab193afbb77cbdd5251531326f945
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 10, start 0x4F0De440a4039Be1F2aCC1414b35a2dD7Dda0845,4501 ===
+Progress: 5000(12725) === 39%
+Gas Estimation: Units: 18703707, Price: 76161852 wei, Total Cost: 0.001425 ETH
+Transaction hash: 0x510f8c6c9b1178ba40e498953589c678b4b1602b886677debe1fafb8fceeb0fa
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 11, start 0x63DC84C5516eD20C908bad86fA09e6155D093B47,5001 ===
+Progress: 5500(12725) === 43%
+Gas Estimation: Units: 19109716, Price: 76898594 wei, Total Cost: 0.001470 ETH
+Transaction hash: 0xfef30820c0f4cd592d70f4c9f4e149a72d39f607427317718c2d2fe5df1f04b7
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 12, start 0xCEa245b432c3d276c181e21ad6bC0FeeE6511e5e,5501 ===
+Progress: 6000(12725) === 47%
+Gas Estimation: Units: 17919492, Price: 77491748 wei, Total Cost: 0.001389 ETH
+Transaction hash: 0x3cc0cc9cffaeb7af230e70f2ff5ed4870625f0198b8a52bda4d282eee5249018
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 13, start 0xdA6189F47361D8B3133D8619a8552da1da95F680,6001 ===
+Progress: 6500(12725) === 51%
+Gas Estimation: Units: 17644056, Price: 77977047 wei, Total Cost: 0.001376 ETH
+Transaction hash: 0x2d672a76d9ec5276280b7f4a290c478329f682b9579dc93eb0d5178d25d0daeb
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 14, start 0xf7E55b99c47a68cD269AB9541281c968b7305D2E,6501 ===
+Progress: 7000(12725) === 55%
+Gas Estimation: Units: 17919613, Price: 78763777 wei, Total Cost: 0.001411 ETH
+Transaction hash: 0x3019102ba5bf7f9da8ed0ed98f8ad27166605bc6fad14db44d80e121b90c45cf
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 15, start 0x569d7680F1982b26653c8a44ab25CA924ce065E9,7001 ===
+Progress: 7500(12725) === 59%
+Gas Estimation: Units: 14116560, Price: 79909309 wei, Total Cost: 0.001128 ETH
+Transaction hash: 0x6303665f168fd1ae087de5caf7a85f1ac627983e8b059037f5ed0d07625a88a8
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 16, start 0xA91BE77843a6eb469F5732d359EA2754A98a8144,7501 ===
+Progress: 8000(12725) === 63%
+Gas Estimation: Units: 14846536, Price: 80509252 wei, Total Cost: 0.001195 ETH
+Transaction hash: 0xa7a2871d2da60add1db84a1ed35a4d2435cf68ae88e58b146dd190a06923e432
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 17, start 0x40e2102Da557bB222338C8814513162927834677,8001 ===
+Progress: 8500(12725) === 67%
+Gas Estimation: Units: 14504910, Price: 81201254 wei, Total Cost: 0.001178 ETH
+Transaction hash: 0x5a9c9e57f23afc802d022407af8bd2557beb136fcf22c8e37663932bc8d905ae
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 18, start 0xA91BE77843a6eb469F5732d359EA2754A98a8144,8501 ===
+Progress: 9000(12725) === 71%
+Gas Estimation: Units: 13978840, Price: 81554423 wei, Total Cost: 0.001140 ETH
+Transaction hash: 0x46e830238b3bf0fc537f236fc9050a3fb02b69f8040d3d37a7b739a4bac392fc
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 19, start 0xF740C1D5B28b35adDFAA61Ea4EE4980ddA508D5d,9001 ===
+Progress: 9500(12725) === 75%
+Gas Estimation: Units: 15072749, Price: 82241468 wei, Total Cost: 0.001240 ETH
+Transaction hash: 0x6e8361851614746f3137896d9071811eb5da16d7562c0b70603179d562d38858
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 20, start 0xA91BE77843a6eb469F5732d359EA2754A98a8144,9501 ===
+Progress: 10000(12725) === 79%
+Gas Estimation: Units: 13964160, Price: 83306605 wei, Total Cost: 0.001163 ETH
+Transaction hash: 0x9417b183196c6b3070d3542b69ae8209bd8e18212246c77f0994e439b4f81176
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 21, start 0x569d7680F1982b26653c8a44ab25CA924ce065E9,10001 ===
+Progress: 10500(12725) === 83%
+Gas Estimation: Units: 14313261, Price: 83789401 wei, Total Cost: 0.001199 ETH
+Transaction hash: 0x17b87f5d2e0fef3a19a03fba58bc3b8496cf5793dcf5881b946de9077d22c424
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 22, start 0x569d7680F1982b26653c8a44ab25CA924ce065E9,10501 ===
+Progress: 11000(12725) === 86%
+Gas Estimation: Units: 14810008, Price: 84098098 wei, Total Cost: 0.001245 ETH
+Transaction hash: 0xac26789cceda6ae349306e6a3fe16709e86f2d9e6a379b97665985d244a0b9ff
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 23, start 0xA91BE77843a6eb469F5732d359EA2754A98a8144,11001 ===
+Progress: 11500(12725) === 90%
+Gas Estimation: Units: 16410200, Price: 84844238 wei, Total Cost: 0.001392 ETH
+Transaction hash: 0xdfa9833a2a986204cb525b9b26a6fc92fdb94a2b6223b8baa07f1056057926a2
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 24, start 0xCFBdb68eB6C577F45863755EAB1c65Ce496d235F,11501 ===
+Progress: 12000(12725) === 94%
+Gas Estimation: Units: 18494786, Price: 85191395 wei, Total Cost: 0.001576 ETH
+Transaction hash: 0x816d14fbdade9fa940262c461030d3c60a08616d12ac50c704a08683d1d0d90b
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 25, start 0x4Ce608e087f836601A1170bD958AeD8104665198,12001 ===
+Progress: 12500(12725) === 98%
+Gas Estimation: Units: 16938363, Price: 86158947 wei, Total Cost: 0.001459 ETH
+Transaction hash: 0xe32646b259ca8920357fe1ab12e596bdcaa9e8cdff1b25a2c3b304918755e4e1
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 26, start 0x0bbF9D92d7fED269cD7f3FEFe4Bc4cFD2e26bA51,12501 ===
+Progress: 13000(12725) === 102%
+Gas Estimation: Units: 7838736, Price: 86981019 wei, Total Cost: 0.000682 ETH
+Transaction hash: 0xc2f32c39c25aa62a1636211c6f9eb41a0d7c38af40a8f970e927e99b9af7c71e
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 12725
+Actual total supply: 12725
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-19T14:33:43.591Z
+Total duration: 4m 38s
+
+====================================================================================================
+
+➜ npx hardhat run scripts/verify.ts
+
+
+=== Processing project: candyGirl, Soneium, 1868, Contract: 0xC6697fb54f2CB19f307DfeA3bf7dAC4F24DAa392 ===
+
+Starting verification process at: 2025-02-19T14:34:37.292Z
+Verifying candyGirl...
+Starting verification of 12725 tokens...
+Progress: 100/12725 (0.79%) - Verified: 100, Failed: 0
+Progress: 200/12725 (1.57%) - Verified: 200, Failed: 0
+Progress: 300/12725 (2.36%) - Verified: 300, Failed: 0
+Progress: 400/12725 (3.14%) - Verified: 400, Failed: 0
+Progress: 500/12725 (3.93%) - Verified: 500, Failed: 0
+Progress: 600/12725 (4.72%) - Verified: 600, Failed: 0
+Progress: 700/12725 (5.50%) - Verified: 700, Failed: 0
+Progress: 800/12725 (6.29%) - Verified: 800, Failed: 0
+Progress: 900/12725 (7.07%) - Verified: 900, Failed: 0
+Progress: 1000/12725 (7.86%) - Verified: 1000, Failed: 0
+Progress: 1100/12725 (8.64%) - Verified: 1100, Failed: 0
+Progress: 1200/12725 (9.43%) - Verified: 1200, Failed: 0
+Progress: 1300/12725 (10.22%) - Verified: 1300, Failed: 0
+Progress: 1400/12725 (11.00%) - Verified: 1400, Failed: 0
+Progress: 1500/12725 (11.79%) - Verified: 1500, Failed: 0
+Progress: 1600/12725 (12.57%) - Verified: 1600, Failed: 0
+Progress: 1700/12725 (13.36%) - Verified: 1700, Failed: 0
+Progress: 1800/12725 (14.15%) - Verified: 1800, Failed: 0
+Progress: 1900/12725 (14.93%) - Verified: 1900, Failed: 0
+Progress: 2000/12725 (15.72%) - Verified: 2000, Failed: 0
+Progress: 2100/12725 (16.50%) - Verified: 2100, Failed: 0
+Progress: 2200/12725 (17.29%) - Verified: 2200, Failed: 0
+Progress: 2300/12725 (18.07%) - Verified: 2300, Failed: 0
+Progress: 2400/12725 (18.86%) - Verified: 2400, Failed: 0
+Progress: 2500/12725 (19.65%) - Verified: 2500, Failed: 0
+Progress: 2600/12725 (20.43%) - Verified: 2600, Failed: 0
+Progress: 2700/12725 (21.22%) - Verified: 2700, Failed: 0
+Progress: 2800/12725 (22.00%) - Verified: 2800, Failed: 0
+Progress: 2900/12725 (22.79%) - Verified: 2900, Failed: 0
+Progress: 3000/12725 (23.58%) - Verified: 3000, Failed: 0
+Progress: 3100/12725 (24.36%) - Verified: 3100, Failed: 0
+Progress: 3200/12725 (25.15%) - Verified: 3200, Failed: 0
+Progress: 3300/12725 (25.93%) - Verified: 3300, Failed: 0
+Progress: 3400/12725 (26.72%) - Verified: 3400, Failed: 0
+Progress: 3500/12725 (27.50%) - Verified: 3500, Failed: 0
+Progress: 3600/12725 (28.29%) - Verified: 3600, Failed: 0
+Progress: 3700/12725 (29.08%) - Verified: 3700, Failed: 0
+Progress: 3800/12725 (29.86%) - Verified: 3800, Failed: 0
+Progress: 3900/12725 (30.65%) - Verified: 3900, Failed: 0
+Progress: 4000/12725 (31.43%) - Verified: 4000, Failed: 0
+Progress: 4100/12725 (32.22%) - Verified: 4100, Failed: 0
+Progress: 4200/12725 (33.01%) - Verified: 4200, Failed: 0
+Progress: 4300/12725 (33.79%) - Verified: 4300, Failed: 0
+Progress: 4400/12725 (34.58%) - Verified: 4400, Failed: 0
+Progress: 4500/12725 (35.36%) - Verified: 4500, Failed: 0
+Progress: 4600/12725 (36.15%) - Verified: 4600, Failed: 0
+Progress: 4700/12725 (36.94%) - Verified: 4700, Failed: 0
+Progress: 4800/12725 (37.72%) - Verified: 4800, Failed: 0
+Progress: 4900/12725 (38.51%) - Verified: 4900, Failed: 0
+Progress: 5000/12725 (39.29%) - Verified: 5000, Failed: 0
+Progress: 5100/12725 (40.08%) - Verified: 5100, Failed: 0
+Progress: 5200/12725 (40.86%) - Verified: 5200, Failed: 0
+Progress: 5300/12725 (41.65%) - Verified: 5300, Failed: 0
+Progress: 5400/12725 (42.44%) - Verified: 5400, Failed: 0
+Progress: 5500/12725 (43.22%) - Verified: 5500, Failed: 0
+Progress: 5600/12725 (44.01%) - Verified: 5600, Failed: 0
+Progress: 5700/12725 (44.79%) - Verified: 5700, Failed: 0
+Progress: 5800/12725 (45.58%) - Verified: 5800, Failed: 0
+Progress: 5900/12725 (46.37%) - Verified: 5900, Failed: 0
+Progress: 6000/12725 (47.15%) - Verified: 6000, Failed: 0
+Progress: 6100/12725 (47.94%) - Verified: 6100, Failed: 0
+Progress: 6200/12725 (48.72%) - Verified: 6200, Failed: 0
+Progress: 6300/12725 (49.51%) - Verified: 6300, Failed: 0
+Progress: 6400/12725 (50.29%) - Verified: 6400, Failed: 0
+Progress: 6500/12725 (51.08%) - Verified: 6500, Failed: 0
+Progress: 6600/12725 (51.87%) - Verified: 6600, Failed: 0
+Progress: 6700/12725 (52.65%) - Verified: 6700, Failed: 0
+Progress: 6800/12725 (53.44%) - Verified: 6800, Failed: 0
+Progress: 6900/12725 (54.22%) - Verified: 6900, Failed: 0
+Progress: 7000/12725 (55.01%) - Verified: 7000, Failed: 0
+Progress: 7100/12725 (55.80%) - Verified: 7100, Failed: 0
+Progress: 7200/12725 (56.58%) - Verified: 7200, Failed: 0
+Progress: 7300/12725 (57.37%) - Verified: 7300, Failed: 0
+Progress: 7400/12725 (58.15%) - Verified: 7400, Failed: 0
+Progress: 7500/12725 (58.94%) - Verified: 7500, Failed: 0
+Progress: 7600/12725 (59.72%) - Verified: 7600, Failed: 0
+Progress: 7700/12725 (60.51%) - Verified: 7700, Failed: 0
+Progress: 7800/12725 (61.30%) - Verified: 7800, Failed: 0
+Progress: 7900/12725 (62.08%) - Verified: 7900, Failed: 0
+Progress: 8000/12725 (62.87%) - Verified: 8000, Failed: 0
+Progress: 8100/12725 (63.65%) - Verified: 8100, Failed: 0
+Progress: 8200/12725 (64.44%) - Verified: 8200, Failed: 0
+Progress: 8300/12725 (65.23%) - Verified: 8300, Failed: 0
+Progress: 8400/12725 (66.01%) - Verified: 8400, Failed: 0
+Progress: 8500/12725 (66.80%) - Verified: 8500, Failed: 0
+Progress: 8600/12725 (67.58%) - Verified: 8600, Failed: 0
+Progress: 8700/12725 (68.37%) - Verified: 8700, Failed: 0
+Progress: 8800/12725 (69.16%) - Verified: 8800, Failed: 0
+Progress: 8900/12725 (69.94%) - Verified: 8900, Failed: 0
+Progress: 9000/12725 (70.73%) - Verified: 9000, Failed: 0
+Progress: 9100/12725 (71.51%) - Verified: 9100, Failed: 0
+Progress: 9200/12725 (72.30%) - Verified: 9200, Failed: 0
+Progress: 9300/12725 (73.08%) - Verified: 9300, Failed: 0
+Progress: 9400/12725 (73.87%) - Verified: 9400, Failed: 0
+Progress: 9500/12725 (74.66%) - Verified: 9500, Failed: 0
+Progress: 9600/12725 (75.44%) - Verified: 9600, Failed: 0
+Progress: 9700/12725 (76.23%) - Verified: 9700, Failed: 0
+Progress: 9800/12725 (77.01%) - Verified: 9800, Failed: 0
+Progress: 9900/12725 (77.80%) - Verified: 9900, Failed: 0
+Progress: 10000/12725 (78.59%) - Verified: 10000, Failed: 0
+Progress: 10100/12725 (79.37%) - Verified: 10100, Failed: 0
+Progress: 10200/12725 (80.16%) - Verified: 10200, Failed: 0
+Progress: 10300/12725 (80.94%) - Verified: 10300, Failed: 0
+Progress: 10400/12725 (81.73%) - Verified: 10400, Failed: 0
+Progress: 10500/12725 (82.51%) - Verified: 10500, Failed: 0
+Progress: 10600/12725 (83.30%) - Verified: 10600, Failed: 0
+Progress: 10700/12725 (84.09%) - Verified: 10700, Failed: 0
+Progress: 10800/12725 (84.87%) - Verified: 10800, Failed: 0
+Progress: 10900/12725 (85.66%) - Verified: 10900, Failed: 0
+Progress: 11000/12725 (86.44%) - Verified: 11000, Failed: 0
+Progress: 11100/12725 (87.23%) - Verified: 11100, Failed: 0
+Progress: 11200/12725 (88.02%) - Verified: 11200, Failed: 0
+Progress: 11300/12725 (88.80%) - Verified: 11300, Failed: 0
+Progress: 11400/12725 (89.59%) - Verified: 11400, Failed: 0
+Progress: 11500/12725 (90.37%) - Verified: 11500, Failed: 0
+Progress: 11600/12725 (91.16%) - Verified: 11600, Failed: 0
+Progress: 11700/12725 (91.94%) - Verified: 11700, Failed: 0
+Progress: 11800/12725 (92.73%) - Verified: 11800, Failed: 0
+Progress: 11900/12725 (93.52%) - Verified: 11900, Failed: 0
+Progress: 12000/12725 (94.30%) - Verified: 12000, Failed: 0
+Progress: 12100/12725 (95.09%) - Verified: 12100, Failed: 0
+Progress: 12200/12725 (95.87%) - Verified: 12200, Failed: 0
+Progress: 12300/12725 (96.66%) - Verified: 12300, Failed: 0
+Progress: 12400/12725 (97.45%) - Verified: 12400, Failed: 0
+Progress: 12500/12725 (98.23%) - Verified: 12500, Failed: 0
+Progress: 12600/12725 (99.02%) - Verified: 12600, Failed: 0
+Progress: 12700/12725 (99.80%) - Verified: 12700, Failed: 0
+Progress: 12725/12725 (100.00%) - Verified: 12725, Failed: 0
+
+Final Results for candyGirl:
+  Total tokens: 12725
+  Verified: 12725
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-19T15:11:35.342Z
+Total duration: 36m 58s
+
+====================================================================================================
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED

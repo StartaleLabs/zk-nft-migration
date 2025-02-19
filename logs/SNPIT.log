@@ -1,0 +1,157 @@
+Last login: Wed Feb 19 20:47:12 on ttys006
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 23 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 2s 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: SNPIT
+===================================
+Name: SNPIT Special Commemorative NFT Badge
+Symbol: SNPITCOMBADGE
+Base URI: https://file.snpit.xyz/ZCB/
+Base Extension: .json
+Max Supply: 1000
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: No
+Total Supply: 1000
+Metadata Entries: 1000
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: SNPIT
+Name: SNPIT Special Commemorative NFT Badge
+Symbol: SNPITCOMBADGE
+Base URI: https://file.snpit.xyz/ZCB/
+Base Extension: .json
+Max Supply: 1000
+Mint Limit: 0
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0x2B1aCa0C2a0cB34A309aD109F5F22956B080146C
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 11s 
+❯ npx hardhat run scripts/mint-FreeMint.ts
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Successfully verified contract "contracts/FreeMint.sol:FreeMint" for network soneium:
+  - https://soneium.blockscout.com//address/0x2B1aCa0C2a0cB34A309aD109F5F22956B080146C#code
+
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 11s 
+➜ npx hardhat run scripts/mint-FreeMint.ts
+
+=== Processing project: SNPIT, Soneium, 1868, Contract: 0x2B1aCa0C2a0cB34A309aD109F5F22956B080146C ===
+
+Starting minting process at: 2025-02-19T20:21:23.636Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 866998083758320527
+
+
+Starting from token ID: 1
+Records to process: 1000 out of 1000
+
+=== Batch Number: 1, start 0x97e2086622ca51bcd6ebf0ec86FaA57bBf10A37a,1 ===
+Progress: 500(1000) === 50%
+Gas Estimation: Units: 18852854, Price: 1391565 wei, Total Cost: 0.000026 ETH
+Transaction hash: 0x648fd847b3f4e9b2da5e7cc7407f510059bbc289f119ef0d324b253c1a0bb37d
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x23b67Ed97D3e37a286FAA7573bc74eBe55bcD6e0,501 ===
+Progress: 1000(1000) === 100%
+Gas Estimation: Units: 18997287, Price: 1395014 wei, Total Cost: 0.000027 ETH
+Transaction hash: 0xdd8d1e2057be766d66d4123575306ecdccc8c97a816f523d926295ca42b610cd
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 1000
+Actual total supply: 1000
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-19T20:21:44.183Z
+Total duration: 0m 20s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 25s 
+➜ npx hardhat run scripts/verify.ts       
+
+=== Processing project: SNPIT, Soneium, 1868, Contract: 0x2B1aCa0C2a0cB34A309aD109F5F22956B080146C ===
+
+Starting verification process at: 2025-02-19T20:22:16.580Z
+Verifying SNPIT...
+Starting verification of 1000 tokens...
+Progress: 100/1000 (10.00%) - Verified: 100, Failed: 0
+Progress: 200/1000 (20.00%) - Verified: 200, Failed: 0
+Progress: 300/1000 (30.00%) - Verified: 300, Failed: 0
+Progress: 400/1000 (40.00%) - Verified: 400, Failed: 0
+Progress: 500/1000 (50.00%) - Verified: 500, Failed: 0
+Progress: 600/1000 (60.00%) - Verified: 600, Failed: 0
+Progress: 700/1000 (70.00%) - Verified: 700, Failed: 0
+Progress: 800/1000 (80.00%) - Verified: 800, Failed: 0
+Progress: 900/1000 (90.00%) - Verified: 900, Failed: 0
+Progress: 1000/1000 (100.00%) - Verified: 1000, Failed: 0
+
+Final Results for SNPIT:
+  Total tokens: 1000
+  Verified: 1000
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-19T20:25:04.577Z
+Total duration: 2m 47s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2m49s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: SNPIT, Soneium, 1868, Contract: 0x2B1aCa0C2a0cB34A309aD109F5F22956B080146C ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2s 
+➜ 

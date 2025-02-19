@@ -1,6 +1,8 @@
 {
   "Yoki": {
-    "address": "0x5f2a5818DF3216Aa6ac44632541db8F3EC4e9954",
-    "totalSupply": "448241"
+    "address": "0x5f2a5818DF3216Aa6ac44632541db8F3EC4e9954"
+  },
+  "CityPopTokyo": {
+    "address": "0x5a445B95c9eDc0009F97b3ffCD5E6AF5c4b2a1E4"
   }
 }

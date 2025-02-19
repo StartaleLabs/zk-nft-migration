@@ -6,27 +6,25 @@ import * as path from 'path';
 import { parse } from 'csv-parse/sync';
 import FreeMintArtifact from '../artifacts/contracts/FreeMint.sol/FreeMint.json';
 import { readConfig } from './readConfig';
-import { estimateBulkMintGas, printGasEstimate } from './utils';
+import { estimateBulkMintGas, printGasEstimateShort } from './utils';
 
 const FreeMintABI = FreeMintArtifact.abi;
 
 // Read configuration
-const { projectName, chain, contractAddress } = readConfig();
+const { projectName, chain, contractAddress, privateKey } = readConfig();
 
 // Constants
-const BATCH_SIZE = 200;
-const START_TOKEN_ID = 12201;
+const BATCH_SIZE = 500;
+const START_TOKEN_ID = 1;
 
 function printBatchInfo(
     batchNumber: number,
-    batchSize: number,
     recipients: `0x${string}`[],
-    tokenIds: bigint[]
+    tokenIds: bigint[],
+    totalRecords: number
 ) {
-    console.log('\n=== Batch Information ===');
-    console.log(`Batch Number: ${batchNumber}`);
-    console.log(`Batch Size: ${batchSize}, tokens: ${tokenIds[0].toString()}-${tokenIds[tokenIds.length - 1].toString()}`);
-    console.log(`First Address: ${recipients[0]}-${recipients[recipients.length - 1]}`);
+    console.log(`\n=== Batch Number: ${batchNumber}, start ${recipients[0].toString()},${tokenIds[0].toString()} ===`);
+    console.log(`Progress: ${BATCH_SIZE * batchNumber}(${totalRecords}) === ${Math.round((BATCH_SIZE * batchNumber) / totalRecords * 100)}%`);
 }
 
 async function verifyTotalSupply(
@@ -50,13 +48,14 @@ async function verifyTotalSupply(
         console.log('❌ Total supply mismatch!');
         throw new Error(`Total supply mismatch: expected ${expectedSupply}, got ${totalSupply}`);
     }
+
 }
 
 async function main() {
+    const startTime = new Date();
+    console.log(`\nStarting minting process at: ${startTime.toISOString()}`);
 
     // Setup Viem clients
-    const rawKey = process.env.TESTNET_PRIVATE_KEY;
-    const privateKey = `0x${rawKey}` as `0x${string}`;
     const account = privateKeyToAccount(privateKey);
 
     const publicClient = createPublicClient({
@@ -94,7 +93,7 @@ async function main() {
         const recipients = batch.map((record: any) => record.address as `0x${string}`);
         const tokenIds = batch.map((record: any) => BigInt(record.tokenId));
 
-        printBatchInfo(i / BATCH_SIZE + 1, batch.length, recipients, tokenIds);
+        printBatchInfo(i / BATCH_SIZE + 1, recipients, tokenIds, records.length);
 
         try {
             const gasEstimate = await estimateBulkMintGas(
@@ -105,7 +104,7 @@ async function main() {
                 tokenIds
             );
 
-            printGasEstimate(gasEstimate);
+            printGasEstimateShort(gasEstimate);
 
             const hash = await walletClient.writeContract({
                 address: contractAddress,
@@ -114,7 +113,7 @@ async function main() {
                 args: [recipients, tokenIds],
             });
 
-            console.log(`\nTransaction hash: ${hash}`);
+            console.log(`Transaction hash: ${hash}`);
 
             const receipt = await publicClient.waitForTransactionReceipt({ hash });
             console.log('✅ Batch minted successfully\n');
@@ -133,6 +132,14 @@ async function main() {
 
     // Verify final total supply
     await verifyTotalSupply(publicClient, contractAddress, records.length);
+
+    const endTime = new Date();
+    const duration = (endTime.getTime() - startTime.getTime()) / 1000;
+    const minutes = Math.floor(duration / 60);
+    const seconds = Math.floor(duration % 60);
+  
+    console.log(`\nMinting process completed at: ${endTime.toISOString()}`);
+    console.log(`Total duration: ${minutes}m ${seconds}s`);
 }
 
 main().catch((error) => {

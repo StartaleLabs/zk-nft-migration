@@ -1,0 +1,181 @@
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+PrivateKey set: true
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: CityPopTokyo
+Name: City Pop TOKYO Card
+Symbol: CPTC
+Base URI: https://arweave.net/Eanyr2y8yKFtdzmAhZ-i0pk0-2cVMspqUhM25r8HB80/
+Base Extension: .json
+Max Supply: 10000
+Mint Limit: 0
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0x5a445B95c9eDc0009F97b3ffCD5E6AF5c4b2a1E4
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+Note: it was verified automatically from minato database
+
+==============================================================================
+
+❯ npx hardhat run scripts/mint-FreeMint.ts
+PrivateKey set: true
+PrivateKey set: true
+
+=== Processing project: CityPopTokyo, Soneium, 1868, Contract: 0x5a445B95c9eDc0009F97b3ffCD5E6AF5c4b2a1E4 ===
+
+Starting minting process at: 2025-02-19T11:13:00.999Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 968831371993832578
+
+
+Starting from token ID: 1
+Records to process: 3641 out of 3641
+
+=== Batch Number: 1, start 0xd3dE1f8Aa8e9Cf7133Bb65f4555F8f09cFCB7473,1 ===
+Progress: 500(3641) === 14%
+Gas Estimation: Units: 20647985, Price: 62326542 wei, Total Cost: 0.001287 ETH
+Transaction hash: 0x00caf61b353b6a8d158f3685338c0461be3c4666dd95cb139ea1d51f0b63fa25
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0xFea5FEC74d592a12094A478fAa7884fF1167e90e,501 ===
+Progress: 1000(3641) === 27%
+Gas Estimation: Units: 21159408, Price: 63110676 wei, Total Cost: 0.001335 ETH
+Transaction hash: 0xc780afdcae3a25c7f1e6bd41b919c78255810cd2c225caedf7dc9c8ee2b8833f
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0xA82A2A2e1EE8b337Dca7CF4Bdb28A6556f1575eC,1001 ===
+Progress: 1500(3641) === 41%
+Gas Estimation: Units: 20261618, Price: 63855585 wei, Total Cost: 0.001294 ETH
+Transaction hash: 0x8fb8dc37baffcc1114b8c3c927cdfd16a4b2ec5c2a0109481cb8274a4280b2e0
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0xdE54139d9592128EE73B5F8f72e8d0A8DCAA5191,1501 ===
+Progress: 2000(3641) === 55%
+Gas Estimation: Units: 19451701, Price: 64545925 wei, Total Cost: 0.001256 ETH
+Transaction hash: 0x056556d5860adfa9b8e1a06caebfc68416b51af79683cdaa0c5f78d19714a5e7
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 5, start 0xd3dE1f8Aa8e9Cf7133Bb65f4555F8f09cFCB7473,2001 ===
+Progress: 2500(3641) === 69%
+Gas Estimation: Units: 16141666, Price: 65119492 wei, Total Cost: 0.001051 ETH
+Transaction hash: 0xf66c6868a22ebb0befee0721af3cc8e74f672273310eccd7e6778ae09ec682c9
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 6, start 0x8BD161db2263615583b307a45F6CEFbc4deb277C,2501 ===
+Progress: 3000(3641) === 82%
+Gas Estimation: Units: 16802925, Price: 65772419 wei, Total Cost: 0.001105 ETH
+Transaction hash: 0xa3284a1d6133328cd2a32d565a805a260e61bc2c58a148b9e1244da3ebf7799a
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 7, start 0x373C4963f05b5074e3e0cA2154A9a8b1BC7aCAC4,3001 ===
+Progress: 3500(3641) === 96%
+Gas Estimation: Units: 17931817, Price: 66221886 wei, Total Cost: 0.001187 ETH
+Transaction hash: 0x2b7550a3200a65a67fee45e95f8bc973b0a6e77847599cd456d41f1fddb67d28
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 8, start 0x2E1d8381bcD2Cc15567e5dFbC43840D9c382eE63,3501 ===
+Progress: 4000(3641) === 110%
+Gas Estimation: Units: 4631873, Price: 66761893 wei, Total Cost: 0.000309 ETH
+Transaction hash: 0x1380623aca7eec11abcba792f4a653bc5040ad3ed6129590b7bd9e4b38894997
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 3641
+Actual total supply: 3641
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-19T11:14:29.615Z
+Total duration: 1m 28s
+
+==============================================================================
+
+➜ npx hardhat run scripts/verify.ts                                                    
+PrivateKey set: true
+PrivateKey set: true
+
+=== Processing project: CityPopTokyo, Soneium, 1868, Contract: 0x5a445B95c9eDc0009F97b3ffCD5E6AF5c4b2a1E4 ===
+
+Starting verification process at: 2025-02-19T11:15:52.314Z
+Verifying CityPopTokyo...
+Starting verification of 3641 tokens...
+Progress: 100/3641 (2.75%) - Verified: 100, Failed: 0
+Progress: 200/3641 (5.49%) - Verified: 200, Failed: 0
+Progress: 300/3641 (8.24%) - Verified: 300, Failed: 0
+Progress: 400/3641 (10.99%) - Verified: 400, Failed: 0
+Progress: 500/3641 (13.73%) - Verified: 500, Failed: 0
+Progress: 600/3641 (16.48%) - Verified: 600, Failed: 0
+Progress: 700/3641 (19.23%) - Verified: 700, Failed: 0
+Progress: 800/3641 (21.97%) - Verified: 800, Failed: 0
+Progress: 900/3641 (24.72%) - Verified: 900, Failed: 0
+Progress: 1000/3641 (27.46%) - Verified: 1000, Failed: 0
+Progress: 1100/3641 (30.21%) - Verified: 1100, Failed: 0
+Progress: 1200/3641 (32.96%) - Verified: 1200, Failed: 0
+Progress: 1300/3641 (35.70%) - Verified: 1300, Failed: 0
+Progress: 1400/3641 (38.45%) - Verified: 1400, Failed: 0
+Progress: 1500/3641 (41.20%) - Verified: 1500, Failed: 0
+Progress: 1600/3641 (43.94%) - Verified: 1600, Failed: 0
+Progress: 1700/3641 (46.69%) - Verified: 1700, Failed: 0
+Progress: 1800/3641 (49.44%) - Verified: 1800, Failed: 0
+Progress: 1900/3641 (52.18%) - Verified: 1900, Failed: 0
+Progress: 2000/3641 (54.93%) - Verified: 2000, Failed: 0
+Progress: 2100/3641 (57.68%) - Verified: 2100, Failed: 0
+Progress: 2200/3641 (60.42%) - Verified: 2200, Failed: 0
+Progress: 2300/3641 (63.17%) - Verified: 2300, Failed: 0
+Progress: 2400/3641 (65.92%) - Verified: 2400, Failed: 0
+Progress: 2500/3641 (68.66%) - Verified: 2500, Failed: 0
+Progress: 2600/3641 (71.41%) - Verified: 2600, Failed: 0
+Progress: 2700/3641 (74.16%) - Verified: 2700, Failed: 0
+Progress: 2800/3641 (76.90%) - Verified: 2800, Failed: 0
+Progress: 2900/3641 (79.65%) - Verified: 2900, Failed: 0
+Progress: 3000/3641 (82.39%) - Verified: 3000, Failed: 0
+Progress: 3100/3641 (85.14%) - Verified: 3100, Failed: 0
+Progress: 3200/3641 (87.89%) - Verified: 3200, Failed: 0
+Progress: 3300/3641 (90.63%) - Verified: 3300, Failed: 0
+Progress: 3400/3641 (93.38%) - Verified: 3400, Failed: 0
+Progress: 3500/3641 (96.13%) - Verified: 3500, Failed: 0
+Progress: 3600/3641 (98.87%) - Verified: 3600, Failed: 0
+Progress: 3641/3641 (100.00%) - Verified: 3641, Failed: 0
+
+Final Results for CityPopTokyo:
+  Total tokens: 3641
+  Verified: 3641
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-19T11:26:11.531Z
+Total duration: 10m 19s

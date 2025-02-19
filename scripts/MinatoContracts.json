@@ -4,11 +4,12 @@
     "totalSupply": "1979"
   },
   "candyGirl": {
-    "address": "0x47218E43D1Ef2dc01184B51BBe9Fa3d398023C9B",
-    "totalSupply": "12725"
+    "address": "0x47218E43D1Ef2dc01184B51BBe9Fa3d398023C9B"
   },
   "Yoki": {
-    "address": "0xd7971B8FF3e0f9bE641eCfF8722920B5BA18Da13",
-    "totalSupply": "9879"
+    "address": "0xd7971B8FF3e0f9bE641eCfF8722920B5BA18Da13"
+  },
+  "CityPopTokyo": {
+    "address": "0xCB6b6468Ee19782611C79d485Cb4e019d0eDEfA3"
   }
 }

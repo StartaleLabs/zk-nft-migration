@@ -8,6 +8,7 @@ interface ConfigResult {
   projectName: string;
   chain: Chain;
   contractAddress: `0x${string}`;
+  privateKey: `0x${string}`;
 }
 
 export function readConfig(): ConfigResult {
@@ -27,17 +28,28 @@ export function readConfig(): ConfigResult {
     throw new Error(`Chain not set in .env file`);
   }
   
+  let rawKey;
   if (chainName === 'Sepolia') {
     chain = sepolia;
+    rawKey = process.env.TESTNET_PRIVATE_KEY;
   } else if (chainName === 'Soneium') {
     chain = soneium;
+    rawKey = process.env.MAINNET_PRIVATE_KEY;
   } else if (chainName === 'Minato') {
     chain = soneiumMinato;
+    rawKey = process.env.TESTNET_PRIVATE_KEY;
   } else if (chainName === 'Hardhat') {
     chain = hardhat;
+    rawKey = process.env.TESTNET_PRIVATE_KEY;
   } else {
     throw new Error(`Chain ${chainName} not supported`);
   }
+  
+  // set private key
+  if (rawKey === undefined) {
+    throw new Error(`Private key not set for ${chainName} in .env file`);
+  }
+  const privateKey = `0x${rawKey}` as `0x${string}`;
 
   // Read contract address from JSON file
   const contractsPath = path.join(__dirname, `./${chainName}Contracts.json`);
@@ -57,6 +69,7 @@ export function readConfig(): ConfigResult {
   return {
     projectName,
     chain,
-    contractAddress
+    contractAddress,
+    privateKey
   };
 }

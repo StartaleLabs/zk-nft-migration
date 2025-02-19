@@ -1,0 +1,176 @@
+Last login: Wed Feb 19 20:30:26 on ttys005
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: DenShinSanKa
+===================================
+Name: DenDekaDen DenShinSanKa
+Symbol: DSSK
+Base URI: https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/
+Base Extension: .json
+Max Supply: 756
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: No
+Total Supply: 756
+Metadata Entries: 756
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat clean    
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 23 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 2s 
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: DenShinSanKa
+Name: DenDekaDen DenShinSanKa
+Symbol: DSSK
+Base URI: https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/
+Base Extension: .json
+Max Supply: 756
+Mint Limit: 0
+Start Token ID: 1
+=====================
+
+[ FreeMintModule ] reconciliation failed ⛔
+
+The module contains changes to executed futures:
+
+FreeMintModule#FreeMint:
+ - Argument at index 0 has been changed
+
+Consider modifying your module to remove the inconsistencies with deployed futures.
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 4s 
+❯ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: DenShinSanKa
+Name: DenDekaDen DenShinSanKa
+Symbol: DSSK
+Base URI: https://ipfs.io/ipfs/QmTFqAPK23cgo5XhWAdSutLoCmBrCs3WqcHhdL6ndXE6HX/
+Base Extension: .json
+Max Supply: 756
+Mint Limit: 0
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0xeb6F8BB5E370106aa5f6E7aF6d163340F6186925
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 12s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Successfully verified contract "contracts/FreeMint.sol:FreeMint" for network soneium:
+  - https://soneium.blockscout.com//address/0xeb6F8BB5E370106aa5f6E7aF6d163340F6186925#code
+
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 11s 
+➜ npx hardhat run scripts/mint-FreeMint.ts
+
+=== Processing project: DenShinSanKa, Soneium, 1868, Contract: 0xeb6F8BB5E370106aa5f6E7aF6d163340F6186925 ===
+
+Starting minting process at: 2025-02-19T19:50:32.140Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 867049191874836991
+
+
+Starting from token ID: 1
+Records to process: 756 out of 756
+
+=== Batch Number: 1, start 0x88bA11177FF5E4028F6E24A035234F6fb45aF52A,1 ===
+Progress: 500(756) === 66%
+Gas Estimation: Units: 20525162, Price: 1506972 wei, Total Cost: 0.000031 ETH
+Transaction hash: 0xcb55706df0c6f6866e4e021eaab3bb82809e7645075d51571cbd77c8f0d26d0f
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0xd14F2Eae9FfB0F573f5F75488304ac93A707D462,501 ===
+Progress: 1000(756) === 132%
+Gas Estimation: Units: 9860125, Price: 1513903 wei, Total Cost: 0.000015 ETH
+Transaction hash: 0x44aa8fb9aad89cc9bc6efefedc9f3941d46223c296a30749d6884aa4d143f33c
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 756
+Actual total supply: 756
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-19T19:50:52.610Z
+Total duration: 0m 20s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 26s 
+➜ npx hardhat run scripts/verify.ts                                   
+
+=== Processing project: DenShinSanKa, Soneium, 1868, Contract: 0xeb6F8BB5E370106aa5f6E7aF6d163340F6186925 ===
+
+Starting verification process at: 2025-02-19T19:52:17.521Z
+Verifying DenShinSanKa...
+Starting verification of 756 tokens...
+Progress: 100/756 (13.23%) - Verified: 100, Failed: 0
+Progress: 200/756 (26.46%) - Verified: 200, Failed: 0
+Progress: 300/756 (39.68%) - Verified: 300, Failed: 0
+Progress: 400/756 (52.91%) - Verified: 400, Failed: 0
+Progress: 500/756 (66.14%) - Verified: 500, Failed: 0
+Progress: 600/756 (79.37%) - Verified: 600, Failed: 0
+Progress: 700/756 (92.59%) - Verified: 700, Failed: 0
+Progress: 756/756 (100.00%) - Verified: 756, Failed: 0
+
+Final Results for DenShinSanKa:
+  Total tokens: 756
+  Verified: 756
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-19T19:54:27.684Z
+Total duration: 2m 10s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2m12s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: DenShinSanKa, Soneium, 1868, Contract: 0xeb6F8BB5E370106aa5f6E7aF6d163340F6186925 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2s 
+➜ 

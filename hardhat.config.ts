@@ -5,7 +5,7 @@ import * as dotenv from "dotenv";
 
 dotenv.config({ path: __dirname + "/.env" });
 const MAINNET_PRIVATE_KEY = process.env.MAINNET_PRIVATE_KEY || "";
-console.log("PrivateKey set:", !!MAINNET_PRIVATE_KEY)
+// console.log("PrivateKey set:", !!MAINNET_PRIVATE_KEY)
 
 const config: HardhatUserConfig = {
   solidity: {

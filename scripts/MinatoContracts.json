@@ -11,5 +11,8 @@
   },
   "CityPopTokyo": {
     "address": "0xCB6b6468Ee19782611C79d485Cb4e019d0eDEfA3"
+  },
+  "jrKyushuFree": {
+    "address": "0xE6f4b2Eb218cEE594cE1bf86707E56782D0570F4"
   }
 }

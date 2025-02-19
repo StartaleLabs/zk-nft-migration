@@ -1,0 +1,268 @@
+❯ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+PrivateKey set: true
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: jrKyushuFree
+Name: JR九州NFT
+Symbol: JRKYUSHUNFT
+Base URI: ipfs://bafybeie4brnucfxtphaxpo4x5cna7tivetskvc3dqzoy34qg3km2qurcei/
+Base Extension: 
+Max Supply: 15000
+Mint Limit: 2
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0x3BeC3DEEB05fcee24157f8a90df32A7D1a9895E6
+====================================================================================================
+
+
+❯ npx hardhat run scripts/mint-FreeMint.ts
+PrivateKey set: true
+PrivateKey set: true
+
+=== Processing project: jrKyushuFree, Soneium, 1868, Contract: 0x3BeC3DEEB05fcee24157f8a90df32A7D1a9895E6 ===
+
+Starting minting process at: 2025-02-19T13:50:35.512Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 959970158910711766
+
+
+Starting from token ID: 1
+Records to process: 6967 out of 6967
+
+=== Batch Number: 1, start 0xE14041141fFE5999AE6a8d5836b1166228852322,1 ===
+Progress: 500(6967) === 7%
+Gas Estimation: Units: 21631840, Price: 55384748 wei, Total Cost: 0.001198 ETH
+Transaction hash: 0x7ccc6cc021291b7f598048d5a1774ace34ce06b2f0e076da629c72f608a88a0b
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x2DC4DbE3fF63cb49C577375fA5af3C55c4FC3a2A,501 ===
+Progress: 1000(6967) === 14%
+Gas Estimation: Units: 21253182, Price: 56139762 wei, Total Cost: 0.001193 ETH
+Transaction hash: 0xdeac38cc97eedc4bf3171d1bf44e8ee35ddb3ba8e55d8c25d0ed15c4971af1db
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0x511b2cd9C695F1Bb0C1BD7E891cCBE6FFD8CDD08,1001 ===
+Progress: 1500(6967) === 22%
+Gas Estimation: Units: 22037574, Price: 56929368 wei, Total Cost: 0.001255 ETH
+Transaction hash: 0x1d38061608a81a8fa6e3144c3b3a74191b14fe451998c8fda4c40d7c3a857da6
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0x3C946cE00082f8C7f8FC0790D6052d7c4D4434c3,1501 ===
+Progress: 2000(6967) === 29%
+Gas Estimation: Units: 20841093, Price: 57429170 wei, Total Cost: 0.001197 ETH
+Transaction hash: 0xbc548d281a7008eb49a7afe5057d1d13b6c69bdc0de36403c5a7e872b8e4d248
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 5, start 0xd577b011Ac169e7e1502DdB4D2586D1E2A144a70,2001 ===
+Progress: 2500(6967) === 36%
+Gas Estimation: Units: 21109519, Price: 57893254 wei, Total Cost: 0.001222 ETH
+Transaction hash: 0x28793d16531d65caac81556118f3b01a9a6eb6c609eee30ebd39e6708c980bf6
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 6, start 0x8801E5adbeB81DB83179EF19034c81271BDae3b0,2501 ===
+Progress: 3000(6967) === 43%
+Gas Estimation: Units: 21028835, Price: 58597232 wei, Total Cost: 0.001232 ETH
+Transaction hash: 0x90114f4090bbb65a9be955ea2877646020df35d5b6ac01dc1fd2eaa99aefb223
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 7, start 0xDBe1002eB0e073CE848Eff273401abB539e93E7E,3001 ===
+Progress: 3500(6967) === 50%
+Gas Estimation: Units: 20945068, Price: 59475598 wei, Total Cost: 0.001246 ETH
+Transaction hash: 0xc16f6255d03260cc62923347aad01aaf94fa3bda505b6ac5ab50e85c47fd050b
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 8, start 0xB14749BCD7f58F60a92FBf51804c3DC9f360FBac,3501 ===
+Progress: 4000(6967) === 57%
+Gas Estimation: Units: 20524041, Price: 60011139 wei, Total Cost: 0.001232 ETH
+Transaction hash: 0xb20f08d11158684ea98e37e8596364f8125a18b8c7ad4b0b754d7e2750c50ba1
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 9, start 0x0Cac11a7D29aB8C87D8fedB9Cc736146f4fe8E84,4001 ===
+Progress: 4500(6967) === 65%
+Gas Estimation: Units: 18554573, Price: 60635873 wei, Total Cost: 0.001125 ETH
+Transaction hash: 0xcd1449eeb17fb6f74c137139451eb330ce43aec5069066e868f4b019f1ae3675
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 10, start 0xA91BE77843a6eb469F5732d359EA2754A98a8144,4501 ===
+Progress: 5000(6967) === 72%
+Gas Estimation: Units: 19383226, Price: 61488244 wei, Total Cost: 0.001192 ETH
+Transaction hash: 0xf644313825e0c7e703b0ebb0178a3ac7b3dd82a1e1ac4739bdb1ce7983940a6e
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 11, start 0xce71974d1A1B6B4b6fb8AA86Bb105b42b054F8a3,5001 ===
+Progress: 5500(6967) === 79%
+Gas Estimation: Units: 20228985, Price: 62391536 wei, Total Cost: 0.001262 ETH
+Transaction hash: 0x3fb8908bdfb39532a7b0b76ff5257d939525bc6f9f910689e6f1262ce49aaa74
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 12, start 0xd838362e00CAbb26fe3891d8ACaC5275531d9d98,5501 ===
+Progress: 6000(6967) === 86%
+Gas Estimation: Units: 16391110, Price: 63135563 wei, Total Cost: 0.001035 ETH
+Transaction hash: 0x40d4cce3e0d94adbcd02388f95703c46bb46a5436cf89dd10a81e4dcccb631df
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 13, start 0x016F17DC99e1fCbE08e6bF62A42f632340611b36,6001 ===
+Progress: 6500(6967) === 93%
+Gas Estimation: Units: 19412775, Price: 63966813 wei, Total Cost: 0.001242 ETH
+Transaction hash: 0xd872eb5ce8a3d8e0521c418a0f5023b46ba931c5a65449f7efe7adb657bde526
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 14, start 0x569d7680F1982b26653c8a44ab25CA924ce065E9,6501 ===
+Progress: 7000(6967) === 100%
+Gas Estimation: Units: 17653207, Price: 64368737 wei, Total Cost: 0.001136 ETH
+Transaction hash: 0xcf924dc871345ab3e46bcd6c2560f43c21bf76477f49d49aed5486d05509fb42
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 6967
+Actual total supply: 6967
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-19T13:53:11.516Z
+Total duration: 2m 36s
+
+====================================================================================================
+
+
+➜ npx hardhat run scripts/verify.ts
+PrivateKey set: true
+PrivateKey set: true
+
+=== Processing project: jrKyushuFree, Soneium, 1868, Contract: 0x3BeC3DEEB05fcee24157f8a90df32A7D1a9895E6 ===
+
+Starting verification process at: 2025-02-19T13:55:30.496Z
+Verifying jrKyushuFree...
+Starting verification of 6967 tokens...
+Progress: 100/6967 (1.44%) - Verified: 100, Failed: 0
+Progress: 200/6967 (2.87%) - Verified: 200, Failed: 0
+Progress: 300/6967 (4.31%) - Verified: 300, Failed: 0
+Progress: 400/6967 (5.74%) - Verified: 400, Failed: 0
+Progress: 500/6967 (7.18%) - Verified: 500, Failed: 0
+Progress: 600/6967 (8.61%) - Verified: 600, Failed: 0
+Progress: 700/6967 (10.05%) - Verified: 700, Failed: 0
+Progress: 800/6967 (11.48%) - Verified: 800, Failed: 0
+Progress: 900/6967 (12.92%) - Verified: 900, Failed: 0
+Progress: 1000/6967 (14.35%) - Verified: 1000, Failed: 0
+Progress: 1100/6967 (15.79%) - Verified: 1100, Failed: 0
+Progress: 1200/6967 (17.22%) - Verified: 1200, Failed: 0
+Progress: 1300/6967 (18.66%) - Verified: 1300, Failed: 0
+Progress: 1400/6967 (20.09%) - Verified: 1400, Failed: 0
+Progress: 1500/6967 (21.53%) - Verified: 1500, Failed: 0
+Progress: 1600/6967 (22.97%) - Verified: 1600, Failed: 0
+Progress: 1700/6967 (24.40%) - Verified: 1700, Failed: 0
+Progress: 1800/6967 (25.84%) - Verified: 1800, Failed: 0
+Progress: 1900/6967 (27.27%) - Verified: 1900, Failed: 0
+Progress: 2000/6967 (28.71%) - Verified: 2000, Failed: 0
+Progress: 2100/6967 (30.14%) - Verified: 2100, Failed: 0
+Progress: 2200/6967 (31.58%) - Verified: 2200, Failed: 0
+Progress: 2300/6967 (33.01%) - Verified: 2300, Failed: 0
+Progress: 2400/6967 (34.45%) - Verified: 2400, Failed: 0
+Progress: 2500/6967 (35.88%) - Verified: 2500, Failed: 0
+Progress: 2600/6967 (37.32%) - Verified: 2600, Failed: 0
+Progress: 2700/6967 (38.75%) - Verified: 2700, Failed: 0
+Progress: 2800/6967 (40.19%) - Verified: 2800, Failed: 0
+Progress: 2900/6967 (41.62%) - Verified: 2900, Failed: 0
+Progress: 3000/6967 (43.06%) - Verified: 3000, Failed: 0
+Progress: 3100/6967 (44.50%) - Verified: 3100, Failed: 0
+Progress: 3200/6967 (45.93%) - Verified: 3200, Failed: 0
+Progress: 3300/6967 (47.37%) - Verified: 3300, Failed: 0
+Progress: 3400/6967 (48.80%) - Verified: 3400, Failed: 0
+Progress: 3500/6967 (50.24%) - Verified: 3500, Failed: 0
+Progress: 3600/6967 (51.67%) - Verified: 3600, Failed: 0
+Progress: 3700/6967 (53.11%) - Verified: 3700, Failed: 0
+Progress: 3800/6967 (54.54%) - Verified: 3800, Failed: 0
+Progress: 3900/6967 (55.98%) - Verified: 3900, Failed: 0
+Progress: 4000/6967 (57.41%) - Verified: 4000, Failed: 0
+Progress: 4100/6967 (58.85%) - Verified: 4100, Failed: 0
+Progress: 4200/6967 (60.28%) - Verified: 4200, Failed: 0
+Progress: 4300/6967 (61.72%) - Verified: 4300, Failed: 0
+Progress: 4400/6967 (63.15%) - Verified: 4400, Failed: 0
+Progress: 4500/6967 (64.59%) - Verified: 4500, Failed: 0
+Progress: 4600/6967 (66.03%) - Verified: 4600, Failed: 0
+Progress: 4700/6967 (67.46%) - Verified: 4700, Failed: 0
+Progress: 4800/6967 (68.90%) - Verified: 4800, Failed: 0
+Progress: 4900/6967 (70.33%) - Verified: 4900, Failed: 0
+Progress: 5000/6967 (71.77%) - Verified: 5000, Failed: 0
+Progress: 5100/6967 (73.20%) - Verified: 5100, Failed: 0
+Progress: 5200/6967 (74.64%) - Verified: 5200, Failed: 0
+Progress: 5300/6967 (76.07%) - Verified: 5300, Failed: 0
+Progress: 5400/6967 (77.51%) - Verified: 5400, Failed: 0
+Progress: 5500/6967 (78.94%) - Verified: 5500, Failed: 0
+Progress: 5600/6967 (80.38%) - Verified: 5600, Failed: 0
+Progress: 5700/6967 (81.81%) - Verified: 5700, Failed: 0
+Progress: 5800/6967 (83.25%) - Verified: 5800, Failed: 0
+Progress: 5900/6967 (84.68%) - Verified: 5900, Failed: 0
+Progress: 6000/6967 (86.12%) - Verified: 6000, Failed: 0
+Progress: 6100/6967 (87.56%) - Verified: 6100, Failed: 0
+Progress: 6200/6967 (88.99%) - Verified: 6200, Failed: 0
+Progress: 6300/6967 (90.43%) - Verified: 6300, Failed: 0
+Progress: 6400/6967 (91.86%) - Verified: 6400, Failed: 0
+Progress: 6500/6967 (93.30%) - Verified: 6500, Failed: 0
+Progress: 6600/6967 (94.73%) - Verified: 6600, Failed: 0
+Progress: 6700/6967 (96.17%) - Verified: 6700, Failed: 0
+Progress: 6800/6967 (97.60%) - Verified: 6800, Failed: 0
+Progress: 6900/6967 (99.04%) - Verified: 6900, Failed: 0
+Progress: 6967/6967 (100.00%) - Verified: 6967, Failed: 0
+
+Final Results for jrKyushuFree:
+  Total tokens: 6967
+  Verified: 6967
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-19T14:15:36.190Z
+Total duration: 20m 5s
+
+
+==============================================================
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: jrKyushuFree, Soneium, 1868, Contract: 0x3BeC3DEEB05fcee24157f8a90df32A7D1a9895E6 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED

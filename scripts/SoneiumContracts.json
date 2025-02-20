@@ -40,5 +40,20 @@
   },
   "jrKyushuPaid": {
     "address": "0xda81413f6834041b344118887fb153B9e1b3AFbf"
+  },
+  "On1force": {
+    "address": "0x67001BEB3359D5fAEf44eC2480f6BB5D86f97D6C"
+  },
+  "onigiriman": {
+    "address": "0x6406b4BB1338393AAe6A0C6c5c732718BA074CDE"
+  },
+  "sashimi": {
+    "address": "0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7"
+  },
+  "SkyLabs": {
+    "address": "0x15EF159e69F1539A943D8f167C7cCc72dE305C3e"
+  },
+  "UZNo": {
+    "address": "0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A"
   }
 }

@@ -1,0 +1,184 @@
+Last login: Thu Feb 20 18:58:35 on ttys014
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ nprm -fr ignition/deployments 
+zsh: command not found: nprm
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+❯ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 24 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: sashimi
+===================================
+Name: Sashimic Japan
+Symbol: SJ
+Base URI: https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/
+Base Extension: .json
+Max Supply: 20000
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 451
+Metadata Entries: 451
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/PaidMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: sashimi
+Name: Sashimic Japan
+Symbol: SJ
+Base URI: https://arweave.net/tURMvOZpBhwmCkAyha-MyzkvTuPss1KKtUmxHzMoC6I/
+Base Extension: .json
+Max Supply: 20000
+Mint Limit: 0
+Start Token ID: 1
+Price: 15000000000000000 (0.015)
+=====================
+
+
+Hardhat Ignition 🚀
+
+Deploying [ PaidMintModule ]
+
+Batch #1
+  Executed PaidMintModule#PaidMint
+
+[ PaidMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+PaidMintModule#PaidMint - 0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7
+
+Verifying deployed contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 11s 
+❯ 
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Successfully verified contract "contracts/PaidMint.sol:PaidMint" for network soneium:
+  - https://soneium.blockscout.com/address/0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7#code
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 13s 
+➜ npx hardhat run scripts/mint-721.ts
+
+=== Processing project: sashimi, Soneium, 1868, Contract: 0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7 ===
+
+Starting minting process at: 2025-02-20T18:20:54.478Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 852982818920336309
+
+
+Starting from token ID: 1
+Records to process: 451 out of 451
+
+=== Batch Number: 1, start 0xE14041141fFE5999AE6a8d5836b1166228852322,1 ===
+Progress: 500(451) === 111%
+Gas Estimation: Units: 20543731, Price: 6671156 wei, Total Cost: 0.000137 ETH
+Transaction hash: 0x1d861a199506c774723273b3ab8968a1702bdae8d7aaa8c00048681783989e85
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 451
+Actual total supply: 451
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T18:21:03.949Z
+Total duration: 0m 9s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 14s 
+➜ npx hardhat run scripts/verify.ts
+
+=== Processing project: sashimi, Soneium, 1868, Contract: 0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7 ===
+
+Starting verification process at: 2025-02-20T18:21:27.881Z
+Verifying sashimi...
+Starting verification of 451 tokens...
+Progress: 100/451 (22.17%) - Verified: 100, Failed: 0
+Progress: 200/451 (44.35%) - Verified: 200, Failed: 0
+Progress: 300/451 (66.52%) - Verified: 300, Failed: 0
+Progress: 400/451 (88.69%) - Verified: 400, Failed: 0
+Progress: 451/451 (100.00%) - Verified: 451, Failed: 0
+
+Final Results for sashimi:
+  Total tokens: 451
+  Verified: 451
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T18:22:43.826Z
+Total duration: 1m 15s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 1m17s 
+➜ npx hardhat run scripts/arePaused.ts
+
+=== Processing project: sashimi, Soneium, 1868, Contract: 0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+sashimi             : 🟢 active
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 2s 
+➜ npx hardhat run scripts/arePaused.ts
+
+=== Processing project: sashimi, Soneium, 1868, Contract: 0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+sashimi             : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 2s 
+➜ 

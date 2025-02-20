@@ -1,0 +1,160 @@
+Last login: Thu Feb 20 18:05:08 on ttys014
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 24 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 3s 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: On1force
+===================================
+Name: 0N1 FORCE 0N1 Doll and F0N1 Doll Collectible
+Symbol: 0N1FORCE
+Base URI: ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/
+Base Extension: 
+Max Supply: 777
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 777
+Metadata Entries: 777
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/PaidMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: On1force
+Name: 0N1 FORCE 0N1 Doll and F0N1 Doll Collectible
+Symbol: 0N1FORCE
+Base URI: ipfs://bafybeidfqqn46e6rs5eqbmil47t3l4axvltqaf5g6u3rxnoiqlnugqk3qq/
+Base Extension: 
+Max Supply: 777
+Mint Limit: 0
+Start Token ID: 1
+Price: 17770000000000002 (0.01777)
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ PaidMintModule ]
+
+Batch #1
+  Executed PaidMintModule#PaidMint
+
+[ PaidMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+PaidMintModule#PaidMint - 0x67001BEB3359D5fAEf44eC2480f6BB5D86f97D6C
+
+Verifying deployed contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 14s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Successfully verified contract "contracts/PaidMint.sol:PaidMint" for network soneium:
+  - https://soneium.blockscout.com/address/0x67001BEB3359D5fAEf44eC2480f6BB5D86f97D6C#code
+
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 11s 
+➜ npx hardhat run scripts/mint-721.ts
+
+=== Processing project: On1force, Soneium, 1868, Contract: 0x67001BEB3359D5fAEf44eC2480f6BB5D86f97D6C ===
+
+Starting minting process at: 2025-02-20T17:50:03.506Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 853518497138576378
+
+
+Starting from token ID: 1
+Records to process: 777 out of 777
+
+=== Batch Number: 1, start 0x12BbfcD97B792E614eF346061C05f4a98277f9Ac,1 ===
+Progress: 500(777) === 64%
+Gas Estimation: Units: 20795527, Price: 8699860 wei, Total Cost: 0.000181 ETH
+Transaction hash: 0x59556a02b96210955ed75239ea03017f626428fc4d7e5c25505ae79b3bd9cda9
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x3CF5A54cA70e2be24B481e142B4fC265656adEed,501 ===
+Progress: 1000(777) === 129%
+Gas Estimation: Units: 10367759, Price: 8818882 wei, Total Cost: 0.000091 ETH
+Transaction hash: 0xf1287a47a2afb07ab38d98609c332eb884e37d8563466f96354eb3b9f3c69be3
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 777
+Actual total supply: 777
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T17:50:23.990Z
+Total duration: 0m 20s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 26s 
+➜ npx hardhat run scripts/verify.ts  
+
+=== Processing project: On1force, Soneium, 1868, Contract: 0x67001BEB3359D5fAEf44eC2480f6BB5D86f97D6C ===
+
+Starting verification process at: 2025-02-20T17:50:36.155Z
+Verifying On1force...
+Starting verification of 777 tokens...
+Progress: 100/777 (12.87%) - Verified: 100, Failed: 0
+Progress: 200/777 (25.74%) - Verified: 200, Failed: 0
+Progress: 300/777 (38.61%) - Verified: 300, Failed: 0
+Progress: 400/777 (51.48%) - Verified: 400, Failed: 0
+Progress: 500/777 (64.35%) - Verified: 500, Failed: 0
+Progress: 600/777 (77.22%) - Verified: 600, Failed: 0
+Progress: 700/777 (90.09%) - Verified: 700, Failed: 0
+Progress: 777/777 (100.00%) - Verified: 777, Failed: 0
+
+Final Results for On1force:
+  Total tokens: 777
+  Verified: 777
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T17:52:45.281Z
+Total duration: 2m 9s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2m10s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: On1force, Soneium, 1868, Contract: 0x67001BEB3359D5fAEf44eC2480f6BB5D86f97D6C ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2s 
+➜ 

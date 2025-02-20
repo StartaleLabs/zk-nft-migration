@@ -15,23 +15,6 @@
     "price": "0.003",
     "baseUriExtension": ""
   },
-  "Kamui": {
-    "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
-    "totalSupply": "706",
-    "metadataEntries": "706",
-    "metadataExtension": ".json",
-    "name": "Kamui",
-    "symbol": "KAMUI",
-    "contractType": "ERC721",
-    "startsWithToken0": true,
-    "baseURI": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/",
-    "contractName": "Kamui",
-    "maxSupply": "1000",
-    "mintLimit": "0",
-    "isMintPayable": true,
-    "price": "0.001",
-    "baseUriExtension": ".json"
-  },
   "On1force": {
     "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
     "totalSupply": "777",
@@ -126,6 +109,23 @@
     "mintLimit": "0",
     "isMintPayable": true,
     "price": "0.003",
+    "baseUriExtension": ".json"
+  },
+  "Kamui": {
+    "address": "0xcCb3F56AA3e998ee6A662EA822DCd3238C002933",
+    "totalSupply": "706",
+    "metadataEntries": "706",
+    "metadataExtension": ".json",
+    "name": "Kamui",
+    "symbol": "KAMUI",
+    "contractType": "ERC721",
+    "startsWithToken0": true,
+    "baseURI": "https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/",
+    "contractName": "Kamui",
+    "maxSupply": "1000",
+    "mintLimit": "0",
+    "isMintPayable": true,
+    "price": "0.001",
     "baseUriExtension": ".json"
   }
 }

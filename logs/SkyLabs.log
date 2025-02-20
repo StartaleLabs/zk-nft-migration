@@ -1,0 +1,157 @@
+Last login: Thu Feb 20 19:14:40 on ttys016
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat compile
+
+Compiled 24 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+
+===================================
+Project: SkyLabs
+===================================
+Name: SkyLabs NFT
+Symbol: SKY
+Base URI: https://raw.githubusercontent.com/niklabh/sample-nft/main/
+Base Extension: 
+Max Supply: 10000
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 192
+Metadata Entries: 192
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/PaidMint.ts --network soneium --verify
+
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: SkyLabs
+Name: SkyLabs NFT
+Symbol: SKY
+Base URI: https://raw.githubusercontent.com/niklabh/sample-nft/main/
+Base Extension: 
+Max Supply: 10000
+Mint Limit: 0
+Start Token ID: 1
+Price: 10000000000000000 (0.01)
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ PaidMintModule ]
+
+Batch #1
+  Executed PaidMintModule#PaidMint
+
+[ PaidMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+PaidMintModule#PaidMint - 0x15EF159e69F1539A943D8f167C7cCc72dE305C3e
+
+Verifying deployed contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 9s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Successfully verified contract "contracts/PaidMint.sol:PaidMint" for network soneium:
+  - https://soneium.blockscout.com/address/0x15EF159e69F1539A943D8f167C7cCc72dE305C3e#code
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 10s 
+➜ npx hardhat run scripts/mint-721.ts
+
+
+=== Processing project: SkyLabs, Soneium, 1868, Contract: 0x15EF159e69F1539A943D8f167C7cCc72dE305C3e ===
+
+Starting minting process at: 2025-02-20T18:28:36.696Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 852792182734828288
+
+
+Starting from token ID: 1
+Records to process: 192 out of 192
+
+=== Batch Number: 1, start 0xeD5b95342A7A4d2735F7D86c3D2c50cb03837446,1 ===
+Progress: 500(192) === 260%
+Gas Estimation: Units: 8458037, Price: 5980413 wei, Total Cost: 0.000051 ETH
+Transaction hash: 0x73c4b0afb2d9240090f741e9e27cda28e84001573eab7533ef1f0cdbcc3fb43a
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 192
+Actual total supply: 192
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T18:28:45.969Z
+Total duration: 0m 9s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 14s 
+➜ npx hardhat run scripts/verify.ts
+
+
+=== Processing project: SkyLabs, Soneium, 1868, Contract: 0x15EF159e69F1539A943D8f167C7cCc72dE305C3e ===
+
+Starting verification process at: 2025-02-20T18:28:56.013Z
+Verifying SkyLabs...
+Starting verification of 192 tokens...
+Progress: 100/192 (52.08%) - Verified: 100, Failed: 0
+Progress: 192/192 (100.00%) - Verified: 192, Failed: 0
+
+Final Results for SkyLabs:
+  Total tokens: 192
+  Verified: 192
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T18:29:28.160Z
+Total duration: 0m 32s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 33s 
+➜ npx hardhat run scripts/arePaused.ts
+
+=== Processing project: SkyLabs, Soneium, 1868, Contract: 0x15EF159e69F1539A943D8f167C7cCc72dE305C3e ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+sashimi             : 🔴 PAUSED
+SkyLabs             : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ 

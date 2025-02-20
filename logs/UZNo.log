@@ -1,0 +1,196 @@
+Last login: Thu Feb 20 19:25:44 on ttys017
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+
+===================================
+Project: UZNo
+===================================
+Name: UZNo Leonarudo Collection
+Symbol: ULC
+Base URI: https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/
+Base Extension: .json
+Max Supply: 40000
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 2050
+Metadata Entries: 2050
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/PaidMint.ts --network soneium --verify
+
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: UZNo
+Name: UZNo Leonarudo Collection
+Symbol: ULC
+Base URI: https://arweave.net/0ea-JIfg7AVOsJRypJbtLxFqPSdfFCZkNYUOTQEttB0/
+Base Extension: .json
+Max Supply: 40000
+Mint Limit: 0
+Start Token ID: 1
+Price: 1000000000000000 (0.001)
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ PaidMintModule ]
+
+Batch #1
+  Executed PaidMintModule#PaidMint
+
+[ PaidMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+PaidMintModule#PaidMint - 0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A
+
+Verifying deployed contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 10s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Successfully verified contract "contracts/PaidMint.sol:PaidMint" for network soneium:
+  - https://soneium.blockscout.com/address/0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A#code
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 14s 
+➜ npx hardhat run scripts/mint-721.ts
+
+
+=== Processing project: UZNo, Soneium, 1868, Contract: 0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A ===
+
+Starting minting process at: 2025-02-20T18:33:31.466Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 852701327896270899
+
+
+Starting from token ID: 1
+Records to process: 2050 out of 2050
+
+=== Batch Number: 1, start 0x12BbfcD97B792E614eF346061C05f4a98277f9Ac,1 ===
+Progress: 500(2050) === 24%
+Gas Estimation: Units: 21656402, Price: 5757081 wei, Total Cost: 0.000125 ETH
+Transaction hash: 0xa7c7c3188f6b547c09980d9daf07ea75e5d71266b66d244c449a0ae37197699f
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x37b2a3F8Eb9a41B72F4410e679035D0B28F95185,501 ===
+Progress: 1000(2050) === 49%
+Gas Estimation: Units: 17470704, Price: 5818781 wei, Total Cost: 0.000102 ETH
+Transaction hash: 0x2f50f071683a594a2beb65cf4603708fe67639b90ae459a77011cbc130df4a13
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0x129DdF9c3958D5ae6A5A61a40110bEB8D7ca8E7d,1001 ===
+Progress: 1500(2050) === 73%
+Gas Estimation: Units: 22056839, Price: 5841411 wei, Total Cost: 0.000129 ETH
+Transaction hash: 0x62ea2dd8a4a05b367e0204fd43475725dc82e3f199323e4a92db3dd920df53e9
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0x6B423815f899A9496C64148d96247d194bA2600e,1501 ===
+Progress: 2000(2050) === 98%
+Gas Estimation: Units: 20856588, Price: 5910309 wei, Total Cost: 0.000123 ETH
+Transaction hash: 0x22ec8ea402706726b892b2120cb4fc55ca11accb86e50f47af98d05782ebc2ec
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 5, start 0x12a38c1754051093FBa9AB98326EC46Fd0e9547e,2001 ===
+Progress: 2500(2050) === 122%
+Gas Estimation: Units: 2321608, Price: 5983617 wei, Total Cost: 0.000014 ETH
+Transaction hash: 0x98756414096bcd28281802adc243c76d8cb476de42cf221848f7d3c83b89c30e
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 2050
+Actual total supply: 2050
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T18:34:25.232Z
+Total duration: 0m 53s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 59s 
+➜ npx hardhat run scripts/verify.ts
+
+
+=== Processing project: UZNo, Soneium, 1868, Contract: 0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A ===
+
+Starting verification process at: 2025-02-20T18:34:32.836Z
+Verifying UZNo...
+Starting verification of 2050 tokens...
+Progress: 100/2050 (4.88%) - Verified: 100, Failed: 0
+Progress: 200/2050 (9.76%) - Verified: 200, Failed: 0
+Progress: 300/2050 (14.63%) - Verified: 300, Failed: 0
+Progress: 400/2050 (19.51%) - Verified: 400, Failed: 0
+Progress: 500/2050 (24.39%) - Verified: 500, Failed: 0
+Progress: 600/2050 (29.27%) - Verified: 600, Failed: 0
+Progress: 700/2050 (34.15%) - Verified: 700, Failed: 0
+Progress: 800/2050 (39.02%) - Verified: 800, Failed: 0
+Progress: 900/2050 (43.90%) - Verified: 900, Failed: 0
+Progress: 1000/2050 (48.78%) - Verified: 1000, Failed: 0
+Progress: 1100/2050 (53.66%) - Verified: 1100, Failed: 0
+Progress: 1200/2050 (58.54%) - Verified: 1200, Failed: 0
+Progress: 1300/2050 (63.41%) - Verified: 1300, Failed: 0
+Progress: 1400/2050 (68.29%) - Verified: 1400, Failed: 0
+Progress: 1500/2050 (73.17%) - Verified: 1500, Failed: 0
+Progress: 1600/2050 (78.05%) - Verified: 1600, Failed: 0
+Progress: 1700/2050 (82.93%) - Verified: 1700, Failed: 0
+Progress: 1800/2050 (87.80%) - Verified: 1800, Failed: 0
+Progress: 1900/2050 (92.68%) - Verified: 1900, Failed: 0
+Progress: 2000/2050 (97.56%) - Verified: 2000, Failed: 0
+Progress: 2050/2050 (100.00%) - Verified: 2050, Failed: 0
+
+Final Results for UZNo:
+  Total tokens: 2050
+  Verified: 2050
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T18:40:22.996Z
+Total duration: 5m 50s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 5m51s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: UZNo, Soneium, 1868, Contract: 0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+sashimi             : 🔴 PAUSED
+SkyLabs             : 🔴 PAUSED
+UZNo                : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ 

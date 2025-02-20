@@ -1,0 +1,155 @@
+Last login: Thu Feb 20 18:46:08 on ttys016
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 24 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 2s 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: onigiriman
+===================================
+Name: Memory of a Japanese landscapes and girs
+Symbol: MJLG
+Base URI: https://arweave.net/88gyvXsmQTee9dDZPZIrH9M72NJ4CPuKoR084klKQcs/
+Base Extension: .json
+Max Supply: 20000
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 390
+Metadata Entries: 390
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/PaidMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: onigiriman
+Name: Memory of a Japanese landscapes and girs
+Symbol: MJLG
+Base URI: https://arweave.net/88gyvXsmQTee9dDZPZIrH9M72NJ4CPuKoR084klKQcs/
+Base Extension: .json
+Max Supply: 20000
+Mint Limit: 0
+Start Token ID: 1
+Price: 15000000000000000 (0.015)
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ PaidMintModule ]
+
+Batch #1
+  Executed PaidMintModule#PaidMint
+
+[ PaidMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+PaidMintModule#PaidMint - 0x6406b4BB1338393AAe6A0C6c5c732718BA074CDE
+
+Verifying deployed contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 10s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Successfully verified contract "contracts/PaidMint.sol:PaidMint" for network soneium:
+  - https://soneium.blockscout.com/address/0x6406b4BB1338393AAe6A0C6c5c732718BA074CDE#code
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 11s 
+➜ npx hardhat run scripts/mint-721.ts
+
+=== Processing project: onigiriman, Soneium, 1868, Contract: 0x6406b4BB1338393AAe6A0C6c5c732718BA074CDE ===
+
+Starting minting process at: 2025-02-20T18:06:39.873Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 853170403396812470
+
+
+Starting from token ID: 1
+Records to process: 390 out of 390
+
+=== Batch Number: 1, start 0xeD5b95342A7A4d2735F7D86c3D2c50cb03837446,1 ===
+Progress: 500(390) === 128%
+Gas Estimation: Units: 17782191, Price: 7732249 wei, Total Cost: 0.000137 ETH
+Transaction hash: 0x30405cf70f96b98f7e77e83f8b333df7c273b3655705635a4cf2ca60a920eebd
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 390
+Actual total supply: 390
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T18:06:49.179Z
+Total duration: 0m 9s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 14s 
+➜ npx hardhat run scripts/verify     
+Error HH601: Script scripts/verify doesn't exist.
+
+For more info go to https://hardhat.org/HH601 or run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+❯ npx hardhat run scripts/verify.ts
+
+=== Processing project: onigiriman, Soneium, 1868, Contract: 0x6406b4BB1338393AAe6A0C6c5c732718BA074CDE ===
+
+Starting verification process at: 2025-02-20T18:07:16.196Z
+Verifying onigiriman...
+Starting verification of 390 tokens...
+Progress: 100/390 (25.64%) - Verified: 100, Failed: 0
+Progress: 200/390 (51.28%) - Verified: 200, Failed: 0
+Progress: 300/390 (76.92%) - Verified: 300, Failed: 0
+Progress: 390/390 (100.00%) - Verified: 390, Failed: 0
+
+Final Results for onigiriman:
+  Total tokens: 390
+  Verified: 390
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T18:08:23.123Z
+Total duration: 1m 6s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 1m8s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: onigiriman, Soneium, 1868, Contract: 0x6406b4BB1338393AAe6A0C6c5c732718BA074CDE ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 2s 
+➜ 

@@ -1,4 +1,4 @@
-// npx hardhat run scripts/mint-FreeMint.ts
+// npx hardhat run scripts/mint-721.ts
 import { createPublicClient, createWalletClient, http, PublicClient } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
 import * as fs from 'fs';

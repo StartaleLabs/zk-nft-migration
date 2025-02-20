@@ -32,22 +32,6 @@
     "price": "0.001",
     "baseUriExtension": ".json"
   },
-  "mazda": {
-    "address": "0x8Ade4c707630d2F3aB0e36cde5c81dA8F56fE0b6",
-    "totalSupply": "2088",
-    "metadataEntries": "2088",
-    "name": "Meta-Mazda",
-    "symbol": "METAMAZDA",
-    "contractType": "ERC721",
-    "startsWithToken0": false,
-    "baseURI": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/",
-    "contractName": "MetaMazda",
-    "maxSupply": "22222",
-    "mintLimit": "0",
-    "isMintPayable": true,
-    "price": "0.003",
-    "baseUriExtension": ".json"
-  },
   "On1force": {
     "address": "0xE14cdbf9363bBA009Bc3B50ADF67927509C04AF1",
     "totalSupply": "777",
@@ -126,6 +110,22 @@
     "mintLimit": "0",
     "isMintPayable": true,
     "price": "0.001",
+    "baseUriExtension": ".json"
+  },
+  "mazda": {
+    "address": "0x8Ade4c707630d2F3aB0e36cde5c81dA8F56fE0b6",
+    "totalSupply": "2088",
+    "metadataEntries": "2088",
+    "name": "Meta-Mazda",
+    "symbol": "METAMAZDA",
+    "contractType": "ERC721",
+    "startsWithToken0": false,
+    "baseURI": "https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/",
+    "contractName": "MetaMazda",
+    "maxSupply": "22222",
+    "mintLimit": "0",
+    "isMintPayable": true,
+    "price": "0.003",
     "baseUriExtension": ".json"
   }
 }

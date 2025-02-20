@@ -45,7 +45,7 @@ const config: HardhatUserConfig = {
     },
     osaki: {
       accounts: [process.env.TESTNET_PRIVATE_KEY || ""],
-      url: "https://rpc.stg.hypersonicl2.com/",
+      url: "https://rpc.stg.hypersonicl2.com",
       chainId: 200200,
     },
     opinuL1: {
@@ -57,12 +57,12 @@ const config: HardhatUserConfig = {
     },
     minato: {
       accounts: [process.env.TESTNET_PRIVATE_KEY || ""],
-      url: "http://rpc.minato.soneium.org/",
+      url: "http://rpc.minato.soneium.org",
       chainId: 1946,
     },
     soneium: {
       accounts: [process.env.MAINNET_PRIVATE_KEY || ""],
-      url: "https://rpc.soneium.org/",
+      url: "https://rpc.soneium.org",
       chainId: 1868,
     },
     mainnet: {
@@ -91,7 +91,7 @@ const config: HardhatUserConfig = {
         chainId: 1946,
         urls: {
           apiURL: "https://soneium-minato.blockscout.com/api",
-          browserURL: "https://soneium-minato.blockscout.com/",
+          browserURL: "https://soneium-minato.blockscout.com",
         },
       },
       {
@@ -99,7 +99,7 @@ const config: HardhatUserConfig = {
         chainId: 1868,
         urls: {
           apiURL: "https://soneium.blockscout.com/api",
-          browserURL: "https://soneium.blockscout.com/",
+          browserURL: "https://soneium.blockscout.com",
         },
       },
       {
@@ -107,7 +107,7 @@ const config: HardhatUserConfig = {
         chainId: 3776,
         urls: {
           apiURL: "https://astar-zkevm.explorer.startale.com/api",
-          browserURL: "https://astar-zkevm.explorer.startale.com/",
+          browserURL: "https://astar-zkevm.explorer.startale.com",
         },
       },
       {
@@ -115,7 +115,7 @@ const config: HardhatUserConfig = {
         chainId: 11155111,
         urls: {
           apiURL: "https://eth-sepolia.blockscout.com/api",
-          browserURL: "https:/eth-sepolia.blockscout.com/",
+          browserURL: "https:/eth-sepolia.blockscout.com",
         },
       }
     ],

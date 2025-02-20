@@ -1,0 +1,165 @@
+Last login: Thu Feb 20 17:10:42 on ttys006
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: jrKyushuPaid
+===================================
+Name: JR九州NFT
+Symbol: JRKYUSHUNFT
+Base URI: ipfs://bafybeig67mjo5x2m6gc5a3tb7d2fbbfw4lvpycabhg6rp2eivgaksdhnka/
+Base Extension: 
+Max Supply: 5000
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 1126
+Metadata Entries: 1126
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/PaidMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: jrKyushuPaid
+Name: JR九州NFT
+Symbol: JRKYUSHUNFT
+Base URI: ipfs://bafybeig67mjo5x2m6gc5a3tb7d2fbbfw4lvpycabhg6rp2eivgaksdhnka/
+Base Extension: 
+Max Supply: 5000
+Mint Limit: 0
+Start Token ID: 1
+Price: 3000000000000000 (0.003)
+=====================
+
+
+Hardhat Ignition 🚀
+
+Deploying [ PaidMintModule ]
+
+Batch #1
+  Executed PaidMintModule#PaidMint
+
+[ PaidMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+PaidMintModule#PaidMint - 0xda81413f6834041b344118887fb153B9e1b3AFbf
+
+Verifying deployed contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 12s 
+❯ 
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Successfully verified contract "contracts/PaidMint.sol:PaidMint" for network soneium:
+  - https://soneium.blockscout.com//address/0xda81413f6834041b344118887fb153B9e1b3AFbf#code
+
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 13s 
+➜ npx hardhat run scripts/mint-721.ts
+
+=== Processing project: jrKyushuPaid, Soneium, 1868, Contract: 0xda81413f6834041b344118887fb153B9e1b3AFbf ===
+
+Starting minting process at: 2025-02-20T17:09:39.362Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 854438294849762382
+
+
+Starting from token ID: 1
+Records to process: 1126 out of 1126
+
+=== Batch Number: 1, start 0xD3Ae3C8E2700eEc76A9823d6a4bC4e11b22Adb28,1 ===
+Progress: 500(1126) === 44%
+Gas Estimation: Units: 21361206, Price: 14548251 wei, Total Cost: 0.000311 ETH
+Transaction hash: 0x224c7df57d5bea1205b76982ba0dece067ca3af28fdfff50d35dfa59cf944cce
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0xB7abf73D250806524a40C353e6e46d95F1196817,501 ===
+Progress: 1000(1126) === 89%
+Gas Estimation: Units: 23813555, Price: 14661515 wei, Total Cost: 0.000349 ETH
+Transaction hash: 0x8137177368352e9e5e86149656cd553f981f70b1dbaaa0b9ade149379c535c82
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0x8A66466eFA23b9FB7C5FEeE538c1AdA8a716D764,1001 ===
+Progress: 1500(1126) === 133%
+Gas Estimation: Units: 6231616, Price: 14908283 wei, Total Cost: 0.000093 ETH
+Transaction hash: 0xf0de57004da3df9217b82c9b31eae698f81c0b3f744029a493aeecc51f1cbf94
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 1126
+Actual total supply: 1126
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T17:10:10.668Z
+Total duration: 0m 31s
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 36s 
+➜ npx hardhat run scripts/verify.ts  
+
+=== Processing project: jrKyushuPaid, Soneium, 1868, Contract: 0xda81413f6834041b344118887fb153B9e1b3AFbf ===
+
+Starting verification process at: 2025-02-20T17:11:13.192Z
+Verifying jrKyushuPaid...
+Starting verification of 1126 tokens...
+Progress: 100/1126 (8.88%) - Verified: 100, Failed: 0
+Progress: 200/1126 (17.76%) - Verified: 200, Failed: 0
+Progress: 300/1126 (26.64%) - Verified: 300, Failed: 0
+Progress: 400/1126 (35.52%) - Verified: 400, Failed: 0
+Progress: 500/1126 (44.40%) - Verified: 500, Failed: 0
+Progress: 600/1126 (53.29%) - Verified: 600, Failed: 0
+Progress: 700/1126 (62.17%) - Verified: 700, Failed: 0
+Progress: 800/1126 (71.05%) - Verified: 800, Failed: 0
+Progress: 900/1126 (79.93%) - Verified: 900, Failed: 0
+Progress: 1000/1126 (88.81%) - Verified: 1000, Failed: 0
+Progress: 1100/1126 (97.69%) - Verified: 1100, Failed: 0
+Progress: 1126/1126 (100.00%) - Verified: 1126, Failed: 0
+
+Final Results for jrKyushuPaid:
+  Total tokens: 1126
+  Verified: 1126
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T17:14:21.230Z
+Total duration: 3m 8s
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 3m9s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: jrKyushuPaid, Soneium, 1868, Contract: 0xda81413f6834041b344118887fb153B9e1b3AFbf ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ 

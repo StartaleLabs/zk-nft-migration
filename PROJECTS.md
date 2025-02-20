@@ -5,6 +5,14 @@ To claim contract ownership, you must verify control of the account that will se
 1. Ensure your account has sufficient ETH on Minato. If needed, transfer ETH from Sepolia using any [faucet](https://docs.soneium.org/docs/builders/tools/faucets).
 2. From your designated owner account, send a small amount of ETH to the Minato verification address: `0x911d82b108804A18022d0A2621B2Fc608DEF6FCA` 
 3. Provide the Minato transaction hash to Tatsu to complete the ownership transfer.
+   
+
+## Contract Activation Required
+Your contract is currently paused. Before users can transfer tokens or engage in trading, you must activate the contract by:
+1. Connect using the contract owner's account
+2. Call the unpause() function
+
+Until this activation is completed, all token transfers will remain restricted.
 
 
 ## Marketplace registration
@@ -20,17 +28,12 @@ Here is a list of marketplaces that you can register your project to:
 - [Posse](https://posse.market/home)
 - [fractalvisions.io](https://fractalvisions.io/)
 
-## Contract Activation Required
-Your contract is currently paused. Before users can transfer tokens or engage in trading, you must activate the contract by:
-1. Connect using the contract owner's account
-2. Call the unpause() function
-
-Until this activation is completed, all token transfers will remain restricted.
 
 ## Continue minting
 If your collection is not minted out, you can continue minting but first you will need to call `unpause()` function in the contract. This function can be called by the owner of the contract. 
 
 If your contract is payable, you can also change the price of minting by calling setPrice(uint256 _price) function in the contract.
+
 
 ## Other configurable contract parameters
 * mintLimit - limits number of tokens that can be minted per wallet

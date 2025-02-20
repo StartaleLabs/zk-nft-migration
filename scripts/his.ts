@@ -1,5 +1,5 @@
 import { createPublicClient, http, Address } from 'viem';
-import { astarZkEVM } from 'viem/chains';
+import { astarZkEVM, soneiumMinato } from 'viem/chains';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -16,11 +16,11 @@ const ABI = [
 
 async function main() {
   const client = createPublicClient({
-    chain: astarZkEVM,
+    chain: soneiumMinato,
     transport: http(),
   });
 
-  const contractAddress = "0x35e9f0E783140dad67e2A3502362805c7E65Ed69" as Address;
+  const contractAddress = "0x16CD1a4a4394D84BaA82a4e96ad2f9d4E9E670AE" as Address;
   let sum = 0n;
 
   // Read and parse CSV file

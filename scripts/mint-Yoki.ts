@@ -15,7 +15,7 @@ const { projectName, chain, contractAddress, privateKey } = readConfig();
 
 // Constants
 const BATCH_SIZE = 500;
-const START_TOKEN_ID = 0;
+const START_TOKEN_ID = 1;
 const WAIT_BEFORE_NEXT_BATCH = 2000;
 
 function printBatchInfo(

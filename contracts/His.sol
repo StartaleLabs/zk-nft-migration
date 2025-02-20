@@ -1,8 +1,19 @@
+// SPDX-License-Identifier: MIT
 
-// File: @openzeppelin/contracts/access/IAccessControl.sol
+/**
 
+$$\   $$\ $$$$$$\  $$$$$$\  
+$$ |  $$ |\_$$  _|$$  __$$\ 
+$$ |  $$ |  $$ |  $$ /  \__|
+$$$$$$$$ |  $$ |  \$$$$$$\  
+$$  __$$ |  $$ |   \____$$\ 
+$$ |  $$ |  $$ |  $$\   $$ |
+$$ |  $$ |$$$$$$\ \$$$$$$  |
+\__|  \__|\______| \______/ 
+     
+ */
 
-// OpenZeppelin Contracts (last updated v5.0.0) (access/IAccessControl.sol)
+// OpenZeppelin Contracts (last updated v5.0.0)
 
 pragma solidity ^0.8.20;
 
@@ -2124,22 +2135,34 @@ contract HISVTUBERNFT is ERC1155, Ownable, AccessControl {
 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     uint256 public mintPrice = 0.00065 ether;
-    string public baseURI = "";
-    string public name = "";
-    string public symbol = "";
-    uint256 public MAX_MINT_PER_TYPE = 2000;
+    string public baseURI = "ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/";
+    string public name = unicode"ご当地vtuber図鑑　コラボNFT";
+    string public symbol = "HISVTUBERNFT";
+    uint256 public maxMintPerType = 2000;
     uint256 public totalSupply = 0;
     mapping (uint256 => uint256) public counter;
+    bool public paused = false;
 
-    constructor(address initialOwner, string memory _name, string memory _symbol) ERC1155("HISVTUBERNFT") Ownable(initialOwner) {
-        _grantRole(DEFAULT_ADMIN_ROLE, initialOwner);
-        _grantRole(MINTER_ROLE, initialOwner);
-        name = _name;
-        symbol = _symbol;
+    constructor() ERC1155(baseURI) Ownable(msg.sender) {
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(MINTER_ROLE, msg.sender);
+
     }
 
     function setURI (string memory _uri) public onlyOwner {
         baseURI = _uri;
+    }
+
+    function setMintPrice (uint256 _price) public onlyOwner {
+        mintPrice = _price;
+    }
+
+    function setMaxMintPerType (uint256 _limit) public onlyOwner {
+        maxMintPerType = _limit;
+    }
+
+    function setPaused (bool _paused) public onlyOwner {
+        paused = _paused;
     }
 
     function uri(uint256 id) public view override(ERC1155) virtual returns (string memory) {
@@ -2149,15 +2172,38 @@ contract HISVTUBERNFT is ERC1155, Ownable, AccessControl {
     function mint(address account, uint256 amount)
         public
         payable
-        onlyRole(MINTER_ROLE)
     {
+        require(!paused, "PAUSED");
         require(msg.value >= mintPrice * amount, "AMOUNT LESS THAN MINT PRICE");
         uint256 id = generateRandomNumber(amount);
-        require (counter[id] + amount <= MAX_MINT_PER_TYPE, "TOKEN ID MAXXED OUT");
+        require (counter[id] + amount <= maxMintPerType, "TOKEN ID MAXXED OUT");
         bytes memory data = "0x";
         _mint(account, id, amount, data);
         counter[id] += amount;
         totalSupply += amount;
+    }
+
+    function bulkMint(
+        address[] calldata recipients,
+        uint256[] calldata tokenIds,
+        uint256[] calldata amounts
+    ) public onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(
+            recipients.length > 0 && tokenIds.length > 0 && amounts.length > 0,
+            "Empty arrays not allowed"
+        );
+        require(
+            recipients.length == tokenIds.length && tokenIds.length == amounts.length,
+            "Recipients, tokenIds, amount length mismatch"
+        );
+
+        // Update state before external interactions
+        for (uint256 i = 0; i < tokenIds.length; i++) {
+            _mint(recipients[i], tokenIds[i], amounts[i], "");
+            totalSupply += amounts[i];
+            counter[tokenIds[i]] += amounts[i];
+            
+        }
     }
 
     function generateRandomNumber(uint256 amount) public view returns (uint) {
@@ -2175,7 +2221,7 @@ contract HISVTUBERNFT is ERC1155, Ownable, AccessControl {
             if (randomNumber >= 25) {
                 randomNumber++;
             }
-            if (counter[randomNumber] + amount < MAX_MINT_PER_TYPE) {
+            if (counter[randomNumber] + amount < maxMintPerType) {
                 break;
             }
             randomNumber++;

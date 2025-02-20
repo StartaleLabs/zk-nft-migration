@@ -1,28 +1,43 @@
 import { createPublicClient, http, getContract, Address } from 'viem';
-import { soneium } from 'viem/chains';
+import { soneium, soneiumMinato } from 'viem/chains';
 import fs from 'fs';
 import path from 'path';
 import { wait } from '../zk_snapshot_scripts/src/utils';
 import { readConfig } from './readConfig';
 
-const erc1155Abi = [
+// Use minimal ERC1155 ABI for balanceOf
+const ERC1155_ABI = [
   {
-    inputs: [
-      { name: "account", type: "address" },
-      { name: "id", type: "uint256" }
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
     ],
-    name: "balanceOf",
-    outputs: [{ name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  }
-];
+    "name": "balanceOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+] as const;
 
 // Read configuration
 const { projectName, chain, contractAddress } = readConfig();
 
 const client = createPublicClient({
-  chain: soneium,
+  chain: chain,
   transport: http()
 });
 
@@ -40,7 +55,7 @@ async function verifyInstances(projectName: string, contractAddress: Address) {
 
   const contract = getContract({
     address: contractAddress,
-    abi: erc1155Abi,
+    abi: ERC1155_ABI,
     client
   });
 

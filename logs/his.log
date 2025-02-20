@@ -1,0 +1,135 @@
+Last login: Thu Feb 20 15:09:49 on ttys017
+
+zk-nft-migration on  his [📝🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: his
+===================================
+Name: ご当地vtuber図鑑　コラボNFT
+Symbol: HISVTUBERNFT
+Base URI: ipfs://bafybeihwyg2dppzufqlmnxdux4khe4o54khe6twqpjoxp3ncth4r3hgpra/
+Base Extension: 
+Max Supply: 2000
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 2708
+Metadata Entries: 2708
+
+
+
+
+
+=====================================================
+    PROJECT His is deployed with Remix
+    https://soneium.blockscout.com/token/0x99ef89F52d4566d0b6d8Fb61750Ef15175b9f2d0
+=====================================================
+
+
+
+
+zk-nft-migration on  his [📝🌱] via  v20.16.0 
+❯ npx hardhat run scripts/mint-Yoki.ts               
+
+=== Processing project: his, Soneium, 1868, Contract: 0x99ef89F52d4566d0b6d8Fb61750Ef15175b9f2d0 ===
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 857848858420966179
+
+
+Starting from token ID: 1
+Records to process: 2469 out of 2469
+Total tokens to mint: 2708
+Batch size: 500
+
+
+=== Batch Number: 1, start 0xe7415BC47E5325196FF4b33793Ef56e53991C2E3,1 ===
+Progress: 500(2469) === 20%
+Tokens in batch: 541, Total minted so far: 541/2708
+Gas Estimation: Units: 15183036, Price: 25907120 wei, Total Cost: 0.000393 ETH
+Transaction hash: 0x71bcf02a2b688bbb50fd8ee2f00f4a3c638612363d4d2a38d3fc71d50a0b4559
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 2, start 0x7f3cd5Da54b7Aaf26Fe2EeCDbc394BD4d05B5226,9 ===
+Progress: 1000(2469) === 41%
+Tokens in batch: 545, Total minted so far: 1086/2708
+Gas Estimation: Units: 15145536, Price: 26224683 wei, Total Cost: 0.000397 ETH
+Transaction hash: 0xa8dc47e33ccfc2b94d96305529e4ec6d9dc1e2a1b679b75af490dc3599af56d5
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 3, start 0x960BbbfF5a99317cF2C1370426Eafd3C54cF0Be1,19 ===
+Progress: 1500(2469) === 61%
+Tokens in batch: 547, Total minted so far: 1633/2708
+Gas Estimation: Units: 15180633, Price: 26461819 wei, Total Cost: 0.000402 ETH
+Transaction hash: 0x1fb99337af0e6850e2c44a2365a9b80f377756fa265e9810b5aebe806d2e2f71
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 4, start 0x7406b16A29cddA932AAD191ec5Fa06625A8Ef8c9,29 ===
+Progress: 2000(2469) === 81%
+Tokens in batch: 560, Total minted so far: 2193/2708
+Gas Estimation: Units: 15146153, Price: 26776022 wei, Total Cost: 0.000406 ETH
+Transaction hash: 0xda4dbded5bf35b2eb885123e9c454f5e0fd7aaa64dbe5d0d015a2f17f5a57b05
+✅ Batch minted successfully
+
+Waiting before next batch...
+
+=== Batch Number: 5, start 0x25d4EF82374e02E8f94535efa18F224e1e715E6a,37 ===
+Progress: 2500(2469) === 101%
+Tokens in batch: 515, Total minted so far: 2708/2708
+Gas Estimation: Units: 14202421, Price: 27032985 wei, Total Cost: 0.000384 ETH
+Transaction hash: 0x0c7bb114480c48040e515e04a11706247c04f6c51cd4dfda6cc7e140da80a4cf
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 2708
+Actual total supply: 2708
+✅ Total supply matches expected value
+
+zk-nft-migration on  his [📝🌱] via  v20.16.0 took 1m 
+➜ npx hardhat run scripts/verify1155.ts 
+
+=== Processing project: his, Soneium, 1868, Contract: 0x99ef89F52d4566d0b6d8Fb61750Ef15175b9f2d0 ===
+
+Starting verification process at: 2025-02-20T15:06:28.837Z
+[his] Progress: 500/2469 (500 verified, 0 failed)
+[his] Progress: 1000/2469 (1000 verified, 0 failed)
+[his] Progress: 1500/2469 (1500 verified, 0 failed)
+[his] Progress: 2000/2469 (2000 verified, 0 failed)
+Results for his with total 2468:
+  Verified: 2469
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T15:09:09.092Z
+Total duration: 2m 40s
+
+zk-nft-migration on  his [📝🌱] via  v20.16.0 took 2m42s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: his, Soneium, 1868, Contract: 0x99ef89F52d4566d0b6d8Fb61750Ef15175b9f2d0 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+
+zk-nft-migration on  his [📝🌱] via  v20.16.0 took 2s 
+➜ 

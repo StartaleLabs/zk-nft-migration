@@ -11,11 +11,11 @@ import { estimateBulkMintGas1155, printGasEstimateShort, Yoki1155ABI } from './u
 const FreeMintABI = FreeMintArtifact.abi;
 
 // Read configuration
-const { projectName, chain, contractAddress } = readConfig();
+const { projectName, chain, contractAddress, privateKey } = readConfig();
 
 // Constants
 const BATCH_SIZE = 500;
-const START_TOKEN_ID = 0;
+const START_TOKEN_ID = 1;
 const WAIT_BEFORE_NEXT_BATCH = 2000;
 
 function printBatchInfo(
@@ -54,8 +54,6 @@ async function verifyTotalSupply(
 async function main() {
 
     // Setup Viem clients
-    const rawKey = process.env.MAINNET_PRIVATE_KEY;
-    const privateKey = `0x${rawKey}` as `0x${string}`;
     const account = privateKeyToAccount(privateKey);
 
     const publicClient = createPublicClient({

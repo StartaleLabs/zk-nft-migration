@@ -1,0 +1,178 @@
+Last login: Thu Feb 20 07:45:25 on ttys005
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 23 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 3s 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: DEKSA
+===================================
+Name: Pandawa
+Symbol: PNDW
+Base URI: ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/
+Base Extension: .json
+Max Supply: 999
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: No
+Total Supply: 999
+Metadata Entries: 999
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: DEKSA
+Name: Pandawa
+Symbol: PNDW
+Base URI: ipfs://QmTJiFEWsyCaWKi2ZJDsyczJuUBuUcQzKvQeJQPCJQrwon/
+Base Extension: .json
+Max Supply: 999
+Mint Limit: 0
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0x74Aec0a265e4463306bE2073444B58a084829Fb3
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 12s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Successfully verified contract "contracts/FreeMint.sol:FreeMint" for network soneium:
+  - https://soneium.blockscout.com//address/0x74Aec0a265e4463306bE2073444B58a084829Fb3#code
+
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 11s 
+➜ npx hardhat run scripts/mint-FreeMint.ts
+
+=== Processing project: DEKSA, Soneium, 1868, Contract: 0x74Aec0a265e4463306bE2073444B58a084829Fb3 ===
+
+Starting minting process at: 2025-02-20T07:36:45.147Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 860106619806795278
+
+
+Starting from token ID: 1
+Records to process: 999 out of 999
+
+=== Batch Number: 1, start 0x1f5C620B3Dc1934Ef3A80B632B4E70BcD8D31F9f,1 ===
+Progress: 500(999) === 50%
+Gas Estimation: Units: 15040959, Price: 65959880 wei, Total Cost: 0.000992 ETH
+Transaction hash: 0x4303b8762c4ce9fd5e4ba37c7fe89654b879dc6abdc21943bb3762d5282f2da7
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x41bCf897E4782d3F0305735B1DF1bE6130D92682,501 ===
+Progress: 1000(999) === 100%
+Gas Estimation: Units: 14773795, Price: 67437062 wei, Total Cost: 0.000996 ETH
+Transaction hash: 0xae73b78ec96a879f8cd8793d69f76e5860541704cc12c500e6dc76c50ae9dd62
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 999
+Actual total supply: 999
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T07:37:06.028Z
+Total duration: 0m 20s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 26s 
+➜ npx hardhat run scripts/verify.ts       
+
+=== Processing project: DEKSA, Soneium, 1868, Contract: 0x74Aec0a265e4463306bE2073444B58a084829Fb3 ===
+
+Starting verification process at: 2025-02-20T07:37:20.200Z
+Verifying DEKSA...
+Starting verification of 999 tokens...
+Progress: 100/999 (10.01%) - Verified: 100, Failed: 0
+Progress: 200/999 (20.02%) - Verified: 200, Failed: 0
+Progress: 300/999 (30.03%) - Verified: 300, Failed: 0
+Progress: 400/999 (40.04%) - Verified: 400, Failed: 0
+Progress: 500/999 (50.05%) - Verified: 500, Failed: 0
+Progress: 600/999 (60.06%) - Verified: 600, Failed: 0
+Progress: 700/999 (70.07%) - Verified: 700, Failed: 0
+Progress: 800/999 (80.08%) - Verified: 800, Failed: 0
+Progress: 900/999 (90.09%) - Verified: 900, Failed: 0
+Progress: 999/999 (100.00%) - Verified: 999, Failed: 0
+
+Final Results for DEKSA:
+  Total tokens: 999
+  Verified: 999
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T07:40:20.519Z
+Total duration: 3m 0s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 3m2s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: DEKSA, Soneium, 1868, Contract: 0x74Aec0a265e4463306bE2073444B58a084829Fb3 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🟢 active
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2s 
+➜ npx hardhat run scripts/arePaused.ts
+
+=== Processing project: DEKSA, Soneium, 1868, Contract: 0x74Aec0a265e4463306bE2073444B58a084829Fb3 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2s 
+➜ 

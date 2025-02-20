@@ -25,5 +25,11 @@
   },
   "DoF": {
     "address": "0x9Cc2956b1E4ae3f99E874935080Deee330fD41ca"
+  },
+  "origamiKokyo": {
+    "address": "0xE5931B44B973cbd2439f68ADC2EbF207bE7b73c6"
+  },
+  "DenDekaDen": {
+    "address": "0x736c2d6e63587B16C357ddcCebdb4926D35D03cC"
   }
 }

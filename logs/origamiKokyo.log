@@ -1,0 +1,208 @@
+Last login: Wed Feb 19 22:45:51 on ttys006
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: origamiKokyo
+===================================
+Name: ORIGAMI NFT by KOKYO NFT
+Symbol: ORIGAMI
+Base URI: ipfs://bafybeiekt2dawpzewttjdv6m3xhwjv4mvh64l7n2u3iin7txri4nmr5564/
+Base Extension: 
+Max Supply: 3000
+Mint Limit: 1
+Start Token ID: 1
+Is Payable: No
+Total Supply: 3000
+Metadata Entries: 3000
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat clean                         
+
+zk-nft-migration on  main [🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 23 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 2s 
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: origamiKokyo
+Name: ORIGAMI NFT by KOKYO NFT
+Symbol: ORIGAMI
+Base URI: ipfs://bafybeiekt2dawpzewttjdv6m3xhwjv4mvh64l7n2u3iin7txri4nmr5564/
+Base Extension: 
+Max Supply: 3000
+Mint Limit: 1
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0xE5931B44B973cbd2439f68ADC2EbF207bE7b73c6
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [🌱] via  v20.16.0 took 13s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Successfully verified contract "contracts/FreeMint.sol:FreeMint" for network soneium:
+  - https://soneium.blockscout.com//address/0xE5931B44B973cbd2439f68ADC2EbF207bE7b73c6#code
+
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 10s 
+➜  npx hardhat run scripts/mint-FreeMint.ts
+
+=== Processing project: origamiKokyo, Soneium, 1868, Contract: 0xE5931B44B973cbd2439f68ADC2EbF207bE7b73c6 ===
+
+Starting minting process at: 2025-02-20T06:27:36.497Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 866866290872486959
+
+
+Starting from token ID: 1
+Records to process: 3000 out of 3000
+
+=== Batch Number: 1, start 0xE14041141fFE5999AE6a8d5836b1166228852322,1 ===
+Progress: 500(3000) === 17%
+Gas Estimation: Units: 25566739, Price: 3691093 wei, Total Cost: 0.000094 ETH
+Transaction hash: 0x65b41a2cc31d4ef5c90000d310d45eccde8f508a0928761a7d6c82059793c25b
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0xD204875BAD61Fc15A75529B80d855b126Bf13971,501 ===
+Progress: 1000(3000) === 33%
+Gas Estimation: Units: 25692695, Price: 3772051 wei, Total Cost: 0.000097 ETH
+Transaction hash: 0x043c95df7d57ea25bddacf126e483329ccdb2008be82d3a6b603c9d55012ccf5
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0xD5A2Bb794347147eA80517680141Bac9f13a3e6B,1001 ===
+Progress: 1500(3000) === 50%
+Gas Estimation: Units: 25692792, Price: 3851593 wei, Total Cost: 0.000099 ETH
+Transaction hash: 0x4ac4f3c3b213ac7a112b90df4285a75460e4feda39499bd08f540ffe9dbd5c4c
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0xE7C318BcCbD3842af450dF5BDB4AA28479662c0A,1501 ===
+Progress: 2000(3000) === 67%
+Gas Estimation: Units: 25616563, Price: 3936201 wei, Total Cost: 0.000101 ETH
+Transaction hash: 0x5904e8db835f32ddef830cd1cfe07df81de12e148e649f157db83319d48cccc1
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 5, start 0x6Bcd52E71CA6f099269af27EC199C05eFC6Aa48d,2001 ===
+Progress: 2500(3000) === 83%
+Gas Estimation: Units: 25675495, Price: 4024369 wei, Total Cost: 0.000103 ETH
+Transaction hash: 0x22033ad167a916123c5b5c8dbc1667dda8352589e96113af1d30da959b873572
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 6, start 0xB6117B7B57Ede9BB224208F957F94501DF6BbD64,2501 ===
+Progress: 3000(3000) === 100%
+Gas Estimation: Units: 25651071, Price: 4229328 wei, Total Cost: 0.000108 ETH
+Transaction hash: 0x06687fb1cd3e194cc1eaf829c79342fcf629408e12aa1963e8f402f98a4fe64c
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 3000
+Actual total supply: 3000
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T06:29:05.377Z
+Total duration: 1m 28s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 1m34s 
+➜  npx hardhat run scripts/verify.ts       
+
+=== Processing project: origamiKokyo, Soneium, 1868, Contract: 0xE5931B44B973cbd2439f68ADC2EbF207bE7b73c6 ===
+
+Starting verification process at: 2025-02-20T06:31:17.467Z
+Verifying origamiKokyo...
+Starting verification of 3000 tokens...
+Progress: 100/3000 (3.33%) - Verified: 100, Failed: 0
+Progress: 200/3000 (6.67%) - Verified: 200, Failed: 0
+Progress: 300/3000 (10.00%) - Verified: 300, Failed: 0
+Progress: 400/3000 (13.33%) - Verified: 400, Failed: 0
+Progress: 500/3000 (16.67%) - Verified: 500, Failed: 0
+Progress: 600/3000 (20.00%) - Verified: 600, Failed: 0
+Progress: 700/3000 (23.33%) - Verified: 700, Failed: 0
+Progress: 800/3000 (26.67%) - Verified: 800, Failed: 0
+Progress: 900/3000 (30.00%) - Verified: 900, Failed: 0
+Progress: 1000/3000 (33.33%) - Verified: 1000, Failed: 0
+Progress: 1100/3000 (36.67%) - Verified: 1100, Failed: 0
+Progress: 1200/3000 (40.00%) - Verified: 1200, Failed: 0
+Progress: 1300/3000 (43.33%) - Verified: 1300, Failed: 0
+Progress: 1400/3000 (46.67%) - Verified: 1400, Failed: 0
+Progress: 1500/3000 (50.00%) - Verified: 1500, Failed: 0
+Progress: 1600/3000 (53.33%) - Verified: 1600, Failed: 0
+Progress: 1700/3000 (56.67%) - Verified: 1700, Failed: 0
+Progress: 1800/3000 (60.00%) - Verified: 1800, Failed: 0
+Progress: 1900/3000 (63.33%) - Verified: 1900, Failed: 0
+Progress: 2000/3000 (66.67%) - Verified: 2000, Failed: 0
+Progress: 2100/3000 (70.00%) - Verified: 2100, Failed: 0
+Progress: 2200/3000 (73.33%) - Verified: 2200, Failed: 0
+Progress: 2300/3000 (76.67%) - Verified: 2300, Failed: 0
+Progress: 2400/3000 (80.00%) - Verified: 2400, Failed: 0
+Progress: 2500/3000 (83.33%) - Verified: 2500, Failed: 0
+Progress: 2600/3000 (86.67%) - Verified: 2600, Failed: 0
+Progress: 2700/3000 (90.00%) - Verified: 2700, Failed: 0
+Progress: 2800/3000 (93.33%) - Verified: 2800, Failed: 0
+Progress: 2900/3000 (96.67%) - Verified: 2900, Failed: 0
+Progress: 3000/3000 (100.00%) - Verified: 3000, Failed: 0
+
+Final Results for origamiKokyo:
+  Total tokens: 3000
+  Verified: 3000
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T06:39:22.605Z
+Total duration: 8m 5s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 8m7s 
+➜  npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: origamiKokyo, Soneium, 1868, Contract: 0xE5931B44B973cbd2439f68ADC2EbF207bE7b73c6 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 took 2s 
+➜ 

@@ -1,0 +1,380 @@
+Last login: Thu Feb 20 07:17:50 on ttys011
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 23 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 2s 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: origamiKokyo
+===================================
+Name: ORIGAMI NFT by KOKYO NFT
+Symbol: ORIGAMI
+Base URI: ipfs://bafybeiekt2dawpzewttjdv6m3xhwjv4mvh64l7n2u3iin7txri4nmr5564/
+Base Extension: 
+Max Supply: 3000
+Mint Limit: 1
+Start Token ID: 1
+Is Payable: No
+Total Supply: 3000
+Metadata Entries: 3000
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts
+===================================
+Project: DenDekaDen
+===================================
+Name: DenDekaDen Garden YoPort
+Symbol: DGY
+Base URI: ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/
+Base Extension: 
+Max Supply: 8888
+Mint Limit: 8
+Start Token ID: 0
+Is Payable: No
+Total Supply: 8888
+Metadata Entries: 8888
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: DenDekaDen
+Name: DenDekaDen Garden YoPort
+Symbol: DGY
+Base URI: ipfs://QmRGcr3jkCUYp218Va2MFjjJSqR129rxMcT8LQncpwkaC2/
+Base Extension: 
+Max Supply: 8888
+Mint Limit: 8
+Start Token ID: 0
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0x736c2d6e63587B16C357ddcCebdb4926D35D03cC
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 11s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Successfully verified contract "contracts/FreeMint.sol:FreeMint" for network soneium:
+  - https://soneium.blockscout.com//address/0x736c2d6e63587B16C357ddcCebdb4926D35D03cC#code
+
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 14s 
+➜ npx hardhat run scripts/mint-FreeMint.ts
+
+=== Processing project: DenDekaDen, Soneium, 1868, Contract: 0x736c2d6e63587B16C357ddcCebdb4926D35D03cC ===
+
+Starting minting process at: 2025-02-20T06:54:15.394Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 865973844001632122
+
+
+Starting from token ID: 0
+Records to process: 8888 out of 8888
+
+=== Batch Number: 1, start 0xeD5b95342A7A4d2735F7D86c3D2c50cb03837446,0 ===
+Progress: 500(8888) === 6%
+Gas Estimation: Units: 16631813, Price: 15068468 wei, Total Cost: 0.000251 ETH
+Transaction hash: 0x35737a9211dd06c507695245e7cecf186c5c109b266ea470177aae4f24fb25db
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x9f6c0E6E43EA7c8547F43c1966595c521b495eD7,500 ===
+Progress: 1000(8888) === 11%
+Gas Estimation: Units: 16356493, Price: 15327367 wei, Total Cost: 0.000251 ETH
+Transaction hash: 0x8a85dede7cc20fa935fe21d0b7e310282142787896a23a50f9c38261c5d74d2e
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0xDEdbfEE3Ab91B4Aca500a11128225e41667F6708,1000 ===
+Progress: 1500(8888) === 17%
+Gas Estimation: Units: 16413176, Price: 15695673 wei, Total Cost: 0.000258 ETH
+Transaction hash: 0x17f3c04b281f8723c13101c92ced0e219cab91988e20d4361710d763ab14b757
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0xa690010dB2f2AE13809e4718277E3c83c8E002a5,1500 ===
+Progress: 2000(8888) === 23%
+Gas Estimation: Units: 17168104, Price: 15997732 wei, Total Cost: 0.000275 ETH
+Transaction hash: 0xa44bc2e2503113365e45559506490bab3c46f2328965d354cf9676fb19b0d6c0
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 5, start 0x52bB4d1121Ba28E7CAC4B3c994ccbFe8eD1174FB,2000 ===
+Progress: 2500(8888) === 28%
+Gas Estimation: Units: 16794031, Price: 16205942 wei, Total Cost: 0.000272 ETH
+Transaction hash: 0xcd0e5a55923d78cfa996813813a3a65221a718859a34455a2501bb40b6afd4b5
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 6, start 0xc1D9c776Ef4BA56026bB47F16e36C6A4bdAB7d9E,2500 ===
+Progress: 3000(8888) === 34%
+Gas Estimation: Units: 16993074, Price: 16454318 wei, Total Cost: 0.000280 ETH
+Transaction hash: 0x7ce9686cdd82a2f0d9b1d9a62f938122aedab5ae5a58f7e07813639dc615eacb
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 7, start 0x8D9F18820Ff7933b72C944e399B5773d0bE90ab1,3000 ===
+Progress: 3500(8888) === 39%
+Gas Estimation: Units: 16759583, Price: 16698441 wei, Total Cost: 0.000280 ETH
+Transaction hash: 0x1ef2647cdee902855bf70b78967c9bf0a29a96afb0f74dc7e7a0546fa54f510e
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 8, start 0xDf73dBE9020FD06e52644f4bBc8eD449Db29aBd2,3500 ===
+Progress: 4000(8888) === 45%
+Gas Estimation: Units: 17140386, Price: 16958674 wei, Total Cost: 0.000291 ETH
+Transaction hash: 0x0c5cdd6e87e25ada6bf45f80e937e6c558af7b02eec760255421483a715b54b0
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 9, start 0x91069286728A16fB0c2fE0e29EA56e253e69Eb01,4000 ===
+Progress: 4500(8888) === 51%
+Gas Estimation: Units: 16872710, Price: 17159002 wei, Total Cost: 0.000290 ETH
+Transaction hash: 0x502e732d09e5a9a35b914c713fb568b4548b7cdba00d5e062ff9a249552fb874
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 10, start 0x50c6a6bE25749baA8C78602826C338D4413E1e64,4500 ===
+Progress: 5000(8888) === 56%
+Gas Estimation: Units: 16753959, Price: 17408207 wei, Total Cost: 0.000292 ETH
+Transaction hash: 0x97bd8386cdf884f1dd95255bcc771a3768879e1be88f269de7aa613e2acaa984
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 11, start 0xE9aa812F657C908686e2A9eFf2466d5Cb29CD7E6,5000 ===
+Progress: 5500(8888) === 62%
+Gas Estimation: Units: 16818269, Price: 17737775 wei, Total Cost: 0.000298 ETH
+Transaction hash: 0xd3df0ba3aa30d4afa0d8e2e67ad5cf26fac45af1e54e1ab2a474a4c05962a058
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 12, start 0x8Bd9A20Ed9e64b100EbbF58a534b68243ac4CA11,5500 ===
+Progress: 6000(8888) === 68%
+Gas Estimation: Units: 16972774, Price: 17968001 wei, Total Cost: 0.000305 ETH
+Transaction hash: 0x459eccdb54c11254f67f865f79c39eda8677931c97f53bef9f7770a5f8a23d7b
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 13, start 0x1076c2cfB8d1f3AA5Bf050D8C0d6D128175BFEee,6000 ===
+Progress: 6500(8888) === 73%
+Gas Estimation: Units: 16620915, Price: 18406281 wei, Total Cost: 0.000306 ETH
+Transaction hash: 0x71b96d6c4a022259a4959ecc88c33c6d5499de4b6ea2a5e99f1192a6aab204e6
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 14, start 0x33C2d15Ce4B2b96C19D8DFAc626557A234624A3C,6500 ===
+Progress: 7000(8888) === 79%
+Gas Estimation: Units: 16064301, Price: 18694816 wei, Total Cost: 0.000300 ETH
+Transaction hash: 0xbbe9106fd14c669a8f71c663d9c5dbedfa5fd3a58738dad0b3a9ee910e663e2f
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 15, start 0x7878c4d495590caD57C76091B600f5491bE6b949,7000 ===
+Progress: 7500(8888) === 84%
+Gas Estimation: Units: 16069655, Price: 19006609 wei, Total Cost: 0.000305 ETH
+Transaction hash: 0xf11570442b80d7a4a63fe2b089a397c680e413e47f28df9357ec1e8baf5965bf
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 16, start 0xf57395058624cC79ae1Ab69617b9B6521E3ac71B,7500 ===
+Progress: 8000(8888) === 90%
+Gas Estimation: Units: 16389215, Price: 19364561 wei, Total Cost: 0.000317 ETH
+Transaction hash: 0x814cae5c4729c7d8cfe6efa486835dbf22e98701ba69c7b462cc60fdff47b421
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 17, start 0xb76735d1626DC524038d23f5F9DC2345F4EeF7aF,8000 ===
+Progress: 8500(8888) === 96%
+Gas Estimation: Units: 16222268, Price: 19711733 wei, Total Cost: 0.000320 ETH
+Transaction hash: 0xab47832315fa45d3780bc4f11f1f01def209f649a2d0b97f2ebc0d269189776b
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 18, start 0x476d3cDBF988AC7C8ECEfb152965A5a9C5EE0e48,8500 ===
+Progress: 9000(8888) === 101%
+Gas Estimation: Units: 12607034, Price: 20021617 wei, Total Cost: 0.000252 ETH
+Transaction hash: 0x5c57ace92ca9280dd15af5fa711bc8a833d9a85da656d119272f76ab37534194
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 8888
+Actual total supply: 8888
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-20T06:57:27.375Z
+Total duration: 3m 11s
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 3m17s 
+➜ npx hardhat run scripts/verify.ts 
+
+=== Processing project: DenDekaDen, Soneium, 1868, Contract: 0x736c2d6e63587B16C357ddcCebdb4926D35D03cC ===
+
+Starting verification process at: 2025-02-20T06:57:44.377Z
+Verifying DenDekaDen...
+Starting verification of 8888 tokens...
+Progress: 100/8888 (1.13%) - Verified: 100, Failed: 0
+Progress: 200/8888 (2.25%) - Verified: 200, Failed: 0
+Progress: 300/8888 (3.38%) - Verified: 300, Failed: 0
+Progress: 400/8888 (4.50%) - Verified: 400, Failed: 0
+Progress: 500/8888 (5.63%) - Verified: 500, Failed: 0
+Progress: 600/8888 (6.75%) - Verified: 600, Failed: 0
+Progress: 700/8888 (7.88%) - Verified: 700, Failed: 0
+Progress: 800/8888 (9.00%) - Verified: 800, Failed: 0
+Progress: 900/8888 (10.13%) - Verified: 900, Failed: 0
+Progress: 1000/8888 (11.25%) - Verified: 1000, Failed: 0
+Progress: 1100/8888 (12.38%) - Verified: 1100, Failed: 0
+Progress: 1200/8888 (13.50%) - Verified: 1200, Failed: 0
+Progress: 1300/8888 (14.63%) - Verified: 1300, Failed: 0
+Progress: 1400/8888 (15.75%) - Verified: 1400, Failed: 0
+Progress: 1500/8888 (16.88%) - Verified: 1500, Failed: 0
+Progress: 1600/8888 (18.00%) - Verified: 1600, Failed: 0
+Progress: 1700/8888 (19.13%) - Verified: 1700, Failed: 0
+Progress: 1800/8888 (20.25%) - Verified: 1800, Failed: 0
+Progress: 1900/8888 (21.38%) - Verified: 1900, Failed: 0
+Progress: 2000/8888 (22.50%) - Verified: 2000, Failed: 0
+Progress: 2100/8888 (23.63%) - Verified: 2100, Failed: 0
+Progress: 2200/8888 (24.75%) - Verified: 2200, Failed: 0
+Progress: 2300/8888 (25.88%) - Verified: 2300, Failed: 0
+Progress: 2400/8888 (27.00%) - Verified: 2400, Failed: 0
+Progress: 2500/8888 (28.13%) - Verified: 2500, Failed: 0
+Progress: 2600/8888 (29.25%) - Verified: 2600, Failed: 0
+Progress: 2700/8888 (30.38%) - Verified: 2700, Failed: 0
+Progress: 2800/8888 (31.50%) - Verified: 2800, Failed: 0
+Progress: 2900/8888 (32.63%) - Verified: 2900, Failed: 0
+Progress: 3000/8888 (33.75%) - Verified: 3000, Failed: 0
+Progress: 3100/8888 (34.88%) - Verified: 3100, Failed: 0
+Progress: 3200/8888 (36.00%) - Verified: 3200, Failed: 0
+Progress: 3300/8888 (37.13%) - Verified: 3300, Failed: 0
+Progress: 3400/8888 (38.25%) - Verified: 3400, Failed: 0
+Progress: 3500/8888 (39.38%) - Verified: 3500, Failed: 0
+Progress: 3600/8888 (40.50%) - Verified: 3600, Failed: 0
+Progress: 3700/8888 (41.63%) - Verified: 3700, Failed: 0
+Progress: 3800/8888 (42.75%) - Verified: 3800, Failed: 0
+Progress: 3900/8888 (43.88%) - Verified: 3900, Failed: 0
+Progress: 4000/8888 (45.00%) - Verified: 4000, Failed: 0
+Progress: 4100/8888 (46.13%) - Verified: 4100, Failed: 0
+Progress: 4200/8888 (47.25%) - Verified: 4200, Failed: 0
+Progress: 4300/8888 (48.38%) - Verified: 4300, Failed: 0
+Progress: 4400/8888 (49.50%) - Verified: 4400, Failed: 0
+Progress: 4500/8888 (50.63%) - Verified: 4500, Failed: 0
+Progress: 4600/8888 (51.76%) - Verified: 4600, Failed: 0
+Progress: 4700/8888 (52.88%) - Verified: 4700, Failed: 0
+Progress: 4800/8888 (54.01%) - Verified: 4800, Failed: 0
+Progress: 4900/8888 (55.13%) - Verified: 4900, Failed: 0
+Progress: 5000/8888 (56.26%) - Verified: 5000, Failed: 0
+Progress: 5100/8888 (57.38%) - Verified: 5100, Failed: 0
+Progress: 5200/8888 (58.51%) - Verified: 5200, Failed: 0
+Progress: 5300/8888 (59.63%) - Verified: 5300, Failed: 0
+Progress: 5400/8888 (60.76%) - Verified: 5400, Failed: 0
+Progress: 5500/8888 (61.88%) - Verified: 5500, Failed: 0
+Progress: 5600/8888 (63.01%) - Verified: 5600, Failed: 0
+Progress: 5700/8888 (64.13%) - Verified: 5700, Failed: 0
+Progress: 5800/8888 (65.26%) - Verified: 5800, Failed: 0
+Progress: 5900/8888 (66.38%) - Verified: 5900, Failed: 0
+Progress: 6000/8888 (67.51%) - Verified: 6000, Failed: 0
+Progress: 6100/8888 (68.63%) - Verified: 6100, Failed: 0
+Progress: 6200/8888 (69.76%) - Verified: 6200, Failed: 0
+Progress: 6300/8888 (70.88%) - Verified: 6300, Failed: 0
+Progress: 6400/8888 (72.01%) - Verified: 6400, Failed: 0
+Progress: 6500/8888 (73.13%) - Verified: 6500, Failed: 0
+Progress: 6600/8888 (74.26%) - Verified: 6600, Failed: 0
+Progress: 6700/8888 (75.38%) - Verified: 6700, Failed: 0
+Progress: 6800/8888 (76.51%) - Verified: 6800, Failed: 0
+Progress: 6900/8888 (77.63%) - Verified: 6900, Failed: 0
+Progress: 7000/8888 (78.76%) - Verified: 7000, Failed: 0
+Progress: 7100/8888 (79.88%) - Verified: 7100, Failed: 0
+Progress: 7200/8888 (81.01%) - Verified: 7200, Failed: 0
+Progress: 7300/8888 (82.13%) - Verified: 7300, Failed: 0
+Progress: 7400/8888 (83.26%) - Verified: 7400, Failed: 0
+Progress: 7500/8888 (84.38%) - Verified: 7500, Failed: 0
+Progress: 7600/8888 (85.51%) - Verified: 7600, Failed: 0
+Progress: 7700/8888 (86.63%) - Verified: 7700, Failed: 0
+Progress: 7800/8888 (87.76%) - Verified: 7800, Failed: 0
+Progress: 7900/8888 (88.88%) - Verified: 7900, Failed: 0
+Progress: 8000/8888 (90.01%) - Verified: 8000, Failed: 0
+Progress: 8100/8888 (91.13%) - Verified: 8100, Failed: 0
+Progress: 8200/8888 (92.26%) - Verified: 8200, Failed: 0
+Progress: 8300/8888 (93.38%) - Verified: 8300, Failed: 0
+Progress: 8400/8888 (94.51%) - Verified: 8400, Failed: 0
+Progress: 8500/8888 (95.63%) - Verified: 8500, Failed: 0
+Progress: 8600/8888 (96.76%) - Verified: 8600, Failed: 0
+Progress: 8700/8888 (97.88%) - Verified: 8700, Failed: 0
+Progress: 8800/8888 (99.01%) - Verified: 8800, Failed: 0
+Progress: 8888/8888 (100.00%) - Verified: 8888, Failed: 0
+
+Final Results for DenDekaDen:
+  Total tokens: 8888
+  Verified: 8888
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-20T07:24:09.992Z
+Total duration: 26m 25s
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 26m27s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: DenDekaDen, Soneium, 1868, Contract: 0x736c2d6e63587B16C357ddcCebdb4926D35D03cC ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+
+zk-nft-migration on  main [🗑📝🤷‍🌱] via  v20.16.0 took 2s 
+➜ 

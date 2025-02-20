@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "slither": "slither . --solc-remaps '@openzeppelin=node_modules/@openzeppelin'"
   },
   "author": "",
   "license": "MIT",
@@ -16,7 +16,6 @@
     "@openzeppelin/contracts": "^5.2.0",
     "csv-parse": "^5.6.0",
     "dotenv": "^16.4.7",
-    "erc721a": "^4.3.0",
     "viem": "^2.23.2"
   }
 }

@@ -142,4 +142,54 @@ describe("PaidMint", function () {
       expect(ownerBalanceAfter > ownerBalanceBefore).to.be.true;
     });
   });
+
+  describe("Price management", function () {
+    it("should allow owner to change price", async function () {
+      const { PaidMint, owner } = await loadFixture(deployTokenFixture);
+      const newPrice = parseEther("0.2"); // 0.2 ETH
+
+      // Change price
+      await PaidMint.write.setPrice([newPrice]);
+
+      // Verify new price
+      const currentPrice = await PaidMint.read.price();
+      expect(currentPrice).to.equal(newPrice);
+    });
+
+    it("should fail when non-owner tries to change price", async function () {
+      const { PaidMint, nonOwner } = await loadFixture(deployTokenFixture);
+      const newPrice = parseEther("0.2");
+
+      // Get contract instance for non-owner
+      const PaidMintAsNonOwner = await hre.viem.getContractAt(
+        "PaidMint",
+        PaidMint.address,
+        { client: { wallet: nonOwner } }
+      );
+
+      // Attempt to change price as non-owner
+      await expect(PaidMintAsNonOwner.write.setPrice([newPrice]))
+        .to.be.rejectedWith("OwnableUnauthorizedAccount");
+    });
+
+    it("should apply new price to mints", async function () {
+      const { PaidMint, recipient1 } = await loadFixture(deployTokenFixture);
+      const newPrice = parseEther("0.2");
+
+      // Change price
+      await PaidMint.write.setPrice([newPrice]);
+
+      // Try to mint with old price
+      await expect(PaidMint.write.mint(
+        [recipient1.account.address, 1n],
+        { value: PRICE }
+      )).to.be.rejectedWith("Incorrect payment amount");
+
+      // Mint with new price
+      await expect(PaidMint.write.mint(
+        [recipient1.account.address, 1n],
+        { value: newPrice }
+      )).to.be.fulfilled;
+    });
+  });
 });

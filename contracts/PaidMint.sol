@@ -158,6 +158,11 @@ contract PaidMint is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572
         return nextTokenId - startWithTokenId;
     }
 
+    //@notice setPrice
+    function setPrice(uint256 _price) public onlyOwner {
+        price = _price;
+    }
+
     // ---------- Getter Functions ---------- //
 
     //@notice tokenURI override

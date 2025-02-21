@@ -1,0 +1,212 @@
+Last login: Thu Feb 20 19:30:52 on ttys018
+
+zk-nft-migration on  main [++(6)🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: casio
+===================================
+Name: CASIO WATCHES NFT
+Symbol: CASIO WATCHES NFT
+Base URI: https://423wryv3ejugj6cjeryup3rfg5shx3ikpymoonj3qxxijoqcpkta.arweave.net/5rdo4rsiaGT4SSRxR-4lN2R77Qp-GOc1O4XuhLoCeqY/
+Base Extension: .json
+Max Supply: 2075
+Mint Limit: 8
+Start Token ID: 0
+Is Payable: Yes
+Total Supply: 2075
+Metadata Entries: 8
+
+zk-nft-migration on  main [++(6)🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/CasioWatches.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: casio
+Name: CASIO WATCHES NFT
+Symbol: CASIO WATCHES NFT
+Base URI: https://423wryv3ejugj6cjeryup3rfg5shx3ikpymoonj3qxxijoqcpkta.arweave.net/5rdo4rsiaGT4SSRxR-4lN2R77Qp-GOc1O4XuhLoCeqY/
+Base Extension: .json
+Max Supply: 2075
+Mint Limit: 8
+Start Token ID: 0
+Price: 2000000000000000 (0.002)
+=====================
+
+Hardhat Ignition 🚀
+
+Resuming existing deployment from ./ignition/deployments/chain-1868
+
+Deploying [ CasioWatchesModule ]
+
+Warning - previously executed futures are not in the module:
+ - PaidMintModule#PaidMint
+
+Batch #1
+  Executed CasioWatchesModule#CasioWatches
+
+[ CasioWatchesModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+PaidMintModule#PaidMint - 0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A
+CasioWatchesModule#CasioWatches - 0x9C7D4758a8a74fdE6516c16C91F8EF2C60081caB
+
+Verifying deployed contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Contract contracts/PaidMint.sol:PaidMint already verified on network soneium:
+  - https://soneium.blockscout.com/address/0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A#code
+
+Verifying contract "contracts/CasioWatches.sol:CasioWatches" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [++(6)🌱] via  v20.16.0 took 11s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Contract contracts/PaidMint.sol:PaidMint already verified on network soneium:
+  - https://soneium.blockscout.com/address/0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A#code
+
+Verifying contract "contracts/CasioWatches.sol:CasioWatches" for network soneium...
+Successfully verified contract "contracts/CasioWatches.sol:CasioWatches" for network soneium:
+  - https://soneium.blockscout.com/address/0x9C7D4758a8a74fdE6516c16C91F8EF2C60081caB#code
+
+
+zk-nft-migration on  main [++(6)🌱] via  v20.16.0 took 14s 
+➜ npx hardhat run scripts/mint-721.ts
+
+=== Processing project: casio, Soneium, 1868, Contract: 0x9C7D4758a8a74fdE6516c16C91F8EF2C60081caB ===
+
+Starting minting process at: 2025-02-21T08:58:42.950Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 851859878908333529
+
+
+Starting from token ID: 0
+Records to process: 2075 out of 2075
+
+=== Batch Number: 1, start 0xE14041141fFE5999AE6a8d5836b1166228852322,0 ===
+Progress: 500(2075) === 24%
+Gas Estimation: Units: 15844567, Price: 100004584 wei, Total Cost: 0.001585 ETH
+Transaction hash: 0x84d46746beba9bd40fdbdfbe19a1231e47764144e0cd36340cd70fdd8b338baa
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x9b50f750Dc4Eb597Fd5BB0B8C435D734782368fE,500 ===
+Progress: 1000(2075) === 48%
+Gas Estimation: Units: 17249772, Price: 101398230 wei, Total Cost: 0.001749 ETH
+Transaction hash: 0x3997fef7cc59e92ae0027f440b62199df23bf4488a4a2c17f94a64844b199c22
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0xa2FF3E1070bBede9E631B98a79F4996bAbE3C395,1000 ===
+Progress: 1500(2075) === 72%
+Gas Estimation: Units: 17729260, Price: 102233607 wei, Total Cost: 0.001813 ETH
+Transaction hash: 0x4a74e50ee60fa979619b440a521f220b9442343527f233f0134bf0094f0dc9b8
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0xc1E7CA17274C36a3358460F93ce30200916688b6,1500 ===
+Progress: 2000(2075) === 96%
+Gas Estimation: Units: 19000493, Price: 103017791 wei, Total Cost: 0.001957 ETH
+Transaction hash: 0xa18c272ced7910d3cc4d40f5aa0784d6129b39a4d466220fb794f6944a056856
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 5, start 0x79C9384595b07a991850CE990FEd9507d97d30ED,2000 ===
+Progress: 2500(2075) === 120%
+Gas Estimation: Units: 2770903, Price: 103694594 wei, Total Cost: 0.000287 ETH
+Transaction hash: 0xe0ea3ecc16f7cbb628e689763f6f46f7329de6bd7b018d6c0f7c9faf8c224383
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 2075
+Actual total supply: 2075
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-21T08:59:28.005Z
+Total duration: 0m 45s
+
+zk-nft-migration on  main [📝++(6)🌱] via  v20.16.0 took 50s 
+➜ npx hardhat run scripts/verify                                      
+Error HH601: Script scripts/verify doesn't exist.
+
+For more info go to https://hardhat.org/HH601 or run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝++(6)🌱] via  v20.16.0 
+❯ npx hardhat run scripts/verify.ts
+
+=== Processing project: casio, Soneium, 1868, Contract: 0x9C7D4758a8a74fdE6516c16C91F8EF2C60081caB ===
+
+Starting verification process at: 2025-02-21T08:59:50.747Z
+Verifying casio...
+Starting verification of 2075 tokens...
+Progress: 100/2075 (4.82%) - Verified: 100, Failed: 0
+Progress: 200/2075 (9.64%) - Verified: 200, Failed: 0
+Progress: 300/2075 (14.46%) - Verified: 300, Failed: 0
+Progress: 400/2075 (19.28%) - Verified: 400, Failed: 0
+Progress: 500/2075 (24.10%) - Verified: 500, Failed: 0
+Progress: 600/2075 (28.92%) - Verified: 600, Failed: 0
+Progress: 700/2075 (33.73%) - Verified: 700, Failed: 0
+Progress: 800/2075 (38.55%) - Verified: 800, Failed: 0
+Progress: 900/2075 (43.37%) - Verified: 900, Failed: 0
+Progress: 1000/2075 (48.19%) - Verified: 1000, Failed: 0
+Progress: 1100/2075 (53.01%) - Verified: 1100, Failed: 0
+Progress: 1200/2075 (57.83%) - Verified: 1200, Failed: 0
+Progress: 1300/2075 (62.65%) - Verified: 1300, Failed: 0
+Progress: 1400/2075 (67.47%) - Verified: 1400, Failed: 0
+Progress: 1500/2075 (72.29%) - Verified: 1500, Failed: 0
+Progress: 1600/2075 (77.11%) - Verified: 1600, Failed: 0
+Progress: 1700/2075 (81.93%) - Verified: 1700, Failed: 0
+Progress: 1800/2075 (86.75%) - Verified: 1800, Failed: 0
+Progress: 1900/2075 (91.57%) - Verified: 1900, Failed: 0
+Progress: 2000/2075 (96.39%) - Verified: 2000, Failed: 0
+Progress: 2075/2075 (100.00%) - Verified: 2075, Failed: 0
+
+Final Results for casio:
+  Total tokens: 2075
+  Verified: 2075
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-21T09:05:29.996Z
+Total duration: 5m 39s
+
+zk-nft-migration on  main [📝++(6)🤷‍🌱] via  v20.16.0 took 5m40s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: casio, Soneium, 1868, Contract: 0x9C7D4758a8a74fdE6516c16C91F8EF2C60081caB ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+sashimi             : 🔴 PAUSED
+SkyLabs             : 🔴 PAUSED
+UZNo                : 🔴 PAUSED
+casio               : 🔴 PAUSED
+
+zk-nft-migration on  main [📝++(6)🤷‍🌱] via  v20.16.0 took 2s 
+➜ 

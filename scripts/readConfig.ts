@@ -1,5 +1,5 @@
 import { Chain } from 'viem';
-import { sepolia, soneium, soneiumMinato, hardhat } from 'viem/chains';
+import { sepolia, soneium, soneiumMinato, hardhat, astarZkEVM } from 'viem/chains';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from "dotenv";
@@ -40,6 +40,9 @@ export function readConfig(): ConfigResult {
     rawKey = process.env.TESTNET_PRIVATE_KEY;
   } else if (chainName === 'Hardhat') {
     chain = hardhat;
+    rawKey = process.env.TESTNET_PRIVATE_KEY;
+  } else if (chainName === 'AstarZkEVM') {
+    chain = astarZkEVM;
     rawKey = process.env.TESTNET_PRIVATE_KEY;
   } else {
     throw new Error(`Chain ${chainName} not supported`);

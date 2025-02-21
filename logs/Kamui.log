@@ -1,0 +1,243 @@
+Last login: Fri Feb 21 09:52:42 on ttys019
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat compile
+Compiled 26 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 took 4s 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+===================================
+Project: Kamui
+===================================
+Name: Kamui
+Symbol: KAMUI
+Base URI: https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/
+Base Extension: .json
+Max Supply: 706
+Mint Limit: 0
+Start Token ID: 0
+Is Payable: Yes
+Total Supply: 706
+Metadata Entries: 706
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/KamuiVerse.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: Kamui
+Name: Kamui
+Symbol: KAMUI
+Base URI: https://arweave.net/8lIwCR0f_ks7V94xIpe_dJqHmYTsNFuHbNSfy-JCAlk/
+Base Extension: .json
+Max Supply: 706
+Mint Limit: 0
+Start Token ID: 0
+Price: 1000000000000000 (0.001)
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ KamuiVerseModule ]
+
+Batch #1
+  Executed KamuiVerseModule#KamuiVerse
+
+[ KamuiVerseModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+KamuiVerseModule#KamuiVerse - 0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E
+
+Verifying deployed contracts
+
+Verifying contract "contracts/KamuiVerse.sol:KamuiVerse" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 took 9s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/KamuiVerse.sol:KamuiVerse" for network soneium...
+Successfully verified contract "contracts/KamuiVerse.sol:KamuiVerse" for network soneium:
+  - https://soneium.blockscout.com/address/0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E#code
+
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 took 17s 
+➜ npx hardhat run scripts/mint-Kamui.ts
+
+=== Processing project: Kamui, Soneium, 1868, Contract: 0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E ===
+
+Starting minting process at: 2025-02-21T13:46:24.436Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 844148643540740031
+
+
+Starting from token ID: 0
+Records to process: 706 out of 706
+
+=== Batch Number: 1, start 0xD3Ae3C8E2700eEc76A9823d6a4bC4e11b22Adb28,0 ===
+Progress: 200(706) === 28%
+Gas Estimation: Units: 12959926, Price: 77948862 wei, Total: 0.001010 ETH
+Transaction hash: 0x8fb0acfe1742c16ddfaadee0aba4abd4af1771562138d6b939f77ccf7ceb06ea
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x48BD7f6658A7098B83b51b1b6E7A509e382D8aCf,200 ===
+Progress: 400(706) === 57%
+Gas Estimation: Units: 12723081, Price: 78513288 wei, Total: 0.000999 ETH
+Transaction hash: 0x94f98acf6c9df2ff10deb728bfc927ff4c1912dff2ed9340635041e34acc008c
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0xEC8AFF769B4995a5dB62C26212Ca612f0914Af2f,400 ===
+Progress: 600(706) === 85%
+Gas Estimation: Units: 12371754, Price: 79753778 wei, Total: 0.000987 ETH
+Transaction hash: 0xe06ee972c8eaf82172db8559a1f0a4a96913d2d33d885f715f8ba4b1876e4b85
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0x6C706335e2AE648B084985E14ad5Fb2A11005168,600 ===
+Progress: 800(706) === 113%
+Gas Estimation: Units: 6193575, Price: 80002834 wei, Total: 0.000496 ETH
+Transaction hash: 0x2d69e635bbaba61f6d5eaadd4bafd31eb06a277599e1024becace8d9ae174370
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 706
+Actual total supply: 706
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-21T13:46:58.223Z
+Total duration: 0m 33s
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 took 39s 
+➜ npx hardhat run scripts/verify.ts    
+
+=== Processing project: Kamui, Soneium, 1868, Contract: 0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E ===
+
+Starting verification process at: 2025-02-21T13:47:17.521Z
+Verifying Kamui...
+Starting verification of 706 tokens...
+Progress: 100/706 (14.16%) - Verified: 100, Failed: 0
+Progress: 200/706 (28.33%) - Verified: 200, Failed: 0
+Progress: 300/706 (42.49%) - Verified: 300, Failed: 0
+Progress: 400/706 (56.66%) - Verified: 400, Failed: 0
+Progress: 500/706 (70.82%) - Verified: 500, Failed: 0
+Progress: 600/706 (84.99%) - Verified: 600, Failed: 0
+Progress: 700/706 (99.15%) - Verified: 700, Failed: 0
+Progress: 706/706 (100.00%) - Verified: 706, Failed: 0
+
+Final Results for Kamui:
+  Total tokens: 706
+  Verified: 706
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-21T13:49:12.487Z
+Total duration: 1m 54s
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 took 1m56s 
+➜ npx hardhat run scripts/verify-tokenUri.ts 
+
+=== Processing project: Kamui, Soneium, 1868, Contract: 0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E ===
+
+Starting metadata verification at: 2025-02-21T13:50:19.597Z
+
+Verifying metadata for Kamui...
+Starting verification of 706 tokens...
+Progress: 100/706 (14.16%) - Verified: 100, Failed: 0
+Progress: 200/706 (28.33%) - Verified: 200, Failed: 0
+Progress: 300/706 (42.49%) - Verified: 300, Failed: 0
+Progress: 400/706 (56.66%) - Verified: 400, Failed: 0
+Progress: 500/706 (70.82%) - Verified: 500, Failed: 0
+Progress: 600/706 (84.99%) - Verified: 600, Failed: 0
+Progress: 700/706 (99.15%) - Verified: 700, Failed: 0
+Progress: 706/706 (100.00%) - Verified: 706, Failed: 0
+
+Final Results for Kamui:
+  Total tokens: 706
+  Verified: 706
+  Failed: 0
+----------------------------------------
+
+Verification completed at: 2025-02-21T13:52:16.235Z
+Total duration: 1m 56s
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 took 1m58s 
+➜ npx hardhat run scripts/arePaused.ts      
+
+=== Processing project: Kamui, Soneium, 1868, Contract: 0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+sashimi             : 🔴 PAUSED
+SkyLabs             : 🔴 PAUSED
+UZNo                : 🔴 PAUSED
+casio               : 🔴 PAUSED
+Kamui               : 🔴 PAUSED
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ npx hardhat run scripts/status.ts   
+
+=== Processing project: Kamui, Soneium, 1868, Contract: 0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E ===
+
+Checking contracts on Soneium:
+----------------------------------------
+┌─────────┬──────────────────────────┬──────────────┬───────────────┬─────────────┬──────────────┬──────────────────────────────────────────────┐
+│ (index) │ project                  │ status       │ price         │ totalSupply │ freeMint     │ contractAddress                              │
+├─────────┼──────────────────────────┼──────────────┼───────────────┼─────────────┼──────────────┼──────────────────────────────────────────────┤
+│ 1       │ 'Yoki'                   │ '🟢 active'  │ 'N/A'         │ '448241'    │ '🟢'         │ '0x5f2a5818DF3216Aa6ac44632541db8F3EC4e9954' │
+│ 2       │ 'CityPopTokyo'           │ '🔴 PAUSED'  │ 'N/A'         │ '3641'      │ '🟢'         │ '0x5a445B95c9eDc0009F97b3ffCD5E6AF5c4b2a1E4' │
+│ 3       │ 'jrKyushuFree'           │ '🔴 PAUSED'  │ 'N/A'         │ '6967'      │ '🟢'         │ '0x3BeC3DEEB05fcee24157f8a90df32A7D1a9895E6' │
+│ 4       │ 'candyGirl'              │ '🔴 PAUSED'  │ 'N/A'         │ '12725'     │ '🟢'         │ '0xC6697fb54f2CB19f307DfeA3bf7dAC4F24DAa392' │
+│ 5       │ 'JapanCreatorCollection' │ '🔴 PAUSED'  │ 'N/A'         │ '50000'     │ '🟢'         │ '0x8a6387C00f5069e71124907F2a0F5bCBca611105' │
+│ 6       │ 'Walkmon'                │ '🔴 PAUSED'  │ 'N/A'         │ '1979'      │ '🟢'         │ '0x869a541D89d98e8e78C08DA4cC68AA7412C0710D' │
+│ 7       │ 'DenShinSanKa'           │ '🔴 PAUSED'  │ 'N/A'         │ '756'       │ '🟢'         │ '0xeb6F8BB5E370106aa5f6E7aF6d163340F6186925' │
+│ 8       │ 'SNPIT'                  │ '🔴 PAUSED'  │ 'N/A'         │ '1000'      │ '🟢'         │ '0x2B1aCa0C2a0cB34A309aD109F5F22956B080146C' │
+│ 9       │ 'DoF'                    │ '🔴 PAUSED'  │ 'N/A'         │ '1000'      │ '🟢'         │ '0x9Cc2956b1E4ae3f99E874935080Deee330fD41ca' │
+│ 10      │ 'origamiKokyo'           │ '🔴 PAUSED'  │ 'N/A'         │ '3000'      │ '🟢'         │ '0xE5931B44B973cbd2439f68ADC2EbF207bE7b73c6' │
+│ 11      │ 'DenDekaDen'             │ '🔴 PAUSED'  │ 'N/A'         │ '8888'      │ '🟢'         │ '0x736c2d6e63587B16C357ddcCebdb4926D35D03cC' │
+│ 12      │ 'DEKSA'                  │ '🔴 PAUSED'  │ 'N/A'         │ '999'       │ '🟢'         │ '0x74Aec0a265e4463306bE2073444B58a084829Fb3' │
+│ 13      │ 'his'                    │ '🔴 PAUSED'  │ '0.00065 ETH' │ '2708'      │ '🔴'         │ '0x99ef89F52d4566d0b6d8Fb61750Ef15175b9f2d0' │
+│ 14      │ 'jrKyushuPaid'           │ '🔴 PAUSED'  │ '0.003 ETH'   │ '1126'      │ '🔴'         │ '0xda81413f6834041b344118887fb153B9e1b3AFbf' │
+│ 15      │ 'On1force'               │ '🔴 PAUSED'  │ '0.01777 ETH' │ '777'       │ '🔴'         │ '0x67001BEB3359D5fAEf44eC2480f6BB5D86f97D6C' │
+│ 16      │ 'onigiriman'             │ '🔴 PAUSED'  │ '0.015 ETH'   │ '390'       │ '🔴'         │ '0x6406b4BB1338393AAe6A0C6c5c732718BA074CDE' │
+│ 17      │ 'sashimi'                │ '🔴 PAUSED'  │ '0.015 ETH'   │ '451'       │ '🔴'         │ '0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7' │
+│ 18      │ 'SkyLabs'                │ '🔴 PAUSED'  │ '0.01 ETH'    │ '192'       │ '🔴'         │ '0x15EF159e69F1539A943D8f167C7cCc72dE305C3e' │
+│ 19      │ 'UZNo'                   │ '🔴 PAUSED'  │ '0.001 ETH'   │ '2050'      │ '🔴'         │ '0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A' │
+│ 20      │ 'casio'                  │ '🔴 PAUSED'  │ '0.002 ETH'   │ '2075'      │ '🔴'         │ '0x9C7D4758a8a74fdE6516c16C91F8EF2C60081caB' │
+│ 21      │ 'Kamui'                  │ '🔴 PAUSED'  │ '0.001 ETH'   │ '706'       │ '🔴'         │ '0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E' │
+│ Total   │ '=========='             │ '==========' │ '=========='  │ '✨ 549671' │ '==========' │ '=========='                                 │
+└─────────┴──────────────────────────┴──────────────┴───────────────┴─────────────┴──────────────┴──────────────────────────────────────────────┘
+
+zk-nft-migration on  kamui [📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ 

@@ -24,7 +24,7 @@ interface TokenCounters {
     transfers_count: string;
 }
 const BASE_API_URL = 'https://astar-zkevm.explorer.startale.com/api/v2';
-const INPUT_PROJECTS_JSON = 'data/zk_input_721_troubled.json';
+const INPUT_PROJECTS_JSON = 'data/zk_AON.json';
 
 /**
  * Fetches all token instances for a given contract address

@@ -1,0 +1,196 @@
+Last login: Fri Feb 21 16:49:00 on ttys006
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ rm -fr ignition/deployments 
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat clean
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat run scripts/nextProjectInfo.ts 
+
+
+Compiled 26 Solidity files successfully (evm target: paris).
+===================================
+Project: AON
+===================================
+Name: オオカミのアオン
+Symbol: AON
+Base URI: ipfs://QmP5w69Lx6Ku9nV9tsBHZfks1bqCHrJrFCFsKgst147AJ4/
+Base Extension: 
+Max Supply: 405
+Mint Limit: 0
+Start Token ID: 0
+Is Payable: No
+Total Supply: 405
+Metadata Entries: 405
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 4s 
+➜ 
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: AON
+Name: オオカミのアオン
+Symbol: AON
+Base URI: ipfs://QmP5w69Lx6Ku9nV9tsBHZfks1bqCHrJrFCFsKgst147AJ4/
+Base Extension: 
+Max Supply: 405
+Mint Limit: 0
+Start Token ID: 0
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0xc202EB2073cC3A52c985f516D82EA725A6474202
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 10s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Successfully verified contract "contracts/FreeMint.sol:FreeMint" for network soneium:
+  - https://soneium.blockscout.com/address/0xc202EB2073cC3A52c985f516D82EA725A6474202#code
+
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 10s 
+➜ npx hardhat run scripts/mint-721.ts
+
+=== Processing project: AON, Soneium, 1868, Contract: 0xc202EB2073cC3A52c985f516D82EA725A6474202 ===
+
+Starting minting process at: 2025-02-21T16:04:22.366Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 839766193009577799
+
+
+Starting from token ID: 0
+Records to process: 405 out of 405
+
+=== Batch Number: 1, start 0x5A5cC9daB5Cfcaaba2316d8628A745aC60eedD47,0 ===
+Progress: 500(405) === 123%
+Gas Estimation: Units: 14166771, Price: 64716979 wei, Total Cost: 0.000917 ETH
+Transaction hash: 0xc8dad660c2e26af2d1282f6f02c6928618162ab842bd18ad9e5d7abbfaa13715
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 405
+Actual total supply: 405
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-21T16:04:31.634Z
+Total duration: 0m 9s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 15s 
+➜ npx hardhat run scripts/verify.ts
+
+
+=== Processing project: AON, Soneium, 1868, Contract: 0xc202EB2073cC3A52c985f516D82EA725A6474202 ===
+
+Starting verification process at: 2025-02-21T16:04:39.780Z
+Verifying AON...
+Starting verification of 405 tokens...
+Progress: 100/405 (24.69%) - Verified: 100, Failed: 0
+Progress: 200/405 (49.38%) - Verified: 200, Failed: 0
+Progress: 300/405 (74.07%) - Verified: 300, Failed: 0
+Progress: 400/405 (98.77%) - Verified: 400, Failed: 0
+Progress: 405/405 (100.00%) - Verified: 405, Failed: 0
+
+Final Results for AON:
+  Total tokens: 405
+  Verified: 405
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-21T16:05:46.813Z
+Total duration: 1m 7s
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 1m8s 
+➜ npx hardhat run scripts/arePaused.ts
+
+=== Processing project: AON, Soneium, 1868, Contract: 0xc202EB2073cC3A52c985f516D82EA725A6474202 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+sashimi             : 🔴 PAUSED
+SkyLabs             : 🔴 PAUSED
+UZNo                : 🔴 PAUSED
+casio               : 🔴 PAUSED
+Kamui               : 🔴 PAUSED
+AON                 : 🟢 active
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ npx hardhat run scripts/status.ts   
+
+=== Processing project: AON, Soneium, 1868, Contract: 0xc202EB2073cC3A52c985f516D82EA725A6474202 ===
+
+Checking contracts on Soneium:
+----------------------------------------
+┌─────────┬──────────────────────────┬──────────────┬───────────────┬─────────────┬──────────────┬──────────────────────────────────────────────┐
+│ (index) │ project                  │ status       │ price         │ totalSupply │ freeMint     │ contractAddress                              │
+├─────────┼──────────────────────────┼──────────────┼───────────────┼─────────────┼──────────────┼──────────────────────────────────────────────┤
+│ 1       │ 'Yoki'                   │ '🟢 active'  │ 'N/A'         │ '448241'    │ '🟢'         │ '0x5f2a5818DF3216Aa6ac44632541db8F3EC4e9954' │
+│ 2       │ 'CityPopTokyo'           │ '🔴 PAUSED'  │ 'N/A'         │ '3641'      │ '🟢'         │ '0x5a445B95c9eDc0009F97b3ffCD5E6AF5c4b2a1E4' │
+│ 3       │ 'jrKyushuFree'           │ '🔴 PAUSED'  │ 'N/A'         │ '6967'      │ '🟢'         │ '0x3BeC3DEEB05fcee24157f8a90df32A7D1a9895E6' │
+│ 4       │ 'candyGirl'              │ '🔴 PAUSED'  │ 'N/A'         │ '12725'     │ '🟢'         │ '0xC6697fb54f2CB19f307DfeA3bf7dAC4F24DAa392' │
+│ 5       │ 'JapanCreatorCollection' │ '🔴 PAUSED'  │ 'N/A'         │ '50000'     │ '🟢'         │ '0x8a6387C00f5069e71124907F2a0F5bCBca611105' │
+│ 6       │ 'Walkmon'                │ '🔴 PAUSED'  │ 'N/A'         │ '1979'      │ '🟢'         │ '0x869a541D89d98e8e78C08DA4cC68AA7412C0710D' │
+│ 7       │ 'DenShinSanKa'           │ '🔴 PAUSED'  │ 'N/A'         │ '756'       │ '🟢'         │ '0xeb6F8BB5E370106aa5f6E7aF6d163340F6186925' │
+│ 8       │ 'SNPIT'                  │ '🔴 PAUSED'  │ 'N/A'         │ '1000'      │ '🟢'         │ '0x2B1aCa0C2a0cB34A309aD109F5F22956B080146C' │
+│ 9       │ 'DoF'                    │ '🔴 PAUSED'  │ 'N/A'         │ '1000'      │ '🟢'         │ '0x9Cc2956b1E4ae3f99E874935080Deee330fD41ca' │
+│ 10      │ 'origamiKokyo'           │ '🔴 PAUSED'  │ 'N/A'         │ '3000'      │ '🟢'         │ '0xE5931B44B973cbd2439f68ADC2EbF207bE7b73c6' │
+│ 11      │ 'DenDekaDen'             │ '🔴 PAUSED'  │ 'N/A'         │ '8888'      │ '🟢'         │ '0x736c2d6e63587B16C357ddcCebdb4926D35D03cC' │
+│ 12      │ 'DEKSA'                  │ '🔴 PAUSED'  │ 'N/A'         │ '999'       │ '🟢'         │ '0x74Aec0a265e4463306bE2073444B58a084829Fb3' │
+│ 13      │ 'his'                    │ '🔴 PAUSED'  │ '0.00065 ETH' │ '2708'      │ '🔴'         │ '0x99ef89F52d4566d0b6d8Fb61750Ef15175b9f2d0' │
+│ 14      │ 'jrKyushuPaid'           │ '🔴 PAUSED'  │ '0.003 ETH'   │ '1126'      │ '🔴'         │ '0xda81413f6834041b344118887fb153B9e1b3AFbf' │
+│ 15      │ 'On1force'               │ '🔴 PAUSED'  │ '0.01777 ETH' │ '777'       │ '🔴'         │ '0x67001BEB3359D5fAEf44eC2480f6BB5D86f97D6C' │
+│ 16      │ 'onigiriman'             │ '🔴 PAUSED'  │ '0.015 ETH'   │ '390'       │ '🔴'         │ '0x6406b4BB1338393AAe6A0C6c5c732718BA074CDE' │
+│ 17      │ 'sashimi'                │ '🔴 PAUSED'  │ '0.015 ETH'   │ '451'       │ '🔴'         │ '0x922fE31A1A3fEe6C2d24525E4D1be08c41224fB7' │
+│ 18      │ 'SkyLabs'                │ '🔴 PAUSED'  │ '0.01 ETH'    │ '192'       │ '🔴'         │ '0x15EF159e69F1539A943D8f167C7cCc72dE305C3e' │
+│ 19      │ 'UZNo'                   │ '🔴 PAUSED'  │ '0.001 ETH'   │ '2050'      │ '🔴'         │ '0x8F82eAffabDAa7DeADEDb3BE97EE2d006320e67A' │
+│ 20      │ 'casio'                  │ '🔴 PAUSED'  │ '0.002 ETH'   │ '2075'      │ '🔴'         │ '0x9C7D4758a8a74fdE6516c16C91F8EF2C60081caB' │
+│ 21      │ 'Kamui'                  │ '🔴 PAUSED'  │ '0.001 ETH'   │ '706'       │ '🔴'         │ '0x7c14C590D4cc6BDf3Fd9CCB16576C8f111b65c6E' │
+│ 22      │ 'AON'                    │ '🔴 PAUSED'  │ 'N/A'         │ '405'       │ '🟢'         │ '0xc202EB2073cC3A52c985f516D82EA725A6474202' │
+│ Total   │ '=========='             │ '==========' │ '=========='  │ '✨ 550076' │ '==========' │ '=========='                                 │
+└─────────┴──────────────────────────┴──────────────┴───────────────┴─────────────┴──────────────┴──────────────────────────────────────────────┘
+
+zk-nft-migration on  main [📝🤷‍🌱] via  v20.16.0 took 3s 
+➜ 

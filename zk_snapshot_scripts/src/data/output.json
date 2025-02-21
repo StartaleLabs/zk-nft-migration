@@ -368,6 +368,22 @@
     "price": null,
     "baseUriExtension": ".json"
   },
+  "AON": {
+    "address": "0xa1CEFc12987288FB6327377408EaEC63d145a68e",
+    "totalSupply": "405",
+    "metadataEntries": "405",
+    "name": "オオカミのアオン",
+    "symbol": "AON",
+    "contractType": "ERC721",
+    "startsWithToken0": true,
+    "baseURI": "ipfs://QmP5w69Lx6Ku9nV9tsBHZfks1bqCHrJrFCFsKgst147AJ4/",
+    "contractName": "AON",
+    "maxSupply": "405",
+    "mintLimit": "0",
+    "isMintPayable": false,
+    "price": "",
+    "baseUriExtension": ""
+  },
   "Yoki": {
     "address": "0x2e6ff2a374844ed25E4523da53292a89B93e8905",
     "totalSupply": "448241",

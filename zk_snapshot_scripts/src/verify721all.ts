@@ -84,7 +84,7 @@ async function main() {
     const startTime = new Date();
     console.log(`\nStarting verification process at: ${startTime.toISOString()}`);
     
-    const inputPath = path.join(__dirname, 'data/zk_input_721.json');
+    const inputPath = path.join(__dirname, 'data/zk_AON.json');
     const inputJson: Record<string, ProjectConfig> = JSON.parse(
         fs.readFileSync(inputPath, 'utf-8')
     );

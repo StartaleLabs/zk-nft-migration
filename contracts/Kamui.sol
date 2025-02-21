@@ -14,9 +14,9 @@ interface IERC7572 {
     event ContractURIUpdated();
 }
 
-/// @title Kamui NFT Contract
+/// @title KamuiVerse NFT Contract
 /// @notice Contract for minting NFTs with payable mint capability
-contract Kamui is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
+contract KamuiVerse is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
     using Strings for uint256;
 
     uint256 public nextTokenId;
@@ -34,6 +34,9 @@ contract Kamui is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
     uint256 public immutable startWithTokenId;
 
     uint256 public price;
+
+    mapping(uint256 => uint256) private metadataId;
+
 
     constructor(
         string memory name_,
@@ -89,15 +92,16 @@ contract Kamui is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
     //@notice bulk mint function for owner
     function bulkMint(
         address[] calldata recipients,
-        uint256[] calldata tokenIds
+        uint256[] calldata tokenIds,
+        uint256[] calldata metadataIds 
     ) public onlyOwner whenNotPaused {
         require(
             recipients.length > 0 && tokenIds.length > 0,
             "Empty arrays not allowed"
         );
         require(
-            recipients.length == tokenIds.length,
-            "Recipients and tokenIds length mismatch"
+            recipients.length == tokenIds.length && recipients.length == metadataIds.length,
+            "Arrays length mismatch"
         );
         require(
             nextTokenId + tokenIds.length - startWithTokenId <= maxSupply,
@@ -111,6 +115,8 @@ contract Kamui is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
             require(tokenIds[i] <= maxSupply, "Token ID exceeds maxSupply");
             
             _safeMint(recipients[i], tokenIds[i]);
+            
+            metadataId[tokenIds[i]] = metadataIds[i];
         }
     }
 
@@ -172,14 +178,12 @@ contract Kamui is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC7572 {
         _requireOwned(tokenId);
         require(tokenId < nextTokenId, "Token ID is invalid");
 
-        // Check if the last character in baseURI is a slash.
-        // if there is no slash, use baseURI without token ID
-        if (bytes(baseURI)[bytes(baseURI).length - 1] != bytes("/")[0]) {
-            return baseURI;
-        }
+        // Get metadata ID for this token
+        uint256 tokenMetadataId = metadataId[tokenId];
 
         return bytes(baseURI).length > 0
-                ? string.concat(baseURI, tokenId.toString(), baseExtension) : "";
+                ? string.concat(baseURI, tokenMetadataId.toString(), baseExtension)
+                : "";
     }
 
     //@notice contractURI 

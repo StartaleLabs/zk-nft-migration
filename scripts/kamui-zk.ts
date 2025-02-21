@@ -13,6 +13,15 @@ const ABI = [
   }
 ] as const;
 
+function extractNumberFromUri(uri: string): string {
+  // Remove .json extension if present
+  const withoutJson = uri.replace(/\.json$/, '');
+  // Get the last part after the last slash
+  const parts = withoutJson.split('/');
+  // Return the last part (number)
+  return parts[parts.length - 1];
+}
+
 async function main() {
   // Initialize client
   const client = createPublicClient({
@@ -37,7 +46,7 @@ async function main() {
   const dataLines = lines.slice(1).filter(line => line.trim());
 
   // Prepare new CSV with additional column
-  let newCsvContent = header + ',tokenUri\n';
+  let newCsvContent = header + ',tokenNumber\n';
   let processed = 0;
   const total = dataLines.length;
 
@@ -55,7 +64,15 @@ async function main() {
         args: [BigInt(tokenId)]
       });
 
-      newCsvContent += `${line},${uri}\n`;
+      // Extract number from URI
+      const number = extractNumberFromUri(uri);
+
+      // Validate that we got a number
+      if (!/^\d+$/.test(number)) {
+        throw new Error(`Invalid number format in URI: ${uri}`);
+      }
+
+      newCsvContent += `${line},${number}\n`;
       processed++;
 
       if (processed % 100 === 0) {
@@ -68,8 +85,9 @@ async function main() {
     }
   }
 
-  // Write to new file
+  // Write to new file with updated name to reflect content
   fs.writeFileSync(outputPath, newCsvContent);
+  
   console.log('\nDone!');
   console.log(`Processed ${processed} entries`);
   console.log(`Output written to: ${outputPath}`);

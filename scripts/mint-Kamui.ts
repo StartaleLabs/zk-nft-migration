@@ -1,21 +1,38 @@
-// npx hardhat run scripts/mint-721.ts
+// npx hardhat run scripts/mint-Kamui.ts
 import { createPublicClient, createWalletClient, http, PublicClient } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
 import * as fs from 'fs';
 import * as path from 'path';
 import { parse } from 'csv-parse/sync';
-import FreeMintArtifact from '../artifacts/contracts/FreeMint.sol/FreeMint.json';
+import KamuiArtifact from '../artifacts/contracts/KamuiVerse.sol/KamuiVerse.json';
 import { readConfig } from './readConfig';
-import { estimateBulkMintGas, printGasEstimateShort } from './utils';
+import { printGasEstimateShort } from './utils';
 
-const FreeMintABI = FreeMintArtifact.abi;
+const KamuiABI = KamuiArtifact.abi;
 
 // Read configuration
 const { projectName, chain, contractAddress, privateKey } = readConfig();
 
 // Constants
-const BATCH_SIZE = 500;
+const BATCH_SIZE = 200;
 const START_TOKEN_ID = 0;
+
+async function estimateKamuiBulkMintGas(
+    publicClient: PublicClient,
+    contractAddress: `0x${string}`,
+    account: any,
+    recipients: `0x${string}`[],
+    tokenIds: bigint[],
+    metadataIds: bigint[]
+) {
+    return await publicClient.estimateContractGas({
+        address: contractAddress,
+        abi: KamuiABI,
+        functionName: 'bulkMint',
+        args: [recipients, tokenIds, metadataIds],
+        account: account.address
+    });
+}
 
 function printBatchInfo(
     batchNumber: number,
@@ -34,7 +51,7 @@ async function verifyTotalSupply(
 ) {
     const totalSupply = await publicClient.readContract({
         address: contractAddress,
-        abi: FreeMintABI,
+        abi: KamuiABI,
         functionName: 'totalSupply',
     });
 
@@ -51,6 +68,17 @@ async function verifyTotalSupply(
 
 }
 
+async function printGasInfo(
+    publicClient: PublicClient,
+    gasEstimate: bigint
+) {
+    const gasPrice = await publicClient.getGasPrice();
+    const totalGasCost = gasEstimate * gasPrice;
+    const gasCostInEth = Number(totalGasCost) / 1e18;
+
+    console.log(`Gas Estimation: Units: ${gasEstimate.toString()}, Price: ${gasPrice.toString()} wei, Total: ${gasCostInEth.toFixed(6)} ETH`);
+}
+
 async function main() {
     const startTime = new Date();
     console.log(`\nStarting minting process at: ${startTime.toISOString()}`);
@@ -62,17 +90,17 @@ async function main() {
         chain: chain,
         transport: http()
     });
-    
+
     const walletClient = createWalletClient({
         account,
         chain: chain,
         transport: http()
     });
-    
+
     console.log(`Minting with ${account.address}, Balance: ${await publicClient.getBalance({ address: account.address })}\n`);
-    
+
     // Read and parse CSV file
-    const csvPath = path.join(__dirname, `../zk_snapshot_scripts/src/instances/${projectName}_instances.csv`);
+    const csvPath = path.join(__dirname, `../zk_snapshot_scripts/src/instances/${projectName}_instances_with_uri.csv`);
     const fileContent = fs.readFileSync(csvPath, 'utf-8');
     const allRecords = parse(fileContent, {
         columns: true,
@@ -92,25 +120,27 @@ async function main() {
         const batch = records.slice(i, i + BATCH_SIZE);
         const recipients = batch.map((record: any) => record.address as `0x${string}`);
         const tokenIds = batch.map((record: any) => BigInt(record.tokenId));
+        const metadataIds = batch.map((record: any) => BigInt(record.tokenNumber));
 
         printBatchInfo(i / BATCH_SIZE + 1, recipients, tokenIds, records.length);
 
         try {
-            const gasEstimate = await estimateBulkMintGas(
+            const gasEstimate = await estimateKamuiBulkMintGas(
                 publicClient,
                 contractAddress,
                 account,
                 recipients,
-                tokenIds
+                tokenIds,
+                metadataIds
             );
-
-            printGasEstimateShort(gasEstimate);
+        
+            await printGasInfo(publicClient, gasEstimate);
 
             const hash = await walletClient.writeContract({
                 address: contractAddress,
-                abi: FreeMintABI,
+                abi: KamuiABI,
                 functionName: 'bulkMint',
-                args: [recipients, tokenIds],
+                args: [recipients, tokenIds, metadataIds],
             });
 
             console.log(`Transaction hash: ${hash}`);
@@ -121,6 +151,7 @@ async function main() {
             console.error('❌ Error minting batch:', error);
             process.exit(1);
         }
+
 
         if (i + BATCH_SIZE < records.length) {
             console.log('Waiting 2 seconds before next batch...');
@@ -137,7 +168,7 @@ async function main() {
     const duration = (endTime.getTime() - startTime.getTime()) / 1000;
     const minutes = Math.floor(duration / 60);
     const seconds = Math.floor(duration % 60);
-  
+
     console.log(`\nMinting process completed at: ${endTime.toISOString()}`);
     console.log(`Total duration: ${minutes}m ${seconds}s`);
 }

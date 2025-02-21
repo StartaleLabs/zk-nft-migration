@@ -10,9 +10,9 @@ describe("KamuiVerse TokenURI Tests", function () {
   const BASE_URI = "ipfs://example/";
   const BASE_EXTENSION = ".json";
   const MAX_SUPPLY = 1000n;
-  const MINT_LIMIT = 5n;
+  const MINT_LIMIT = 0n;
   const START_TOKEN_ID = 0n;
-  const PRICE = parseEther("0.1");
+  const PRICE = parseEther("0.001");
 
   async function deployTokenFixture() {
     const [owner, recipient1, recipient2] = await hre.viem.getWalletClients();
@@ -115,7 +115,7 @@ describe("KamuiVerse TokenURI Tests", function () {
       ]);
 
       const originalUri = await Kamui.read.tokenURI([0n]);
-      
+
       // Change baseURI
       const newBaseUri = "https://api.example.com/tokens/";
       await Kamui.write.setBaseURI([newBaseUri]);
@@ -124,5 +124,27 @@ describe("KamuiVerse TokenURI Tests", function () {
       expect(newUri).to.equal(`${newBaseUri}5${BASE_EXTENSION}`);
       expect(newUri).to.not.equal(originalUri);
     });
+  });
+
+
+  describe("Mint function", function () {
+    it("should mint tokens with sequential metadata IDs modulo 10", async function () {
+      const { Kamui, recipient1 } = await loadFixture(deployTokenFixture);
+      const amount = 15n;
+
+      await Kamui.write.mint(
+        [recipient1.account.address, amount],
+        { value: PRICE * amount }
+      );
+
+      // Verify metadata IDs for each token
+      for (let i = 0n; i < amount; i++) {
+        const uri = await Kamui.read.tokenURI([i]);
+        const expectedMetadataId = i % 10n;
+        const expectedUri = `${BASE_URI}${expectedMetadataId}${BASE_EXTENSION}`;
+        expect(uri).to.equal(expectedUri);
+      }
+    });
+
   });
 });

@@ -86,6 +86,7 @@ contract KamuiVerse is ERC721, ERC721URIStorage, ERC721Pausable, Ownable, IERC75
         // Use local variable in loop
         for (uint256 i = 0; i < amount; i++) {
             _safeMint(to, startId + i);
+            metadataId[startId + i] = (startId + i) % 10;
         }
     }
 

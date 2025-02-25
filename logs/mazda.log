@@ -1,0 +1,222 @@
+Last login: Tue Feb 25 11:19:43 on ttys005
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0
+❯ npx hardhat clean
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0
+❯ npx hardhat compile
+Compiled 26 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 5s
+❯ npx hardhat run scripts/nextProjectInfo.ts
+===================================
+Project: mazda
+===================================
+Name: Meta-Mazda
+Symbol: METAMAZDA
+Base URI: https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/
+Base Extension: .json
+Max Supply: 2088
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 2088
+Metadata Entries: 2088
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 2s
+❯ npx hardhat run scripts/nextProjectInfo.ts
+===================================================
+Project: mazda, Network: Soneium
+===================================================
+Name: Meta-Mazda
+Symbol: METAMAZDA
+Base URI: https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/
+Base Extension: .json
+Max Supply: 2088
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: Yes
+Total Supply: 2088
+Metadata Entries: 2088
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 2s
+❯ npx hardhat ignition deploy ./ignition/modules/PaidMInt.ts --network soneium --verify
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: mazda
+Name: Meta-Mazda
+Symbol: METAMAZDA
+Base URI: https://arweave.net/5H09pRM3o1lQGYOeisesHvcGkau0g033TO1Xg8Lzuqc/
+Base Extension: .json
+Max Supply: 2088
+Mint Limit: 0
+Start Token ID: 1
+Price: 3000000000000000 (0.003)
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ PaidMintModule ]
+
+Batch #1
+  Executed PaidMintModule#PaidMint
+
+[ PaidMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+PaidMintModule#PaidMint - 0x26c30bD83dd15b884F895b2e1E4795430Aa5c5d8
+
+Verifying deployed contracts
+
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 11s
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/PaidMint.sol:PaidMint" for network soneium...
+Successfully verified contract "contracts/PaidMint.sol:PaidMint" for network soneium:
+  - https://soneium.blockscout.com/address/0x26c30bD83dd15b884F895b2e1E4795430Aa5c5d8#code
+
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 14s
+❯ npx hardhat run scripts/mint-721.ts
+
+=== Processing project: mazda, Soneium, 1868, Contract: 0x26c30bD83dd15b884F895b2e1E4795430Aa5c5d8 ===
+
+Starting minting process at: 2025-02-25T13:01:56.334Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 837219800370400322
+
+
+Starting from token ID >= 0
+Records to process: 2088 out of 2088
+
+=== Batch Number: 1, start 0xC779CEB0853fa7AB6a38c587c1CFC702e4603d9B,1 ===
+Progress: 500(2088) === 24%
+Gas Estimation: Units: 21213801, Price: 301931612 wei, Total Cost: 0.006405 ETH
+Transaction hash: 0x91f2f229f3427e280f844d5f94a13bc0ae429e728f65331e82a973b175c4b592
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 2, start 0x9202C379982018E3d7De4d28b06F288582E6f15D,501 ===
+Progress: 1000(2088) === 48%
+Gas Estimation: Units: 20692363, Price: 306466184 wei, Total Cost: 0.006342 ETH
+Transaction hash: 0x7d53ff291ab59f70fc30fc8286f61a3d9115c2841bde0497e7b46047a3f2fc59
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 3, start 0xd239355E298AD3550fA33647C71042a35aeDEE15,1001 ===
+Progress: 1500(2088) === 72%
+Gas Estimation: Units: 18446209, Price: 308525199 wei, Total Cost: 0.005691 ETH
+Transaction hash: 0x66c55b5ca29d9a6c01fce2277dd8874f7733256c3fcc132a70b8d42429ad33d4
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 4, start 0x0C56b32EAc3b01910Bab318422996348C4D9E90C,1501 ===
+Progress: 2000(2088) === 96%
+Gas Estimation: Units: 19395979, Price: 310515865 wei, Total Cost: 0.006023 ETH
+Transaction hash: 0x564497facf7d36062b5db251e70194b020833d9f8a92c86af7cfc9d7f6f06723
+✅ Batch minted successfully
+
+Waiting 2 seconds before next batch...
+
+=== Batch Number: 5, start 0x5Ef0CCd9E730D832E01Aa859894cF8fEeF148cF5,2001 ===
+Progress: 2500(2088) === 120%
+Gas Estimation: Units: 4156084, Price: 311665804 wei, Total Cost: 0.001295 ETH
+Transaction hash: 0x9b4d98d9f83f3a695e41e2757b99203691201f4dc241bc301f0d839e3cb98545
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 2088
+Actual total supply: 2088
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-25T13:02:42.254Z
+Total duration: 0m 45s
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 52s
+❯ npx hardhat run scripts/verify
+^C
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 2s
+❯ npx hardhat run scripts/verify.ts
+
+=== Processing project: mazda, Soneium, 1868, Contract: 0x26c30bD83dd15b884F895b2e1E4795430Aa5c5d8 ===
+
+Starting verification process at: 2025-02-25T13:03:44.471Z
+Verifying mazda...
+Starting verification of 2088 tokens...
+Progress: 100/2088 (4.79%) - Verified: 100, Failed: 0
+Progress: 200/2088 (9.58%) - Verified: 200, Failed: 0
+Progress: 300/2088 (14.37%) - Verified: 300, Failed: 0
+Progress: 400/2088 (19.16%) - Verified: 400, Failed: 0
+Progress: 500/2088 (23.95%) - Verified: 500, Failed: 0
+Progress: 600/2088 (28.74%) - Verified: 600, Failed: 0
+Progress: 700/2088 (33.52%) - Verified: 700, Failed: 0
+Progress: 800/2088 (38.31%) - Verified: 800, Failed: 0
+Progress: 900/2088 (43.10%) - Verified: 900, Failed: 0
+Progress: 1000/2088 (47.89%) - Verified: 1000, Failed: 0
+Progress: 1100/2088 (52.68%) - Verified: 1100, Failed: 0
+Progress: 1200/2088 (57.47%) - Verified: 1200, Failed: 0
+Progress: 1300/2088 (62.26%) - Verified: 1300, Failed: 0
+Progress: 1400/2088 (67.05%) - Verified: 1400, Failed: 0
+Progress: 1500/2088 (71.84%) - Verified: 1500, Failed: 0
+Progress: 1600/2088 (76.63%) - Verified: 1600, Failed: 0
+Progress: 1700/2088 (81.42%) - Verified: 1700, Failed: 0
+Progress: 1800/2088 (86.21%) - Verified: 1800, Failed: 0
+Progress: 1900/2088 (91.00%) - Verified: 1900, Failed: 0
+Progress: 2000/2088 (95.79%) - Verified: 2000, Failed: 0
+Progress: 2088/2088 (100.00%) - Verified: 2088, Failed: 0
+
+Final Results for mazda:
+  Total tokens: 2088
+  Verified: 2088
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-25T13:09:31.765Z
+Total duration: 5m 47s
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 5m49s
+❯ npx hardhat run scripts/arePaused.ts
+
+=== Processing project: mazda, Soneium, 1868, Contract: 0x26c30bD83dd15b884F895b2e1E4795430Aa5c5d8 ===
+
+Checking pause status for all contracts on Soneium:
+----------------------------------------
+Yoki                : 🟢 active
+CityPopTokyo        : 🔴 PAUSED
+jrKyushuFree        : 🔴 PAUSED
+candyGirl           : 🔴 PAUSED
+JapanCreatorCollection: 🔴 PAUSED
+Walkmon             : 🔴 PAUSED
+DenShinSanKa        : 🔴 PAUSED
+SNPIT               : 🔴 PAUSED
+DoF                 : 🔴 PAUSED
+origamiKokyo        : 🔴 PAUSED
+DenDekaDen          : 🔴 PAUSED
+DEKSA               : 🔴 PAUSED
+his                 : 🔴 PAUSED
+jrKyushuPaid        : 🔴 PAUSED
+On1force            : 🔴 PAUSED
+onigiriman          : 🔴 PAUSED
+sashimi             : 🔴 PAUSED
+SkyLabs             : 🔴 PAUSED
+UZNo                : 🔴 PAUSED
+casio               : 🔴 PAUSED
+Kamui               : 🔴 PAUSED
+AON                 : 🔴 PAUSED
+mazda               : 🔴 PAUSED
+
+zk-nft-migration on  main [!?] is 󰏗 v1.0.0 via  v20.10.0 took 4s
+❯

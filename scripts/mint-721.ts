@@ -62,15 +62,15 @@ async function main() {
         chain: chain,
         transport: http()
     });
-    
+
     const walletClient = createWalletClient({
         account,
         chain: chain,
         transport: http()
     });
-    
+
     console.log(`Minting with ${account.address}, Balance: ${await publicClient.getBalance({ address: account.address })}\n`);
-    
+
     // Read and parse CSV file
     const csvPath = path.join(__dirname, `../zk_snapshot_scripts/src/instances/${projectName}_instances.csv`);
     const fileContent = fs.readFileSync(csvPath, 'utf-8');
@@ -84,7 +84,7 @@ async function main() {
         parseInt(record.tokenId) >= START_TOKEN_ID
     );
 
-    console.log(`\nStarting from token ID: ${START_TOKEN_ID}`);
+    console.log(`\nStarting from token ID >= ${START_TOKEN_ID}`);
     console.log(`Records to process: ${records.length} out of ${allRecords.length}`);
 
     // Process in batches
@@ -137,7 +137,7 @@ async function main() {
     const duration = (endTime.getTime() - startTime.getTime()) / 1000;
     const minutes = Math.floor(duration / 60);
     const seconds = Math.floor(duration % 60);
-  
+
     console.log(`\nMinting process completed at: ${endTime.toISOString()}`);
     console.log(`Total duration: ${minutes}m ${seconds}s`);
 }

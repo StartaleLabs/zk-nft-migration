@@ -1,6 +1,7 @@
 import type { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox-viem";
 import "@nomicfoundation/hardhat-ignition"
+import "./tasks/network-info";
 import * as dotenv from "dotenv";
 
 dotenv.config({ path: __dirname + "/.env" });

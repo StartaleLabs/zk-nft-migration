@@ -11,6 +11,10 @@ async function main() {
   if (!projectName) {
     throw new Error(`Current project not set in .env file`);
   }
+  const deploymentNetwork = process.env.CHAIN_NAME;
+  if (!deploymentNetwork) {
+    throw new Error(`Deployment CHAIN_NAME not set in .env file`);
+  }
 
   // Read and parse the JSON file
   const inputPath = path.join(__dirname, '../zk_snapshot_scripts/src/data/output.json');
@@ -23,9 +27,9 @@ async function main() {
   }
 
   // Print project information
-  console.log("===================================");
-  console.log(`Project: ${projectName}`);
-  console.log("===================================");
+  console.log("===================================================");
+  console.log(`Project: ${projectName}, Network: ${deploymentNetwork}`);
+  console.log("===================================================");
   console.log(`Name: ${projectData.name}`);
   console.log(`Symbol: ${projectData.symbol}`);
   console.log(`Base URI: ${projectData.baseURI}`);

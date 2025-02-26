@@ -360,7 +360,7 @@
     "symbol": "AIRian",
     "contractType": "ERC721",
     "startsWithToken0": false,
-    "baseURI": "https://ipfs.io/ipfs/QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/",
+    "baseURI": "ipfs://QmeEqFFUzMJmt2YvWraAvbvVzRbXWotEqPPcXXiJ7scLwW/",
     "contractName": "AIRianAvatar",
     "maxSupply": 10000,
     "mintLimit": 0,

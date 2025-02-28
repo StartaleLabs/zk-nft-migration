@@ -10,7 +10,7 @@ To claim contract ownership, you must verify control of the account that will se
 ## Contract Activation Required
 Your contract is currently paused. Before users can transfer tokens or engage in trading, you must activate the contract by:
 1. Connect using the contract owner's account
-2. Call the unpause() function
+2. Call the unpause() function. Here is the instruction on how to [unpause a contract](UNPAUSE.md).
 
 Until this activation is completed, all token transfers will remain restricted.
 

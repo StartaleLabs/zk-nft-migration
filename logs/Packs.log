@@ -1,0 +1,207 @@
+Last login: Fri Feb 28 13:43:59 on ttys014
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   
+➜ rm -fr ignition/deployments
+
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   
+➜ npx hardhat clean
+
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   
+➜ npx hardhat compile
+
+
+Compiled 26 Solidity files successfully (evm target: paris).
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   took 5s 
+➜ 
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   
+➜ npx hardhat run scripts/nextProjectInfo.ts
+
+===================================================
+Project: Packs, Network: Soneium
+===================================================
+Name: PACKS
+Symbol: PACKS
+Base URI: ipfs://QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/
+Base Extension: .json
+Max Supply: 150
+Mint Limit: 0
+Start Token ID: 1
+Is Payable: No
+Total Supply: 150
+Metadata Entries: 150
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   
+➜ npx hardhat ignition deploy ./ignition/modules/FreeMint.ts --network soneium --verify
+
+✔ Confirm deploy to network soneium (1868)? … yes
+
+Deployment Parameters:
+=====================
+Project: Packs
+Name: PACKS
+Symbol: PACKS
+Base URI: ipfs://QmcaPtdWgGtWMNySBLnNUfzxj7CLtUTtu2kUuoHpSP4hjo/
+Base Extension: .json
+Max Supply: 150
+Mint Limit: 0
+Start Token ID: 1
+=====================
+
+Hardhat Ignition 🚀
+
+Deploying [ FreeMintModule ]
+
+Batch #1
+  Executed FreeMintModule#FreeMint
+
+[ FreeMintModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+FreeMintModule#FreeMint - 0xee6fBD8c2b2CE5FCe6Fb4B5a8FEDBcC1E4d460D6
+
+Verifying deployed contracts
+
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Error in plugin hardhat-ignition: Verification failed. Please run `hardhat ignition verify chain-1868 --include-unrelated-contracts` to attempt verifying all contracts.
+
+For more info run Hardhat with --show-stack-traces
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   took 13s 
+❯ npx hardhat ignition verify chain-1868 --include-unrelated-contracts
+Verifying contract "contracts/FreeMint.sol:FreeMint" for network soneium...
+Successfully verified contract "contracts/FreeMint.sol:FreeMint" for network soneium:
+  - https://soneium.blockscout.com/address/0xee6fBD8c2b2CE5FCe6Fb4B5a8FEDBcC1E4d460D6#code
+
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   took 16s 
+➜ npx hardhat run scripts/mint-721.ts
+
+=== Processing project: Packs, Soneium, 1868, Contract: 0xee6fBD8c2b2CE5FCe6Fb4B5a8FEDBcC1E4d460D6 ===
+
+Starting minting process at: 2025-02-28T12:59:54.052Z
+Minting with 0xEE70e6d461F0888Fd9DB60cb5B2e933adF5f4c7C, Balance: 795406547279971761
+
+
+Starting from token ID >= 0
+Records to process: 150 out of 150
+
+=== Batch Number: 1, start 0x3e822b686ab2741de8642c6e10d1A184Fb3bC702,1 ===
+Progress: 500(150) === 333%
+Gas Estimation: Units: 6647462, Price: 1000349 wei, Total Cost: 0.000007 ETH
+Transaction hash: 0xd42f5ebab13766068229d0224e2690a2a47876d058df4b537df3923e99ace856
+✅ Batch minted successfully
+
+
+✨ All batches processed successfully
+
+=== Final Verification ===
+Expected total supply: 150
+Actual total supply: 150
+✅ Total supply matches expected value
+
+Minting process completed at: 2025-02-28T13:00:03.133Z
+Total duration: 0m 9s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   took 15s 
+➜ npx hardhat run scripts/verify.ts  
+
+=== Processing project: Packs, Soneium, 1868, Contract: 0xee6fBD8c2b2CE5FCe6Fb4B5a8FEDBcC1E4d460D6 ===
+
+Starting verification process at: 2025-02-28T13:00:19.113Z
+Verifying Packs...
+Starting verification of 150 tokens...
+Progress: 100/150 (66.67%) - Verified: 100, Failed: 0
+Progress: 150/150 (100.00%) - Verified: 150, Failed: 0
+
+Final Results for Packs:
+  Total tokens: 150
+  Verified: 150
+  Failed: 0
+-------------------
+
+Verification process completed at: 2025-02-28T13:00:43.445Z
+Total duration: 0m 24s
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   took 26s 
+➜ npx hardhat run scripts/arePaused.ts 
+
+=== Processing project: Packs, Soneium, 1868, Contract: 0xee6fBD8c2b2CE5FCe6Fb4B5a8FEDBcC1E4d460D6 ===
+
+Checking contracts status on Soneium:
+
+┌─────────┬──────────────────────────┬───────────────────────┬──────────────┐
+│ (index) │ Project                  │ Ownership Transferred │ Pause Status │
+├─────────┼──────────────────────────┼───────────────────────┼──────────────┤
+│ 0       │ 'Yoki'                   │ '🟢 Internal'         │ '🟢 active'  │
+│ 1       │ 'CityPopTokyo'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 2       │ 'jrKyushuFree'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 3       │ 'candyGirl'              │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 4       │ 'JapanCreatorCollection' │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 5       │ 'Walkmon'                │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 6       │ 'DenShinSanKa'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 7       │ 'SNPIT'                  │ '🔴 not transferred'  │ '🔴 PAUSED'  │
+│ 8       │ 'DoF'                    │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 9       │ 'origamiKokyo'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 10      │ 'DenDekaDen'             │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 11      │ 'DEKSA'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 12      │ 'his'                    │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 13      │ 'jrKyushuPaid'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 14      │ 'On1force'               │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 15      │ 'onigiriman'             │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 16      │ 'sashimi'                │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 17      │ 'SkyLabs'                │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 18      │ 'UZNo'                   │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 19      │ 'casio'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 20      │ 'Kamui'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 21      │ 'AON'                    │ '🟢 transferred'      │ '🟢 active'  │
+│ 22      │ 'mazda'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 23      │ 'Neemo'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 24      │ 'Airian'                 │ '🔴 not transferred'  │ '🔴 PAUSED'  │
+│ 25      │ 'Packs'                  │ '🔴 not transferred'  │ '🟢 active'  │
+└─────────┴──────────────────────────┴───────────────────────┴──────────────┘
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   took 5s 
+➜ npx hardhat run scripts/arePaused.ts
+
+=== Processing project: Packs, Soneium, 1868, Contract: 0xee6fBD8c2b2CE5FCe6Fb4B5a8FEDBcC1E4d460D6 ===
+
+Checking contracts status on Soneium:
+
+┌─────────┬──────────────────────────┬───────────────────────┬──────────────┐
+│ (index) │ Project                  │ Ownership Transferred │ Pause Status │
+├─────────┼──────────────────────────┼───────────────────────┼──────────────┤
+│ 0       │ 'Yoki'                   │ '🟢 Internal'         │ '🟢 active'  │
+│ 1       │ 'CityPopTokyo'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 2       │ 'jrKyushuFree'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 3       │ 'candyGirl'              │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 4       │ 'JapanCreatorCollection' │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 5       │ 'Walkmon'                │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 6       │ 'DenShinSanKa'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 7       │ 'SNPIT'                  │ '🔴 not transferred'  │ '🔴 PAUSED'  │
+│ 8       │ 'DoF'                    │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 9       │ 'origamiKokyo'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 10      │ 'DenDekaDen'             │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 11      │ 'DEKSA'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 12      │ 'his'                    │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 13      │ 'jrKyushuPaid'           │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 14      │ 'On1force'               │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 15      │ 'onigiriman'             │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 16      │ 'sashimi'                │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 17      │ 'SkyLabs'                │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 18      │ 'UZNo'                   │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 19      │ 'casio'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 20      │ 'Kamui'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 21      │ 'AON'                    │ '🟢 transferred'      │ '🟢 active'  │
+│ 22      │ 'mazda'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 23      │ 'Neemo'                  │ '🟢 transferred'      │ '🔴 PAUSED'  │
+│ 24      │ 'Airian'                 │ '🔴 not transferred'  │ '🔴 PAUSED'  │
+│ 25      │ 'Packs'                  │ '🔴 not transferred'  │ '🔴 PAUSED'  │
+└─────────┴──────────────────────────┴───────────────────────┴──────────────┘
+
+zk-nft-migration on  main [📝🌱] via  v20.16.0 on ☁️   took 6s 
+➜ 
